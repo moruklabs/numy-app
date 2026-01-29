@@ -128,6 +128,6 @@
     "sharp": "^0.34.5",
     "syncpack": "^13.0.4",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.52.0"
+    "typescript-eslint": "^8.54.0"
   }
 }
