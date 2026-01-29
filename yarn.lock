@@ -4235,16 +4235,16 @@ __metadata:
   linkType: hard
 
 "@react-native-firebase/remote-config@npm:*":
-  version: 23.7.0
-  resolution: "@react-native-firebase/remote-config@npm:23.7.0"
+  version: 23.8.4
+  resolution: "@react-native-firebase/remote-config@npm:23.8.4"
   dependencies:
     react-native-fetch-api: "npm:^3.0.0"
     text-encoding: "npm:^0.7.0"
     web-streams-polyfill: "npm:^4.2.0"
   peerDependencies:
-    "@react-native-firebase/analytics": 23.7.0
-    "@react-native-firebase/app": 23.7.0
-  checksum: 10c0/ebebdbccb8cafee7ba71ce19f9dec8d23d7266c67c229bf1d4b0b58d63201630c9f6c7877899561e53d8c198b02f03db4cae9056689df200f51026a9bc362a6a
+    "@react-native-firebase/analytics": 23.8.4
+    "@react-native-firebase/app": 23.8.4
+  checksum: 10c0/b95b9ecf51715df11c8565ecd95f1a31b096b263866a48715ec0db63ffb15ca6b082d272356e04364f462e6817dd54ceff25050a2f1c52d8e9f509bac536d9a0
   languageName: node
   linkType: hard
 
