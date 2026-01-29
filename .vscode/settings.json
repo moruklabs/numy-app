@@ -112,5 +112,9 @@
   "terminal.integrated.cwd": "${workspaceFolder}",
   // Git Configuration
   "git.ignoreLimitWarning": true,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "sonarlint.connectedMode.project": {
+    "connectionId": "moruklabs",
+    "projectKey": "moruklabs_numy-app"
+  }
 }
