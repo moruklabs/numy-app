@@ -3435,7 +3435,7 @@ __metadata:
     concurrently: "npm:^9.2.1"
     eslint: "npm:^9.39.2"
     eslint-config-expo: "npm:^10.0.0"
-    expo: "npm:~54.0.31"
+    expo: "npm:~54.0.32"
     husky: "npm:^9.1.7"
     jest: "npm:~29.7.0"
     jest-expo: "npm:^54.0.16"
@@ -7865,8 +7865,8 @@ __metadata:
   linkType: hard
 
 "expo-router@npm:~6.0.21":
-  version: 6.0.21
-  resolution: "expo-router@npm:6.0.21"
+  version: 6.0.22
+  resolution: "expo-router@npm:6.0.22"
   dependencies:
     "@expo/metro-runtime": "npm:^6.1.2"
     "@expo/schema-utils": "npm:^0.1.8"
@@ -7896,7 +7896,7 @@ __metadata:
     "@react-navigation/drawer": ^7.5.0
     "@testing-library/react-native": ">= 12.0.0"
     expo: "*"
-    expo-constants: ^18.0.12
+    expo-constants: ^18.0.13
     expo-linking: ^8.0.11
     react: "*"
     react-dom: "*"
@@ -7922,7 +7922,7 @@ __metadata:
       optional: true
     react-server-dom-webpack:
       optional: true
-  checksum: 10c0/ae39edf1d5c841be46d3dcc8598e46773cbdd2f5a0b6a0c0711dbd0ed852121ada010363270b75a664563e7c74e16dbbd650e4ee7faec8e6e229fd189e99e3b0
+  checksum: 10c0/1c53812790a08b4b74a7c586e6b77db62cc53b54724696a1926325c63b49acc078ade0356ae365378178724f3e842d89dfc4a6c154bdcb7dd6fca04b4b8d037d
   languageName: node
   linkType: hard
 
