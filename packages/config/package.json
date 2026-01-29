@@ -1,0 +1,31 @@
+{
+  "name": "@moruk/config",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared configuration types, theme system, and constants for moruk apps",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "lint": "yarn run lint:fix",
+    "lint:fix": "eslint src/ --fix",
+    "type-check": "tsc --noEmit",
+    "validate": "concurrently --kill-others-on-fail -n \"TypeCheck,Lint\" -c \"magenta,cyan\" \"yarn run type-check\" \"yarn run lint\"",
+    "clean": "rm -rf dist",
+    "doctor:fix": "exit 0",
+    "fix": "yarn run lint:fix && yarn run format:fix && yarn run doctor:fix",
+    "format": "yarn run format:fix",
+    "format:fix": "npx prettier --ignore-path ../../.prettierignore --write . --log-level error"
+  },
+  "dependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "*",
+    "concurrently": "*",
+    "eslint": "*",
+    "prettier": "*",
+    "typescript": "*"
+  },
+  "packageManager": "yarn@4.12.0"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Geschiedenis",
+  "screenTitle": "Geschiedenis scherm met opgeslagen berekeningen",
+  "listAccessibility": "Lijst met opgeslagen documenten met {{count}} documenten",
+  "documentAccessibility": "{{title}}, opgeslagen op {{date}}, {{count}} berekeningen",
+  "documentHint": "Dubbeltik om te openen. Gebruik het actiemenu om te verwijderen.",
+  "openAction": "Document openen",
+  "deleteAction": "Document verwijderen",
+  "lastEdited": "laatst bewerkt",
+  "emptyState": {
+    "title": "# Nog geen opgeslagen berekeningen",
+    "subtitle": "Uw opgeslagen berekeningen verschijnen hier nadat u een document hebt opgeslagen"
+  },
+  "sections": {
+    "examples": "# Voorbeelden",
+    "history": "# Geschiedenis"
+  },
+  "lineCount_one": "{{count}} regel",
+  "lineCount_other": "{{count}} regels",
+  "deleteAlert": {
+    "title": "Document verwijderen",
+    "message": "Weet u zeker dat u \"{{title}}\" wilt verwijderen? Deze actie kan niet ongedaan gemaakt worden."
+  }
+}

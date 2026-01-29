@@ -1,0 +1,24 @@
+{
+  "title": "履歴",
+  "screenTitle": "保存された計算を表示する履歴画面",
+  "listAccessibility": "{{count}}件のドキュメントを含む保存済みドキュメントリスト",
+  "documentAccessibility": "{{title}}、{{date}}に保存、{{count}}件の計算",
+  "documentHint": "ダブルタップで開く。アクションメニューで削除。",
+  "openAction": "ドキュメントを開く",
+  "deleteAction": "ドキュメントを削除",
+  "emptyState": {
+    "title": "# 保存された計算はありません",
+    "subtitle": "保存した計算はここに表示されます"
+  },
+  "lineCount_one": "{{count}}行",
+  "lineCount_other": "{{count}}行",
+  "deleteAlert": {
+    "title": "ドキュメントを削除",
+    "message": "\"{{title}}\"を削除してもよろしいですか？この操作は取り消せません。"
+  },
+  "lastEdited": "last edited",
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  }
+}

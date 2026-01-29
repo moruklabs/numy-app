@@ -1,0 +1,24 @@
+{
+  "title": "Verlauf",
+  "screenTitle": "Verlaufsbildschirm mit gespeicherten Berechnungen",
+  "listAccessibility": "Liste der gespeicherten Dokumente mit {{count}} Dokumenten",
+  "documentAccessibility": "{{title}}, gespeichert am {{date}}, {{count}} Berechnungen",
+  "documentHint": "Doppeltippen zum Öffnen. Aktionsmenü zum Löschen verwenden.",
+  "openAction": "Dokument öffnen",
+  "deleteAction": "Dokument löschen",
+  "emptyState": {
+    "title": "# Keine gespeicherten Berechnungen",
+    "subtitle": "Deine gespeicherten Berechnungen erscheinen hier"
+  },
+  "lineCount_one": "{{count}} Zeile",
+  "lineCount_other": "{{count}} Zeilen",
+  "deleteAlert": {
+    "title": "Dokument Löschen",
+    "message": "Möchtest du \"{{title}}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden."
+  },
+  "lastEdited": "last edited",
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  }
+}

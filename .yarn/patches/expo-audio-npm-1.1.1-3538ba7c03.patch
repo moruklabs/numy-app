@@ -1,0 +1,31 @@
+diff --git a/android/src/main/java/expo/modules/audio/service/AudioControlsService.kt b/android/src/main/java/expo/modules/audio/service/AudioControlsService.kt
+index 04486e21da2f96bbfcfa00528fb2ac3d147acef3..d289a4c72411ea0206ecad6e42c4d26a804fd421 100644
+--- a/android/src/main/java/expo/modules/audio/service/AudioControlsService.kt
++++ b/android/src/main/java/expo/modules/audio/service/AudioControlsService.kt
+@@ -175,14 +175,18 @@ class AudioControlsService : MediaSessionService() {
+     val notification = buildNotification() ?: return
+ 
+     if (startInForeground) {
+-      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+-        startForeground(
+-          notificationId,
+-          notification,
+-          ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK
+-        )
+-      } else {
+-        startForeground(notificationId, notification)
++      try {
++        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
++          startForeground(
++            notificationId,
++            notification,
++            ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK
++          )
++        } else {
++          startForeground(notificationId, notification)
++        }
++      } catch (e: Exception) {
++        Log.e("AudioControlsService", "Failed to start foreground service: ${e.message}")
+       }
+     } else {
+       notificationManager.notify(notificationId, notification)

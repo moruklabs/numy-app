@@ -1,0 +1,49 @@
+{
+  "title": "설정",
+  "screenTitle": "설정 화면",
+  "cssUnits": {
+    "title": "# CSS 단위",
+    "description": "CSS 단위 변환의 기본값 설정",
+    "emBase": "em 기본값 (px)",
+    "emBaseHint": "em 계산을 위한 기본 픽셀 값을 입력하세요",
+    "ppiBase": "ppi 기본값",
+    "ppiBaseHint": "물리적 단위 계산을 위한 인치당 픽셀 값을 입력하세요"
+  },
+  "privacy": {
+    "title": "# 개인정보",
+    "description": "데이터 수집 및 사용 방법 제어",
+    "analyticsLabel": "분석",
+    "analyticsDescription": "익명 사용 데이터를 공유하여 Numy 개선에 도움을 주세요",
+    "analyticsEnableHint": "분석 수집을 활성화하려면 두 번 탭하세요",
+    "analyticsDisableHint": "분석 수집을 비활성화하려면 두 번 탭하세요"
+  },
+  "about": {
+    "title": "# 정보",
+    "appName": "Numy - 자연어 계산기",
+    "version": "버전 1.0.0",
+    "aiHighlight": "Numy는 Apple Intelligence로 구동됩니다.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "title": "# 링크",
+    "privacyPolicy": "개인정보처리방침",
+    "termsOfUse": "이용약관",
+    "support": "지원",
+    "opensInBrowser": "브라우저에서 열립니다"
+  },
+  "preferences": {
+    "title": "# Preferences",
+    "showTotal": "Show running total",
+    "showTotalHint": "Toggle the running total bar at the bottom of the calculator",
+    "decimalPlaces": "Decimal places",
+    "decimalPlacesHint": "Enter the number of decimal places for results (0-10)"
+  },
+  "resetAll": {
+    "title": "Erase All Settings",
+    "message": "This will delete all your notes and reset all settings to defaults. This cannot be undone.",
+    "confirm": "Erase All",
+    "cancel": "Cancel",
+    "buttonLabel": "Erase All Settings",
+    "buttonHint": "Double tap to erase all settings and delete all notes"
+  }
+}

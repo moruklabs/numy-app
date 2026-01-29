@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "{{source}} türünden {{target}} türüne dönüştürülemiyor",
+  "calculationError": "Hesaplama hatası",
+  "aiTimeout": "Hesaplama zaman aşımına uğradı. Tekrar denemek ister misiniz?",
+  "aiNetworkError": "İnternet bağlantınızı kontrol edin ve tekrar deneyin",
+  "aiRateLimit": "Çok fazla istek. Lütfen bir süre sonra tekrar deneyin",
+  "aiNotCalculable": "Bu ifade hesaplanamıyor",
+  "aiServerError": "Bir şeyler ters gitti. Tekrar denemek ister misiniz?"
+}

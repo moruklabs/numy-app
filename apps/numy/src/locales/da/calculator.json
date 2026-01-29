@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Mine Beregninger",
+  "placeholder": "Indtast beregning...",
+  "total": "Total: ",
+  "tapToShare": "tryk for at dele",
+  "shareAccessibility": "Del total",
+  "inputAccessibility": "Beregning input",
+  "inputHint": "Indtast et matematisk udtryk som 5 gange 3 eller 20% af 100",
+  "resultAccessibility": "Resultat: {{value}}",
+  "resultHint": "Dobbeltklik for at dele dette resultat",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Dobbeltklik for at dele totalen",
+  "document": {
+    "saveButton": "Gem",
+    "saveHint": "Dobbeltklik for at gemme dette dokument i historikken",
+    "clearButton": "Ryd",
+    "clearHint": "Dobbeltklik for at rydde alle beregninger",
+    "closeHint": "Luk uden at gemme",
+    "titleAccessibility": "Dokumenttitel: {{title}}",
+    "titleHint": "Dobbeltklik for at redigere dokumenttitlen",
+    "editTitleModal": "Dialog til redigering af dokumenttitel",
+    "titleInputLabel": "Dokumenttitel",
+    "titleInputHint": "Indtast en ny titel for dette dokument",
+    "cancelHint": "Dobbeltklik for at annullere og beholde den aktuelle titel",
+    "saveNewTitleHint": "Dobbeltklik for at gemme den nye titel",
+    "newDocHint": "Dobbeltklik for at oprette et nyt dokument. Det aktuelle dokument gemmes automatisk.",
+    "savedAlert": {
+      "title": "Gemt",
+      "message": "Dokument gemt i historikken"
+    },
+    "clearAlert": {
+      "title": "Ryd Dokument",
+      "message": "Er du sikker på, at du vil rydde alle beregninger?"
+    },
+    "editTitle": "Rediger Titel",
+    "titlePlaceholder": "Dokumenttitel",
+    "lastUpdated": "opdateret {{time}}"
+  }
+}

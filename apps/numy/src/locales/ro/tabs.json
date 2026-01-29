@@ -1,0 +1,9 @@
+{
+  "calculator": "Calculator",
+  "history": "Istoric",
+  "settings": "Setări",
+  "calculatorTab": "Filă Calculator, introduceți calcule și vedeți rezultatele",
+  "historyTab": "Filă Istoric, vizualizați calculele salvate",
+  "settingsTab": "Filă Setări, configurați preferințele aplicației",
+  "newDocument": "Calcul nou"
+}

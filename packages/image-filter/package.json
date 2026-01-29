@@ -1,0 +1,36 @@
+{
+  "name": "@moruk/image-filter",
+  "version": "1.0.0",
+  "description": "Image filtering utilities for pencil text enhancement and document scanning",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "lint": "yarn run lint:fix",
+    "lint:fix": "eslint src/ --fix",
+    "validate": "concurrently --kill-others-on-fail -n \"TypeCheck,Lint,Test\" -c \"magenta,cyan,yellow\" \"yarn run type-check\" \"yarn run lint\" \"yarn run test\"",
+    "doctor:fix": "exit 0",
+    "fix": "yarn run lint:fix && yarn run format:fix && yarn run doctor:fix",
+    "format": "yarn run format:fix",
+    "format:fix": "npx prettier --ignore-path ../../.prettierignore --write . --log-level error"
+  },
+  "dependencies": {
+    "@moruk/logger": "*",
+    "expo-image-manipulator": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-typescript": "*",
+    "@types/jest": "*",
+    "concurrently": "*",
+    "eslint": "*",
+    "jest": "*",
+    "prettier": "*",
+    "typescript": "*"
+  },
+  "private": true,
+  "packageManager": "yarn@4.12.0"
+}

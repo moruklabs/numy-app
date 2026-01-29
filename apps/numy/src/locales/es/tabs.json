@@ -1,0 +1,9 @@
+{
+  "calculator": "Calculadora",
+  "history": "Historial",
+  "settings": "Ajustes",
+  "calculatorTab": "Pestaña de calculadora, ingresa cálculos y ve resultados",
+  "historyTab": "Pestaña de historial, ve cálculos guardados",
+  "settingsTab": "Pestaña de ajustes, configura preferencias de la app",
+  "newDocument": "New calculation"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Histórico",
+  "screenTitle": "Tela de histórico mostrando cálculos salvos",
+  "listAccessibility": "Lista de documentos salvos com {{count}} documentos",
+  "documentAccessibility": "{{title}}, salvo em {{date}}, {{count}} cálculos",
+  "documentHint": "Toque duas vezes para abrir. Use o menu de ações para excluir.",
+  "openAction": "Abrir documento",
+  "deleteAction": "Excluir documento",
+  "emptyState": {
+    "title": "# Nenhum cálculo salvo",
+    "subtitle": "Seus cálculos salvos aparecerão aqui"
+  },
+  "lineCount_one": "{{count}} linha",
+  "lineCount_other": "{{count}} linhas",
+  "deleteAlert": {
+    "title": "Excluir Documento",
+    "message": "Tem certeza de que deseja excluir \"{{title}}\"? Esta ação não pode ser desfeita."
+  },
+  "lastEdited": "last edited",
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  }
+}

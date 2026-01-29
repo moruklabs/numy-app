@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "No es pot convertir {{source}} a {{target}}",
+  "calculationError": "Error de càlcul",
+  "aiTimeout": "El càlcul ha superat el temps límit. Torna-ho a provar?",
+  "aiNetworkError": "Comprova la teva connexió a internet i torna-ho a provar",
+  "aiRateLimit": "Massa sol·licituds. Torna-ho a provar en un moment",
+  "aiNotCalculable": "No es pot calcular aquesta expressió",
+  "aiServerError": "Alguna cosa ha anat malament. Torna-ho a provar?"
+}

@@ -1,0 +1,40 @@
+{
+  "title": "הגדרות",
+  "screenTitle": "מסך הגדר��ת",
+  "cssUnits": {
+    "title": "## יחידות CSS",
+    "description": "הגדר ערכי בסיס להמרות יחידות CSS",
+    "emBase": "בסיס em (פיקסלים)",
+    "emBaseHint": "הזן את ערך הפיקסלים הבסיסי לחישובי em",
+    "ppiBase": "בסיס ppi",
+    "ppiBaseHint": "הזן את ערך הפיקסלים לאינץ' עבור חישובי יחידות פיזיות"
+  },
+  "about": {
+    "title": "# אודות",
+    "appName": "Numy - מחשבון שפה טבעית",
+    "version": "גרסה 1.0.0",
+    "aiHighlight": "Numy מופעל על ידי Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "מדיניות פרטיות",
+    "termsOfUse": "תנאי שימוש",
+    "support": "תמיכה",
+    "opensInBrowser": "נפתח בדפדפן"
+  },
+  "preferences": {
+    "title": "# העדפות",
+    "showTotal": "הצג סכום כולל רץ",
+    "showTotalHint": "הפעל/כבה את סרגל הסכום הכולל הרץ בתחתית המחשבון",
+    "decimalPlaces": "מקומות אחרי הנקודה",
+    "decimalPlacesHint": "הזן את מספר המקומות אחרי הנקודה עבור תוצאות (0-10)"
+  },
+  "resetAll": {
+    "title": "אפס את כל ההגדרות",
+    "message": "פעולה זו תמחק את כל הפתקים שלך ותאפס את כל ההגדרות לברירת המחדל. לא ניתן לבטל פעולה זו.",
+    "confirm": "אפס הכל",
+    "cancel": "ביטול",
+    "buttonLabel": "אפס את כל ההגדרות",
+    "buttonHint": "הקשה כפולה לאיפוס כל ההגדרות ומחיקת כל הפתקים"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "היסטוריה",
+  "screenTitle": "מסך ��יסטוריה המציג חישובים שמורים",
+  "listAccessibility": "רשימת מסמכים שמורים עם {{count}} מסמכים",
+  "documentAccessibility": "{{title}}, נשמר ב-{{date}}, {{count}} חישובים",
+  "documentHint": "הקשה כפולה לפתיחה. השתמש בתפריט הפעולות כדי למחוק.",
+  "openAction": "פתח מסמך",
+  "deleteAction": "מחק מסמך",
+  "lastEdited": "נערך לאחרונה",
+  "emptyState": {
+    "title": "# אין עדיין חישובים שמורים",
+    "subtitle": "החישובים השמורים שלך יופיעו כאן לאחר שתשמור מסמך"
+  },
+  "sections": {
+    "examples": "# דוגמאות",
+    "history": "# היסטוריה"
+  },
+  "lineCount_one": "{{count}} שורה",
+  "lineCount_other": "{{count}} שורות",
+  "deleteAlert": {
+    "title": "מחק מסמך",
+    "message": "האם אתה בטוח שברצונך למחוק את \"{{title}}\"? פעולה זו אינה ניתנת לביטול."
+  }
+}

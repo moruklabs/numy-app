@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "{{source}}を{{target}}に変換できません",
+  "calculationError": "計算エラー",
+  "aiTimeout": "計算がタイムアウトしました。もう一度試しますか？",
+  "aiNetworkError": "インターネット接続を確認してもう一度お試しください",
+  "aiRateLimit": "リクエストが多すぎます。しばらくしてからもう一度お試しください",
+  "aiNotCalculable": "この式は計算できません",
+  "aiServerError": "問題が発生しました。もう一度試しますか？"
+}

@@ -1,0 +1,16 @@
+{
+  "cancel": "Hủy",
+  "clear": "Xóa",
+  "delete": "Xóa",
+  "save": "Lưu",
+  "new": "Mới",
+  "back": "Quay lại",
+  "saved": "Đã lưu",
+  "loading": "Đang tải...",
+  "share": "Chia sẻ",
+  "notFound": {
+    "title": "Rất tiếc!",
+    "message": "Màn hình này không tồn tại.",
+    "goHome": "Đi đến màn hình chính!"
+  }
+}

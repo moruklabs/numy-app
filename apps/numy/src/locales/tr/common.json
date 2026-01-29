@@ -1,0 +1,16 @@
+{
+  "cancel": "İptal",
+  "clear": "Temizle",
+  "delete": "Sil",
+  "save": "Kaydet",
+  "new": "Yeni",
+  "back": "Geri",
+  "saved": "Kaydedildi",
+  "loading": "Yükleniyor...",
+  "share": "Paylaş",
+  "notFound": {
+    "title": "Hata!",
+    "message": "Bu ekran mevcut değil.",
+    "goHome": "Ana ekrana git!"
+  }
+}

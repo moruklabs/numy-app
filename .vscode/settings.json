@@ -1,0 +1,116 @@
+{
+  // Python Configuration - Fixes false negatives for sys, ImportError, etc.
+  "python.defaultInterpreterPath": "python3",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.stubPath": "${workspaceFolder}/.vscode/python-stubs",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": false,
+  "python.formatting.provider": "none",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/.claude/hooks"
+  ],
+  // TypeScript Configuration
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // ESLint Configuration
+  "eslint.enable": true,
+  "eslint.useFlatConfig": true,
+  "eslint.workingDirectories": [
+    {
+      "pattern": "./apps/*"
+    },
+    {
+      "pattern": "./packages/*"
+    },
+    {
+      "pattern": "./workers/*"
+    },
+    {
+      "pattern": "./"
+    }
+  ],
+  // Prettier Configuration
+  "prettier.enable": true,
+  "prettier.configPath": "./prettier.config.js",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  // Editor Configuration
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.rulers": [
+    100
+  ],
+  "editor.trimAutoWhitespace": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  // File Associations
+  "files.associations": {
+    "*.tsx": "typescriptreact",
+    "*.ts": "typescript"
+  },
+  // File Exclusions (matching ESLint ignores)
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/web-build": true,
+    "**/*.jsbundle": true,
+    "**/.expo": true,
+    "**/expo-env.d.ts": true,
+    "**/.eas": true,
+    "**/eas-build-*": true,
+    "**/ios": true,
+    "**/android": true,
+    "**/.kotlin": true,
+    "**/svg.d.ts": true,
+    "**/coverage": true,
+    "**/reports": true,
+    "**/.stryker-tmp": true,
+    "**/.stryker-cache": true,
+    "**/fastlane": true,
+    ".yarn": true,
+    ".pnp.*": true,
+    "**/metro.config.js": true,
+    "**/babel.config.js": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  // Search Exclusions
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/web-build": true,
+    "**/.expo": true,
+    "**/ios": true,
+    "**/android": true,
+    "**/coverage": true,
+    "**/.yarn": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  // Yarn Workspaces
+  "yarn.enable": true,
+  "yarn.path": "yarn",
+  // React Native / Expo
+  "react-native.packager.port": 3131,
+  "expo.showDevMenu": true,
+  // Terminal Configuration
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  // Git Configuration
+  "git.ignoreLimitWarning": true,
+  "git.autofetch": true
+}

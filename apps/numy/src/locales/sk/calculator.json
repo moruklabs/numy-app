@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Moje výpočty",
+  "placeholder": "Zadajte výpočet...",
+  "total": "Suma: ",
+  "tapToShare": "klepnite pre zdieľanie",
+  "shareAccessibility": "Zdieľať sumu",
+  "inputAccessibility": "Vstup pre výpočet",
+  "inputHint": "Zadajte matematický výraz ako 5 krát 3 alebo 20% zo 100",
+  "resultAccessibility": "Výsledok: {{value}}",
+  "resultHint": "Dvojitým klepnutím zdieľajte tento výsledok",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Dvojitým klepnutím zdieľajte súhrn",
+  "document": {
+    "saveButton": "Uložiť",
+    "saveHint": "Dvojitým klepnutím uložte tento dokument do histórie",
+    "clearButton": "Vymazať",
+    "clearHint": "Dvojitým klepnutím vymažete všetky výpočty",
+    "closeHint": "Zavrieť bez uloženia",
+    "titleAccessibility": "Názov dokumentu: {{title}}",
+    "titleHint": "Dvojitým klepnutím upravíte názov dokumentu",
+    "editTitleModal": "Dialógové okno pre úpravu názvu dokumentu",
+    "titleInputLabel": "Názov dokumentu",
+    "titleInputHint": "Zadajte nový názov pre tento dokument",
+    "cancelHint": "Dvojitým klepnutím zrušíte a ponecháte aktuálny názov",
+    "saveNewTitleHint": "Dvojitým klepnutím uložíte nový názov",
+    "newDocHint": "Dvojitým klepnutím vytvoríte nový dokument. Aktuálny dokument sa automaticky uloží.",
+    "savedAlert": {
+      "title": "Uložené",
+      "message": "Dokument bol uložený do histórie"
+    },
+    "clearAlert": {
+      "title": "Vymazať dokument",
+      "message": "Ste si istí, že chcete vymazať všetky výpočty?"
+    },
+    "editTitle": "Upraviť názov",
+    "titlePlaceholder": "Názov dokumentu",
+    "lastUpdated": "aktualizované {{time}}"
+  }
+}

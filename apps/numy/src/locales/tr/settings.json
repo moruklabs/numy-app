@@ -1,0 +1,40 @@
+{
+  "title": "Ayarlar",
+  "screenTitle": "Ayarlar ekran��",
+  "cssUnits": {
+    "title": "## CSS Birimleri",
+    "description": "CSS birim dönüşümleri için temel değerleri yapılandırın",
+    "emBase": "em tabanı (px)",
+    "emBaseHint": "em hesaplamaları için temel piksel değerini girin",
+    "ppiBase": "ppi tabanı",
+    "ppiBaseHint": "Fiziksel birim hesaplamaları için inç başına düşen piksel değerini girin"
+  },
+  "about": {
+    "title": "# Hakkında",
+    "appName": "Numy - Doğal Dil Hesap Makinesi",
+    "version": "Sürüm 1.0.0",
+    "aiHighlight": "Numy, Apple Intelligence tarafından desteklenmektedir.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfUse": "Kullanım Koşulları",
+    "support": "Destek",
+    "opensInBrowser": "Tarayıcıda açılır"
+  },
+  "preferences": {
+    "title": "# Tercihler",
+    "showTotal": "Toplamı göster",
+    "showTotalHint": "Hesap makinesinin altındaki çalışan toplam çubuğunu açıp kapatın",
+    "decimalPlaces": "Ondalık basamaklar",
+    "decimalPlacesHint": "Sonuçlar için ondalık basamak sayısını girin (0-10)"
+  },
+  "resetAll": {
+    "title": "Tüm Ayarları Sil",
+    "message": "Bu, tüm notlarınızı silecek ve tüm ayarları varsayılana sıfırlayacaktır. Bu geri alınamaz.",
+    "confirm": "Tümünü Sil",
+    "cancel": "İptal",
+    "buttonLabel": "Tüm Ayarları Sil",
+    "buttonHint": "Tüm ayarları silmek ve tüm notları kaldırmak için çift dokunun"
+  }
+}

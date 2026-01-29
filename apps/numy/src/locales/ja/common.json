@@ -1,0 +1,16 @@
+{
+  "cancel": "キャンセル",
+  "clear": "クリア",
+  "delete": "削除",
+  "save": "保存",
+  "saved": "保存済み",
+  "loading": "読み込み中...",
+  "share": "共有",
+  "notFound": {
+    "title": "おっと！",
+    "message": "このページは存在しません。",
+    "goHome": "ホーム画面へ！"
+  },
+  "new": "New",
+  "back": "Back"
+}

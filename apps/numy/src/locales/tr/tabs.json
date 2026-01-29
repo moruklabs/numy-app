@@ -1,0 +1,9 @@
+{
+  "calculator": "Hesap Makinesi",
+  "history": "Geçmiş",
+  "settings": "Ayarlar",
+  "calculatorTab": "Hesap makinesi sekmesi, hesaplamaları girin ve sonuçları görün",
+  "historyTab": "Geçmiş sekmesi, kaydedilmiş hesaplamalarınızı görüntüleyin",
+  "settingsTab": "Ayarlar sekmesi, uygulama tercihlerini yapılandırın",
+  "newDocument": "Yeni hesaplama"
+}

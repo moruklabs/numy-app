@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Hesaplamalarım",
+  "placeholder": "Hesaplama yazın...",
+  "total": "Toplam: ",
+  "tapToShare": "paylaşmak için dokunun",
+  "shareAccessibility": "Toplamı paylaş",
+  "inputAccessibility": "Hesaplama girişi",
+  "inputHint": "5 çarpı 3 veya 100'ün %20'si gibi bir matematik ifadesi yazın",
+  "resultAccessibility": "Sonuç: {{value}}",
+  "resultHint": "Bu sonucu paylaşmak için çift dokunun",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Toplamı paylaşmak için çift dokunun",
+  "document": {
+    "saveButton": "Kaydet",
+    "saveHint": "Bu belgeyi geçmişe kaydetmek için çift dokunun",
+    "clearButton": "Temizle",
+    "clearHint": "Tüm hesaplamaları temizlemek için çift dokunun",
+    "closeHint": "Kaydetmeden kapat",
+    "titleAccessibility": "Belge başlığı: {{title}}",
+    "titleHint": "Belge başlığını düzenlemek için çift dokunun",
+    "editTitleModal": "Belge başlığını düzenleme iletişim kutusu",
+    "titleInputLabel": "Belge başlığı",
+    "titleInputHint": "Bu belge için yeni bir başlık girin",
+    "cancelHint": "İptal etmek ve mevcut başlığı korumak için çift dokunun",
+    "saveNewTitleHint": "Yeni başlığı kaydetmek için çift dokunun",
+    "newDocHint": "Yeni bir belge oluşturmak için çift dokunun. Mevcut belge otomatik olarak kaydedilecektir.",
+    "savedAlert": {
+      "title": "Kaydedildi",
+      "message": "Belge geçmişe kaydedildi"
+    },
+    "clearAlert": {
+      "title": "Belgeyi Temizle",
+      "message": "Tüm hesaplamaları temizlemek istediğinizden emin misiniz?"
+    },
+    "editTitle": "Başlığı Düzenle",
+    "titlePlaceholder": "Belge başlığı",
+    "lastUpdated": "{{time}} tarihinde güncellendi"
+  }
+}

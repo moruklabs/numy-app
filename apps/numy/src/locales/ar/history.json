@@ -1,0 +1,24 @@
+{
+  "title": "التاريخ",
+  "screenTitle": "شاشة التا��يخ تعرض العمليات الحسابية المحفوظة",
+  "listAccessibility": "قائمة المستندات المحفوظة وتحتوي على {{count}} مستند",
+  "documentAccessibility": "{{title}}، تم الحفظ في {{date}}، {{count}} عملية حسابية",
+  "documentHint": "انقر نقرًا مزدوجًا لفتح. استخدم قائمة الإجراءات للحذف.",
+  "openAction": "فتح المستند",
+  "deleteAction": "حذف المستند",
+  "lastEdited": "آخر تعديل",
+  "emptyState": {
+    "title": "# لا توجد عمليات حسابية محفوظة بعد",
+    "subtitle": "ستظهر عملياتك الحسابية المحفوظة هنا بعد حفظ مستند"
+  },
+  "sections": {
+    "examples": "# أمثلة",
+    "history": "# التاريخ"
+  },
+  "lineCount_one": "{{count}} سطر",
+  "lineCount_other": "{{count}} أسطر",
+  "deleteAlert": {
+    "title": "حذف المستند",
+    "message": "هل أنت متأكد من رغبتك في حذف \"{{title}}\"؟ لا يمكن التراجع عن هذا الإجراء."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Tetapan",
+  "screenTitle": "Skrin Tetapan",
+  "cssUnits": {
+    "title": "## Unit CSS",
+    "description": "Konfigurasikan nilai asas untuk penukaran unit CSS",
+    "emBase": "Asas em (px)",
+    "emBaseHint": "Masukkan nilai piksel asas untuk pengiraan em",
+    "ppiBase": "Asas ppi",
+    "ppiBaseHint": "Masukkan nilai piksel per inci untuk pengiraan unit fizikal"
+  },
+  "about": {
+    "title": "# Tentang",
+    "appName": "Numy - Kalkulator Bahasa Semula Jadi",
+    "version": "Versi 1.0.0",
+    "aiHighlight": "Numy diperkasakan oleh Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Dasar Privasi",
+    "termsOfUse": "Terma Penggunaan",
+    "support": "Sokongan",
+    "opensInBrowser": "Buka dalam pelayar"
+  },
+  "preferences": {
+    "title": "# Pilihan",
+    "showTotal": "Tunjukkan jumlah larian",
+    "showTotalHint": "Togol bar jumlah larian di bahagian bawah kalkulator",
+    "decimalPlaces": "Tempat perpuluhan",
+    "decimalPlacesHint": "Masukkan bilangan tempat perpuluhan untuk hasil (0-10)"
+  },
+  "resetAll": {
+    "title": "Padam Semua Tetapan",
+    "message": "Ini akan memadam semua nota anda dan menetapkan semula semua tetapan kepada lalai. Ini tidak boleh dibatalkan.",
+    "confirm": "Padam Semua",
+    "cancel": "Batal",
+    "buttonLabel": "Padam Semua Tetapan",
+    "buttonHint": "Ketik dua kali untuk memadam semua tetapan dan memadam semua nota"
+  }
+}

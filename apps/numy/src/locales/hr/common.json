@@ -1,0 +1,16 @@
+{
+  "cancel": "Odustani",
+  "clear": "Obriši",
+  "delete": "Izbriši",
+  "save": "Spremi",
+  "new": "Novo",
+  "back": "Nazad",
+  "saved": "Spremljeno",
+  "loading": "Učitavanje...",
+  "share": "Dijeli",
+  "notFound": {
+    "title": "Ups!",
+    "message": "Ovaj zaslon ne postoji.",
+    "goHome": "Idi na početni zaslon!"
+  }
+}

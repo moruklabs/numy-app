@@ -1,0 +1,9 @@
+{
+  "calculator": "Laskin",
+  "history": "Historia",
+  "settings": "Asetukset",
+  "calculatorTab": "Laskin-välilehti, syötä laskutoimituksia ja näe tulokset",
+  "historyTab": "Historia-välilehti, tarkastele tallennettuja laskutoimituksiasi",
+  "settingsTab": "Asetukset-välilehti, määritä sovelluksen asetukset",
+  "newDocument": "Uusi laskutoimitus"
+}

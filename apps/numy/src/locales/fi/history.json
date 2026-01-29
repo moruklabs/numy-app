@@ -1,0 +1,24 @@
+{
+  "title": "Historia",
+  "screenTitle": "Historia-näyttö, jossa näkyvät tallennetut laskelmat",
+  "listAccessibility": "Tallennusluettelo, jossa on {{count}} asiakirjaa",
+  "documentAccessibility": "{{title}}, tallennettu {{date}}, {{count}} laskelmaa",
+  "documentHint": "Avaa kaksoisnapauttamalla. Poista toimintovalikosta.",
+  "openAction": "Avaa asiakirja",
+  "deleteAction": "Poista asiakirja",
+  "lastEdited": "viimeksi muokattu",
+  "emptyState": {
+    "title": "# Ei tallennettuja laskelmia",
+    "subtitle": "Tallennetut laskelmasi näkyvät täällä, kun olet tallentanut asiakirjan"
+  },
+  "sections": {
+    "examples": "# Esimerkit",
+    "history": "# Historia"
+  },
+  "lineCount_one": "{{count}} rivi",
+  "lineCount_other": "{{count}} riviä",
+  "deleteAlert": {
+    "title": "Poista asiakirja",
+    "message": "Haluatko varmasti poistaa asiakirjan \"{{title}}\"? Tätä toimintoa ei voi peruuttaa."
+  }
+}

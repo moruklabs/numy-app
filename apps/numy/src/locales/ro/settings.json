@@ -1,0 +1,40 @@
+{
+  "title": "Setări",
+  "screenTitle": "Ecranul de setări",
+  "cssUnits": {
+    "title": "## Unități CSS",
+    "description": "Configurați valorile de bază pentru conversiile unităților CSS",
+    "emBase": "Baza em (px)",
+    "emBaseHint": "Introduceți valoarea de bază în pixeli pentru calculele em",
+    "ppiBase": "Baza ppi",
+    "ppiBaseHint": "Introduceți valoarea de pixeli pe inch pentru calculele unităților fizice"
+  },
+  "about": {
+    "title": "# Despre",
+    "appName": "Numy - Calculator în Limbaj Natural",
+    "version": "Versiunea 1.0.0",
+    "aiHighlight": "Numy este alimentat de Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Politica de Confidențialitate",
+    "termsOfUse": "Termeni de Utilizare",
+    "support": "Suport",
+    "opensInBrowser": "Se deschide în browser"
+  },
+  "preferences": {
+    "title": "# Preferințe",
+    "showTotal": "Afișează totalul curent",
+    "showTotalHint": "Comută bara totalului curent din partea de jos a calculatorului",
+    "decimalPlaces": "Zecimale",
+    "decimalPlacesHint": "Introduceți numărul de zecimale pentru rezultate (0-10)"
+  },
+  "resetAll": {
+    "title": "Șterge Toate Setările",
+    "message": "Aceasta va șterge toate notițele și va reseta toate setările la valorile implicite. Această acțiune nu poate fi anulată.",
+    "confirm": "Șterge Tot",
+    "cancel": "Anulează",
+    "buttonLabel": "Șterge Toate Setările",
+    "buttonHint": "Atingeți de două ori pentru a șterge toate setările și a șterge toate notițele"
+  }
+}

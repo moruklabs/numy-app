@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Mina beräkningar",
+  "placeholder": "Skriv beräkning...",
+  "total": "Totalt: ",
+  "tapToShare": "tryck för att dela",
+  "shareAccessibility": "Dela totalen",
+  "inputAccessibility": "Beräkningsinmatning",
+  "inputHint": "Skriv ett matematiskt uttryck som 5 gånger 3 eller 20% av 100",
+  "resultAccessibility": "Resultat: {{value}}",
+  "resultHint": "Dubbeltryck för att dela detta resultat",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Dubbeltryck för att dela totalen",
+  "document": {
+    "saveButton": "Spara",
+    "saveHint": "Dubbeltryck för att spara detta dokument i historiken",
+    "clearButton": "Rensa",
+    "clearHint": "Dubbeltryck för att rensa alla beräkningar",
+    "closeHint": "Stäng utan att spara",
+    "titleAccessibility": "Dokumenttitel: {{title}}",
+    "titleHint": "Dubbeltryck för att redigera dokumenttiteln",
+    "editTitleModal": "Dialogruta för att redigera dokumenttitel",
+    "titleInputLabel": "Dokumenttitel",
+    "titleInputHint": "Ange en ny titel för detta dokument",
+    "cancelHint": "Dubbeltryck för att avbryta och behålla nuvarande titel",
+    "saveNewTitleHint": "Dubbeltryck för att spara den nya titeln",
+    "newDocHint": "Dubbeltryck för att skapa ett nytt dokument. Nuvarande dokument sparas automatiskt.",
+    "savedAlert": {
+      "title": "Sparat",
+      "message": "Dokument sparat i historiken"
+    },
+    "clearAlert": {
+      "title": "Rensa dokument",
+      "message": "Är du säker på att du vill rensa alla beräkningar?"
+    },
+    "editTitle": "Redigera titel",
+    "titlePlaceholder": "Dokumenttitel",
+    "lastUpdated": "uppdaterad {{time}}"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Kalkulasi Saya",
+  "placeholder": "Ketik kalkulasi...",
+  "total": "Total: ",
+  "tapToShare": "ketuk untuk berbagi",
+  "shareAccessibility": "Bagikan total",
+  "inputAccessibility": "Input kalkulasi",
+  "inputHint": "Ketik ekspresi matematika seperti 5 kali 3 atau 20% dari 100",
+  "resultAccessibility": "Hasil: {{value}}",
+  "resultHint": "Ketuk dua kali untuk membagikan hasil ini",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Ketuk dua kali untuk membagikan total",
+  "document": {
+    "saveButton": "Simpan",
+    "saveHint": "Ketuk dua kali untuk menyimpan dokumen ini ke riwayat",
+    "clearButton": "Hapus",
+    "clearHint": "Ketuk dua kali untuk menghapus semua kalkulasi",
+    "closeHint": "Tutup tanpa menyimpan",
+    "titleAccessibility": "Judul dokumen: {{title}}",
+    "titleHint": "Ketuk dua kali untuk mengedit judul dokumen",
+    "editTitleModal": "Dialog edit judul dokumen",
+    "titleInputLabel": "Judul dokumen",
+    "titleInputHint": "Masukkan judul baru untuk dokumen ini",
+    "cancelHint": "Ketuk dua kali untuk membatalkan dan mempertahankan judul saat ini",
+    "saveNewTitleHint": "Ketuk dua kali untuk menyimpan judul baru",
+    "newDocHint": "Ketuk dua kali untuk membuat dokumen baru. Dokumen saat ini akan disimpan secara otomatis.",
+    "savedAlert": {
+      "title": "Tersimpan",
+      "message": "Dokumen telah disimpan ke riwayat"
+    },
+    "clearAlert": {
+      "title": "Hapus Dokumen",
+      "message": "Apakah Anda yakin ingin menghapus semua kalkulasi?"
+    },
+    "editTitle": "Edit Judul",
+    "titlePlaceholder": "Judul dokumen",
+    "lastUpdated": "diperbarui {{time}}"
+  }
+}

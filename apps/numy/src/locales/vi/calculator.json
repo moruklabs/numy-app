@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Các phép tính của tôi",
+  "placeholder": "Nhập phép tính...",
+  "total": "Tổng cộng: ",
+  "tapToShare": "chạm để chia sẻ",
+  "shareAccessibility": "Chia sẻ tổng",
+  "inputAccessibility": "Đầu vào phép tính",
+  "inputHint": "Nhập một biểu thức toán học như 5 nhân 3 hoặc 20% của 100",
+  "resultAccessibility": "Kết quả: {{value}}",
+  "resultHint": "Chạm hai lần để chia sẻ kết quả này",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Chạm hai lần để chia sẻ tổng",
+  "document": {
+    "saveButton": "Lưu",
+    "saveHint": "Chạm hai lần để lưu tài liệu này vào lịch sử",
+    "clearButton": "Xóa",
+    "clearHint": "Chạm hai lần để xóa tất cả các phép tính",
+    "closeHint": "Đóng mà không lưu",
+    "titleAccessibility": "Tiêu đề tài liệu: {{title}}",
+    "titleHint": "Chạm hai lần để chỉnh sửa tiêu đề tài liệu",
+    "editTitleModal": "Hộp thoại chỉnh sửa tiêu đề tài liệu",
+    "titleInputLabel": "Tiêu đề tài liệu",
+    "titleInputHint": "Nhập tiêu đề mới cho tài liệu này",
+    "cancelHint": "Chạm hai lần để hủy và giữ tiêu đề hiện tại",
+    "saveNewTitleHint": "Chạm hai lần để lưu tiêu đề mới",
+    "newDocHint": "Chạm hai lần để tạo tài liệu mới. Tài liệu hiện tại sẽ được tự động lưu.",
+    "savedAlert": {
+      "title": "Đã lưu",
+      "message": "Tài liệu đã được lưu vào lịch sử"
+    },
+    "clearAlert": {
+      "title": "Xóa Tài liệu",
+      "message": "Bạn có chắc chắn muốn xóa tất cả các phép tính không?"
+    },
+    "editTitle": "Chỉnh sửa Tiêu đề",
+    "titlePlaceholder": "Tiêu đề tài liệu",
+    "lastUpdated": "cập nhật {{time}}"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "myCalculations": "החישובים שלי",
+  "placeholder": "הקלד חישוב...",
+  "total": "סה\"כ: ",
+  "tapToShare": "הקש כדי לשתף",
+  "shareAccessibility": "שתף סכום כולל",
+  "inputAccessibility": "קלט חישוב",
+  "inputHint": "הקלד ביטוי מתמטי כמו 5 כפול 3 או 20% מתוך 100",
+  "resultAccessibility": "תוצאה: {{value}}",
+  "resultHint": "הקש פעמיים כדי לשתף תוצאה זו",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "הקש פעמיים כדי לשתף את הסכום הכולל",
+  "document": {
+    "saveButton": "שמור",
+    "saveHint": "הקש פעמיים כדי לשמור מסמך זה בהיסטוריה",
+    "clearButton": "נקה",
+    "clearHint": "הקש פעמיים כדי לנקות את כל החישובים",
+    "closeHint": "סגור ללא שמירה",
+    "titleAccessibility": "כותרת המסמך: {{title}}",
+    "titleHint": "הקש פעמיים כדי לערוך את כותרת המסמך",
+    "editTitleModal": "חלון עריכת כותרת המסמך",
+    "titleInputLabel": "כותרת המסמך",
+    "titleInputHint": "הזן כותרת חדשה למסמך זה",
+    "cancelHint": "הקש פעמיים כדי לבטל ולשמור על הכותרת הנוכחית",
+    "saveNewTitleHint": "הקש פעמיים כדי לשמור את הכותרת החדשה",
+    "newDocHint": "הקש פעמיים כדי ליצור מסמך חדש. המסמך הנוכחי יישמר אוטומטית.",
+    "savedAlert": {
+      "title": "נשמר",
+      "message": "המסמך נשמר בהיסטוריה"
+    },
+    "clearAlert": {
+      "title": "נקה מסמך",
+      "message": "האם אתה בטוח שברצונך לנקות את כל החישובים?"
+    },
+    "editTitle": "ערוך כותרת",
+    "titlePlaceholder": "כותרת המסמך",
+    "lastUpdated": "עודכן {{time}}"
+  }
+}

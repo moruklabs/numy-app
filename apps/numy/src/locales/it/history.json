@@ -1,0 +1,24 @@
+{
+  "title": "Cronologia",
+  "screenTitle": "Schermata cronologia che mostra i calcoli salvati",
+  "listAccessibility": "Elenco documenti salvati con {{count}} documenti",
+  "documentAccessibility": "{{title}}, salvato il {{date}}, {{count}} calcoli",
+  "documentHint": "Tocca due volte per aprire. Usa il menu azioni per eliminare.",
+  "openAction": "Apri documento",
+  "deleteAction": "Elimina documento",
+  "emptyState": {
+    "title": "# Nessun calcolo salvato",
+    "subtitle": "I tuoi calcoli salvati appariranno qui"
+  },
+  "lineCount_one": "{{count}} riga",
+  "lineCount_other": "{{count}} righe",
+  "deleteAlert": {
+    "title": "Elimina Documento",
+    "message": "Sei sicuro di voler eliminare \"{{title}}\"? Questa azione non può essere annullata."
+  },
+  "lastEdited": "last edited",
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "History",
+  "screenTitle": "History screen showing saved calculations",
+  "listAccessibility": "Saved documents list with {{count}} documents",
+  "documentAccessibility": "{{title}}, saved on {{date}}, {{count}} calculations",
+  "documentHint": "Double tap to open. Use actions menu to delete.",
+  "openAction": "Open document",
+  "deleteAction": "Delete document",
+  "lastEdited": "last edited",
+  "emptyState": {
+    "title": "# No saved calculations yet",
+    "subtitle": "Your saved calculations will appear here after you save a document"
+  },
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  },
+  "lineCount_one": "{{count}} line",
+  "lineCount_other": "{{count}} lines",
+  "deleteAlert": {
+    "title": "Delete Document",
+    "message": "Are you sure you want to delete \"{{title}}\"? This action cannot be undone."
+  }
+}

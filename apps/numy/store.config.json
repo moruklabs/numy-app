@@ -1,0 +1,617 @@
+{
+  "configVersion": 0,
+  "apple": {
+    "version": "1.0.0",
+    "copyright": "© 2026 Moruk Labs.",
+    "release": {
+      "automaticRelease": true
+    },
+    "categories": [
+      "UTILITIES",
+      "PRODUCTIVITY"
+    ],
+    "review": {
+      "firstName": "Fatih",
+      "lastName": "Yavuz",
+      "email": "fatih@moruk.ai",
+      "phone": "+18884322048",
+      "demoRequired": false,
+      "notes": "Thanks for your effort!"
+    },
+    "info": {
+      "ar-SA": {
+        "title": "Numy: آلة حاسبة طبيعية",
+        "subtitle": "اكتب واحسب بشكل طبيعي",
+        "description": "احسب بشكل طبيعي، تماماً كما تفكر. Numy آلة حاسبة جميلة تفهم اللغة العربية البسيطة. اكتب '6 دولار ضرب 5' أو 'خصم 20% على 50 دولار' أو '100 كم بالأميال' - إجابات فورية أثناء الكتابة.\n\nلماذا ستحب Numy:\n\n• إدخال باللغة الطبيعية: اكتب الحسابات بالعربية البسيطة\n• نتائج فورية: شاهد الإجابات أثناء الكتابة\n• تحويلات ذكية: حوّل الوحدات والعملات وأكثر\n• تصميم جميل: واجهة نظيفة وبديهية\n• بدون أزرار: فقط اكتب بشكل طبيعي\n\nالميزات الرئيسية:\n• حسابات بالعربية البسيطة\n• تحويل الوحدات (المسافة، درجة الحرارة، إلخ)\n• حسابات النسب المئوية\n• تحويل العملات\n• التعبيرات الرياضية\n• تتبع السجل\n• دعم الوضع الداكن\n• الخصوصية أولاً: لا حاجة لحساب\n\nلمن هذا التطبيق؟\n• الطلاب والمعلمين\n• المتسوقين الذين يحسبون الخصومات\n• المسافرين الذين يحولون الوحدات\n• أي شخص يفضل الكتابة على النقر\n\nتوقف عن النقر على الأزرار وابدأ الكتابة بشكل طبيعي! حمّل Numy مجاناً اليوم واختبر مستقبل الحسابات!\n\n*Numy مصمم للحسابات والتحويلات اليومية. للحسابات العلمية المعقدة، فكر في استخدام أدوات متخصصة.*",
+        "keywords": [
+          "آلة حاسبة",
+          "لغة طبيعية",
+          "محول وحدات",
+          "رياضيات",
+          "نسبة مئوية"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "ca": {
+        "title": "Numy: Calculadora Natural",
+        "subtitle": "Escriu i Calcula Naturalment",
+        "description": "Calcula naturalment, tal com penses. Numy és una bonica calculadora que entén català senzill. Escriu '$6 per 5', '20% de descompte a $50', o '100km en milles' - respostes instantànies mentre escrius.\n\nPer què t'agradarà Numy:\n\n• Entrada en Llenguatge Natural: Escriu càlculs en català senzill\n• Resultats Instantanis: Veu les respostes mentre escrius\n• Conversions Intel·ligents: Converteix unitats, monedes i més\n• Disseny Bonic: Interfície neta i intuïtiva\n• Sense Botons: Només escriu naturalment\n\nCaracterístiques Principals:\n• Càlculs en català senzill\n• Conversions d'unitats (distància, temperatura, etc.)\n• Càlculs de percentatges\n• Conversions de moneda\n• Expressions matemàtiques\n• Seguiment de l'historial\n• Suport de mode fosc\n• Privacitat primer: No cal compte\n\nPer a qui és aquesta aplicació?\n• Estudiants i professors\n• Compradors calculant descomptes\n• Viatgers convertint unitats\n• Qualsevol que prefereixi escriure en lloc de tocar\n\nDeixes de tocar botons i comença a escriure naturalment! Descarrega Numy GRATUÏTAMENT avui i experimenta el futur dels càlculs!\n\n*Numy està dissenyada per a càlculs i conversions quotidianes. Per a càlculs científics complexos, considera utilitzar eines especialitzades.*",
+        "keywords": [
+          "calculadora",
+          "llenguatge natural",
+          "convertidor unitats",
+          "matemàtiques",
+          "percentatge"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "cs": {
+        "title": "Numy: Přirozená Kalkulačka",
+        "subtitle": "Pište a Počítejte Přirozeně",
+        "description": "Počítejte přirozeně, přesně jak myslíte. Numy je krásná kalkulačka, která rozumí jednoduché češtině. Napište '$6 krát 5', '20% sleva na $50', nebo '100km v mílích' - okamžité odpovědi při psaní.\n\nProč budete Numy milovat:\n\n• Vstup v Přirozeném Jazyce: Pište výpočty v jednoduché češtině\n• Okamžité Výsledky: Vidíte odpovědi při psaní\n• Chytré Konverze: Převádějte jednotky, měny a další\n• Krásný Design: Čisté, intuitivní rozhraní\n• Žádná Tlačítka: Jen pište přirozeně\n\nHlavní Funkce:\n• Výpočty v jednoduché češtině\n• Převody jednotek (vzdálenost, teplota atd.)\n• Procentuální výpočty\n• Převody měn\n• Matematické výrazy\n• Sledování historie\n• Podpora tmavého režimu\n• Soukromí na prvním místě: Účet není vyžadován\n\nPro koho je tato aplikace?\n• Studenti a učitelé\n• Nakupující počítající slevy\n• Cestovatelé převádějící jednotky\n• Kdokoli, kdo dává přednost psaní před ťukáním\n\nPřestaňte ťukat na tlačítka a začněte psát přirozeně! Stáhněte si Numy ZDARMA dnes a zažijte budoucnost výpočtů!\n\n*Numy je navržena pro každodenní výpočty a převody. Pro složité vědecké výpočty zvažte použití specializovaných nástrojů.*",
+        "keywords": [
+          "kalkulačka",
+          "přirozený jazyk",
+          "převodník jednotek",
+          "matematika",
+          "procento"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "da": {
+        "title": "Numy: Naturlig Lommeregner",
+        "subtitle": "Skriv & Beregn Naturligt",
+        "description": "Beregn naturligt, præcis som du tænker. Numy er en smuk lommeregner, der forstår simpel dansk. Skriv '$6 gange 5', '20% rabat på $50', eller '100km i miles' - øjeblikkelige svar mens du skriver.\n\nHvorfor du vil elske Numy:\n\n• Naturligt Sprog Input: Skriv beregninger på simpel dansk\n• Øjeblikkelige Resultater: Se svar mens du skriver\n• Smart Konvertering: Konverter enheder, valutaer og mere\n• Smukt Design: Rent, intuitivt interface\n• Ingen Knapper: Bare skriv naturligt\n\nHovedfunktioner:\n• Simple danske beregninger\n• Enhedskonverteringer (afstand, temperatur, osv.)\n• Procentberegninger\n• Valutakonvertering\n• Matematiske udtryk\n• Historiesporing\n• Mørk tilstand-understøttelse\n• Privatliv først: Ingen konto påkrævet\n\nHvem er denne app til?\n• Studerende og lærere\n• Shoppere der beregner rabatter\n• Rejsende der konverterer enheder\n• Alle der foretrækker at skrive frem for at trykke\n\nStop med at trykke på knapper og begynd at skrive naturligt! Download Numy GRATIS i dag og oplev fremtiden for beregninger!\n\n*Numy er designet til daglige beregninger og konverteringer. For komplekse videnskabelige beregninger, overvej at bruge specialiserede værktøjer.*",
+        "keywords": [
+          "lommeregner",
+          "naturligt sprog",
+          "enhedskonverter",
+          "matematik",
+          "procent"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "de-DE": {
+        "title": "Numy: Natürlicher Rechner",
+        "subtitle": "Natürlich Tippen & Rechnen",
+        "description": "Rechnen Sie natürlich, so wie Sie denken. Numy ist ein schöner Rechner, der einfaches Deutsch versteht. Tippen Sie '6€ mal 5', '20% Rabatt auf 50€', oder '100km in Meilen' - sofortige Antworten beim Tippen.\n\nWarum Sie Numy lieben werden:\n\n• Natürlichsprachliche Eingabe: Schreiben Sie Berechnungen in einfachem Deutsch\n• Sofortige Ergebnisse: Sehen Sie Antworten beim Tippen\n• Intelligente Konvertierungen: Konvertieren Sie Einheiten, Währungen und mehr\n• Schönes Design: Saubere, intuitive Oberfläche\n• Keine Tasten: Einfach natürlich tippen\n\nHauptmerkmale:\n• Berechnungen in einfachem Deutsch\n• Einheitenkonvertierung (Entfernung, Temperatur, etc.)\n• Prozentberechnungen\n• Währungskonvertierung\n• Mathematische Ausdrücke\n• Verlaufsverfolgung\n• Dunkelmodus-Unterstützung\n• Datenschutz zuerst: Kein Konto erforderlich\n\nFür wen ist diese App?\n• Studenten und Lehrer\n• Käufer, die Rabatte berechnen\n• Reisende, die Einheiten umrechnen\n• Jeder, der lieber tippt als tippt\n\nHören Sie auf, Tasten zu drücken und beginnen Sie natürlich zu tippen! Laden Sie Numy KOSTENLOS herunter und erleben Sie die Zukunft der Berechnungen!\n\n*Numy ist für alltägliche Berechnungen und Konvertierungen konzipiert. Für komplexe wissenschaftliche Berechnungen sollten Sie spezialisierte Tools verwenden.*",
+        "keywords": [
+          "rechner",
+          "natürliche sprache",
+          "einheitenkonverter",
+          "mathematik",
+          "prozent"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "el": {
+        "title": "Numy: Φυσική Αριθμομηχανή",
+        "subtitle": "Γράψτε & Υπολογίστε Φυσικά",
+        "description": "Υπολογίστε φυσικά, όπως ακριβώς σκέφτεστε. Η Numy είναι μια όμορφη αριθμομηχανή που καταλαβαίνει απλά Ελληνικά. Γράψτε '$6 επί 5', '20% έκπτωση στα $50', ή '100χλμ σε μίλια' - άμεσες απαντήσεις καθώς πληκτρολογείτε.\n\nΓιατί θα λατρέψετε τη Numy:\n\n• Είσοδος Φυσικής Γλώσσας: Γράψτε υπολογισμούς σε απλά Ελληνικά\n• Άμεσα Αποτελέσματα: Δείτε απαντήσεις καθώς πληκτρολογείτε\n• Έξυπνες Μετατροπές: Μετατρέψτε μονάδες, νομίσματα και άλλα\n• Όμορφος Σχεδιασμός: Καθαρή, διαισθητική διεπαφή\n• Χωρίς Κουμπιά: Απλά πληκτρολογήστε φυσικά\n\nΚύρια Χαρακτηριστικά:\n• Απλοί ελληνικοί υπολογισμοί\n• Μετατροπές μονάδων (απόσταση, θερμοκρασία κ.λπ.)\n• Υπολογισμοί ποσοστών\n• Μετατροπές νομισμάτων\n• Μαθηματικές εκφράσεις\n• Παρακολούθηση ιστορικού\n• Υποστήριξη σκούρου θέματος\n• Απόρρητο πρώτα: Δεν απαιτείται λογαριασμός\n\nΓια ποιους είναι αυτή η εφαρμογή;\n• Μαθητές και δάσκαλοι\n• Αγοραστές που υπολογίζουν εκπτώσεις\n• Ταξιδιώτες που μετατρέπουν μονάδες\n• Όποιος προτιμά να πληκτρολογεί παρά να πατά\n\nΣταματήστε να πατάτε κουμπιά και αρχίστε να πληκτρολογείτε φυσικά! Κατεβάστε τη Numy ΔΩΡΕΑΝ σήμερα και ζήστε το μέλλον των υπολογισμών!\n\n*Η Numy είναι σχεδιασμένη για καθημερινούς υπολογισμούς και μετατροπές. Για περίπλοκους επιστημονικούς υπολογισμούς, εξετάστε τη χρήση εξειδικευμένων εργαλείων.*",
+        "keywords": [
+          "αριθμομηχανή",
+          "φυσική γλώσσα",
+          "μετατροπέας μονάδων",
+          "μαθηματικά",
+          "ποσοστό"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "en-AU": {
+        "title": "Numy: Natural Calculator",
+        "subtitle": "Type & Calculate Naturally",
+        "description": "Calculate naturally, just like you think. Numy is a beautiful calculator that understands plain English. Type '$6 times 5', '20% off $50', or '100km in miles' - instant answers as you type.\n\nWhy You'll Love Numy:\n\n• Natural Language Input: Type calculations in plain English\n• Instant Results: See answers as you type\n• Smart Conversions: Convert units, currencies, and more\n• Beautiful Design: Clean, intuitive interface\n• No Buttons: Just type naturally\n\nKey Features:\n• Plain English calculations\n• Unit conversions (distance, temperature, etc.)\n• Percentage calculations\n• Currency conversions\n• Mathematical expressions\n• History tracking\n• Dark mode support\n• Privacy-first: No account required\n\nWho Is This App For?\n• Students and teachers\n• Shoppers calculating discounts\n• Travellers converting units\n• Anyone who prefers typing over tapping\n\nStop tapping buttons and start typing naturally! Download Numy FREE today and experience the future of calculations!\n\n*Numy is designed for everyday calculations and conversions. For complex scientific calculations, consider using specialised tools.*",
+        "keywords": [
+          "calculator",
+          "natural language",
+          "unit converter",
+          "maths",
+          "percentage",
+          "currency"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "en-CA": {
+        "title": "Numy: Natural Calculator",
+        "subtitle": "Type & Calculate Naturally",
+        "description": "Calculate naturally, just like you think. Numy is a beautiful calculator that understands plain English. Type '$6 times 5', '20% off $50', or '100km in miles' - instant answers as you type.\n\nWhy You'll Love Numy:\n\n• Natural Language Input: Type calculations in plain English\n• Instant Results: See answers as you type\n• Smart Conversions: Convert units, currencies, and more\n• Beautiful Design: Clean, intuitive interface\n• No Buttons: Just type naturally\n\nKey Features:\n• Plain English calculations\n• Unit conversions (distance, temperature, etc.)\n• Percentage calculations\n• Currency conversions\n• Mathematical expressions\n• History tracking\n• Dark mode support\n• Privacy-first: No account required\n\nWho Is This App For?\n• Students and teachers\n• Shoppers calculating discounts\n• Travellers converting units\n• Anyone who prefers typing over tapping\n\nStop tapping buttons and start typing naturally! Download Numy FREE today and experience the future of calculations!\n\n*Numy is designed for everyday calculations and conversions. For complex scientific calculations, consider using specialized tools.*",
+        "keywords": [
+          "calculator",
+          "natural language",
+          "unit converter",
+          "math",
+          "percentage",
+          "currency"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "en-GB": {
+        "title": "Numy: Natural Calculator",
+        "subtitle": "Type & Calculate Naturally",
+        "description": "Calculate naturally, just like you think. Numy is a beautiful calculator that understands plain English. Type '£6 times 5', '20% off £50', or '100km in miles' - instant answers as you type.\n\nWhy You'll Love Numy:\n\n• Natural Language Input: Type calculations in plain English\n• Instant Results: See answers as you type\n• Smart Conversions: Convert units, currencies, and more\n• Beautiful Design: Clean, intuitive interface\n• No Buttons: Just type naturally\n\nKey Features:\n• Plain English calculations\n• Unit conversions (distance, temperature, etc.)\n• Percentage calculations\n• Currency conversions\n• Mathematical expressions\n• History tracking\n• Dark mode support\n• Privacy-first: No account required\n\nWho Is This App For?\n• Students and teachers\n• Shoppers calculating discounts\n• Travellers converting units\n• Anyone who prefers typing over tapping\n\nStop tapping buttons and start typing naturally! Download Numy FREE today and experience the future of calculations!\n\n*Numy is designed for everyday calculations and conversions. For complex scientific calculations, consider using specialised tools.*",
+        "keywords": [
+          "calculator",
+          "natural language",
+          "unit converter",
+          "maths",
+          "percentage",
+          "currency"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "en-US": {
+        "title": "Numy: Natural Calculator",
+        "subtitle": "Type & Calculate Naturally",
+        "description": "Calculate naturally, just like you think. Numy is a beautiful calculator that understands plain English. Type '$6 times 5', '20% off $50', or '100km in miles' - instant answers as you type.\n\nWhy You'll Love Numy:\n\n• Natural Language Input: Type calculations in plain English\n• Instant Results: See answers as you type\n• Smart Conversions: Convert units, currencies, and more\n• Beautiful Design: Clean, intuitive interface\n• No Buttons: Just type naturally\n\nKey Features:\n• Plain English calculations\n• Unit conversions (distance, temperature, etc.)\n• Percentage calculations\n• Currency conversions\n• Mathematical expressions\n• History tracking\n• Dark mode support\n• Privacy-first: No account required\n\nWho Is This App For?\n• Students and teachers\n• Shoppers calculating discounts\n• Travelers converting units\n• Anyone who prefers typing over tapping\n\nStop tapping buttons and start typing naturally! Download Numy FREE today and experience the future of calculations!\n\n*Numy is designed for everyday calculations and conversions. For complex scientific calculations, consider using specialized tools.*",
+        "keywords": [
+          "calculator",
+          "natural language",
+          "unit converter",
+          "math",
+          "percentage",
+          "currency"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "es-ES": {
+        "title": "Numy: Calculadora Natural",
+        "subtitle": "Escribe y Calcula Naturalmente",
+        "description": "Calcula de forma natural, tal como piensas. Numy es una hermosa calculadora que entiende español simple. Escribe '$6 por 5', '20% de descuento en $50', o '100km en millas' - respuestas instantáneas mientras escribes.\n\nPor qué te encantará Numy:\n\n• Entrada en Lenguaje Natural: Escribe cálculos en español simple\n• Resultados Instantáneos: Ve las respuestas mientras escribes\n• Conversiones Inteligentes: Convierte unidades, monedas y más\n• Diseño Hermoso: Interfaz limpia e intuitiva\n• Sin Botones: Solo escribe naturalmente\n\nCaracterísticas Clave:\n• Cálculos en español simple\n• Conversiones de unidades (distancia, temperatura, etc.)\n• Cálculos de porcentajes\n• Conversiones de moneda\n• Expresiones matemáticas\n• Seguimiento de historial\n• Soporte de modo oscuro\n• Privacidad primero: No requiere cuenta\n\n¿Para quién es esta app?\n• Estudiantes y profesores\n• Compradores calculando descuentos\n• Viajeros convirtiendo unidades\n• Cualquiera que prefiera escribir en vez de tocar\n\n¡Deja de tocar botones y empieza a escribir naturalmente! Descarga Numy GRATIS hoy y experimenta el futuro de los cálculos!\n\n*Numy está diseñada para cálculos y conversiones cotidianas. Para cálculos científicos complejos, considera usar herramientas especializadas.*",
+        "keywords": [
+          "calculadora",
+          "lenguaje natural",
+          "conversor unidades",
+          "matemáticas",
+          "porcentaje"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "es-MX": {
+        "title": "Numy: Calculadora Natural",
+        "subtitle": "Escribe y Calcula Naturalmente",
+        "description": "Calcula de forma natural, tal como piensas. Numy es una hermosa calculadora que entiende español simple. Escribe '$6 por 5', '20% de descuento en $50', o '100km en millas' - respuestas instantáneas mientras escribes.\n\nPor qué te encantará Numy:\n\n• Entrada en Lenguaje Natural: Escribe cálculos en español simple\n• Resultados Instantáneos: Ve las respuestas mientras escribes\n• Conversiones Inteligentes: Convierte unidades, monedas y más\n• Diseño Hermoso: Interfaz limpia e intuitiva\n• Sin Botones: Solo escribe naturalmente\n\nCaracterísticas Clave:\n• Cálculos en español simple\n• Conversiones de unidades (distancia, temperatura, etc.)\n• Cálculos de porcentajes\n• Conversiones de moneda\n• Expresiones matemáticas\n• Seguimiento de historial\n• Soporte de modo oscuro\n• Privacidad primero: No requiere cuenta\n\n¿Para quién es esta app?\n• Estudiantes y profesores\n• Compradores calculando descuentos\n• Viajeros convirtiendo unidades\n• Cualquiera que prefiera escribir en vez de tocar\n\n¡Deja de tocar botones y empieza a escribir naturalmente! Descarga Numy GRATIS hoy y experimenta el futuro de los cálculos!\n\n*Numy está diseñada para cálculos y conversiones cotidianas. Para cálculos científicos complejos, considera usar herramientas especializadas.*",
+        "keywords": [
+          "calculadora",
+          "lenguaje natural",
+          "conversor unidades",
+          "matemáticas",
+          "porcentaje"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "fi": {
+        "title": "Numy: Luonnollinen Laskin",
+        "subtitle": "Kirjoita & Laske Luontevasti",
+        "description": "Laske luonnollisesti, kuten ajattelet. Numy on kaunis laskin, joka ymmärtää yksinkertaista suomea. Kirjoita '$6 kertaa 5', '20% alennus 50$:sta', tai '100km maileina' - välittömät vastaukset kirjoittaessasi.\n\nMiksi rakastat Numya:\n\n• Luonnollisen Kielen Syöte: Kirjoita laskut yksinkertaisella suomella\n• Välittömät Tulokset: Näe vastaukset kirjoittaessasi\n• Älykäs Muunnos: Muunna yksiköitä, valuuttoja ja muuta\n• Kaunis Muotoilu: Siisti, intuitiivinen käyttöliittymä\n• Ei Painikkeita: Vain kirjoita luonnollisesti\n\nTärkeimmät Ominaisuudet:\n• Yksinkertaiset suomalaiset laskut\n• Yksikkömuunnokset (etäisyys, lämpötila jne.)\n• Prosenttilaskut\n• Valuuttamuunnokset\n• Matemaattiset lausekkeet\n• Historian seuranta\n• Tumman tilan tuki\n• Yksityisyys ensin: Ei tiliä tarvita\n\nKenelle tämä sovellus on?\n• Opiskelijat ja opettajat\n• Ostajat, jotka laskevat alennuksia\n• Matkustajat, jotka muuntavat yksiköitä\n• Kuka tahansa, joka mieluummin kirjoittaa kuin naputtaa\n\nLopeta painikkeiden naputtaminen ja ala kirjoittaa luonnollisesti! Lataa Numy ILMAISEKSI tänään ja koe laskennan tulevaisuus!\n\n*Numy on suunniteltu päivittäisiin laskelmiin ja muunnoksiin. Monimutkaisiin tieteellisiin laskelmiin harkitse erikoistyökalujen käyttöä.*",
+        "keywords": [
+          "laskin",
+          "luonnollinen kieli",
+          "yksikkömuunnin",
+          "matematiikka",
+          "prosentti"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "fr-CA": {
+        "title": "Numy: Calculatrice Naturelle",
+        "subtitle": "Tapez & Calculez Naturellement",
+        "description": "Calculez naturellement, comme vous pensez. Numy est une belle calculatrice qui comprend le français simple. Tapez '6$ fois 5', '20% de réduction sur 50$', ou '100km en miles' - réponses instantanées pendant que vous tapez.\n\nPourquoi vous allez adorer Numy:\n\n• Saisie en Langage Naturel: Tapez des calculs en français simple\n• Résultats Instantanés: Voyez les réponses pendant que vous tapez\n• Conversions Intelligentes: Convertissez unités, devises et plus\n• Design Magnifique: Interface propre et intuitive\n• Pas de Boutons: Tapez simplement naturellement\n\nFonctionnalités Clés:\n• Calculs en français simple\n• Conversions d'unités (distance, température, etc.)\n• Calculs de pourcentages\n• Conversions de devises\n• Expressions mathématiques\n• Suivi de l'historique\n• Support du mode sombre\n• Confidentialité d'abord: Pas de compte requis\n\nPour qui est cette app?\n• Étudiants et enseignants\n• Acheteurs calculant des remises\n• Voyageurs convertissant des unités\n• Quiconque préfère taper plutôt que toucher\n\nArrêtez de toucher des boutons et commencez à taper naturellement! Téléchargez Numy GRATUITEMENT aujourd'hui et découvrez le futur des calculs!\n\n*Numy est conçue pour les calculs et conversions quotidiennes. Pour les calculs scientifiques complexes, envisagez d'utiliser des outils spécialisés.*",
+        "keywords": [
+          "calculatrice",
+          "langage naturel",
+          "convertisseur",
+          "mathématiques",
+          "pourcentage"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "fr-FR": {
+        "title": "Numy: Calculatrice Naturelle",
+        "subtitle": "Tapez & Calculez Naturellement",
+        "description": "Calculez naturellement, comme vous pensez. Numy est une belle calculatrice qui comprend le français simple. Tapez '6€ fois 5', '20% de réduction sur 50€', ou '100km en miles' - réponses instantanées pendant que vous tapez.\n\nPourquoi vous allez adorer Numy:\n\n• Saisie en Langage Naturel: Tapez des calculs en français simple\n• Résultats Instantanés: Voyez les réponses pendant que vous tapez\n• Conversions Intelligentes: Convertissez unités, devises et plus\n• Design Magnifique: Interface propre et intuitive\n• Pas de Boutons: Tapez simplement naturellement\n\nFonctionnalités Clés:\n• Calculs en français simple\n• Conversions d'unités (distance, température, etc.)\n• Calculs de pourcentages\n• Conversions de devises\n• Expressions mathématiques\n• Suivi de l'historique\n• Support du mode sombre\n• Confidentialité d'abord: Pas de compte requis\n\nPour qui est cette app?\n• Étudiants et enseignants\n• Acheteurs calculant des remises\n• Voyageurs convertissant des unités\n• Quiconque préfère taper plutôt que toucher\n\nArrêtez de toucher des boutons et commencez à taper naturellement! Téléchargez Numy GRATUITEMENT aujourd'hui et découvrez le futur des calculs!\n\n*Numy est conçue pour les calculs et conversions quotidiennes. Pour les calculs scientifiques complexes, envisagez d'utiliser des outils spécialisés.*",
+        "keywords": [
+          "calculatrice",
+          "langage naturel",
+          "convertisseur",
+          "mathématiques",
+          "pourcentage"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "he": {
+        "title": "Numy: מחשבון טבעי",
+        "subtitle": "הקלד וחשב באופן טבעי",
+        "description": "חשב באופן טבעי, בדיוק כפי שאתה חושב. Numy היא מחשבון יפה שמבין עברית פשוטה. הקלד '$6 כפול 5', '20% הנחה על $50', או '100 ק״מ במיילים' - תשובות מיידיות תוך כדי הקלדה.\n\nלמה תאהב את Numy:\n\n• קלט בשפה טבעית: הקלד חישובים בעברית פשוטה\n• תוצאות מיידיות: ראה תשובות תוך כדי הקלדה\n• המרות חכמות: המר יחידות, מטבעות ועוד\n• עיצוב יפה: ממשק נקי ואינטואיטיבי\n• ללא כפתורים: פשוט הקלד באופן טבעי\n\nתכונות עיקריות:\n• חישובים בעברית פשוטה\n• המרת יחידות (מרחק, טמפרטורה וכו׳)\n• חישובי אחוזים\n• המרת מטבעות\n• ביטויים מתמטיים\n• מעקב היסטוריה\n• תמיכה במצב כהה\n• פרטיות קודם: אין צורך בחשבון\n\nבשביל מי האפליקציה הזאת?\n• סטודנטים ומורים\n• קונים שמחשבים הנחות\n• מטיילים שממירים יחידות\n• כל מי שמעדיף להקליד במקום ללחוץ\n\nתפסיק ללחוץ על כפתורים ותתחיל להקליד באופן טבעי! הורד את Numy בחינם היום וחווה את עתיד החישובים!\n\n*Numy מיועדת לחישובים והמרות יומיומיים. לחישובים מדעיים מורכבים, שקול להשתמש בכלים מיוחדים.*",
+        "keywords": [
+          "מחשבון",
+          "שפה טבעית",
+          "ממיר יחידות",
+          "מתמטיקה",
+          "אחוזים"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "hi": {
+        "title": "Numy: कैलकुलेटर",
+        "subtitle": "टाइप करें और गणना करें",
+        "description": "स्वाभाविक रूप से गणना करें, जैसे आप सोचते हैं। Numy एक सुंदर कैलकुलेटर है जो सरल हिंदी को समझता है। '$6 गुणा 5', '$50 पर 20% छूट', या '100km मील में' टाइप करें - टाइप करते समय तुरंत उत्तर।\n\nआप Numy को क्यों पसंद करेंगे:\n\n• प्राकृतिक भाषा इनपुट: सरल हिंदी में गणनाएं टाइप करें\n• तुरंत परिणाम: टाइप करते समय उत्तर देखें\n• स्मार्ट रूपांतरण: इकाइयों, मुद्राओं और अधिक को परिवर्तित करें\n• सुंदर डिज़ाइन: साफ, सहज इंटरफ़ेस\n• कोई बटन नहीं: बस स्वाभाविक रूप से टाइप करें\n\nमुख्य विशेषताएं:\n• सरल हिंदी में गणना\n• इकाई रूपांतरण (दूरी, तापमान, आदि)\n• प्रतिशत गणना\n• मुद्रा रूपांतरण\n• गणितीय व्यंजक\n• इतिहास ट्रैकिंग\n• डार्क मोड समर्थन\n• गोपनीयता पहले: खाते की आवश्यकता नहीं\n\nयह ऐप किसके लिए है?\n• छात्र और शिक्षक\n• छूट की गणना करने वाले खरीदार\n• इकाइयों को परिवर्तित करने वाले यात्री\n• कोई भी जो टैप करने की जगह टाइप करना पसंद करता है\n\nबटन टैप करना बंद करें और स्वाभाविक रूप से टाइप करना शुरू करें! आज मुफ्त में Numy डाउनलोड करें और गणनाओं के भविष्य का अनुभव करें!\n\n*Numy रोज़मर्रा की गणनाओं और रूपांतरणों के लिए डिज़ाइन किया गया है। जटिल वैज्ञानिक गणनाओं के लिए, विशेष उपकरणों का उपयोग करने पर विचार करें।*",
+        "keywords": [
+          "कैलकुलेटर",
+          "प्राकृतिक भाषा",
+          "इकाई परिवर्तक",
+          "गणित",
+          "प्रतिशत"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "hr": {
+        "title": "Numy: Kalkulator Prirodan",
+        "subtitle": "Pišite i Računajte Prirodno",
+        "description": "Računajte prirodno, baš kao što mislite. Numy je lijep kalkulator koji razumije jednostavan hrvatski. Napišite '$6 puta 5', '20% popust na $50', ili '100km u milje' - trenutni odgovori dok tipkate.\n\nZašto ćete voljeti Numy:\n\n• Unos Prirodnim Jezikom: Pišite izračune jednostavnim hrvatskim\n• Trenutni Rezultati: Vidite odgovore dok tipkate\n• Pametne Konverzije: Konvertirajte jedinice, valute i više\n• Lijepi Dizajn: Čisto, intuitivno sučelje\n• Bez Gumba: Samo pišite prirodno\n\nGlavne Značajke:\n• Izračuni jednostavnim hrvatskim\n• Konverzije jedinica (udaljenost, temperatura itd.)\n• Postotni izračuni\n• Konverzije valuta\n• Matematički izrazi\n• Praćenje povijesti\n• Podrška tamnom načinu\n• Privatnost na prvom mjestu: Račun nije potreban\n\nZa koga je ova aplikacija?\n• Studenti i nastavnici\n• Kupci koji računaju popuste\n• Putnici koji pretvaraju jedinice\n• Svatko tko radije piše nego dodiruje\n\nPrekinite dodirivanji gumba i počnite pisati prirodno! Preuzmite Numy BESPLATNO danas i iskusite budućnost izračuna!\n\n*Numy je dizajniran za svakodnevne izračune i konverzije. Za složene znanstvene izračune, razmislite o korištenju specijaliziranih alata.*",
+        "keywords": [
+          "kalkulator",
+          "prirodni jezik",
+          "pretvarač jedinica",
+          "matematika",
+          "postotak"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "hu": {
+        "title": "Numy: Természetes Számológép",
+        "subtitle": "Írj és Számolj Természetesen",
+        "description": "Számolj természetesen, ahogy gondolkodsz. A Numy egy gyönyörű számológép, amely megérti az egyszerű magyart. Írd be: '$6 szorozva 5-tel', '20% kedvezmény $50-ből', vagy '100km mérföldben' - azonnali válaszok írás közben.\n\nMiért fogod szeretni a Numy-t:\n\n• Természetes Nyelvi Bevitel: Írj számításokat egyszerű magyarul\n• Azonnali Eredmények: Lásd a válaszokat írás közben\n• Intelligens Átváltások: Váltsd át mértékegységeket, pénznemeket és többet\n• Gyönyörű Design: Tiszta, intuitív felület\n• Nincsenek Gombok: Csak írj természetesen\n\nFő Funkciók:\n• Egyszerű magyar számítások\n• Mértékegység átváltások (távolság, hőmérséklet stb.)\n• Százalékszámítások\n• Pénznem átváltások\n• Matematikai kifejezések\n• Előzmények követése\n• Sötét mód támogatás\n• Adatvédelem először: Nincs szükség fiókra\n\nKinek szól ez az alkalmazás?\n• Diákok és tanárok\n• Vásárlók, akik kedvezményeket számolnak\n• Utazók, akik mértékegységeket váltanak\n• Bárki, aki szívesebben ír, mint koppint\n\nHagyd abba a gombok nyomkodását és kezdj el természetesen írni! Töltsd le a Numy-t INGYEN ma és tapasztald meg a számítások jövőjét!\n\n*A Numy a mindennapi számításokra és átváltásokra készült. Összetett tudományos számításokhoz fontolja meg speciális eszközök használatát.*",
+        "keywords": [
+          "számológép",
+          "természetes nyelv",
+          "mértékegység váltó",
+          "matematika",
+          "százalék"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "id": {
+        "title": "Numy: Kalkulator Alami",
+        "subtitle": "Ketik & Hitung Secara Alami",
+        "description": "Hitung secara alami, seperti yang Anda pikirkan. Numy adalah kalkulator cantik yang memahami bahasa Indonesia sederhana. Ketik '$6 kali 5', 'diskon 20% dari $50', atau '100km dalam mil' - jawaban instan saat Anda mengetik.\n\nMengapa Anda akan menyukai Numy:\n\n• Input Bahasa Alami: Ketik perhitungan dalam bahasa Indonesia sederhana\n• Hasil Instan: Lihat jawaban saat Anda mengetik\n• Konversi Cerdas: Konversi unit, mata uang, dan lainnya\n• Desain Indah: Antarmuka bersih dan intuitif\n• Tanpa Tombol: Cukup ketik secara alami\n\nFitur Utama:\n• Perhitungan bahasa Indonesia sederhana\n• Konversi unit (jarak, suhu, dll.)\n• Perhitungan persentase\n• Konversi mata uang\n• Ekspresi matematika\n• Pelacakan riwayat\n• Dukungan mode gelap\n• Privasi pertama: Tidak perlu akun\n\nUntuk siapa aplikasi ini?\n• Siswa dan guru\n• Pembeli yang menghitung diskon\n• Pelancong yang mengonversi unit\n• Siapa saja yang lebih suka mengetik daripada mengetuk\n\nBerhenti mengetuk tombol dan mulai mengetik secara alami! Unduh Numy GRATIS hari ini dan rasakan masa depan perhitungan!\n\n*Numy dirancang untuk perhitungan dan konversi sehari-hari. Untuk perhitungan ilmiah yang kompleks, pertimbangkan untuk menggunakan alat khusus.*",
+        "keywords": [
+          "kalkulator",
+          "bahasa alami",
+          "konverter unit",
+          "matematika",
+          "persentase"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "it": {
+        "title": "Numy: Calcolatrice Naturale",
+        "subtitle": "Digita e Calcola Naturalmente",
+        "description": "Calcola naturalmente, proprio come pensi. Numy è una bella calcolatrice che capisce l'italiano semplice. Digita '6€ per 5', '20% di sconto su 50€', o '100km in miglia' - risposte istantanee mentre digiti.\n\nPerché amerai Numy:\n\n• Input in Linguaggio Naturale: Digita calcoli in italiano semplice\n• Risultati Istantanei: Vedi le risposte mentre digiti\n• Conversioni Intelligenti: Converti unità, valute e altro\n• Design Bellissimo: Interfaccia pulita e intuitiva\n• Nessun Pulsante: Digita semplicemente in modo naturale\n\nCaratteristiche Principali:\n• Calcoli in italiano semplice\n• Conversioni di unità (distanza, temperatura, ecc.)\n• Calcoli percentuali\n• Conversioni di valuta\n• Espressioni matematiche\n• Tracciamento cronologia\n• Supporto modalità scura\n• Privacy prima di tutto: Nessun account richiesto\n\nPer chi è questa app?\n• Studenti e insegnanti\n• Acquirenti che calcolano sconti\n• Viaggiatori che convertono unità\n• Chiunque preferisca digitare piuttosto che toccare\n\nSmetti di toccare pulsanti e inizia a digitare naturalmente! Scarica Numy GRATIS oggi e sperimenta il futuro dei calcoli!\n\n*Numy è progettata per calcoli e conversioni quotidiane. Per calcoli scientifici complessi, considera l'uso di strumenti specializzati.*",
+        "keywords": [
+          "calcolatrice",
+          "linguaggio naturale",
+          "convertitore unità",
+          "matematica",
+          "percentuale"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "ja": {
+        "title": "Numy: 自然な計算機",
+        "subtitle": "自然に入力して計算",
+        "description": "思ったとおりに自然に計算。Numyはシンプルな日本語を理解する美しい計算機です。「6ドル×5」「50ドルから20%オフ」「100kmをマイルに」と入力すると即座に答えが表示されます。\n\nNumyを気に入る理由:\n\n• 自然言語入力: シンプルな日本語で計算を入力\n• 即座の結果: 入力中に答えが表示されます\n• スマート変換: 単位、通貨などを変換\n• 美しいデザイン: クリーンで直感的なインターフェース\n• ボタン不要: 自然に入力するだけ\n\n主な機能:\n• シンプルな日本語での計算\n• 単位変換（距離、温度など）\n• パーセント計算\n• 通貨変換\n• 数式\n• 履歴追跡\n• ダークモードサポート\n• プライバシー第一: アカウント不要\n\nこのアプリは誰のため?\n• 学生と教師\n• 割引を計算する買い物客\n• 単位を変換する旅行者\n• タップよりタイピングを好む方\n\nボタンをタップするのをやめて、自然に入力を始めましょう！今すぐNumyを無料でダウンロードして、計算の未来を体験してください！\n\n*Numyは日常の計算と変換用に設計されています。複雑な科学計算には専用ツールの使用をご検討ください。*",
+        "keywords": [
+          "計算機",
+          "自然言語",
+          "単位変換",
+          "数学",
+          "パーセント",
+          "通貨"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "ko": {
+        "title": "Numy: 자연스러운 계산기",
+        "subtitle": "자연스럽게 입력하고 계산",
+        "description": "생각하는 대로 자연스럽게 계산하세요. Numy는 간단한 한국어를 이해하는 아름다운 계산기입니다. '6달러 곱하기 5', '50달러에서 20% 할인', 또는 '100km를 마일로' - 입력하는 동안 즉시 답변이 표시됩니다.\n\nNumy를 좋아하실 이유:\n\n• 자연어 입력: 간단한 한국어로 계산 입력\n• 즉각적인 결과: 입력하는 동안 답변 보기\n• 스마트 변환: 단위, 통화 등 변환\n• 아름다운 디자인: 깔끔하고 직관적인 인터페이스\n• 버튼 없음: 자연스럽게 입력하기만 하면 됨\n\n주요 기능:\n• 간단한 한국어 계산\n• 단위 변환 (거리, 온도 등)\n• 백분율 계산\n• 통화 변환\n• 수학 표현식\n• 기록 추적\n• 다크 모드 지원\n• 개인정보 보호 우선: 계정 필요 없음\n\n이 앱은 누구를 위한 것인가요?\n• 학생과 교사\n• 할인을 계산하는 쇼핑객\n• 단위를 변환하는 여행자\n• 탭보다 타이핑을 선호하는 모든 사람\n\n버튼 탭을 멈추고 자연스럽게 입력을 시작하세요! 지금 Numy를 무료로 다운로드하여 계산의 미래를 경험하세요!\n\n*Numy는 일상적인 계산 및 변환용으로 설계되었습니다. 복잡한 과학 계산의 경우 전문 도구 사용을 고려하십시오.*",
+        "keywords": [
+          "계산기",
+          "자연어",
+          "단위 변환기",
+          "수학",
+          "백분율",
+          "통화"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "ms": {
+        "title": "Numy: Kalkulator Semula Jadi",
+        "subtitle": "Taip & Kira Secara Semula Jadi",
+        "description": "Kira secara semula jadi, seperti yang anda fikirkan. Numy ialah kalkulator cantik yang memahami Bahasa Melayu mudah. Taip '$6 darab 5', 'diskaun 20% daripada $50', atau '100km dalam batu' - jawapan serta-merta semasa anda menaip.\n\nMengapa anda akan suka Numy:\n\n• Input Bahasa Semula Jadi: Taip pengiraan dalam Bahasa Melayu mudah\n• Hasil Segera: Lihat jawapan semasa anda menaip\n• Penukaran Pintar: Tukar unit, mata wang, dan lain-lain\n• Reka Bentuk Cantik: Antara muka bersih dan intuitif\n• Tiada Butang: Hanya taip secara semula jadi\n\nCiri-ciri Utama:\n• Pengiraan Bahasa Melayu mudah\n• Penukaran unit (jarak, suhu, dll.)\n• Pengiraan peratusan\n• Penukaran mata wang\n• Ungkapan matematik\n• Penjejakan sejarah\n• Sokongan mod gelap\n• Privasi dahulu: Tiada akaun diperlukan\n\nUntuk siapa aplikasi ini?\n• Pelajar dan guru\n• Pembeli yang mengira diskaun\n• Pelancong yang menukar unit\n• Sesiapa yang lebih suka menaip daripada mengetik\n\nBerhenti mengetik butang dan mula menaip secara semula jadi! Muat turun Numy PERCUMA hari ini dan alami masa depan pengiraan!\n\n*Numy direka untuk pengiraan dan penukaran harian. Untuk pengiraan saintifik yang kompleks, pertimbangkan menggunakan alat khusus.*",
+        "keywords": [
+          "kalkulator",
+          "bahasa semula jadi",
+          "penukar unit",
+          "matematik",
+          "peratusan"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "nl-NL": {
+        "title": "Numy: Natuurlijke Rekenmachine",
+        "subtitle": "Typ & Bereken Natuurlijk",
+        "description": "Bereken natuurlijk, zoals je denkt. Numy is een prachtige rekenmachine die eenvoudig Nederlands begrijpt. Typ '€6 keer 5', '20% korting op €50', of '100km in mijlen' - directe antwoorden terwijl je typt.\n\nWaarom je Numy geweldig vindt:\n\n• Natuurlijke Taal Invoer: Typ berekeningen in eenvoudig Nederlands\n• Directe Resultaten: Zie antwoorden terwijl je typt\n• Slimme Conversies: Converteer eenheden, valuta en meer\n• Mooi Ontwerp: Schone, intuïtieve interface\n• Geen Knoppen: Gewoon natuurlijk typen\n\nBelangrijkste Functies:\n• Berekeningen in eenvoudig Nederlands\n• Eenheidsconversies (afstand, temperatuur, enz.)\n• Percentageberekeningen\n• Valutaconversies\n• Wiskundige uitdrukkingen\n• Geschiedenis bijhouden\n• Donkere modus ondersteuning\n• Privacy eerst: Geen account vereist\n\nVoor wie is deze app?\n• Studenten en docenten\n• Shoppers die kortingen berekenen\n• Reizigers die eenheden converteren\n• Iedereen die liever typt dan tikt\n\nStop met knoppen tikken en begin natuurlijk te typen! Download Numy GRATIS vandaag en ervaar de toekomst van berekeningen!\n\n*Numy is ontworpen voor dagelijkse berekeningen en conversies. Voor complexe wetenschappelijke berekeningen, overweeg gespecialiseerde tools te gebruiken.*",
+        "keywords": [
+          "rekenmachine",
+          "natuurlijke taal",
+          "eenheidsconverter",
+          "wiskunde",
+          "percentage"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "no": {
+        "title": "Numy: Naturlig Kalkulator",
+        "subtitle": "Skriv & Regn Naturligt",
+        "description": "Regn naturligt, akkurat som du tenker. Numy er en vakker kalkulator som forstår enkel norsk. Skriv '$6 ganger 5', '20% rabatt på $50', eller '100km i miles' - umiddelbare svar mens du skriver.\n\nHvorfor du vil elske Numy:\n\n• Naturlig Språkinput: Skriv beregninger på enkel norsk\n• Umiddelbare Resultater: Se svar mens du skriver\n• Smart Konvertering: Konverter enheter, valutaer og mer\n• Vakker Design: Ren, intuitiv grensesnitt\n• Ingen Knapper: Bare skriv naturlig\n\nHovedfunksjoner:\n• Enkle norske beregninger\n• Enhetskonverteringer (avstand, temperatur, osv.)\n• Prosentberegninger\n• Valutakonvertering\n• Matematiske uttrykk\n• Historiesporing\n• Mørk modus-støtte\n• Personvern først: Ingen konto nødvendig\n\nHvem er denne appen for?\n• Studenter og lærere\n• Shoppere som beregner rabatter\n• Reisende som konverterer enheter\n• Alle som foretrekker å skrive fremfor å trykke\n\nSlutt å trykke på knapper og begynn å skrive naturlig! Last ned Numy GRATIS i dag og opplev fremtiden for beregninger!\n\n*Numy er designet for daglige beregninger og konverteringer. For komplekse vitenskapelige beregninger, vurder å bruke spesialiserte verktøy.*",
+        "keywords": [
+          "kalkulator",
+          "naturlig språk",
+          "enhetskonverter",
+          "matematikk",
+          "prosent"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "pl": {
+        "title": "Numy: Kalkulator Naturalny",
+        "subtitle": "Pisz i Obliczaj Naturalnie",
+        "description": "Obliczaj naturalnie, tak jak myślisz. Numy to piękny kalkulator, który rozumie prosty polski. Wpisz '$6 razy 5', '20% zniżki na $50', lub '100km w milach' - natychmiastowe odpowiedzi podczas pisania.\n\nDlaczego pokochasz Numy:\n\n• Wprowadzanie w Języku Naturalnym: Wpisuj obliczenia w prostym polskim\n• Natychmiastowe Wyniki: Zobacz odpowiedzi podczas pisania\n• Inteligentne Konwersje: Konwertuj jednostki, waluty i więcej\n• Piękny Design: Czysty, intuicyjny interfejs\n• Bez Przycisków: Po prostu pisz naturalnie\n\nGłówne Funkcje:\n• Obliczenia w prostym polskim\n• Konwersje jednostek (odległość, temperatura itp.)\n• Obliczenia procentowe\n• Konwersje walut\n• Wyrażenia matematyczne\n• Śledzenie historii\n• Wsparcie trybu ciemnego\n• Prywatność na pierwszym miejscu: Nie wymaga konta\n\nDla kogo jest ta aplikacja?\n• Uczniowie i nauczyciele\n• Kupujący obliczający zniżki\n• Podróżnicy konwertujący jednostki\n• Każdy, kto woli pisać niż stukać\n\nPrzestań stukać w przyciski i zacznij pisać naturalnie! Pobierz Numy ZA DARMO już dziś i doświadcz przyszłości obliczeń!\n\n*Numy jest zaprojektowany do codziennych obliczeń i konwersji. Do skomplikowanych obliczeń naukowych rozważ użycie specjalistycznych narzędzi.*",
+        "keywords": [
+          "kalkulator",
+          "język naturalny",
+          "konwerter jednostek",
+          "matematyka",
+          "procent"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "pt-BR": {
+        "title": "Numy: Calculadora Natural",
+        "subtitle": "Digite e Calcule Naturalmente",
+        "description": "Calcule naturalmente, como você pensa. Numy é uma linda calculadora que entende português simples. Digite '$6 vezes 5', '20% de desconto em $50', ou '100km em milhas' - respostas instantâneas enquanto você digita.\n\nPor que você vai amar o Numy:\n\n• Entrada em Linguagem Natural: Digite cálculos em português simples\n• Resultados Instantâneos: Veja as respostas enquanto digita\n• Conversões Inteligentes: Converta unidades, moedas e mais\n• Design Bonito: Interface limpa e intuitiva\n• Sem Botões: Apenas digite naturalmente\n\nRecursos Principais:\n• Cálculos em português simples\n• Conversões de unidades (distância, temperatura, etc.)\n• Cálculos de porcentagem\n• Conversões de moeda\n• Expressões matemáticas\n• Rastreamento de histórico\n• Suporte ao modo escuro\n• Privacidade em primeiro lugar: Nenhuma conta necessária\n\nPara quem é este app?\n• Estudantes e professores\n• Compradores calculando descontos\n• Viajantes convertendo unidades\n• Qualquer pessoa que prefira digitar a tocar\n\nPare de tocar botões e comece a digitar naturalmente! Baixe o Numy GRÁTIS hoje e experimente o futuro dos cálculos!\n\n*Numy é projetado para cálculos e conversões do dia a dia. Para cálculos científicos complexos, considere usar ferramentas especializadas.*",
+        "keywords": [
+          "calculadora",
+          "linguagem natural",
+          "conversor unidades",
+          "matemática",
+          "porcentagem"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "pt-PT": {
+        "title": "Numy: Calculadora Natural",
+        "subtitle": "Digite e Calcule Naturalmente",
+        "description": "Calcule naturalmente, como pensa. Numy é uma bela calculadora que compreende português simples. Digite '6€ vezes 5', '20% de desconto em 50€', ou '100km em milhas' - respostas instantâneas enquanto digita.\n\nPorquê vai adorar o Numy:\n\n• Entrada em Linguagem Natural: Digite cálculos em português simples\n• Resultados Instantâneos: Veja as respostas enquanto digita\n• Conversões Inteligentes: Converta unidades, moedas e mais\n• Design Bonito: Interface limpa e intuitiva\n• Sem Botões: Apenas digite naturalmente\n\nRecursos Principais:\n• Cálculos em português simples\n• Conversões de unidades (distância, temperatura, etc.)\n• Cálculos de percentagem\n• Conversões de moeda\n• Expressões matemáticas\n• Rastreamento de histórico\n• Suporte ao modo escuro\n• Privacidade em primeiro lugar: Nenhuma conta necessária\n\nPara quem é esta app?\n• Estudantes e professores\n• Compradores a calcular descontos\n• Viajantes a converter unidades\n• Qualquer pessoa que prefira digitar a tocar\n\nPare de tocar botões e comece a digitar naturalmente! Descarregue o Numy GRÁTIS hoje e experimente o futuro dos cálculos!\n\n*Numy é concebido para cálculos e conversões do dia a dia. Para cálculos científicos complexos, considere usar ferramentas especializadas.*",
+        "keywords": [
+          "calculadora",
+          "linguagem natural",
+          "conversor unidades",
+          "matemática",
+          "percentagem"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "ro": {
+        "title": "Numy: Calculadora Natural",
+        "subtitle": "Scrie și Calculează Natural",
+        "description": "Calculează natural, exact cum gândești. Numy este o calculatoare frumoasă care înțelege româna simplă. Scrie '$6 înmulțit cu 5', '20% reducere la $50', sau '100km în mile' - răspunsuri instantanee în timp ce scrii.\n\nDe ce vei iubi Numy:\n\n• Introducere în Limbaj Natural: Scrie calcule în româna simplă\n• Rezultate Instantanee: Vezi răspunsuri în timp ce scrii\n• Conversii Inteligente: Convertește unități, valute și mai mult\n• Design Frumos: Interfață curată, intuitivă\n• Fără Butoane: Doar scrie natural\n\nFuncții Principale:\n• Calcule în româna simplă\n• Conversii de unități (distanță, temperatură etc.)\n• Calcule procentuale\n• Conversii valutare\n• Expresii matematice\n• Urmărire istoric\n• Suport mod întunecat\n• Confidențialitate pe primul loc: Nu necesită cont\n\nPentru cine este această aplicație?\n• Studenți și profesori\n• Cumpărători care calculează reduceri\n• Călători care convertesc unități\n• Oricine preferă să scrie decât să apese\n\nÎncetează să apeși butoane și începe să scrii natural! Descarcă Numy GRATUIT astăzi și experimentează viitorul calculelor!\n\n*Numy este proiectat pentru calcule și conversii zilnice. Pentru calcule științifice complexe, ia în considerare utilizarea unor instrumente specializate.*",
+        "keywords": [
+          "calculatoare",
+          "limbaj natural",
+          "convertor unități",
+          "matematică",
+          "procent"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "ru": {
+        "title": "Numy: Калькулятор",
+        "subtitle": "Пишите и Считайте Естественно",
+        "description": "Считайте естественно, как вы думаете. Numy - красивый калькулятор, который понимает простой русский. Введите '$6 умножить на 5', '20% скидка на $50', или '100км в мили' - мгновенные ответы при вводе.\n\nПочему вам понравится Numy:\n\n• Ввод на естественном языке: Вводите вычисления на простом русском\n• Мгновенные результаты: Видите ответы при вводе\n• Умные преобразования: Преобразуйте единицы, валюты и многое другое\n• Красивый дизайн: Чистый, интуитивный интерфейс\n• Без кнопок: Просто вводите естественно\n\nОсновные функции:\n• Вычисления на простом русском\n• Преобразование единиц (расстояние, температура и т.д.)\n• Процентные вычисления\n• Преобразование валют\n• Математические выражения\n• Отслеживание истории\n• Поддержка темного режима\n• Конфиденциальность прежде всего: Аккаунт не требуется\n\nДля кого это приложение?\n• Студенты и преподаватели\n• Покупатели, рассчитывающие скидки\n• Путешественники, конвертирующие единицы\n• Любой, кто предпочитает печатать, а не нажимать\n\nПрекратите нажимать кнопки и начните вводить естественно! Загрузите Numy БЕСПЛАТНО сегодня и испытайте будущее вычислений!\n\n*Numy предназначен для повседневных вычислений и преобразований. Для сложных научных вычислений рассмотрите использование специализированных инструментов.*",
+        "keywords": [
+          "калькулятор",
+          "естественный язык",
+          "конвертер единиц",
+          "математика",
+          "процент"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "sk": {
+        "title": "Numy: Kalkulačka",
+        "subtitle": "Píšte a Počítajte Prirodzene",
+        "description": "Počítajte prirodzene, presne ako myslíte. Numy je krásna kalkulačka, ktorá rozumie jednoduchej slovenčine. Napíšte '$6 krát 5', '20% zľava na $50', alebo '100km v míľach' - okamžité odpovede počas písania.\n\nPrečo sa vám Numy páči:\n\n• Vstup v Prirodzenom Jazyku: Píšte výpočty v jednoduchej slovenčine\n• Okamžité Výsledky: Vidíte odpovede počas písania\n• Inteligentné Konverzie: Konvertujte jednotky, meny a ďalšie\n• Krásny Dizajn: Čisté, intuitívne rozhranie\n• Bez Tlačidiel: Jednoducho píšte prirodzene\n\nHlavné Funkcie:\n• Výpočty v jednoduchej slovenčine\n• Konverzie jednotiek (vzdialenosť, teplota atď.)\n• Percentuálne výpočty\n• Konverzie mien\n• Matematické výrazy\n• Sledovanie histórie\n• Podpora tmavého režimu\n• Súkromie na prvom mieste: Nevyžaduje sa účet\n\nPre koho je táto aplikácia?\n• Študenti a učitelia\n• Nakupujúci počítajúci zľavy\n• Cestujúci konvertujúci jednotky\n• Ktokoľvek, kto uprednostňuje písanie pred ťukaním\n\nPrestaňte ťukať na tlačidlá a začnite písať prirodzene! Stiahnite si Numy ZADARMO dnes a zažite budúcnosť výpočtov!\n\n*Numy je navrhnutá pre každodenné výpočty a konverzie. Pre zložité vedecké výpočty zvážte použitie špecializovaných nástrojov.*",
+        "keywords": [
+          "kalkulačka",
+          "prirodzený jazyk",
+          "konvertor jednotiek",
+          "matematika",
+          "percento"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "sv": {
+        "title": "Numy: Naturlig Kalkylator",
+        "subtitle": "Skriv & Räkna Naturligt",
+        "description": "Räkna naturligt, precis som du tänker. Numy är en vacker kalkylator som förstår enkel svenska. Skriv '$6 gånger 5', '20% rabatt på $50', eller '100km i miles' - omedelbara svar medan du skriver.\n\nVarför du kommer att älska Numy:\n\n• Naturligt Språkinmatning: Skriv beräkningar på enkel svenska\n• Omedelbara Resultat: Se svar medan du skriver\n• Smart Konvertering: Konvertera enheter, valutor och mer\n• Vacker Design: Rent, intuitivt gränssnitt\n• Inga Knappar: Bara skriv naturligt\n\nHuvudfunktioner:\n• Enkla svenska beräkningar\n• Enhetskonverteringar (avstånd, temperatur, etc.)\n• Procentberäkningar\n• Valutakonvertering\n• Matematiska uttryck\n• Historikspårning\n• Mörkt läge-stöd\n• Integritet först: Inget konto krävs\n\nVem är denna app för?\n• Studenter och lärare\n• Shoppare som beräknar rabatter\n• Resenärer som konverterar enheter\n• Alla som föredrar att skriva framför att trycka\n\nSluta trycka på knappar och börja skriva naturligt! Ladda ner Numy GRATIS idag och upplev framtiden för beräkningar!\n\n*Numy är designad för dagliga beräkningar och konverteringar. För komplexa vetenskapliga beräkningar, överväg att använda specialiserade verktyg.*",
+        "keywords": [
+          "kalkylator",
+          "naturligt språk",
+          "enhetsomvandlare",
+          "matematik",
+          "procent"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "th": {
+        "title": "Numy: เครื่องคิดเลขธรรมชาติ",
+        "subtitle": "พิมพ์และคำนวณอย่างธรรมชาติ",
+        "description": "คำนวณอย่างธรรมชาติ เหมือนที่คุณคิด Numy เป็นเครื่องคิดเลขสวยงามที่เข้าใจภาษาไทยง่ายๆ พิมพ์ '$6 คูณ 5', 'ลด 20% จาก $50', หรือ '100km เป็นไมล์' - คำตอบทันทีขณะที่คุณพิมพ์\n\nทำไมคุณจะชอบ Numy:\n\n• การป้อนข้อมูลภาษาธรรมชาติ: พิมพ์การคำนวณเป็นภาษาไทยง่ายๆ\n• ผลลัพธ์ทันที: ดูคำตอบขณะที่คุณพิมพ์\n• การแปลงอัจฉริยะ: แปลงหน่วย สกุลเงิน และอื่นๆ\n• ดีไซน์สวยงาม: อินเทอร์เฟซที่สะอาดและใช้งานง่าย\n• ไม่มีปุ่ม: เพียงพิมพ์อย่างธรรมชาติ\n\nคุณสมบัติหลัก:\n• การคำนวณภาษาไทยง่ายๆ\n• การแปลงหน่วย (ระยะทาง, อุณหภูมิ ฯลฯ)\n• การคำนวณเปอร์เซ็นต์\n• การแปลงสกุลเงิน\n• นิพจน์ทางคณิตศาสตร์\n• การติดตามประวัติ\n• รองรับโหมดมืด\n• ความเป็นส่วนตัวก่อน: ไม่ต้องใช้บัญชี\n\nแอปนี้เหมาะสำหรับใคร?\n• นักเรียนและครู\n• ผู้ซื้อที่คำนวณส่วนลด\n• นักเดินทางที่แปลงหน่วย\n• ทุกคนที่ชอบพิมพ์มากกว่าแตะ\n\nหยุดแตะปุ่มและเริ่มพิมพ์อย่างธรรมชาติ! ดาวน์โหลด Numy ฟรีวันนี้และสัมผัสอนาคตของการคำนวณ!\n\n*Numy ออกแบบมาสำหรับการคำนวณและการแปลงประจำวัน สำหรับการคำนวณทางวิทยาศาสตร์ที่ซับซ้อน ควรพิจารณาใช้เครื่องมือเฉพาะทาง*",
+        "keywords": [
+          "เครื่องคิดเลข",
+          "ภาษาธรรมชาติ",
+          "ตัวแปลงหน่วย",
+          "คณิตศาสตร์",
+          "เปอร์เซ็นต์"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "tr": {
+        "title": "Numy: Doğal Hesap Makinesi",
+        "subtitle": "Doğal Yazın ve Hesaplayın",
+        "description": "Düşündüğünüz gibi doğal olarak hesaplayın. Numy, basit Türkçeyi anlayan güzel bir hesap makinesidir. '$6 çarpı 5', '$50'den %20 indirim' veya '100km mil olarak' yazın - yazdıkça anında cevaplar.\n\nNumy'yi seveceksiniz çünkü:\n\n• Doğal Dil Girişi: Basit Türkçe ile hesaplamalar yazın\n• Anında Sonuçlar: Yazdıkça cevapları görün\n• Akıllı Dönüşümler: Birimleri, para birimlerini ve daha fazlasını dönüştürün\n• Güzel Tasarım: Temiz, sezgisel arayüz\n• Düğme Yok: Sadece doğal olarak yazın\n\nAna Özellikler:\n• Basit Türkçe hesaplamalar\n• Birim dönüşümleri (mesafe, sıcaklık vb.)\n• Yüzde hesaplamaları\n• Para birimi dönüşümleri\n• Matematiksel ifadeler\n• Geçmiş takibi\n• Karanlık mod desteği\n• Önce gizlilik: Hesap gerekmez\n\nBu uygulama kimler için?\n• Öğrenciler ve öğretmenler\n• İndirim hesaplayan alışveriş yapanlar\n• Birim dönüştüren gezginler\n• Dokunmak yerine yazmayı tercih eden herkes\n\nDüğmelere dokunmayı bırakın ve doğal olarak yazmaya başlayın! Numy'yi bugün ÜCRETSİZ indirin ve hesaplamaların geleceğini deneyimleyin!\n\n*Numy, günlük hesaplamalar ve dönüşümler için tasarlanmıştır. Karmaşık bilimsel hesaplamalar için özel araçlar kullanmayı düşünün.*",
+        "keywords": [
+          "hesap makinesi",
+          "doğal dil",
+          "birim çevirici",
+          "matematik",
+          "yüzde"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "uk": {
+        "title": "Numy: Калькулятор",
+        "subtitle": "Друкуйте і Рахуйте Природно",
+        "description": "Рахуйте природно, як ви думаєте. Numy - красивий калькулятор, який розуміє просту українську. Введіть '$6 помножити на 5', '20% знижка на $50', або '100км в милі' - миттєві відповіді під час введення.\n\nЧому вам сподобається Numy:\n\n• Введення Природною Мовою: Вводьте обчислення простою українською\n• Миттєві Результати: Бачите відповіді під час введення\n• Розумні Перетворення: Перетворюйте одиниці, валюти та інше\n• Красивий Дизайн: Чистий, інтуїтивний інтерфейс\n• Без Кнопок: Просто вводьте природно\n\nОсновні Функції:\n• Обчислення простою українською\n• Перетворення одиниць (відстань, температура тощо)\n• Відсоткові обчислення\n• Перетворення валют\n• Математичні вирази\n• Відстеження історії\n• Підтримка темного режиму\n• Конфіденційність перш за все: Обліковий запис не потрібен\n\nДля кого ця програма?\n• Студенти та викладачі\n• Покупці, які розраховують знижки\n• Мандрівники, які конвертують одиниці\n• Будь-хто, хто віддає перевагу друкуванню замість натискання\n\nПрипиніть натискати кнопки і почніть вводити природно! Завантажте Numy БЕЗКОШТОВНО сьогодні та відчуйте майбутнє обчислень!\n\n*Numy призначена для повсякденних обчислень і перетворень. Для складних наукових обчислень розгляньте використання спеціалізованих інструментів.*",
+        "keywords": [
+          "калькулятор",
+          "природна мова",
+          "конвертер одиниць",
+          "математика",
+          "відсоток"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "vi": {
+        "title": "Numy: Máy Tính Tự Nhiên",
+        "subtitle": "Gõ & Tính Toán Tự Nhiên",
+        "description": "Tính toán tự nhiên, giống như bạn nghĩ. Numy là máy tính đẹp hiểu tiếng Việt đơn giản. Gõ '$6 nhân 5', 'giảm 20% cho $50', hoặc '100km sang dặm' - câu trả lời ngay lập tức khi bạn gõ.\n\nTại sao bạn sẽ thích Numy:\n\n• Nhập Ngôn Ngữ Tự Nhiên: Gõ phép tính bằng tiếng Việt đơn giản\n• Kết Quả Ngay Lập Tức: Xem câu trả lời khi bạn gõ\n• Chuyển Đổi Thông Minh: Chuyển đổi đơn vị, tiền tệ và nhiều hơn\n• Thiết Kế Đẹp: Giao diện sạch, trực quan\n• Không Cần Nút: Chỉ cần gõ tự nhiên\n\nTính Năng Chính:\n• Phép tính tiếng Việt đơn giản\n• Chuyển đổi đơn vị (khoảng cách, nhiệt độ, v.v.)\n• Tính phần trăm\n• Chuyển đổi tiền tệ\n• Biểu thức toán học\n• Theo dõi lịch sử\n• Hỗ trợ chế độ tối\n• Quyền riêng tư trước: Không cần tài khoản\n\nỨng dụng này dành cho ai?\n• Học sinh và giáo viên\n• Người mua sắm tính giảm giá\n• Du khách chuyển đổi đơn vị\n• Bất kỳ ai thích gõ hơn chạm\n\nNgừng chạm nút và bắt đầu gõ tự nhiên! Tải Numy MIỄN PHÍ ngay hôm nay và trải nghiệm tương lai của phép tính!\n\n*Numy được thiết kế cho các phép tính và chuyển đổi hàng ngày. Đối với các phép tính khoa học phức tạp, hãy cân nhắc sử dụng các công cụ chuyên dụng.*",
+        "keywords": [
+          "máy tính",
+          "ngôn ngữ tự nhiên",
+          "chuyển đổi đơn vị",
+          "toán học",
+          "phần trăm"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "zh-Hans": {
+        "title": "Numy: 自然计算器",
+        "subtitle": "自然输入与计算",
+        "description": "像思考一样自然地计算。Numy是一款理解简单中文的精美计算器。输入「6美元乘以5」、「50美元打8折」或「100公里转英里」 - 输入时即时显示答案。\n\n您会喜欢Numy的原因:\n\n• 自然语言输入: 用简单中文输入计算\n• 即时结果: 输入时查看答案\n• 智能转换: 转换单位、货币等\n• 精美设计: 简洁直观的界面\n• 无需按钮: 只需自然输入\n\n主要功能:\n• 简单中文计算\n• 单位转换（距离、温度等）\n• 百分比计算\n• 货币转换\n• 数学表达式\n• 历史记录追踪\n• 支持深色模式\n• 隐私优先: 无需账户\n\n这个应用适合谁?\n• 学生和教师\n• 计算折扣的购物者\n• 转换单位的旅行者\n• 喜欢打字而不是点击的任何人\n\n停止点击按钮，开始自然输入！立即免费下载Numy，体验计算的未来！\n\n*Numy专为日常计算和转换而设计。对于复杂的科学计算，请考虑使用专业工具。*",
+        "keywords": [
+          "计算器",
+          "自然语言",
+          "单位转换器",
+          "数学",
+          "百分比",
+          "货币"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      },
+      "zh-Hant": {
+        "title": "Numy: 自然計算機",
+        "subtitle": "自然輸入與計算",
+        "description": "像思考一樣自然地計算。Numy是一款理解簡單中文的精美計算器。輸入「6美元乘以5」、「50美元打8折」或「100公里轉英里」 - 輸入時即時顯示答案。\n\n您會喜歡Numy的原因:\n\n• 自然語言輸入: 用簡單中文輸入計算\n• 即時結果: 輸入時查看答案\n• 智能轉換: 轉換單位、貨幣等\n• 精美設計: 簡潔直觀的界面\n• 無需按鈕: 只需自然輸入\n\n主要功能:\n• 簡單中文計算\n• 單位轉換（距離、溫度等）\n• 百分比計算\n• 貨幣轉換\n• 數學表達式\n• 歷史記錄追蹤\n• 支持深色模式\n• 隱私優先: 無需帳戶\n\n這個應用適合誰?\n• 學生和教師\n• 計算折扣的購物者\n• 轉換單位的旅行者\n• 喜歡打字而不是點擊的任何人\n\n停止點擊按鈕，開始自然輸入！立即免費下載Numy，體驗計算的未來！\n\n*Numy專為日常計算和轉換而設計。對於複雜的科學計算，請考慮使用專業工具。*",
+        "keywords": [
+          "計算器",
+          "自然語言",
+          "單位轉換器",
+          "數學",
+          "百分比",
+          "貨幣"
+        ],
+        "marketingUrl": "https://moruk.ai",
+        "supportUrl": "https://moruk.link/support",
+        "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+      }
+    }
+  }
+}

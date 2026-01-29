@@ -1,0 +1,9 @@
+{
+  "calculator": "Calculatrice",
+  "history": "Historique",
+  "settings": "Paramètres",
+  "calculatorTab": "Onglet calculatrice, entrez des calculs et voyez les résultats",
+  "historyTab": "Onglet historique, consultez les calculs enregistrés",
+  "settingsTab": "Onglet paramètres, configurez les préférences de l'app",
+  "newDocument": "New calculation"
+}

@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "Tidak dapat mengonversi {{source}} ke {{target}}",
+  "calculationError": "Kesalahan perhitungan",
+  "aiTimeout": "Perhitungan kehabisan waktu. Coba lagi?",
+  "aiNetworkError": "Periksa koneksi internet Anda dan coba lagi",
+  "aiRateLimit": "Terlalu banyak permintaan. Coba lagi sebentar",
+  "aiNotCalculable": "Tidak dapat menghitung ekspresi ini",
+  "aiServerError": "Terjadi kesalahan. Coba lagi?"
+}

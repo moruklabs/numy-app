@@ -1,0 +1,24 @@
+{
+  "title": "Sejarah",
+  "screenTitle": "Skrin sejarah menunjukkan pengiraan yang disimpan",
+  "listAccessibility": "Senarai dokumen yang disimpan dengan {{count}} dokumen",
+  "documentAccessibility": "{{title}}, disimpan pada {{date}}, {{count}} pengiraan",
+  "documentHint": "Ketik dua kali untuk membuka. Gunakan menu tindakan untuk memadam.",
+  "openAction": "Buka dokumen",
+  "deleteAction": "Padam dokumen",
+  "lastEdited": "terakhir diedit",
+  "emptyState": {
+    "title": "# Tiada pengiraan disimpan lagi",
+    "subtitle": "Pengiraan anda yang disimpan akan muncul di sini selepas anda menyimpan dokumen"
+  },
+  "sections": {
+    "examples": "# Contoh",
+    "history": "# Sejarah"
+  },
+  "lineCount_one": "{{count}} baris",
+  "lineCount_other": "{{count}} baris",
+  "deleteAlert": {
+    "title": "Padam Dokumen",
+    "message": "Adakah anda pasti mahu memadam \"{{title}}\"? Tindakan ini tidak boleh dibatalkan."
+  }
+}

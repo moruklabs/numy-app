@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Meine Berechnungen",
+  "placeholder": "Berechnung eingeben...",
+  "total": "Gesamt: ",
+  "tapToShare": "Tippen zum Teilen",
+  "inputAccessibility": "Berechnungseingabe",
+  "inputHint": "Gib einen mathematischen Ausdruck ein wie 5 mal 3 oder 20% von 100",
+  "resultAccessibility": "Ergebnis: {{value}}",
+  "resultHint": "Doppeltippen zum Teilen dieses Ergebnisses",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Doppeltippen zum Teilen der Gesamtsumme",
+  "document": {
+    "saveButton": "Speichern",
+    "saveHint": "Doppeltippen zum Speichern dieses Dokuments im Verlauf",
+    "clearButton": "Löschen",
+    "clearHint": "Doppeltippen zum Löschen aller Berechnungen",
+    "titleAccessibility": "Dokumenttitel: {{title}}",
+    "titleHint": "Doppeltippen zum Bearbeiten des Dokumenttitels",
+    "editTitleModal": "Dialog zum Bearbeiten des Dokumenttitels",
+    "titleInputLabel": "Dokumenttitel",
+    "titleInputHint": "Gib einen neuen Titel für dieses Dokument ein",
+    "cancelHint": "Doppeltippen zum Abbrechen und Beibehalten des aktuellen Titels",
+    "saveNewTitleHint": "Doppeltippen zum Speichern des neuen Titels",
+    "savedAlert": {
+      "title": "Gespeichert",
+      "message": "Dokument im Verlauf gespeichert"
+    },
+    "clearAlert": {
+      "title": "Dokument Löschen",
+      "message": "Möchtest du wirklich alle Berechnungen löschen?"
+    },
+    "editTitle": "Titel Bearbeiten",
+    "titlePlaceholder": "Dokumenttitel",
+    "closeHint": "Close without saving",
+    "newDocHint": "Double tap to create a new document. Current document will be auto-saved.",
+    "lastUpdated": "updated {{time}}"
+  },
+  "shareAccessibility": "Share total"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@moruk/firebase",
+  "version": "1.0.0",
+  "description": "Firebase services (Analytics, Crashlytics, Remote Config) for moruk apps",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "jest --detectLeaks --passWithNoTests --no-coverage",
+    "test:watch": "jest --watch",
+    "lint": "yarn run lint:fix",
+    "lint:fix": "eslint src/ --fix",
+    "type-check": "tsc --noEmit",
+    "validate": "concurrently --kill-others-on-fail -n \"TypeCheck,Lint,Test\" -c \"magenta,cyan,yellow\" \"yarn run type-check\" \"yarn run lint\" \"yarn run test\"",
+    "build": "tsc --noEmit",
+    "doctor:fix": "exit 0",
+    "fix": "yarn run lint:fix && yarn run format:fix && yarn run doctor:fix",
+    "format": "yarn run format:fix",
+    "format:fix": "npx prettier --ignore-path ../../.prettierignore --write . --log-level error"
+  },
+  "dependencies": {
+    "@react-native-firebase/analytics": "*",
+    "@react-native-firebase/app": "*",
+    "@react-native-firebase/crashlytics": "*",
+    "@react-native-firebase/remote-config": "*",
+    "@types/jest": "*",
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "concurrently": "*",
+    "eslint": "*",
+    "jest": "*",
+    "prettier": "*",
+    "typescript": "*"
+  },
+  "private": true,
+  "packageManager": "yarn@4.12.0"
+}

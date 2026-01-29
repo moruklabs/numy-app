@@ -1,0 +1,9 @@
+{
+  "calculator": "Calculadora",
+  "history": "Historial",
+  "settings": "Configuració",
+  "calculatorTab": "Pestanya de la calculadora, introdueix càlculs i veu resultats",
+  "historyTab": "Pestanya d'historial, visualitza els càlculs guardats",
+  "settingsTab": "Pestanya de configuració, configura les preferències de l'aplicació",
+  "newDocument": "Nou càlcul"
+}

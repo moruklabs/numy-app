@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Moje Kalkulacije",
+  "placeholder": "Upišite izračun...",
+  "total": "Ukupno: ",
+  "tapToShare": "dodirnite za dijeljenje",
+  "shareAccessibility": "Podijeli ukupno",
+  "inputAccessibility": "Ulaz za izračun",
+  "inputHint": "Upišite matematički izraz poput 5 puta 3 ili 20% od 100",
+  "resultAccessibility": "Rezultat: {{value}}",
+  "resultHint": "Dvaput dodirnite za dijeljenje ovog rezultata",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Dvaput dodirnite za dijeljenje ukupnog iznosa",
+  "document": {
+    "saveButton": "Spremi",
+    "saveHint": "Dvaput dodirnite za spremanje ovog dokumenta u povijest",
+    "clearButton": "Obriši",
+    "clearHint": "Dvaput dodirnite za brisanje svih izračuna",
+    "closeHint": "Zatvori bez spremanja",
+    "titleAccessibility": "Naziv dokumenta: {{title}}",
+    "titleHint": "Dvaput dodirnite za uređivanje naziva dokumenta",
+    "editTitleModal": "Dijalog za uređivanje naziva dokumenta",
+    "titleInputLabel": "Naziv dokumenta",
+    "titleInputHint": "Unesite novi naziv za ovaj dokument",
+    "cancelHint": "Dvaput dodirnite za otkazivanje i zadržavanje trenutnog naziva",
+    "saveNewTitleHint": "Dvaput dodirnite za spremanje novog naziva",
+    "newDocHint": "Dvaput dodirnite za stvaranje novog dokumenta. Trenutni dokument će biti automatski spremljen.",
+    "savedAlert": {
+      "title": "Spremljeno",
+      "message": "Dokument spremljen u povijest"
+    },
+    "clearAlert": {
+      "title": "Obriši Dokument",
+      "message": "Jeste li sigurni da želite obrisati sve izračune?"
+    },
+    "editTitle": "Uredi Naziv",
+    "titlePlaceholder": "Naziv dokumenta",
+    "lastUpdated": "ažurirano {{time}}"
+  }
+}

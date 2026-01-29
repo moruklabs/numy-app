@@ -1,0 +1,16 @@
+{
+  "cancel": "Annuleren",
+  "clear": "Wissen",
+  "delete": "Verwijderen",
+  "save": "Opslaan",
+  "new": "Nieuw",
+  "back": "Terug",
+  "saved": "Opgeslagen",
+  "loading": "Laden...",
+  "share": "Delen",
+  "notFound": {
+    "title": "Oeps!",
+    "message": "Dit scherm bestaat niet.",
+    "goHome": "Ga naar het startscherm!"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "历史",
+  "screenTitle": "显示已保存计算的历史屏幕",
+  "listAccessibility": "包含{{count}}个文档的已保存文档列表",
+  "documentAccessibility": "{{title}}，保存于{{date}}，{{count}}个计算",
+  "documentHint": "双击打开。使用操作菜单删除。",
+  "openAction": "打开文档",
+  "deleteAction": "删除文档",
+  "emptyState": {
+    "title": "# 没有已保存的计算",
+    "subtitle": "您保存的计算将显示在这里"
+  },
+  "lineCount_one": "{{count}}行",
+  "lineCount_other": "{{count}}行",
+  "deleteAlert": {
+    "title": "删除文档",
+    "message": "确定要删除「{{title}}」吗？此操作无法撤销。"
+  },
+  "lastEdited": "last edited",
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  }
+}

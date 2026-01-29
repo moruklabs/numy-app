@@ -1,0 +1,24 @@
+{
+  "title": "Historik",
+  "screenTitle": "Historikskärm som visar sparade beräkningar",
+  "listAccessibility": "Lista över sparade dokument med {{count}} dokument",
+  "documentAccessibility": "{{title}}, sparad {{date}}, {{count}} beräkningar",
+  "documentHint": "Dubbelknacka för att öppna. Använd åtgärdsmenyn för att ta bort.",
+  "openAction": "Öppna dokument",
+  "deleteAction": "Ta bort dokument",
+  "lastEdited": "senast redigerad",
+  "emptyState": {
+    "title": "# Inga sparade beräkningar ännu",
+    "subtitle": "Dina sparade beräkningar visas här när du har sparat ett dokument"
+  },
+  "sections": {
+    "examples": "# Exempel",
+    "history": "# Historik"
+  },
+  "lineCount_one": "{{count}} rad",
+  "lineCount_other": "{{count}} rader",
+  "deleteAlert": {
+    "title": "Ta bort dokument",
+    "message": "Är du säker på att du vill ta bort \"{{title}}\"? Denna åtgärd kan inte ångras."
+  }
+}

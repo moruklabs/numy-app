@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "Ne mogu pretvoriti {{source}} u {{target}}",
+  "calculationError": "Greška pri izračunu",
+  "aiTimeout": "Isteklo je vrijeme za izračun. Pokušajte ponovno?",
+  "aiNetworkError": "Provjerite internetsku vezu i pokušajte ponovno",
+  "aiRateLimit": "Previše zahtjeva. Pokušajte ponovno za trenutak",
+  "aiNotCalculable": "Ovaj izraz se ne može izračunati",
+  "aiServerError": "Nešto je pošlo po zlu. Pokušajte ponovno?"
+}

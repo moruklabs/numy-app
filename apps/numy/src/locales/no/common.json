@@ -1,0 +1,16 @@
+{
+  "cancel": "Avbryt",
+  "clear": "Tøm",
+  "delete": "Slett",
+  "save": "Lagre",
+  "new": "Ny",
+  "back": "Tilbake",
+  "saved": "Lagret",
+  "loading": "Laster inn...",
+  "share": "Del",
+  "notFound": {
+    "title": "Oisann!",
+    "message": "Denne skjermen eksisterer ikke.",
+    "goHome": "Gå til startskjermen!"
+  }
+}

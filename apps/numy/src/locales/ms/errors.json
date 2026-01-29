@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "Tidak dapat menukar {{source}} kepada {{target}}",
+  "calculationError": "Ralat pengiraan",
+  "aiTimeout": "Pengiraan tamat masa. Cuba lagi?",
+  "aiNetworkError": "Semak sambungan internet anda dan cuba lagi",
+  "aiRateLimit": "Terlalu banyak permintaan. Cuba lagi sebentar",
+  "aiNotCalculable": "Tidak dapat mengira ungkapan ini",
+  "aiServerError": "Sesuatu telah berlaku. Cuba lagi?"
+}

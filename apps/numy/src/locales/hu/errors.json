@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "{{source}} nem konvertálható {{target}} formátumra",
+  "calculationError": "Számítási hiba",
+  "aiTimeout": "A számítás időtúllépés miatt megszakadt. Próbálja újra?",
+  "aiNetworkError": "Ellenőrizze az internetkapcsolatát, és próbálja újra",
+  "aiRateLimit": "Túl sok kérés. Próbálkozzon újra egy pillanat múlva",
+  "aiNotCalculable": "Ez a kifejezés nem számítható ki",
+  "aiServerError": "Valami hiba történt. Próbálja újra?"
+}

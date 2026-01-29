@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "Kan ikke konvertere {{source}} til {{target}}",
+  "calculationError": "Beregningsfejl",
+  "aiTimeout": "Beregning timeout. Prøv igen?",
+  "aiNetworkError": "Tjek din internetforbindelse og prøv igen",
+  "aiRateLimit": "For mange anmodninger. Prøv igen om et øjeblik",
+  "aiNotCalculable": "Kan ikke beregne dette udtryk",
+  "aiServerError": "Noget gik galt. Prøv igen?"
+}

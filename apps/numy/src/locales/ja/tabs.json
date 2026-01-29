@@ -1,0 +1,9 @@
+{
+  "calculator": "電卓",
+  "history": "履歴",
+  "settings": "設定",
+  "calculatorTab": "電卓タブ、計算を入力して結果を見る",
+  "historyTab": "履歴タブ、保存した計算を見る",
+  "settingsTab": "設定タブ、アプリの設定を行う",
+  "newDocument": "New calculation"
+}

@@ -1,0 +1,39 @@
+{
+  "myCalculations": "我的计算",
+  "placeholder": "输入计算...",
+  "total": "总计：",
+  "tapToShare": "点击分享",
+  "inputAccessibility": "计算输入",
+  "inputHint": "输入数学表达式，如5乘3或100的20%",
+  "resultAccessibility": "结果：{{value}}",
+  "resultHint": "双击分享此结果",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "双击分享总计",
+  "document": {
+    "saveButton": "保存",
+    "saveHint": "双击将此文档保存到历史记录",
+    "clearButton": "清除",
+    "clearHint": "双击清除所有计算",
+    "titleAccessibility": "文档标题：{{title}}",
+    "titleHint": "双击编辑文档标题",
+    "editTitleModal": "编辑文档标题对话框",
+    "titleInputLabel": "文档标题",
+    "titleInputHint": "为此文档输入新标题",
+    "cancelHint": "双击取消并保留当前标题",
+    "saveNewTitleHint": "双击保存新标题",
+    "savedAlert": {
+      "title": "已保存",
+      "message": "文档已保存到历史记录"
+    },
+    "clearAlert": {
+      "title": "清除文档",
+      "message": "确定要清除所有计算吗？"
+    },
+    "editTitle": "编辑标题",
+    "titlePlaceholder": "文档标题",
+    "closeHint": "关闭不保存",
+    "newDocHint": "双击创建新文档。当前文档将自动保存。",
+    "lastUpdated": "更新于 {{time}}"
+  },
+  "shareAccessibility": "分享总计"
+}

@@ -1,0 +1,9 @@
+{
+  "calculator": "Calculator",
+  "history": "History",
+  "settings": "Settings",
+  "calculatorTab": "Calculator tab, enter calculations and see results",
+  "historyTab": "History tab, view your saved calculations",
+  "settingsTab": "Settings tab, configure app preferences",
+  "newDocument": "New calculation"
+}

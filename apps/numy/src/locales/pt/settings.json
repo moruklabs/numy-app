@@ -1,0 +1,49 @@
+{
+  "title": "Configurações",
+  "screenTitle": "Tela de configurações",
+  "cssUnits": {
+    "title": "# Unidades CSS",
+    "description": "Configure os valores base para conversões de unidades CSS",
+    "emBase": "base em (px)",
+    "emBaseHint": "Digite o valor base em pixels para cálculos de em",
+    "ppiBase": "base ppi",
+    "ppiBaseHint": "Digite o valor de pixels por polegada para cálculos de unidades físicas"
+  },
+  "privacy": {
+    "title": "# Privacidade",
+    "description": "Controle como seus dados são coletados e usados",
+    "analyticsLabel": "Análises",
+    "analyticsDescription": "Ajude a melhorar o Numy compartilhando dados de uso anônimos",
+    "analyticsEnableHint": "Toque duas vezes para habilitar a coleta de análises",
+    "analyticsDisableHint": "Toque duas vezes para desabilitar a coleta de análises"
+  },
+  "about": {
+    "title": "# Sobre",
+    "appName": "Numy - Calculadora de Linguagem Natural",
+    "version": "Versão 1.0.0",
+    "aiHighlight": "Numy é alimentado por Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "title": "# Links",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfUse": "Termos de Uso",
+    "support": "Suporte",
+    "opensInBrowser": "Abre no navegador"
+  },
+  "preferences": {
+    "title": "# Preferences",
+    "showTotal": "Show running total",
+    "showTotalHint": "Toggle the running total bar at the bottom of the calculator",
+    "decimalPlaces": "Decimal places",
+    "decimalPlacesHint": "Enter the number of decimal places for results (0-10)"
+  },
+  "resetAll": {
+    "title": "Erase All Settings",
+    "message": "This will delete all your notes and reset all settings to defaults. This cannot be undone.",
+    "confirm": "Erase All",
+    "cancel": "Cancel",
+    "buttonLabel": "Erase All Settings",
+    "buttonHint": "Double tap to erase all settings and delete all notes"
+  }
+}

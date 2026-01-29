@@ -1,0 +1,16 @@
+{
+  "cancel": "Avbryt",
+  "clear": "Rensa",
+  "delete": "Ta bort",
+  "save": "Spara",
+  "new": "Ny",
+  "back": "Tillbaka",
+  "saved": "Sparad",
+  "loading": "Laddar...",
+  "share": "Dela",
+  "notFound": {
+    "title": "Hoppsan!",
+    "message": "Den här skärmen existerar inte.",
+    "goHome": "Gå till startsidan!"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "设置",
+  "screenTitle": "设置屏幕",
+  "cssUnits": {
+    "title": "# CSS单位",
+    "description": "配置CSS单位转换的基础值",
+    "emBase": "em基值 (px)",
+    "emBaseHint": "输入em计算的基础像素值",
+    "ppiBase": "ppi基值",
+    "ppiBaseHint": "输入物理单位计算的每英寸像素值"
+  },
+  "privacy": {
+    "title": "# 隐私",
+    "description": "控制您的数据如何被收集和使用",
+    "analyticsLabel": "数据分析",
+    "analyticsDescription": "分享匿名使用数据以帮助改进Numy",
+    "analyticsEnableHint": "双击启用数据分析收集",
+    "analyticsDisableHint": "双击禁用数据分析收集"
+  },
+  "about": {
+    "title": "# 关于",
+    "appName": "Numy - 自然语言计算器",
+    "version": "版本 1.0.0",
+    "aiHighlight": "Numy由Apple Intelligence提供支持。",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "title": "# 链接",
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "使用条款",
+    "support": "支持",
+    "opensInBrowser": "在浏览器中打开"
+  },
+  "preferences": {
+    "title": "# Preferences",
+    "showTotal": "Show running total",
+    "showTotalHint": "Toggle the running total bar at the bottom of the calculator",
+    "decimalPlaces": "Decimal places",
+    "decimalPlacesHint": "Enter the number of decimal places for results (0-10)"
+  },
+  "resetAll": {
+    "title": "Erase All Settings",
+    "message": "This will delete all your notes and reset all settings to defaults. This cannot be undone.",
+    "confirm": "Erase All",
+    "cancel": "Cancel",
+    "buttonLabel": "Erase All Settings",
+    "buttonHint": "Double tap to erase all settings and delete all notes"
+  }
+}

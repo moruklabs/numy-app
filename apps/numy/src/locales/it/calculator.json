@@ -1,0 +1,39 @@
+{
+  "myCalculations": "I Miei Calcoli",
+  "placeholder": "Digita un calcolo...",
+  "total": "Totale: ",
+  "tapToShare": "Tocca per condividere",
+  "inputAccessibility": "Input di calcolo",
+  "inputHint": "Digita un'espressione matematica come 5 per 3 o 20% di 100",
+  "resultAccessibility": "Risultato: {{value}}",
+  "resultHint": "Tocca due volte per condividere questo risultato",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Tocca due volte per condividere il totale",
+  "document": {
+    "saveButton": "Salva",
+    "saveHint": "Tocca due volte per salvare questo documento nella cronologia",
+    "clearButton": "Cancella",
+    "clearHint": "Tocca due volte per cancellare tutti i calcoli",
+    "titleAccessibility": "Titolo del documento: {{title}}",
+    "titleHint": "Tocca due volte per modificare il titolo del documento",
+    "editTitleModal": "Dialogo per modificare il titolo del documento",
+    "titleInputLabel": "Titolo del documento",
+    "titleInputHint": "Inserisci un nuovo titolo per questo documento",
+    "cancelHint": "Tocca due volte per annullare e mantenere il titolo attuale",
+    "saveNewTitleHint": "Tocca due volte per salvare il nuovo titolo",
+    "savedAlert": {
+      "title": "Salvato",
+      "message": "Documento salvato nella cronologia"
+    },
+    "clearAlert": {
+      "title": "Cancella Documento",
+      "message": "Sei sicuro di voler cancellare tutti i calcoli?"
+    },
+    "editTitle": "Modifica Titolo",
+    "titlePlaceholder": "Titolo del documento",
+    "closeHint": "Close without saving",
+    "newDocHint": "Double tap to create a new document. Current document will be auto-saved.",
+    "lastUpdated": "updated {{time}}"
+  },
+  "shareAccessibility": "Share total"
+}

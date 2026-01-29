@@ -1,0 +1,16 @@
+{
+  "cancel": "취소",
+  "clear": "지우기",
+  "delete": "삭제",
+  "save": "저장",
+  "saved": "저장됨",
+  "loading": "로딩 중...",
+  "share": "공유",
+  "notFound": {
+    "title": "이런!",
+    "message": "이 페이지는 존재하지 않습니다.",
+    "goHome": "홈 화면으로!"
+  },
+  "new": "New",
+  "back": "Back"
+}

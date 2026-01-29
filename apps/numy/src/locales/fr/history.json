@@ -1,0 +1,24 @@
+{
+  "title": "Historique",
+  "screenTitle": "Écran d'historique affichant les calculs enregistrés",
+  "listAccessibility": "Liste des documents enregistrés avec {{count}} documents",
+  "documentAccessibility": "{{title}}, enregistré le {{date}}, {{count}} calculs",
+  "documentHint": "Appuyez deux fois pour ouvrir. Utilisez le menu d'actions pour supprimer.",
+  "openAction": "Ouvrir le document",
+  "deleteAction": "Supprimer le document",
+  "emptyState": {
+    "title": "# Aucun calcul enregistré",
+    "subtitle": "Vos calculs enregistrés apparaîtront ici"
+  },
+  "lineCount_one": "{{count}} ligne",
+  "lineCount_other": "{{count}} lignes",
+  "deleteAlert": {
+    "title": "Supprimer le Document",
+    "message": "Êtes-vous sûr de vouloir supprimer \"{{title}}\" ? Cette action est irréversible."
+  },
+  "lastEdited": "last edited",
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  }
+}

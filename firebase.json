@@ -1,0 +1,14 @@
+{
+  "react-native": {
+    "analytics_auto_collection_enabled": false,
+    "crashlytics_auto_collection_enabled": false,
+    "crashlytics_debug_enabled": false,
+    "crashlytics_ndk_enabled": false,
+    "crashlytics_is_error_generation_on_js_crash_enabled": false,
+    "perf_auto_collection_enabled": false,
+    "messaging_auto_init_enabled": false,
+    "in_app_messaging_auto_collection_enabled": false,
+    "app_check_token_auto_refresh": false,
+    "analytics_collection_deactivated": true
+  }
+}

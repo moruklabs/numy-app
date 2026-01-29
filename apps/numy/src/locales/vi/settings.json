@@ -1,0 +1,40 @@
+{
+  "title": "Cài đặt",
+  "screenTitle": "Màn hình Cài đ���t",
+  "cssUnits": {
+    "title": "## Đơn vị CSS",
+    "description": "Cấu hình các giá trị cơ sở để chuyển đổi đơn vị CSS",
+    "emBase": "Cơ sở em (px)",
+    "emBaseHint": "Nhập giá trị pixel cơ sở cho các phép tính em",
+    "ppiBase": "Cơ sở ppi",
+    "ppiBaseHint": "Nhập giá trị pixel trên inch cho các phép tính đơn vị vật lý"
+  },
+  "about": {
+    "title": "# Giới thiệu",
+    "appName": "Numy - Máy tính Ngôn ngữ Tự nhiên",
+    "version": "Phiên bản 1.0.0",
+    "aiHighlight": "Numy được cung cấp bởi Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Chính sách Bảo mật",
+    "termsOfUse": "Điều khoản Sử dụng",
+    "support": "Hỗ trợ",
+    "opensInBrowser": "Mở trong trình duyệt"
+  },
+  "preferences": {
+    "title": "# Tùy chọn",
+    "showTotal": "Hiển thị tổng cộng dồn",
+    "showTotalHint": "Bật/tắt thanh tổng cộng dồn ở cuối máy tính",
+    "decimalPlaces": "Số chữ số thập phân",
+    "decimalPlacesHint": "Nhập số chữ số thập phân cho kết quả (0-10)"
+  },
+  "resetAll": {
+    "title": "Xóa Tất cả Cài đặt",
+    "message": "Thao tác này sẽ xóa tất cả ghi chú của bạn và đặt lại tất cả cài đặt về mặc định. Thao tác này không thể hoàn tác.",
+    "confirm": "Xóa Tất Cả",
+    "cancel": "Hủy",
+    "buttonLabel": "Xóa Tất Cả Cài Đặt",
+    "buttonHint": "Chạm hai lần để xóa tất cả cài đặt và xóa tất cả ghi chú"
+  }
+}

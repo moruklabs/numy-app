@@ -1,0 +1,74 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Python Hook",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/.claude/hooks"
+      }
+    },
+    {
+      "name": "Debug Python Hook Test",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": [
+        "discover",
+        "-s",
+        ".claude/hooks/tests",
+        "-p",
+        "test_*.py"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/.claude/hooks"
+      }
+    },
+    {
+      "name": "Attach to Python",
+      "type": "debugpy",
+      "request": "attach",
+      "connect": {
+        "host": "localhost",
+        "port": 5678
+      },
+      "justMyCode": false
+    },
+    {
+      "name": "Debug React Native (Expo)",
+      "type": "reactnative",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "platform": "ios"
+    },
+    {
+      "name": "Debug Node.js Worker",
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Worker",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/workers/${input:workerName}/src/index.ts",
+      "outFiles": ["${workspaceFolder}/workers/**/*.js"],
+      "runtimeArgs": ["--loader", "ts-node/esm"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "workerName",
+      "type": "promptString",
+      "description": "Worker name (e.g., gemini-api, monitor-api)"
+    }
+  ]
+}
+

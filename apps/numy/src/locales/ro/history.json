@@ -1,0 +1,24 @@
+{
+  "title": "Istoric",
+  "screenTitle": "Ecran Istoric care afi��ează calculele salvate",
+  "listAccessibility": "Listă de documente salvate cu {{count}} documente",
+  "documentAccessibility": "{{title}}, salvat la {{date}}, {{count}} calcule",
+  "documentHint": "Atingeți de două ori pentru a deschide. Folosiți meniul de acțiuni pentru a șterge.",
+  "openAction": "Deschide document",
+  "deleteAction": "Șterge document",
+  "lastEdited": "ultima modificare",
+  "emptyState": {
+    "title": "# Niciun calcul salvat încă",
+    "subtitle": "Calculele dvs. salvate vor apărea aici după ce salvați un document"
+  },
+  "sections": {
+    "examples": "# Exemple",
+    "history": "# Istoric"
+  },
+  "lineCount_one": "{{count}} linie",
+  "lineCount_other": "{{count}} linii",
+  "deleteAlert": {
+    "title": "Șterge Document",
+    "message": "Ești sigur că vrei să ștergi \"{{title}}\"? Această acțiune nu poate fi anulată."
+  }
+}

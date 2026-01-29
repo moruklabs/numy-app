@@ -1,0 +1,24 @@
+{
+  "title": "Geçmiş",
+  "screenTitle": "Kaydedilmiş hesaplamaları gösteren Geçmiş ekranı",
+  "listAccessibility": "{{count}} belge içeren kaydedilmiş belgeler listesi",
+  "documentAccessibility": "{{title}}, {{date}} tarihinde kaydedildi, {{count}} hesaplama",
+  "documentHint": "Açmak için çift dokunun. Silmek için eylemler menüsünü kullanın.",
+  "openAction": "Belgeyi aç",
+  "deleteAction": "Belgeyi sil",
+  "lastEdited": "son düzenleme",
+  "emptyState": {
+    "title": "# Henüz kaydedilmiş hesaplama yok",
+    "subtitle": "Kaydettiğiniz hesaplamalar bir belge kaydettikten sonra burada görünecektir"
+  },
+  "sections": {
+    "examples": "# Örnekler",
+    "history": "# Geçmiş"
+  },
+  "lineCount_one": "{{count}} satır",
+  "lineCount_other": "{{count}} satır",
+  "deleteAlert": {
+    "title": "Belgeyi Sil",
+    "message": "\"{{title}}\" öğesini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+  }
+}

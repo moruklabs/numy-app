@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "Kan {{source}} niet converteren naar {{target}}",
+  "calculationError": "Berekeningsfout",
+  "aiTimeout": "Berekening is verlopen. Probeer het opnieuw?",
+  "aiNetworkError": "Controleer uw internetverbinding en probeer het opnieuw",
+  "aiRateLimit": "Te veel verzoeken. Probeer het over een ogenblik opnieuw",
+  "aiNotCalculable": "Deze uitdrukking kan niet worden berekend",
+  "aiServerError": "Er is iets misgegaan. Probeer het opnieuw?"
+}

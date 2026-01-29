@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Mijn Berekeningen",
+  "placeholder": "Typ berekening...",
+  "total": "Totaal: ",
+  "tapToShare": "tik om te delen",
+  "shareAccessibility": "Totaal delen",
+  "inputAccessibility": "Invoer voor berekening",
+  "inputHint": "Typ een wiskundige uitdrukking zoals 5 maal 3 of 20% van 100",
+  "resultAccessibility": "Resultaat: {{value}}",
+  "resultHint": "Dubbeltik om dit resultaat te delen",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Dubbeltik om het totaal te delen",
+  "document": {
+    "saveButton": "Opslaan",
+    "saveHint": "Dubbeltik om dit document op te slaan in de geschiedenis",
+    "clearButton": "Wissen",
+    "clearHint": "Dubbeltik om alle berekeningen te wissen",
+    "closeHint": "Sluiten zonder op te slaan",
+    "titleAccessibility": "Documenttitel: {{title}}",
+    "titleHint": "Dubbeltik om de documenttitel te bewerken",
+    "editTitleModal": "Dialoogvenster om documenttitel te bewerken",
+    "titleInputLabel": "Documenttitel",
+    "titleInputHint": "Voer een nieuwe titel in voor dit document",
+    "cancelHint": "Dubbeltik om te annuleren en de huidige titel te behouden",
+    "saveNewTitleHint": "Dubbeltik om de nieuwe titel op te slaan",
+    "newDocHint": "Dubbeltik om een nieuw document aan te maken. Het huidige document wordt automatisch opgeslagen.",
+    "savedAlert": {
+      "title": "Opgeslagen",
+      "message": "Document opgeslagen in geschiedenis"
+    },
+    "clearAlert": {
+      "title": "Document Wissen",
+      "message": "Weet u zeker dat u alle berekeningen wilt wissen?"
+    },
+    "editTitle": "Titel Bewerken",
+    "titlePlaceholder": "Documenttitel",
+    "lastUpdated": "bijgewerkt {{time}}"
+  }
+}

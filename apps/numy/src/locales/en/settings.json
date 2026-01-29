@@ -1,0 +1,40 @@
+{
+  "title": "Settings",
+  "screenTitle": "Settings screen",
+  "cssUnits": {
+    "title": "## CSS Units",
+    "description": "Configure base values for CSS unit conversions",
+    "emBase": "em base (px)",
+    "emBaseHint": "Enter the base pixel value for em calculations",
+    "ppiBase": "ppi base",
+    "ppiBaseHint": "Enter the pixels per inch value for physical unit calculations"
+  },
+  "about": {
+    "title": "# About",
+    "appName": "Numy - Natural Language Calculator",
+    "version": "Version 1.0.0",
+    "aiHighlight": "Numy is empowered by Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "support": "Support",
+    "opensInBrowser": "Opens in browser"
+  },
+  "preferences": {
+    "title": "# Preferences",
+    "showTotal": "Show running total",
+    "showTotalHint": "Toggle the running total bar at the bottom of the calculator",
+    "decimalPlaces": "Decimal places",
+    "decimalPlacesHint": "Enter the number of decimal places for results (0-10)"
+  },
+  "resetAll": {
+    "title": "Erase All Settings",
+    "message": "This will delete all your notes and reset all settings to defaults. This cannot be undone.",
+    "confirm": "Erase All",
+    "cancel": "Cancel",
+    "buttonLabel": "Erase All Settings",
+    "buttonHint": "Double tap to erase all settings and delete all notes"
+  }
+}

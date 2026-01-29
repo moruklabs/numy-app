@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Mes Calculs",
+  "placeholder": "Tapez un calcul...",
+  "total": "Total : ",
+  "tapToShare": "Appuyez pour partager",
+  "inputAccessibility": "Entrée de calcul",
+  "inputHint": "Tapez une expression mathématique comme 5 fois 3 ou 20% de 100",
+  "resultAccessibility": "Résultat : {{value}}",
+  "resultHint": "Appuyez deux fois pour partager ce résultat",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Appuyez deux fois pour partager le total",
+  "document": {
+    "saveButton": "Enregistrer",
+    "saveHint": "Appuyez deux fois pour enregistrer ce document dans l'historique",
+    "clearButton": "Effacer",
+    "clearHint": "Appuyez deux fois pour effacer tous les calculs",
+    "titleAccessibility": "Titre du document : {{title}}",
+    "titleHint": "Appuyez deux fois pour modifier le titre du document",
+    "editTitleModal": "Dialogue de modification du titre du document",
+    "titleInputLabel": "Titre du document",
+    "titleInputHint": "Entrez un nouveau titre pour ce document",
+    "cancelHint": "Appuyez deux fois pour annuler et garder le titre actuel",
+    "saveNewTitleHint": "Appuyez deux fois pour enregistrer le nouveau titre",
+    "savedAlert": {
+      "title": "Enregistré",
+      "message": "Document enregistré dans l'historique"
+    },
+    "clearAlert": {
+      "title": "Effacer le Document",
+      "message": "Êtes-vous sûr de vouloir effacer tous les calculs ?"
+    },
+    "editTitle": "Modifier le Titre",
+    "titlePlaceholder": "Titre du document",
+    "closeHint": "Close without saving",
+    "newDocHint": "Double tap to create a new document. Current document will be auto-saved.",
+    "lastUpdated": "updated {{time}}"
+  },
+  "shareAccessibility": "Share total"
+}

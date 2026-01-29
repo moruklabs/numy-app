@@ -1,0 +1,40 @@
+{
+  "title": "Ustawienia",
+  "screenTitle": "Ekran ustawień",
+  "cssUnits": {
+    "title": "## Jednostki CSS",
+    "description": "Skonfiguruj wartości bazowe dla konwersji jednostek CSS",
+    "emBase": "Wartość bazowa em (px)",
+    "emBaseHint": "Wprowadź bazową wartość w pikselach dla obliczeń em",
+    "ppiBase": "Wartość bazowa ppi",
+    "ppiBaseHint": "Wprowadź wartość pikseli na cal dla obliczeń jednostek fizycznych"
+  },
+  "about": {
+    "title": "# O aplikacji",
+    "appName": "Numy - Kalkulator języka naturalnego",
+    "version": "Wersja 1.0.0",
+    "aiHighlight": "Numy jest zasilany przez Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Polityka prywatności",
+    "termsOfUse": "Warunki użytkowania",
+    "support": "Wsparcie",
+    "opensInBrowser": "Otwiera się w przeglądarce"
+  },
+  "preferences": {
+    "title": "# Preferencje",
+    "showTotal": "Pokaż sumę bieżącą",
+    "showTotalHint": "Przełącz pasek sumy bieżącej na dole kalkulatora",
+    "decimalPlaces": "Miejsca po przecinku",
+    "decimalPlacesHint": "Wprowadź liczbę miejsc po przecinku dla wyników (0-10)"
+  },
+  "resetAll": {
+    "title": "Wyczyść wszystkie ustawienia",
+    "message": "Spowoduje to usunięcie wszystkich notatek i zresetowanie wszystkich ustawień do wartości domyślnych. Tej operacji nie można cofnąć.",
+    "confirm": "Wyczyść wszystko",
+    "cancel": "Anuluj",
+    "buttonLabel": "Wyczyść wszystkie ustawienia",
+    "buttonHint": "Dwukrotne dotknięcie spowoduje wyczyszczenie wszystkich ustawień i usunięcie wszystkich notatek"
+  }
+}

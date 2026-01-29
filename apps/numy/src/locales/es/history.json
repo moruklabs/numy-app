@@ -1,0 +1,24 @@
+{
+  "title": "Historial",
+  "screenTitle": "Pantalla de historial mostrando cálculos guardados",
+  "listAccessibility": "Lista de documentos guardados con {{count}} documentos",
+  "documentAccessibility": "{{title}}, guardado el {{date}}, {{count}} cálculos",
+  "documentHint": "Toca dos veces para abrir. Usa el menú de acciones para eliminar.",
+  "openAction": "Abrir documento",
+  "deleteAction": "Eliminar documento",
+  "emptyState": {
+    "title": "# Sin cálculos guardados",
+    "subtitle": "Tus cálculos guardados aparecerán aquí"
+  },
+  "lineCount_one": "{{count}} línea",
+  "lineCount_other": "{{count}} líneas",
+  "deleteAlert": {
+    "title": "Eliminar Documento",
+    "message": "¿Estás seguro de que quieres eliminar \"{{title}}\"? Esta acción no se puede deshacer."
+  },
+  "lastEdited": "last edited",
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  }
+}

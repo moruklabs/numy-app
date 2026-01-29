@@ -1,0 +1,24 @@
+{
+  "title": "Lịch sử",
+  "screenTitle": "Màn hình Lịch sử hiển thị các phép tính đã lưu",
+  "listAccessibility": "Danh sách tài liệu đã lưu với {{count}} tài liệu",
+  "documentAccessibility": "{{title}}, được lưu vào ngày {{date}}, {{count}} phép tính",
+  "documentHint": "Chạm hai lần để mở. Sử dụng menu hành động để xóa.",
+  "openAction": "Mở tài liệu",
+  "deleteAction": "Xóa tài liệu",
+  "lastEdited": "chỉnh sửa lần cuối",
+  "emptyState": {
+    "title": "# Chưa có phép tính nào được lưu",
+    "subtitle": "Các phép tính đã lưu của bạn sẽ xuất hiện ở đây sau khi bạn lưu tài liệu"
+  },
+  "sections": {
+    "examples": "# Ví dụ",
+    "history": "# Lịch sử"
+  },
+  "lineCount_one": "{{count}} dòng",
+  "lineCount_other": "{{count}} dòng",
+  "deleteAlert": {
+    "title": "Xóa Tài liệu",
+    "message": "Bạn có chắc chắn muốn xóa \"{{title}}\" không? Hành động này không thể hoàn tác."
+  }
+}

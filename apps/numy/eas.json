@@ -1,0 +1,66 @@
+{
+  "cli": {
+    "version": ">= 16.13.2",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "ios": {
+        "developmentClient": true,
+        "cache": {
+          "disabled": false,
+          "key": "dev-local-build",
+          "paths": ["node_modules", "ios/Pods"]
+        },
+        "distribution": "internal",
+        "simulator": false
+      },
+      "channel": "development",
+      "android": {
+        "developmentClient": true,
+        "distribution": "internal"
+      }
+    },
+    "preview": {
+      "ios": {
+        "cache": {
+          "disabled": false,
+          "key": "preview-local-build",
+          "paths": ["node_modules", "ios/Pods"]
+        },
+        "distribution": "internal",
+        "simulator": false
+      },
+      "channel": "preview",
+      "android": {
+        "distribution": "internal"
+      }
+    },
+    "production": {
+      "ios": {
+        "autoIncrement": true,
+        "cache": {
+          "disabled": false,
+          "key": "prod-local-build",
+          "paths": ["node_modules", "ios/Pods"]
+        }
+      },
+      "channel": "production",
+      "android": {}
+    },
+    "production-simulator": {
+      "ios": {
+        "simulator": true
+      },
+      "channel": "production-simulator"
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "6756936386",
+        "metadataPath": "./store.config.json"
+      }
+    }
+  }
+}

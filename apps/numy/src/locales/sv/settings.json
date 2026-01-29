@@ -1,0 +1,40 @@
+{
+  "title": "Inställningar",
+  "screenTitle": "Inställningsskärm",
+  "cssUnits": {
+    "title": "## CSS-enheter",
+    "description": "Konfigurera basvärden för CSS-enhetskonverteringar",
+    "emBase": "em-bas (px)",
+    "emBaseHint": "Ange baspixeltalet för em-beräkningar",
+    "ppiBase": "ppi-bas",
+    "ppiBaseHint": "Ange pixlar per tum-värdet för beräkningar av fysiska enheter"
+  },
+  "about": {
+    "title": "# Om",
+    "appName": "Numy - Naturlig Språk Kalkylator",
+    "version": "Version 1.0.0",
+    "aiHighlight": "Numy drivs av Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfUse": "Användarvillkor",
+    "support": "Support",
+    "opensInBrowser": "Öppnas i webbläsare"
+  },
+  "preferences": {
+    "title": "# Inställningar",
+    "showTotal": "Visa löpande totalsumma",
+    "showTotalHint": "Växla den löpande totalsumman längst ner på kalkylatorn",
+    "decimalPlaces": "Antal decimaler",
+    "decimalPlacesHint": "Ange antalet decimaler för resultat (0-10)"
+  },
+  "resetAll": {
+    "title": "Radera alla inställningar",
+    "message": "Detta kommer att radera alla dina anteckningar och återställa alla inställningar till standardvärden. Detta kan inte ångras.",
+    "confirm": "Radera allt",
+    "cancel": "Avbryt",
+    "buttonLabel": "Radera alla inställningar",
+    "buttonHint": "Dubbeltryck för att radera alla inställningar och ta bort alla anteckningar"
+  }
+}

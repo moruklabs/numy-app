@@ -1,0 +1,16 @@
+{
+  "cancel": "Zrušit",
+  "clear": "Vymazat",
+  "delete": "Odstranit",
+  "save": "Uložit",
+  "new": "Nový",
+  "back": "Zpět",
+  "saved": "Uloženo",
+  "loading": "Načítání...",
+  "share": "Sdílet",
+  "notFound": {
+    "title": "Jejda!",
+    "message": "Tato obrazovka neexistuje.",
+    "goHome": "Přejít na domovskou obrazovku!"
+  }
+}

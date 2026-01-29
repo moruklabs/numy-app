@@ -1,0 +1,24 @@
+{
+  "title": "Riwayat",
+  "screenTitle": "Layar Riwayat menampilkan perhitungan yang disimpan",
+  "listAccessibility": "Daftar dokumen tersimpan dengan {{count}} dokumen",
+  "documentAccessibility": "{{title}}, disimpan pada {{date}}, {{count}} perhitungan",
+  "documentHint": "Ketuk dua kali untuk membuka. Gunakan menu tindakan untuk menghapus.",
+  "openAction": "Buka dokumen",
+  "deleteAction": "Hapus dokumen",
+  "lastEdited": "terakhir diedit",
+  "emptyState": {
+    "title": "# Belum ada perhitungan yang disimpan",
+    "subtitle": "Perhitungan Anda yang disimpan akan muncul di sini setelah Anda menyimpan dokumen"
+  },
+  "sections": {
+    "examples": "# Contoh",
+    "history": "# Riwayat"
+  },
+  "lineCount_one": "{{count}} baris",
+  "lineCount_other": "{{count}} baris",
+  "deleteAlert": {
+    "title": "Hapus Dokumen",
+    "message": "Apakah Anda yakin ingin menghapus \"{{title}}\"? Tindakan ini tidak dapat dibatalkan."
+  }
+}

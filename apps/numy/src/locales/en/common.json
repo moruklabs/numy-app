@@ -1,0 +1,16 @@
+{
+  "cancel": "Cancel",
+  "clear": "Clear",
+  "delete": "Delete",
+  "save": "Save",
+  "new": "New",
+  "back": "Back",
+  "saved": "Saved",
+  "loading": "Loading...",
+  "share": "Share",
+  "notFound": {
+    "title": "Oops!",
+    "message": "This screen does not exist.",
+    "goHome": "Go to home screen!"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Beállítások",
+  "screenTitle": "Beállítások képernyő",
+  "cssUnits": {
+    "title": "## CSS egységek",
+    "description": "Konfigurálja az alapértékeket a CSS egységkonverziókhoz",
+    "emBase": "em alap (px)",
+    "emBaseHint": "Adja meg az em számítások alap pixelértékét",
+    "ppiBase": "ppi alap",
+    "ppiBaseHint": "Adja meg a képpont per hüvelyk értéket a fizikai egység számításokhoz"
+  },
+  "about": {
+    "title": "# Névjegy",
+    "appName": "Numy - Természetes nyelvi számológép",
+    "version": "Verzió 1.0.0",
+    "aiHighlight": "A Numy-t az Apple Intelligence működteti.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Adatvédelmi irányelvek",
+    "termsOfUse": "Felhasználási feltételek",
+    "support": "Támogatás",
+    "opensInBrowser": "Böngészőben nyílik meg"
+  },
+  "preferences": {
+    "title": "# Beállítások",
+    "showTotal": "Futtatott összeg megjelenítése",
+    "showTotalHint": "Kapcsolja be/ki a futtatott összeg sávot a számológép alján",
+    "decimalPlaces": "Tizedesjegyek",
+    "decimalPlacesHint": "Adja meg az eredmények tizedesjegyeinek számát (0-10)"
+  },
+  "resetAll": {
+    "title": "Minden beállítás törlése",
+    "message": "Ez törli az összes jegyzetét és visszaállítja az összes beállítást az alapértelmezettre. Ez nem vonható vissza.",
+    "confirm": "Mindent töröl",
+    "cancel": "Mégse",
+    "buttonLabel": "Minden beállítás törlése",
+    "buttonHint": "Dupla koppintás az összes beállítás törléséhez és az összes jegyzet eltávolításához"
+  }
+}

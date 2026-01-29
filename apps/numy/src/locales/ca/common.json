@@ -1,0 +1,16 @@
+{
+  "cancel": "Cancel·la",
+  "clear": "Neteja",
+  "delete": "Suprimeix",
+  "save": "Desa",
+  "new": "Nou",
+  "back": "Enrere",
+  "saved": "Desat",
+  "loading": "Carregant...",
+  "share": "Comparteix",
+  "notFound": {
+    "title": "Ups!",
+    "message": "Aquesta pantalla no existeix.",
+    "goHome": "Ves a la pantalla d'inici!"
+  }
+}

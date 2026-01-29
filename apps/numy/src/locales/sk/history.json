@@ -1,0 +1,24 @@
+{
+  "title": "História",
+  "screenTitle": "Obrazovka histórie zobrazuj��ca uložené výpočty",
+  "listAccessibility": "Zoznam uložených dokumentov s {{count}} dokumentmi",
+  "documentAccessibility": "{{title}}, uložené dňa {{date}}, {{count}} výpočtov",
+  "documentHint": "Dvakrát ťuknite pre otvorenie. Na odstránenie použite ponuku akcií.",
+  "openAction": "Otvoriť dokument",
+  "deleteAction": "Odstrániť dokument",
+  "lastEdited": "naposledy upravené",
+  "emptyState": {
+    "title": "# Zatiaľ žiadne uložené výpočty",
+    "subtitle": "Vaše uložené výpočty sa tu zobrazia po uložení dokumentu"
+  },
+  "sections": {
+    "examples": "# Príklady",
+    "history": "# História"
+  },
+  "lineCount_one": "{{count}} riadok",
+  "lineCount_other": "{{count}} riadkov",
+  "deleteAlert": {
+    "title": "Odstrániť dokument",
+    "message": "Ste si istý, že chcete odstrániť \"{{title}}\"? Túto akciu nie je možné vrátiť späť."
+  }
+}

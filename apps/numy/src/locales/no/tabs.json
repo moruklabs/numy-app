@@ -1,0 +1,9 @@
+{
+  "calculator": "Kalkulator",
+  "history": "Historikk",
+  "settings": "Innstillinger",
+  "calculatorTab": "Kalkulatorfane, skriv inn beregninger og se resultater",
+  "historyTab": "Historikkfane, se dine lagrede beregninger",
+  "settingsTab": "Innstillingsfane, konfigurer app-preferanser",
+  "newDocument": "Ny beregning"
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Indstillinger",
+  "screenTitle": "Indstillingsskærm",
+  "cssUnits": {
+    "title": "## CSS Enheder",
+    "description": "Konfigurer basisværdier for CSS-enhedskonverteringer",
+    "emBase": "em basis (px)",
+    "emBaseHint": "Indtast basis pixelværdien for em-beregninger",
+    "ppiBase": "ppi basis",
+    "ppiBaseHint": "Indtast pixels per inch-værdien for beregninger af fysiske enheder"
+  },
+  "about": {
+    "title": "# Om",
+    "appName": "Numy - Naturlig Sprog Lommeregner",
+    "version": "Version 1.0.0",
+    "aiHighlight": "Numy er drevet af Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Privatlivspolitik",
+    "termsOfUse": "Brugsvilkår",
+    "support": "Support",
+    "opensInBrowser": "Åbnes i browser"
+  },
+  "preferences": {
+    "title": "# Præferencer",
+    "showTotal": "Vis løbende total",
+    "showTotalHint": "Skift den løbende totalbjælke i bunden af lommeregneren",
+    "decimalPlaces": "Decimaler",
+    "decimalPlacesHint": "Indtast antallet af decimaler for resultater (0-10)"
+  },
+  "resetAll": {
+    "title": "Slet Alle Indstillinger",
+    "message": "Dette vil slette alle dine noter og nulstille alle indstillinger til standardværdier. Dette kan ikke fortrydes.",
+    "confirm": "Slet Alt",
+    "cancel": "Annuller",
+    "buttonLabel": "Slet Alle Indstillinger",
+    "buttonHint": "Dobbeltklik for at slette alle indstillinger og alle noter"
+  }
+}

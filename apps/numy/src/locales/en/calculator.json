@@ -1,0 +1,39 @@
+{
+  "myCalculations": "My Calculations",
+  "placeholder": "Type calculation...",
+  "total": "Total: ",
+  "tapToShare": "tap to share",
+  "shareAccessibility": "Share total",
+  "inputAccessibility": "Calculation input",
+  "inputHint": "Type a math expression like 5 times 3 or 20% of 100",
+  "resultAccessibility": "Result: {{value}}",
+  "resultHint": "Double tap to share this result",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Double tap to share the total",
+  "document": {
+    "saveButton": "Save",
+    "saveHint": "Double tap to save this document to history",
+    "clearButton": "Clear",
+    "clearHint": "Double tap to clear all calculations",
+    "closeHint": "Close without saving",
+    "titleAccessibility": "Document title: {{title}}",
+    "titleHint": "Double tap to edit the document title",
+    "editTitleModal": "Edit document title dialog",
+    "titleInputLabel": "Document title",
+    "titleInputHint": "Enter a new title for this document",
+    "cancelHint": "Double tap to cancel and keep current title",
+    "saveNewTitleHint": "Double tap to save the new title",
+    "newDocHint": "Double tap to create a new document. Current document will be auto-saved.",
+    "savedAlert": {
+      "title": "Saved",
+      "message": "Document saved to history"
+    },
+    "clearAlert": {
+      "title": "Clear Document",
+      "message": "Are you sure you want to clear all calculations?"
+    },
+    "editTitle": "Edit Title",
+    "titlePlaceholder": "Document title",
+    "lastUpdated": "updated {{time}}"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Mine beregninger",
+  "placeholder": "Skriv inn beregning...",
+  "total": "Totalt: ",
+  "tapToShare": "trykk for å dele",
+  "shareAccessibility": "Del total",
+  "inputAccessibility": "Beregning input",
+  "inputHint": "Skriv et matematisk uttrykk som 5 ganger 3 eller 20% av 100",
+  "resultAccessibility": "Resultat: {{value}}",
+  "resultHint": "Dobbeltklikk for å dele dette resultatet",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Dobbeltklikk for å dele totalen",
+  "document": {
+    "saveButton": "Lagre",
+    "saveHint": "Dobbeltklikk for å lagre dette dokumentet i historikken",
+    "clearButton": "Tøm",
+    "clearHint": "Dobbeltklikk for å tømme alle beregninger",
+    "closeHint": "Lukk uten å lagre",
+    "titleAccessibility": "Dokumenttittel: {{title}}",
+    "titleHint": "Dobbeltklikk for å redigere dokumenttittelen",
+    "editTitleModal": "Dialog for redigering av dokumenttittel",
+    "titleInputLabel": "Dokumenttittel",
+    "titleInputHint": "Skriv inn en ny tittel for dette dokumentet",
+    "cancelHint": "Dobbeltklikk for å avbryte og beholde gjeldende tittel",
+    "saveNewTitleHint": "Dobbeltklikk for å lagre den nye tittelen",
+    "newDocHint": "Dobbeltklikk for å opprette et nytt dokument. Gjeldende dokument vil bli automatisk lagret.",
+    "savedAlert": {
+      "title": "Lagret",
+      "message": "Dokument lagret i historikken"
+    },
+    "clearAlert": {
+      "title": "Tøm dokument",
+      "message": "Er du sikker på at du vil tømme alle beregninger?"
+    },
+    "editTitle": "Rediger tittel",
+    "titlePlaceholder": "Dokumenttittel",
+    "lastUpdated": "oppdatert {{time}}"
+  }
+}

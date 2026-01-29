@@ -1,0 +1,9 @@
+{
+  "calculator": "계산기",
+  "history": "기록",
+  "settings": "설정",
+  "calculatorTab": "계산기 탭, 계산을 입력하고 결과 확인",
+  "historyTab": "기록 탭, 저장된 계산 보기",
+  "settingsTab": "설정 탭, 앱 환경설정 구성",
+  "newDocument": "New calculation"
+}

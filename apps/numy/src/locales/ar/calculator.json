@@ -1,0 +1,39 @@
+{
+  "myCalculations": "عمليات الحساب الخاصة بي",
+  "placeholder": "اكتب عملية حسابية...",
+  "total": "الإجمالي: ",
+  "tapToShare": "انقر للمشاركة",
+  "shareAccessibility": "مشاركة الإجمالي",
+  "inputAccessibility": "إدخال العملية الحسابية",
+  "inputHint": "اكتب تعبيراً رياضياً مثل 5 ضرب 3 أو 20% من 100",
+  "resultAccessibility": "النتيجة: {{value}}",
+  "resultHint": "انقر نقراً مزدوجاً لمشاركة هذه النتيجة",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "انقر نقراً مزدوجاً لمشاركة الإجمالي",
+  "document": {
+    "saveButton": "حفظ",
+    "saveHint": "انقر نقراً مزدوجاً لحفظ هذا المستند في السجل",
+    "clearButton": "مسح",
+    "clearHint": "انقر نقراً مزدوجاً لمسح جميع العمليات الحسابية",
+    "closeHint": "إغلاق بدون حفظ",
+    "titleAccessibility": "عنوان المستند: {{title}}",
+    "titleHint": "انقر نقراً مزدوجاً لتحرير عنوان المستند",
+    "editTitleModal": "مربع حوار تحرير عنوان المستند",
+    "titleInputLabel": "عنوان المستند",
+    "titleInputHint": "أدخ�� عنواناً جديداً لهذا المستند",
+    "cancelHint": "انقر نقراً مزدوجاً للإلغاء والاحتفاظ بالعنوان الحالي",
+    "saveNewTitleHint": "انقر نقراً مزدوجاً لحفظ العنوان الجديد",
+    "newDocHint": "انقر نقراً مزدوجاً لإنشاء مستند جديد. سيتم حفظ المستند الحالي تلقائياً.",
+    "savedAlert": {
+      "title": "تم الحفظ",
+      "message": "تم حفظ المستند في السجل"
+    },
+    "clearAlert": {
+      "title": "مسح المستند",
+      "message": "هل أنت متأكد من رغبتك في مسح جميع العمليات الحسابية؟"
+    },
+    "editTitle": "تحرير العنوان",
+    "titlePlaceholder": "عنوان المستند",
+    "lastUpdated": "تم التحديث {{time}}"
+  }
+}

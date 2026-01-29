@@ -1,0 +1,9 @@
+{
+  "calculator": "Lommeregner",
+  "history": "Historik",
+  "settings": "Indstillinger",
+  "calculatorTab": "Lommeregnerfane, indtast beregninger og se resultater",
+  "historyTab": "Historikfane, se dine gemte beregninger",
+  "settingsTab": "Indstillingsfane, konfigurer app-præferencer",
+  "newDocument": "Ny beregning"
+}

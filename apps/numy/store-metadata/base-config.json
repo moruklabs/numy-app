@@ -1,0 +1,22 @@
+{
+  "configVersion": 0,
+  "apple": {
+    "version": "1.0.0",
+    "copyright": "© 2026 Moruk Labs.",
+    "release": {
+      "automaticRelease": true
+    },
+    "categories": [
+      "UTILITIES",
+      "PRODUCTIVITY"
+    ],
+    "review": {
+      "firstName": "Fatih",
+      "lastName": "Yavuz",
+      "email": "fatih@moruk.ai",
+      "phone": "+18884322048",
+      "demoRequired": false,
+      "notes": "Thanks for your effort!"
+    }
+  }
+}

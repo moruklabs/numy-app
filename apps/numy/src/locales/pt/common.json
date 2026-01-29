@@ -1,0 +1,16 @@
+{
+  "cancel": "Cancelar",
+  "clear": "Limpar",
+  "delete": "Excluir",
+  "save": "Salvar",
+  "saved": "Salvo",
+  "loading": "Carregando...",
+  "share": "Compartilhar",
+  "notFound": {
+    "title": "Ops!",
+    "message": "Esta página não existe.",
+    "goHome": "Ir para a tela inicial!"
+  },
+  "new": "New",
+  "back": "Back"
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Nastavenia",
+  "screenTitle": "Obrazovka nastavení",
+  "cssUnits": {
+    "title": "## CSS jednotky",
+    "description": "Konfigurujte základné hodnoty pre prevody CSS jednotiek",
+    "emBase": "Základ em (px)",
+    "emBaseHint": "Zadajte základnú pixelovú hodnotu pre výpočty em",
+    "ppiBase": "Základ ppi",
+    "ppiBaseHint": "Zadajte hodnotu pixelov na palec pre výpočty fyzických jednotiek"
+  },
+  "about": {
+    "title": "# O aplikácii",
+    "appName": "Numy - Kalkulačka prirodzeného jazyka",
+    "version": "Verzia 1.0.0",
+    "aiHighlight": "Numy je poháňaný Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Zásady ochrany osobných údajov",
+    "termsOfUse": "Podmienky používania",
+    "support": "Podpora",
+    "opensInBrowser": "Otvorí sa v prehliadači"
+  },
+  "preferences": {
+    "title": "# Predvoľby",
+    "showTotal": "Zobraziť bežný súčet",
+    "showTotalHint": "Prepnutie panela bežného súčtu v spodnej časti kalkulačky",
+    "decimalPlaces": "Desatinné miesta",
+    "decimalPlacesHint": "Zadajte počet desatinných miest pre výsledky (0-10)"
+  },
+  "resetAll": {
+    "title": "Vymazať všetky nastavenia",
+    "message": "Týmto sa odstránia všetky vaše poznámky a všetky nastavenia sa obnovia na predvolené hodnoty. Toto sa nedá vrátiť späť.",
+    "confirm": "Vymazať všetko",
+    "cancel": "Zrušiť",
+    "buttonLabel": "Vymazať všetky nastavenia",
+    "buttonHint": "Dvojité ťuknutie na vymazanie všetkých nastavení a odstránenie všetkých poznámok"
+  }
+}

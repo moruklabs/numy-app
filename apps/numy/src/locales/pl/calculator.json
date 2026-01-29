@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Moje Obliczenia",
+  "placeholder": "Wpisz obliczenie...",
+  "total": "Suma: ",
+  "tapToShare": "dotknij, aby udostępnić",
+  "shareAccessibility": "Udostępnij sumę",
+  "inputAccessibility": "Wprowadzanie obliczeń",
+  "inputHint": "Wpisz wyrażenie matematyczne, np. 5 razy 3 lub 20% ze 100",
+  "resultAccessibility": "Wynik: {{value}}",
+  "resultHint": "Dwukrotnie dotknij, aby udostępnić ten wynik",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Dwukrotnie dotknij, aby udostępnić sumę",
+  "document": {
+    "saveButton": "Zapisz",
+    "saveHint": "Dwukrotnie dotknij, aby zapisać ten dokument w historii",
+    "clearButton": "Wyczyść",
+    "clearHint": "Dwukrotnie dotknij, aby wyczyścić wszystkie obliczenia",
+    "closeHint": "Zamknij bez zapisywania",
+    "titleAccessibility": "Tytuł dokumentu: {{title}}",
+    "titleHint": "Dwukrotnie dotknij, aby edytować tytuł dokumentu",
+    "editTitleModal": "Okno dialogowe edycji tytułu dokumentu",
+    "titleInputLabel": "Tytuł dokumentu",
+    "titleInputHint": "Wprowadź nowy tytuł dla tego dokumentu",
+    "cancelHint": "Dwukrotnie dotknij, aby anulować i zachować bieżący tytuł",
+    "saveNewTitleHint": "Dwukrotnie dotknij, aby zapisać nowy tytuł",
+    "newDocHint": "Dwukrotnie dotknij, aby utworzyć nowy dokument. Bieżący dokument zostanie automatycznie zapisany.",
+    "savedAlert": {
+      "title": "Zapisano",
+      "message": "Dokument zapisany w historii"
+    },
+    "clearAlert": {
+      "title": "Wyczyść Dokument",
+      "message": "Czy na pewno chcesz wyczyścić wszystkie obliczenia?"
+    },
+    "editTitle": "Edytuj Tytuł",
+    "titlePlaceholder": "Tytuł dokumentu",
+    "lastUpdated": "zaktualizowano {{time}}"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Configuració",
+  "screenTitle": "Pantalla de configuració",
+  "cssUnits": {
+    "title": "## Unitats CSS",
+    "description": "Configureu els valors base per a les conversions d'unitats CSS",
+    "emBase": "Base em (px)",
+    "emBaseHint": "Introduïu el valor base en píxels per als càlculs em",
+    "ppiBase": "Base ppi",
+    "ppiBaseHint": "Introduïu el valor de píxels per polzada per als càlculs d'unitats físiques"
+  },
+  "about": {
+    "title": "# Sobre",
+    "appName": "Numy - Calculadora de llenguatge natural",
+    "version": "Versió 1.0.0",
+    "aiHighlight": "Numy està impulsat per Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Política de privacitat",
+    "termsOfUse": "Condicions d'ús",
+    "support": "Suport",
+    "opensInBrowser": "S'obre al navegador"
+  },
+  "preferences": {
+    "title": "# Preferències",
+    "showTotal": "Mostra el total acumulat",
+    "showTotalHint": "Activa/desactiva la barra del total acumulat a la part inferior de la calculadora",
+    "decimalPlaces": "Decimales",
+    "decimalPlacesHint": "Introduïu el nombre de decimals per als resultats (0-10)"
+  },
+  "resetAll": {
+    "title": "Esborrar tota la configuració",
+    "message": "Això suprimirà totes les vostres notes i restablirà tota la configuració als valors predeterminats. Això no es pot desfer.",
+    "confirm": "Esborrar-ho tot",
+    "cancel": "Cancel·lar",
+    "buttonLabel": "Esborrar tota la configuració",
+    "buttonHint": "Doble toc per esborrar tota la configuració i suprimir totes les notes"
+  }
+}

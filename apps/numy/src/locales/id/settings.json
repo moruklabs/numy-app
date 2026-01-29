@@ -1,0 +1,40 @@
+{
+  "title": "Pengaturan",
+  "screenTitle": "Layar Pengaturan",
+  "cssUnits": {
+    "title": "## Unit CSS",
+    "description": "Konfigurasikan nilai dasar untuk konversi unit CSS",
+    "emBase": "Dasar em (px)",
+    "emBaseHint": "Masukkan nilai piksel dasar untuk perhitungan em",
+    "ppiBase": "Dasar ppi",
+    "ppiBaseHint": "Masukkan nilai piksel per inci untuk perhitungan unit fisik"
+  },
+  "about": {
+    "title": "# Tentang",
+    "appName": "Numy - Kalkulator Bahasa Alami",
+    "version": "Versi 1.0.0",
+    "aiHighlight": "Numy didukung oleh Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Kebijakan Privasi",
+    "termsOfUse": "Ketentuan Penggunaan",
+    "support": "Dukungan",
+    "opensInBrowser": "Buka di browser"
+  },
+  "preferences": {
+    "title": "# Preferensi",
+    "showTotal": "Tampilkan total berjalan",
+    "showTotalHint": "Alihkan bilah total berjalan di bagian bawah kalkulator",
+    "decimalPlaces": "Tempat desimal",
+    "decimalPlacesHint": "Masukkan jumlah tempat desimal untuk hasil (0-10)"
+  },
+  "resetAll": {
+    "title": "Hapus Semua Pengaturan",
+    "message": "Ini akan menghapus semua catatan Anda dan mengatur ulang semua pengaturan ke default. Ini tidak dapat dibatalkan.",
+    "confirm": "Hapus Semua",
+    "cancel": "Batal",
+    "buttonLabel": "Hapus Semua Pengaturan",
+    "buttonHint": "Ketuk dua kali untuk menghapus semua pengaturan dan menghapus semua catatan"
+  }
+}

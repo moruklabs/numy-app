@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "לא ניתן להמיר את {{source}} ל-{{target}}",
+  "calculationError": "שגיאת חישוב",
+  "aiTimeout": "פג תוקף החישוב. לנסות שוב?",
+  "aiNetworkError": "בדוק את חיבור האינטרנט שלך ונסה שוב",
+  "aiRateLimit": "יותר מדי בקשות. נסה שוב בעוד רגע",
+  "aiNotCalculable": "לא ניתן לחשב ביטוי זה",
+  "aiServerError": "משהו השתבש. לנסות שוב?"
+}

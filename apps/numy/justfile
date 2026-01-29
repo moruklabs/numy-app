@@ -1,0 +1,118 @@
+# App-level task runner
+# Run `just` or `just --list` to see available commands
+
+# Default recipe - list all available commands
+default:
+    @just --list
+
+# ============================================================
+# Development
+# ============================================================
+
+# Start Metro bundler
+start:
+    yarn start
+
+# Run on iOS simulator
+ios:
+    yarn ios
+
+# Run on iOS simulator (fast mode - skips pod install)
+ios-fast:
+    yarn ios:fast
+
+# Run on Android emulator
+android:
+    yarn android
+
+# ============================================================
+# Validation
+# ============================================================
+
+# Run full validation (type-check, lint, format, doctor, test)
+validate:
+    yarn validate
+
+# Run tests
+test:
+    yarn test
+
+# Run tests with coverage
+test-coverage:
+    yarn test:coverage
+
+# Run tests in watch mode
+test-watch:
+    yarn test:watch
+
+# Type check
+type-check:
+    yarn type-check
+
+# Lint code
+lint:
+    yarn lint
+
+# Fix lint issues
+lint-fix:
+    yarn lint:fix
+
+# Check formatting
+format:
+    yarn format
+
+# Fix formatting issues
+format-fix:
+    yarn format:fix
+
+# Run expo doctor
+doctor:
+    yarn doctor
+
+# Fix expo doctor issues
+doctor-fix:
+    yarn doctor:fix
+
+# Fix all issues (lint, format, doctor)
+fix:
+    yarn fix
+
+# ============================================================
+# Building
+# ============================================================
+
+# Build for iOS (local)
+build-ios:
+    yarn build:ios
+
+# Build for Android (local)
+build-android:
+    yarn build:android
+
+# Clean build artifacts
+clean:
+    yarn clean
+
+# ============================================================
+# Deployment
+# ============================================================
+
+# Build and submit to App Store (local)
+deploy:
+    yarn deploy:local
+
+# Push OTA update to production
+update message="":
+    eas update --branch production --message "{{message}}"
+
+# ============================================================
+# Utilities
+# ============================================================
+
+# Kill process on port 3131
+killport:
+    yarn killport
+
+# Clean watchman state
+watchman-clean:
+    yarn watchman:clean

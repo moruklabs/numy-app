@@ -1,0 +1,16 @@
+{
+  "cancel": "Batal",
+  "clear": "Kosongkan",
+  "delete": "Padam",
+  "save": "Simpan",
+  "new": "Baru",
+  "back": "Kembali",
+  "saved": "Telah disimpan",
+  "loading": "Memuatkan...",
+  "share": "Kongsi",
+  "notFound": {
+    "title": "Oops!",
+    "message": "Skrin ini tidak wujud.",
+    "goHome": "Pergi ke skrin utama!"
+  }
+}

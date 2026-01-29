@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "Kan inte konvertera {{source}} till {{target}}",
+  "calculationError": "Beräkningsfel",
+  "aiTimeout": "Beräkningen tidsavbröts. Försök igen?",
+  "aiNetworkError": "Kontrollera din internetanslutning och försök igen",
+  "aiRateLimit": "För många förfrågningar. Försök igen om en stund",
+  "aiNotCalculable": "Kan inte beräkna detta uttryck",
+  "aiServerError": "Något gick fel. Försök igen?"
+}

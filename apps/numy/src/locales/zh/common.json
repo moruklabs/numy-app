@@ -1,0 +1,16 @@
+{
+  "cancel": "取消",
+  "clear": "清除",
+  "delete": "删除",
+  "save": "保存",
+  "saved": "已保存",
+  "loading": "加载中...",
+  "share": "分享",
+  "notFound": {
+    "title": "哎呀！",
+    "message": "此页面不存在。",
+    "goHome": "返回主页！"
+  },
+  "new": "New",
+  "back": "Back"
+}

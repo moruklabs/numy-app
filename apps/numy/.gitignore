@@ -1,0 +1,113 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# Dependencies
+node_modules/
+yarn.lock
+pnpm-lock.yaml
+
+# Expo
+.expo/
+dist/
+web-build/
+.expo-shared/
+.expo/
+expo-env.d.ts
+
+# Generated native projects
+/ios
+/android
+.kotlin/
+
+# Build outputs
+*.orig.*
+build/
+dist/
+
+# Native secrets and certificates
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+*.provisioning-profile
+
+# Metro bundler
+.metro-health-check*
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+jest.config.js.bak
+
+# Debug logs
+npm-debug.*
+npm-error.*
+yarn-debug.*
+yarn-error.*
+yarn-error.log
+firebase-debug.log*
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+.env*.local
+
+# Firebase config files (contain API keys)
+google-services.json
+GoogleService-Info.plist
+
+# IDE and editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vagrant/
+*.sublime-project
+
+# TypeScript
+*.tsbuildinfo
+*.d.ts.map
+
+# Logs
+logs/
+*.log
+lerna-debug.log*
+
+# Design and documentation artifacts (local only)
+design-ideas/
+*.figma
+*.sketch
+.cache/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Linux
+.directory
+
+# Node version managers
+.nvmrc
+.node-version
+
+# Local development
+.eas/
+*.hprof

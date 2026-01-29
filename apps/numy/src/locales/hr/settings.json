@@ -1,0 +1,40 @@
+{
+  "title": "Postavke",
+  "screenTitle": "Zaslon postavki",
+  "cssUnits": {
+    "title": "## CSS Jedinice",
+    "description": "Konfigurirajte osnovne vrijednosti za pretvorbe CSS jedinica",
+    "emBase": "em baza (px)",
+    "emBaseHint": "Unesite osnovnu vrijednost u pikselima za em izračune",
+    "ppiBase": "ppi baza",
+    "ppiBaseHint": "Unesite vrijednost piksela po inču za izračune fizičkih jedinica"
+  },
+  "about": {
+    "title": "# O aplikaciji",
+    "appName": "Numy - Kalkulator prirodnog jezika",
+    "version": "Verzija 1.0.0",
+    "aiHighlight": "Numy pokreće Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Pravila o privatnosti",
+    "termsOfUse": "Uvjeti korištenja",
+    "support": "Podrška",
+    "opensInBrowser": "Otvara se u pregledniku"
+  },
+  "preferences": {
+    "title": "# Preferencije",
+    "showTotal": "Prikaži ukupni zbroj",
+    "showTotalHint": "Uključite traku ukupnog zbroja na dnu kalkulatora",
+    "decimalPlaces": "Decimalna mjesta",
+    "decimalPlacesHint": "Unesite broj decimalnih mjesta za rezultate (0-10)"
+  },
+  "resetAll": {
+    "title": "Izbriši sve postavke",
+    "message": "Ovo će izbrisati sve vaše bilješke i vratiti sve postavke na zadane vrijednosti. To se ne može poništiti.",
+    "confirm": "Izbriši sve",
+    "cancel": "Odustani",
+    "buttonLabel": "Izbriši sve postavke",
+    "buttonHint": "Dvaput dodirnite za brisanje svih postavki i svih bilješki"
+  }
+}

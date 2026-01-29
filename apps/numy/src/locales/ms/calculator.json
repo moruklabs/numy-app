@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Pengiraan Saya",
+  "placeholder": "Taip pengiraan...",
+  "total": "Jumlah: ",
+  "tapToShare": "ketik untuk berkongsi",
+  "shareAccessibility": "Kongsi jumlah",
+  "inputAccessibility": "Input pengiraan",
+  "inputHint": "Taip ungkapan matematik seperti 5 darab 3 atau 20% daripada 100",
+  "resultAccessibility": "Keputusan: {{value}}",
+  "resultHint": "Ketik dua kali untuk berkongsi keputusan ini",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Ketik dua kali untuk berkongsi jumlah",
+  "document": {
+    "saveButton": "Simpan",
+    "saveHint": "Ketik dua kali untuk menyimpan dokumen ini ke sejarah",
+    "clearButton": "Kosongkan",
+    "clearHint": "Ketik dua kali untuk mengosongkan semua pengiraan",
+    "closeHint": "Tutup tanpa menyimpan",
+    "titleAccessibility": "Tajuk dokumen: {{title}}",
+    "titleHint": "Ketik dua kali untuk mengedit tajuk dokumen",
+    "editTitleModal": "Dialog edit tajuk dokumen",
+    "titleInputLabel": "Tajuk dokumen",
+    "titleInputHint": "Masukkan tajuk baharu untuk dokumen ini",
+    "cancelHint": "Ketik dua kali untuk membatalkan dan mengekalkan tajuk semasa",
+    "saveNewTitleHint": "Ketik dua kali untuk menyimpan tajuk baharu",
+    "newDocHint": "Ketik dua kali untuk mencipta dokumen baharu. Dokumen semasa akan disimpan secara automatik.",
+    "savedAlert": {
+      "title": "Disimpan",
+      "message": "Dokumen disimpan ke sejarah"
+    },
+    "clearAlert": {
+      "title": "Kosongkan Dokumen",
+      "message": "Adakah anda pasti mahu mengosongkan semua pengiraan?"
+    },
+    "editTitle": "Edit Tajuk",
+    "titlePlaceholder": "Tajuk dokumen",
+    "lastUpdated": "dikemas kini {{time}}"
+  }
+}

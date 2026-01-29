@@ -1,0 +1,40 @@
+{
+  "title": "Innstillinger",
+  "screenTitle": "Innstillinger-skjerm",
+  "cssUnits": {
+    "title": "## CSS-enheter",
+    "description": "Konfigurer basisverdier for CSS-enhetskonverteringer",
+    "emBase": "em-basis (px)",
+    "emBaseHint": "Skriv inn basis pikselverdi for em-beregninger",
+    "ppiBase": "ppi-basis",
+    "ppiBaseHint": "Skriv inn piksler per tomme-verdi for fysiske enhetsberegninger"
+  },
+  "about": {
+    "title": "# Om",
+    "appName": "Numy - Kalkulator for naturlig språk",
+    "version": "Versjon 1.0.0",
+    "aiHighlight": "Numy er drevet av Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Personvernerklæring",
+    "termsOfUse": "Bruksvilkår",
+    "support": "Støtte",
+    "opensInBrowser": "Åpnes i nettleser"
+  },
+  "preferences": {
+    "title": "# Preferanser",
+    "showTotal": "Vis løpende total",
+    "showTotalHint": "Veksle den løpende total-linjen nederst på kalkulatoren",
+    "decimalPlaces": "Desimalplasser",
+    "decimalPlacesHint": "Skriv inn antall desimalplasser for resultater (0-10)"
+  },
+  "resetAll": {
+    "title": "Slett alle innstillinger",
+    "message": "Dette vil slette alle notatene dine og tilbakestille alle innstillinger til standard. Dette kan ikke angres.",
+    "confirm": "Slett alt",
+    "cancel": "Avbryt",
+    "buttonLabel": "Slett alle innstillinger",
+    "buttonHint": "Dobbeltklikk for å slette alle innstillinger og alle notater"
+  }
+}

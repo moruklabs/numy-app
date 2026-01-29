@@ -1,0 +1,16 @@
+{
+  "cancel": "Annuller",
+  "clear": "Ryd",
+  "delete": "Slet",
+  "save": "Gem",
+  "new": "Ny",
+  "back": "Tilbage",
+  "saved": "Gemt",
+  "loading": "Indlæser...",
+  "share": "Del",
+  "notFound": {
+    "title": "Ups!",
+    "message": "Denne skærm eksisterer ikke.",
+    "goHome": "Gå til startskærmen!"
+  }
+}

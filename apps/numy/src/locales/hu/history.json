@@ -1,0 +1,24 @@
+{
+  "title": "Előzmények",
+  "screenTitle": "Előzmények képernyő mentett számításokkal",
+  "listAccessibility": "{{count}} dokumentumot tartalmazó mentett dokumentumok listája",
+  "documentAccessibility": "{{title}}, mentve ekkor: {{date}}, {{count}} számítás",
+  "documentHint": "Dupla koppintás a megnyitáshoz. A törléshez használd a műveletek menüt.",
+  "openAction": "Dokumentum megnyitása",
+  "deleteAction": "Dokumentum törlése",
+  "lastEdited": "utoljára szerkesztve",
+  "emptyState": {
+    "title": "# Még nincsenek mentett számítások",
+    "subtitle": "A mentett számítások itt jelennek meg, miután elmentett egy dokumentumot"
+  },
+  "sections": {
+    "examples": "# Példák",
+    "history": "# Előzmények"
+  },
+  "lineCount_one": "{{count}} sor",
+  "lineCount_other": "{{count}} sor",
+  "deleteAlert": {
+    "title": "Dokumentum törlése",
+    "message": "Biztosan törölni szeretné a(z) \"{{title}}\" dokumentumot? Ez a művelet nem vonható vissza."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "calculator": "Rechner",
+  "history": "Verlauf",
+  "settings": "Einstellungen",
+  "calculatorTab": "Rechner-Tab, Berechnungen eingeben und Ergebnisse sehen",
+  "historyTab": "Verlauf-Tab, gespeicherte Berechnungen anzeigen",
+  "settingsTab": "Einstellungen-Tab, App-Einstellungen konfigurieren",
+  "newDocument": "New calculation"
+}

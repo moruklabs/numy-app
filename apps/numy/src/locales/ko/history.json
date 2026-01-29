@@ -1,0 +1,24 @@
+{
+  "title": "기록",
+  "screenTitle": "저장된 계산을 보여주는 기록 화면",
+  "listAccessibility": "{{count}}개의 문서가 있는 저장된 문서 목록",
+  "documentAccessibility": "{{title}}, {{date}}에 저장됨, {{count}}개의 계산",
+  "documentHint": "열려면 두 번 탭하세요. 삭제하려면 작업 메뉴를 사용하세요.",
+  "openAction": "문서 열기",
+  "deleteAction": "문서 삭제",
+  "emptyState": {
+    "title": "# 저장된 계산 없음",
+    "subtitle": "저장한 계산이 여기에 표시됩니다"
+  },
+  "lineCount_one": "{{count}}줄",
+  "lineCount_other": "{{count}}줄",
+  "deleteAlert": {
+    "title": "문서 삭제",
+    "message": "\"{{title}}\"을(를) 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."
+  },
+  "lastEdited": "last edited",
+  "sections": {
+    "examples": "# Examples",
+    "history": "# History"
+  }
+}

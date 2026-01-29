@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "{{source}}을(를) {{target}}(으)로 변환할 수 없습니다",
+  "calculationError": "계산 오류",
+  "aiTimeout": "계산 시간이 초과되었습니다. 다시 시도하시겠습니까?",
+  "aiNetworkError": "인터넷 연결을 확인하고 다시 시도해 주세요",
+  "aiRateLimit": "요청이 너무 많습니다. 잠시 후 다시 시도해 주세요",
+  "aiNotCalculable": "이 식을 계산할 수 없습니다",
+  "aiServerError": "문제가 발생했습니다. 다시 시도하시겠습니까?"
+}

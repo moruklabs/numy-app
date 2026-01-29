@@ -1,0 +1,16 @@
+{
+  "cancel": "Mégse",
+  "clear": "Törlés",
+  "delete": "Törlés",
+  "save": "Mentés",
+  "new": "Új",
+  "back": "Vissza",
+  "saved": "Mentve",
+  "loading": "Betöltés...",
+  "share": "Megosztás",
+  "notFound": {
+    "title": "Hoppá!",
+    "message": "Ez a képernyő nem létezik.",
+    "goHome": "Ugrás a kezdőképernyőre!"
+  }
+}

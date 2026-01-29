@@ -1,0 +1,40 @@
+{
+  "title": "Asetukset",
+  "screenTitle": "Asetusnäyttö",
+  "cssUnits": {
+    "title": "## CSS-yksiköt",
+    "description": "Määritä perusarvot CSS-yksikkömuunnoksille",
+    "emBase": "em-perusarvo (px)",
+    "emBaseHint": "Syötä em-laskelmien perusarvo pikseleinä",
+    "ppiBase": "ppi-perusarvo",
+    "ppiBaseHint": "Syötä tuumaa kohden olevien pikselien arvo fyysisten yksiköiden laskelmia varten"
+  },
+  "about": {
+    "title": "# Tietoja",
+    "appName": "Numy - Luonnollisen kielen laskin",
+    "version": "Versio 1.0.0",
+    "aiHighlight": "Numyn toimintaa tukee Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "termsOfUse": "Käyttöehdot",
+    "support": "Tuki",
+    "opensInBrowser": "Avaa selaimessa"
+  },
+  "preferences": {
+    "title": "# Asetukset",
+    "showTotal": "Näytä juokseva kokonaissumma",
+    "showTotalHint": "Vaihda juoksevan kokonaissumman palkki laskimen alareunassa",
+    "decimalPlaces": "Desimaalipaikat",
+    "decimalPlacesHint": "Syötä tulosten desimaalipaikkojen lukumäärä (0-10)"
+  },
+  "resetAll": {
+    "title": "Poista kaikki asetukset",
+    "message": "Tämä poistaa kaikki muistiinpanosi ja palauttaa kaikki asetukset oletusarvoihin. Tätä ei voi peruuttaa.",
+    "confirm": "Poista kaikki",
+    "cancel": "Peruuta",
+    "buttonLabel": "Poista kaikki asetukset",
+    "buttonHint": "Kaksoisnapauta poistaaksesi kaikki asetukset ja kaikki muistiinpanot"
+  }
+}

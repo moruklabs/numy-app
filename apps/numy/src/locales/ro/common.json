@@ -1,0 +1,16 @@
+{
+  "cancel": "Anulare",
+  "clear": "Șterge",
+  "delete": "Șterge",
+  "save": "Salvează",
+  "new": "Nou",
+  "back": "Înapoi",
+  "saved": "Salvat",
+  "loading": "Se încarcă...",
+  "share": "Distribuie",
+  "notFound": {
+    "title": "Oops!",
+    "message": "Acest ecran nu există.",
+    "goHome": "Mergi la ecranul principal!"
+  }
+}

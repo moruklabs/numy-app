@@ -1,0 +1,24 @@
+{
+  "title": "Historie",
+  "screenTitle": "Obrazovka historie zobrazující uložené výpočty",
+  "listAccessibility": "Seznam uložených dokumentů s {{count}} dokumenty",
+  "documentAccessibility": "{{title}}, uloženo dne {{date}}, {{count}} výpočtů",
+  "documentHint": "Dvojitým klepnutím otevřete. Pro smazání použijte nabídku akcí.",
+  "openAction": "Otevřít dokument",
+  "deleteAction": "Smazat dokument",
+  "lastEdited": "naposledy upraveno",
+  "emptyState": {
+    "title": "# Zatím žádné uložené výpočty",
+    "subtitle": "Vaše uložené výpočty se zde zobrazí poté, co dokument uložíte"
+  },
+  "sections": {
+    "examples": "# Příklady",
+    "history": "# Historie"
+  },
+  "lineCount_one": "{{count}} řádek",
+  "lineCount_other": "{{count}} řádků",
+  "deleteAlert": {
+    "title": "Smazat dokument",
+    "message": "Opravdu chcete smazat \"{{title}}\"? Tuto akci nelze vrátit zpět."
+  }
+}

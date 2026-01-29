@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Calculele mele",
+  "placeholder": "Introduceți calculul...",
+  "total": "Total: ",
+  "tapToShare": "atingeți pentru a partaja",
+  "shareAccessibility": "Partajați totalul",
+  "inputAccessibility": "Intrare calcul",
+  "inputHint": "Introduceți o expresie matematică precum 5 ori 3 sau 20% din 100",
+  "resultAccessibility": "Rezultat: {{value}}",
+  "resultHint": "Atingeți de două ori pentru a partaja acest rezultat",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Atingeți de două ori pentru a partaja totalul",
+  "document": {
+    "saveButton": "Salvați",
+    "saveHint": "Atingeți de două ori pentru a salva acest document în istoric",
+    "clearButton": "Ștergeți",
+    "clearHint": "Atingeți de două ori pentru a șterge toate calculele",
+    "closeHint": "Închideți fără a salva",
+    "titleAccessibility": "Titlul documentului: {{title}}",
+    "titleHint": "Atingeți de două ori pentru a edita titlul documentului",
+    "editTitleModal": "Dialog editare titlu document",
+    "titleInputLabel": "Titlul documentului",
+    "titleInputHint": "Introduceți un titlu nou pentru acest document",
+    "cancelHint": "Atingeți de două ori pentru a anula și a păstra titlul curent",
+    "saveNewTitleHint": "Atingeți de două ori pentru a salva noul titlu",
+    "newDocHint": "Atingeți de două ori pentru a crea un document nou. Documentul curent va fi salvat automat.",
+    "savedAlert": {
+      "title": "Salvat",
+      "message": "Documentul a fost salvat în istoric"
+    },
+    "clearAlert": {
+      "title": "Ștergeți Documentul",
+      "message": "Sunteți sigur că doriți să ștergeți toate calculele?"
+    },
+    "editTitle": "Editați Titlul",
+    "titlePlaceholder": "Titlul documentului",
+    "lastUpdated": "actualizat {{time}}"
+  }
+}

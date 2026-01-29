@@ -1,0 +1,39 @@
+{
+  "myCalculations": "내 계산",
+  "placeholder": "계산 입력...",
+  "total": "합계: ",
+  "tapToShare": "탭하여 공유",
+  "inputAccessibility": "계산 입력",
+  "inputHint": "5 곱하기 3 또는 100의 20%와 같은 수학 표현식을 입력하세요",
+  "resultAccessibility": "결과: {{value}}",
+  "resultHint": "이 결과를 공유하려면 두 번 탭하세요",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "합계를 공유하려면 두 번 탭하세요",
+  "document": {
+    "saveButton": "저장",
+    "saveHint": "이 문서를 기록에 저장하려면 두 번 탭하세요",
+    "clearButton": "지우기",
+    "clearHint": "모든 계산을 지우려면 두 번 탭하세요",
+    "titleAccessibility": "문서 제목: {{title}}",
+    "titleHint": "문서 제목을 편집하려면 두 번 탭하세요",
+    "editTitleModal": "문서 제목 편집 대화상자",
+    "titleInputLabel": "문서 제목",
+    "titleInputHint": "이 문서의 새 제목을 입력하세요",
+    "cancelHint": "취소하고 현재 제목을 유지하려면 두 번 탭하세요",
+    "saveNewTitleHint": "새 제목을 저장하려면 두 번 탭하세요",
+    "savedAlert": {
+      "title": "저장됨",
+      "message": "문서가 기록에 저장되었습니다"
+    },
+    "clearAlert": {
+      "title": "문서 지우기",
+      "message": "모든 계산을 지우시겠습니까?"
+    },
+    "editTitle": "제목 편집",
+    "titlePlaceholder": "문서 제목",
+    "closeHint": "Close without saving",
+    "newDocHint": "Double tap to create a new document. Current document will be auto-saved.",
+    "lastUpdated": "updated {{time}}"
+  },
+  "shareAccessibility": "Share total"
+}

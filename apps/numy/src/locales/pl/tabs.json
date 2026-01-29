@@ -1,0 +1,9 @@
+{
+  "calculator": "Kalkulator",
+  "history": "Historia",
+  "settings": "Ustawienia",
+  "calculatorTab": "Zakładka Kalkulator, wprowadzaj obliczenia i zobacz wyniki",
+  "historyTab": "Zakładka Historia, przeglądaj zapisane obliczenia",
+  "settingsTab": "Zakładka Ustawienia, skonfiguruj preferencje aplikacji",
+  "newDocument": "Nowe obliczenie"
+}

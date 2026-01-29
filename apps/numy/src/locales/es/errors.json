@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "No se puede convertir {{source}} a {{target}}",
+  "calculationError": "Error de cálculo",
+  "aiTimeout": "El cálculo ha excedido el tiempo. ¿Intentar de nuevo?",
+  "aiNetworkError": "Verifica tu conexión a internet e intenta de nuevo",
+  "aiRateLimit": "Demasiadas solicitudes. Intenta en un momento",
+  "aiNotCalculable": "No se puede calcular esta expresión",
+  "aiServerError": "Algo salió mal. ¿Intentar de nuevo?"
+}

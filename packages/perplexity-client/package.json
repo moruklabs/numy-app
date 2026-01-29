@@ -1,0 +1,29 @@
+{
+  "name": "@moruk/perplexity-client",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Perplexity API client for the moruk.workers.dev proxy",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "lint": "yarn run lint:fix",
+    "lint:fix": "eslint src/ --fix",
+    "type-check": "tsc --noEmit",
+    "validate": "concurrently --kill-others-on-fail -n \"TypeCheck,Lint\" -c \"magenta,cyan\" \"yarn run type-check\" \"yarn run lint\"",
+    "clean": "rm -rf dist",
+    "doctor:fix": "exit 0",
+    "fix": "yarn run lint:fix && yarn run format:fix && yarn run doctor:fix",
+    "format": "yarn run format:fix",
+    "format:fix": "npx prettier --ignore-path ../../.prettierignore --write . --log-level error"
+  },
+  "dependencies": {
+    "@moruk/logger": "*"
+  },
+  "devDependencies": {
+    "concurrently": "*",
+    "eslint": "*",
+    "prettier": "*",
+    "typescript": "*"
+  },
+  "packageManager": "yarn@4.12.0"
+}

@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "Không thể chuyển đổi {{source}} sang {{target}}",
+  "calculationError": "Lỗi tính toán",
+  "aiTimeout": "Hết thời gian tính toán. Thử lại?",
+  "aiNetworkError": "Kiểm tra kết nối internet của bạn và thử lại",
+  "aiRateLimit": "Quá nhiều yêu cầu. Vui lòng thử lại sau một lát",
+  "aiNotCalculable": "Không thể tính toán biểu thức này",
+  "aiServerError": "Đã xảy ra lỗi. Thử lại?"
+}

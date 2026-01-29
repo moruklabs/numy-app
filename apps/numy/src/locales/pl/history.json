@@ -1,0 +1,24 @@
+{
+  "title": "Historia",
+  "screenTitle": "Ekran historii wyświetlający zapisane obliczenia",
+  "listAccessibility": "Lista zapisanych dokumentów z {{count}} dokumentami",
+  "documentAccessibility": "{{title}}, zapisano {{date}}, {{count}} obliczeń",
+  "documentHint": "Dwukrotne dotknięcie, aby otworzyć. Użyj menu akcji, aby usunąć.",
+  "openAction": "Otwórz dokument",
+  "deleteAction": "Usuń dokument",
+  "lastEdited": "ostatnio edytowano",
+  "emptyState": {
+    "title": "# Brak zapisanych obliczeń",
+    "subtitle": "Twoje zapisane obliczenia pojawią się tutaj po zapisaniu dokumentu"
+  },
+  "sections": {
+    "examples": "# Przykłady",
+    "history": "# Historia"
+  },
+  "lineCount_one": "{{count}} wiersz",
+  "lineCount_other": "{{count}} wiersze",
+  "deleteAlert": {
+    "title": "Usuń dokument",
+    "message": "Czy na pewno chcesz usunąć \"{{title}}\"? Tej akcji nie można cofnąć."
+  }
+}

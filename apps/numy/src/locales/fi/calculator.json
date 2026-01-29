@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Omat laskelmat",
+  "placeholder": "Kirjoita laskutoimitus...",
+  "total": "Yhteensä: ",
+  "tapToShare": "napauta jakaaksesi",
+  "shareAccessibility": "Jaa kokonaissumma",
+  "inputAccessibility": "Laskutoimituksen syöte",
+  "inputHint": "Kirjoita matemaattinen lauseke, kuten 5 kertaa 3 tai 20 % 100:sta",
+  "resultAccessibility": "Tulos: {{value}}",
+  "resultHint": "Kaksoisnapauta jakaaksesi tämän tuloksen",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Kaksoisnapauta jakaaksesi kokonaissumman",
+  "document": {
+    "saveButton": "Tallenna",
+    "saveHint": "Kaksoisnapauta tallentaaksesi tämän asiakirjan historiaan",
+    "clearButton": "Tyhjennä",
+    "clearHint": "Kaksoisnapauta tyhjentääksesi kaikki laskutoimitukset",
+    "closeHint": "Sulje tallentamatta",
+    "titleAccessibility": "Asiakirjan otsikko: {{title}}",
+    "titleHint": "Kaksoisnapauta muokataksesi asiakirjan otsikkoa",
+    "editTitleModal": "Muokkaa asiakirjan otsikkoa -valintaikkuna",
+    "titleInputLabel": "Asiakirjan otsikko",
+    "titleInputHint": "Anna uusi otsikko tälle asiakirjalle",
+    "cancelHint": "Kaksoisnapauta peruuttaaksesi ja säilyttääksesi nykyisen otsikon",
+    "saveNewTitleHint": "Kaksoisnapauta tallentaaksesi uuden otsikon",
+    "newDocHint": "Kaksoisnapauta luodaksesi uuden asiakirjan. Nykyinen asiakirja tallennetaan automaattisesti.",
+    "savedAlert": {
+      "title": "Tallennettu",
+      "message": "Asiakirja tallennettu historiaan"
+    },
+    "clearAlert": {
+      "title": "Tyhjennä asiakirja",
+      "message": "Haluatko varmasti tyhjentää kaikki laskutoimitukset?"
+    },
+    "editTitle": "Muokkaa otsikkoa",
+    "titlePlaceholder": "Asiakirjan otsikko",
+    "lastUpdated": "päivitetty {{time}}"
+  }
+}

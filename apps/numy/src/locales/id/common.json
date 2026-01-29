@@ -1,0 +1,16 @@
+{
+  "cancel": "Batal",
+  "clear": "Hapus",
+  "delete": "Hapus",
+  "save": "Simpan",
+  "new": "Baru",
+  "back": "Kembali",
+  "saved": "Tersimpan",
+  "loading": "Memuat...",
+  "share": "Bagikan",
+  "notFound": {
+    "title": "Ups!",
+    "message": "Layar ini tidak ada.",
+    "goHome": "Kembali ke layar utama!"
+  }
+}

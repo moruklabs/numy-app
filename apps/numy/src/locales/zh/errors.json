@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "无法将{{source}}转换为{{target}}",
+  "calculationError": "计算错误",
+  "aiTimeout": "计算超时。重试？",
+  "aiNetworkError": "请检查网络连接后重试",
+  "aiRateLimit": "请求过多。请稍后再试",
+  "aiNotCalculable": "无法计算此表达式",
+  "aiServerError": "出现错误。重试？"
+}

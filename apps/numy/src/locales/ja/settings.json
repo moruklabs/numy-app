@@ -1,0 +1,49 @@
+{
+  "title": "設定",
+  "screenTitle": "設定画面",
+  "cssUnits": {
+    "title": "# CSS単位",
+    "description": "CSS単位変換の基本値を設定",
+    "emBase": "emベース (px)",
+    "emBaseHint": "em計算用の基本ピクセル値を入力",
+    "ppiBase": "ppiベース",
+    "ppiBaseHint": "物理単位計算用のピクセル/インチ値を入力"
+  },
+  "privacy": {
+    "title": "# プライバシー",
+    "description": "データの収集と使用方法を管理",
+    "analyticsLabel": "アナリティクス",
+    "analyticsDescription": "匿名の使用データを共有してNumyの改善に協力",
+    "analyticsEnableHint": "ダブルタップでアナリティクス収集を有効化",
+    "analyticsDisableHint": "ダブルタップでアナリティクス収集を無効化"
+  },
+  "about": {
+    "title": "# について",
+    "appName": "Numy - 自然言語電卓",
+    "version": "バージョン 1.0.0",
+    "aiHighlight": "NumyはApple Intelligenceで動作します。",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "title": "# リンク",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfUse": "利用規約",
+    "support": "サポート",
+    "opensInBrowser": "ブラウザで開きます"
+  },
+  "preferences": {
+    "title": "# Preferences",
+    "showTotal": "Show running total",
+    "showTotalHint": "Toggle the running total bar at the bottom of the calculator",
+    "decimalPlaces": "Decimal places",
+    "decimalPlacesHint": "Enter the number of decimal places for results (0-10)"
+  },
+  "resetAll": {
+    "title": "Erase All Settings",
+    "message": "This will delete all your notes and reset all settings to defaults. This cannot be undone.",
+    "confirm": "Erase All",
+    "cancel": "Cancel",
+    "buttonLabel": "Erase All Settings",
+    "buttonHint": "Double tap to erase all settings and delete all notes"
+  }
+}

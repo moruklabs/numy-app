@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "Nelze převést {{source}} na {{target}}",
+  "calculationError": "Chyba výpočtu",
+  "aiTimeout": "Vypršel časový limit výpočtu. Zkusit znovu?",
+  "aiNetworkError": "Zkontrolujte své připojení k internetu a zkuste to znovu",
+  "aiRateLimit": "Příliš mnoho požadavků. Zkuste to za chvíli znovu",
+  "aiNotCalculable": "Tento výraz nelze vypočítat",
+  "aiServerError": "Něco se pokazilo. Zkusit znovu?"
+}

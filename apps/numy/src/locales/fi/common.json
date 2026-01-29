@@ -1,0 +1,16 @@
+{
+  "cancel": "Peruuta",
+  "clear": "Tyhjennä",
+  "delete": "Poista",
+  "save": "Tallenna",
+  "new": "Uusi",
+  "back": "Takaisin",
+  "saved": "Tallennettu",
+  "loading": "Ladataan...",
+  "share": "Jaa",
+  "notFound": {
+    "title": "Hups!",
+    "message": "Tätä näyttöä ei ole olemassa.",
+    "goHome": "Siirry kotinäyttöön!"
+  }
+}

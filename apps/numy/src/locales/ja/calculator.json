@@ -1,0 +1,39 @@
+{
+  "myCalculations": "マイ計算",
+  "placeholder": "計算を入力...",
+  "total": "合計: ",
+  "tapToShare": "タップして共有",
+  "inputAccessibility": "計算入力",
+  "inputHint": "5かける3や100の20%のような数式を入力してください",
+  "resultAccessibility": "結果: {{value}}",
+  "resultHint": "ダブルタップでこの結果を共有",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "ダブルタップで合計を共有",
+  "document": {
+    "saveButton": "保存",
+    "saveHint": "ダブルタップでこのドキュメントを履歴に保存",
+    "clearButton": "クリア",
+    "clearHint": "ダブルタップで全ての計算をクリア",
+    "titleAccessibility": "ドキュメントタイトル: {{title}}",
+    "titleHint": "ダブルタップでドキュメントタイトルを編集",
+    "editTitleModal": "ドキュメントタイトル編集ダイアログ",
+    "titleInputLabel": "ドキュメントタイトル",
+    "titleInputHint": "このドキュメントの新しいタイトルを入力",
+    "cancelHint": "ダブルタップでキャンセルして現在のタイトルを維持",
+    "saveNewTitleHint": "ダブルタップで新しいタイトルを保存",
+    "savedAlert": {
+      "title": "保存済み",
+      "message": "ドキュメントを履歴に保存しました"
+    },
+    "clearAlert": {
+      "title": "ドキュメントをクリア",
+      "message": "全ての計算をクリアしてもよろしいですか？"
+    },
+    "editTitle": "タイトルを編集",
+    "titlePlaceholder": "ドキュメントタイトル",
+    "closeHint": "Close without saving",
+    "newDocHint": "Double tap to create a new document. Current document will be auto-saved.",
+    "lastUpdated": "updated {{time}}"
+  },
+  "shareAccessibility": "Share total"
+}

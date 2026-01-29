@@ -1,0 +1,40 @@
+{
+  "title": "Instellingen",
+  "screenTitle": "Instellingen scherm",
+  "cssUnits": {
+    "title": "## CSS Eenheden",
+    "description": "Configureer basiswaarden voor CSS-eenheidsconversies",
+    "emBase": "em basis (px)",
+    "emBaseHint": "Voer de basis pixelwaarde in voor em-berekeningen",
+    "ppiBase": "ppi basis",
+    "ppiBaseHint": "Voer de pixels per inch waarde in voor berekeningen van fysieke eenheden"
+  },
+  "about": {
+    "title": "# Over",
+    "appName": "Numy - Natuurlijke Taal Rekenmachine",
+    "version": "Versie 1.0.0",
+    "aiHighlight": "Numy wordt mogelijk gemaakt door Apple Intelligence.",
+    "madeBy": "Moruk Studios"
+  },
+  "links": {
+    "privacyPolicy": "Privacybeleid",
+    "termsOfUse": "Gebruiksvoorwaarden",
+    "support": "Ondersteuning",
+    "opensInBrowser": "Opent in browser"
+  },
+  "preferences": {
+    "title": "# Voorkeuren",
+    "showTotal": "Toon lopend totaal",
+    "showTotalHint": "Schakel de balk voor het lopende totaal onderaan de rekenmachine in/uit",
+    "decimalPlaces": "Decimalen",
+    "decimalPlacesHint": "Voer het aantal decimalen voor resultaten in (0-10)"
+  },
+  "resetAll": {
+    "title": "Alle Instellingen Wissen",
+    "message": "Hiermee worden al uw notities verwijderd en alle instellingen naar de standaardwaarden gereset. Dit kan niet ongedaan gemaakt worden.",
+    "confirm": "Alles Wissen",
+    "cancel": "Annuleren",
+    "buttonLabel": "Alle Instellingen Wissen",
+    "buttonHint": "Dubbeltikken om alle instellingen te wissen en alle notities te verwijderen"
+  }
+}

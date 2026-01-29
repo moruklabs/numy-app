@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Számításaim",
+  "placeholder": "Írjon be egy számítást...",
+  "total": "Összesen: ",
+  "tapToShare": "érintse meg a megosztáshoz",
+  "shareAccessibility": "Összeg megosztása",
+  "inputAccessibility": "Számítás bemenet",
+  "inputHint": "Írjon be egy matematikai kifejezést, például 5 szorozva 3-mal vagy 100 20%-a",
+  "resultAccessibility": "Eredmény: {{value}}",
+  "resultHint": "Érintse meg duplán az eredmény megosztásához",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Érintse meg duplán az összeg megosztásához",
+  "document": {
+    "saveButton": "Mentés",
+    "saveHint": "Érintse meg duplán a dokumentum mentéséhez a történelemben",
+    "clearButton": "Törlés",
+    "clearHint": "Érintse meg duplán az összes számítás törléséhez",
+    "closeHint": "Bezárás mentés nélkül",
+    "titleAccessibility": "Dokumentum címe: {{title}}",
+    "titleHint": "Érintse meg duplán a dokumentum címének szerkesztéséhez",
+    "editTitleModal": "Dokumentum címének szerkesztése párbeszédablak",
+    "titleInputLabel": "Dokumentum címe",
+    "titleInputHint": "Adjon meg egy új címet ehhez a dokumentumhoz",
+    "cancelHint": "Érintse meg duplán a megszakításhoz és a jelenlegi cím megtartásához",
+    "saveNewTitleHint": "Érintse meg duplán az új cím mentéséhez",
+    "newDocHint": "Érintse meg duplán egy új dokumentum létrehozásához. A jelenlegi dokumentum automatikusan mentésre kerül.",
+    "savedAlert": {
+      "title": "Mentve",
+      "message": "A dokumentum elmentve a történelembe"
+    },
+    "clearAlert": {
+      "title": "Dokumentum törlése",
+      "message": "Biztosan törli az összes számítást?"
+    },
+    "editTitle": "Cím szerkesztése",
+    "titlePlaceholder": "Dokumentum címe",
+    "lastUpdated": "frissítve: {{time}}"
+  }
+}

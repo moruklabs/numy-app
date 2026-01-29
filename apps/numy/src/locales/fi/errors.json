@@ -1,0 +1,9 @@
+{
+  "cannotConvert": "{{source}}:n muuntaminen {{target}}:ksi ei onnistu",
+  "calculationError": "Laskentavirhe",
+  "aiTimeout": "Laskenta aikakatkaistiin. Yritä uudelleen?",
+  "aiNetworkError": "Tarkista internetyhteytesi ja yritä uudelleen",
+  "aiRateLimit": "Liian monta pyyntöä. Yritä hetken kuluttua uudelleen",
+  "aiNotCalculable": "Tätä lauseketta ei voi laskea",
+  "aiServerError": "Jotain meni pieleen. Yritä uudelleen?"
+}

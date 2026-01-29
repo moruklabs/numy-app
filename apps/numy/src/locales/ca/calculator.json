@@ -1,0 +1,39 @@
+{
+  "myCalculations": "Els meus càlculs",
+  "placeholder": "Escriviu el càlcul...",
+  "total": "Total: ",
+  "tapToShare": "toca per compartir",
+  "shareAccessibility": "Comparteix el total",
+  "inputAccessibility": "Entrada de càlcul",
+  "inputHint": "Escriviu una expressió matemàtica com 5 vegades 3 o el 20% de 100",
+  "resultAccessibility": "Resultat: {{value}}",
+  "resultHint": "Doble toc per compartir aquest resultat",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "Doble toc per compartir el total",
+  "document": {
+    "saveButton": "Desa",
+    "saveHint": "Doble toc per desar aquest document a l'historial",
+    "clearButton": "Neteja",
+    "clearHint": "Doble toc per netejar tots els càlculs",
+    "closeHint": "Tanca sense desar",
+    "titleAccessibility": "Títol del document: {{title}}",
+    "titleHint": "Doble toc per editar el títol del document",
+    "editTitleModal": "Diàleg per editar el títol del document",
+    "titleInputLabel": "Títol del document",
+    "titleInputHint": "Introduïu un nou títol per a aquest document",
+    "cancelHint": "Doble toc per cancel·lar i conservar el títol actual",
+    "saveNewTitleHint": "Doble toc per desar el nou títol",
+    "newDocHint": "Doble toc per crear un nou document. El document actual es desarà automàticament.",
+    "savedAlert": {
+      "title": "Desat",
+      "message": "Document desat a l'historial"
+    },
+    "clearAlert": {
+      "title": "Netejar Document",
+      "message": "Esteu segur que voleu netejar tots els càlculs?"
+    },
+    "editTitle": "Edita el títol",
+    "titlePlaceholder": "Títol del document",
+    "lastUpdated": "actualitzat {{time}}"
+  }
+}

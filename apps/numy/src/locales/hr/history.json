@@ -1,0 +1,24 @@
+{
+  "title": "Povijest",
+  "screenTitle": "Zaslon povijesti koji prikazuje spremljene izračune",
+  "listAccessibility": "Popis spremljenih dokumenata s {{count}} dokumenata",
+  "documentAccessibility": "{{title}}, spremljeno {{date}}, {{count}} izračuna",
+  "documentHint": "Dvaput dodirnite za otvaranje. Koristite izbornik radnji za brisanje.",
+  "openAction": "Otvori dokument",
+  "deleteAction": "Izbriši dokument",
+  "lastEdited": "zadnje uređeno",
+  "emptyState": {
+    "title": "# Još nema spremljenih izračuna",
+    "subtitle": "Vaši spremljeni izračuni pojavit će se ovdje nakon što spremite dokument"
+  },
+  "sections": {
+    "examples": "# Primjeri",
+    "history": "# Povijest"
+  },
+  "lineCount_one": "{{count}} redak",
+  "lineCount_other": "{{count}} retka",
+  "deleteAlert": {
+    "title": "Izbriši dokument",
+    "message": "Jeste li sigurni da želite izbrisati \"{{title}}\"? Ova se radnja ne može poništiti."
+  }
+}

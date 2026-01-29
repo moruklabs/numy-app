@@ -1,0 +1,24 @@
+{
+  "title": "Historik",
+  "screenTitle": "Historikskærm, der viser gemte beregninger",
+  "listAccessibility": "Liste over gemte dokumenter med {{count}} dokumenter",
+  "documentAccessibility": "{{title}}, gemt den {{date}}, {{count}} beregninger",
+  "documentHint": "Dobbeltklik for at åbne. Brug handlingsmenuen til at slette.",
+  "openAction": "Åbn dokument",
+  "deleteAction": "Slet dokument",
+  "lastEdited": "sidst redigeret",
+  "emptyState": {
+    "title": "# Ingen gemte beregninger endnu",
+    "subtitle": "Dine gemte beregninger vises her, efter du har gemt et dokument"
+  },
+  "sections": {
+    "examples": "# Eksempler",
+    "history": "# Historik"
+  },
+  "lineCount_one": "{{count}} linje",
+  "lineCount_other": "{{count}} linjer",
+  "deleteAlert": {
+    "title": "Slet dokument",
+    "message": "Er du sikker på, at du vil slette \"{{title}}\"? Denne handling kan ikke fortrydes."
+  }
+}

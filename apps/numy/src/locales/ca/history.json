@@ -1,0 +1,24 @@
+{
+  "title": "Historial",
+  "screenTitle": "Pantalla d'historial que mostra els càlculs guardats",
+  "listAccessibility": "Llista de documents guardats amb {{count}} documents",
+  "documentAccessibility": "{{title}}, guardat el {{date}}, {{count}} càlculs",
+  "documentHint": "Doble toc per obrir. Utilitzeu el menú d'accions per eliminar.",
+  "openAction": "Obre el document",
+  "deleteAction": "Elimina el document",
+  "lastEdited": "última modificació",
+  "emptyState": {
+    "title": "# Encara no hi ha càlculs guardats",
+    "subtitle": "Els vostres càlculs guardats apareixeran aquí després de desar un document"
+  },
+  "sections": {
+    "examples": "# Exemples",
+    "history": "# Historial"
+  },
+  "lineCount_one": "{{count}} línia",
+  "lineCount_other": "{{count}} línies",
+  "deleteAlert": {
+    "title": "Eliminar document",
+    "message": "Esteu segur que voleu eliminar \"{{title}}\"? Aquesta acció no es pot desfer."
+  }
+}

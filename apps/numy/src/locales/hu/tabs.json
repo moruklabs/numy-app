@@ -1,0 +1,9 @@
+{
+  "calculator": "Számológép",
+  "history": "Előzmények",
+  "settings": "Beállítások",
+  "calculatorTab": "Számológép lap, írjon be számításokat és tekintse meg az eredményeket",
+  "historyTab": "Előzmények lap, tekintse meg a mentett számításait",
+  "settingsTab": "Beállítások lap, konfigurálja az alkalmazás beállításait",
+  "newDocument": "Új számítás"
+}

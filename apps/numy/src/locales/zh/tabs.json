@@ -1,0 +1,9 @@
+{
+  "calculator": "计算器",
+  "history": "历史",
+  "settings": "设置",
+  "calculatorTab": "计算器标签，输入计算并查看结果",
+  "historyTab": "历史标签，查看已保存的计算",
+  "settingsTab": "设置标签，配置应用偏好",
+  "newDocument": "New calculation"
+}

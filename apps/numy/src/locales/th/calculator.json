@@ -1,0 +1,39 @@
+{
+  "myCalculations": "การคำนวณของฉัน",
+  "placeholder": "พิมพ์การคำนวณ...",
+  "total": "รวม: ",
+  "tapToShare": "แตะเพื่อแชร์",
+  "shareAccessibility": "แชร์ผลรวม",
+  "inputAccessibility": "ช่องป้อนข้อมูลการคำนวณ",
+  "inputHint": "พิมพ์นิพจน์ทางคณิตศาสตร์ เช่น 5 คูณ 3 หรือ 20% ของ 100",
+  "resultAccessibility": "ผลลัพธ์: {{value}}",
+  "resultHint": "แตะสองครั้งเพื่อแชร์ผลลัพธ์นี้",
+  "totalAccessibility": "{{value}}",
+  "totalHint": "แตะสองครั้งเพื่อแชร์ผลรวม",
+  "document": {
+    "saveButton": "บันทึก",
+    "saveHint": "แตะสองครั้งเพื่อบันทึกเอกสารนี้ไปยังประวัติ",
+    "clearButton": "ล้าง",
+    "clearHint": "แตะสองครั้งเพื่อล้างการคำนวณทั้งหมด",
+    "closeHint": "ปิดโดยไม่บันทึก",
+    "titleAccessibility": "ชื่อเอกสาร: {{title}}",
+    "titleHint": "แตะสองครั้งเพื่อแก้ไขชื่อเอกสาร",
+    "editTitleModal": "กล่องโต้ตอบแก้ไขชื่อเอกสาร",
+    "titleInputLabel": "ชื่อเอกสาร",
+    "titleInputHint": "ป้อนชื่อใหม่สำหรับเอกสารนี้",
+    "cancelHint": "แตะสองครั้งเพื่อยกเลิกและคงชื่อปัจจุบันไว้",
+    "saveNewTitleHint": "แตะสองครั้งเพื่อบันทึกชื่อใหม่",
+    "newDocHint": "แตะสองครั้งเพื่อสร้างเอกสารใหม่ เอกสารปัจจุบันจะถูกบันทึกโดยอัตโนมัติ",
+    "savedAlert": {
+      "title": "บันทึกแล้ว",
+      "message": "เอกสารถูกบันทึกไปยังประวัติแล้ว"
+    },
+    "clearAlert": {
+      "title": "ล้างเอกสาร",
+      "message": "คุณแน่ใจหรือไม่ว่าต้องการล้างการคำนวณทั้งหมด?"
+    },
+    "editTitle": "แก้ไขชื่อ",
+    "titlePlaceholder": "ชื่อเอกสาร",
+    "lastUpdated": "อัปเดตเมื่อ {{time}}"
+  }
+}

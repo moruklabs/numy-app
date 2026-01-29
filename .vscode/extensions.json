@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-vscode.vscode-typescript-next",
+    "arcanis.vscode-zipfs",
+    "expo.vscode-expo-tools",
+    "ms-vscode.vscode-react-native",
+    "orta.vscode-jest"
+  ],
+  "unwantedRecommendations": []
+}
+

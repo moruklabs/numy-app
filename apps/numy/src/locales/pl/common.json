@@ -1,0 +1,16 @@
+{
+  "cancel": "Anuluj",
+  "clear": "Wyczyść",
+  "delete": "Usuń",
+  "save": "Zapisz",
+  "new": "Nowy",
+  "back": "Wstecz",
+  "saved": "Zapisano",
+  "loading": "Ładowanie...",
+  "share": "Udostępnij",
+  "notFound": {
+    "title": "Ups!",
+    "message": "Ten ekran nie istnieje.",
+    "goHome": "Przejdź do ekranu głównego!"
+  }
+}
