@@ -4220,17 +4220,17 @@ __metadata:
   linkType: hard
 
 "@react-native-firebase/crashlytics@npm:*":
-  version: 23.7.0
-  resolution: "@react-native-firebase/crashlytics@npm:23.7.0"
+  version: 23.8.4
+  resolution: "@react-native-firebase/crashlytics@npm:23.8.4"
   dependencies:
     stacktrace-js: "npm:^2.0.2"
   peerDependencies:
-    "@react-native-firebase/app": 23.7.0
+    "@react-native-firebase/app": 23.8.4
     expo: ">=47.0.0"
   peerDependenciesMeta:
     expo:
       optional: true
-  checksum: 10c0/1ec6746b6ce539995d968b3930e10203b385345793507060d4d51f403bf9d771d974b9c50e5149a89e1d4cbda3aa5092d04d0211287224687f7fb4aedbb58c6b
+  checksum: 10c0/97bdcf2a9e2250036c3cc21c271684f74599af2b707899176b48eef89be1bfe98672c805aefb1783db773e27499d2b157c913d2a2e620de1f119231d6549f35a
   languageName: node
   linkType: hard
 
