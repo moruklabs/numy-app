@@ -1,0 +1,9 @@
+# EAS Build Ignore
+# This file overrides .gitignore for EAS builds
+# Use negative patterns to include files that are gitignored but needed for builds
+
+# Include Firebase config files for builds
+!GoogleService-Info.plist
+!google-services.json
+!apps/*/GoogleService-Info.plist
+!apps/*/google-services.json

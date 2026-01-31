@@ -66,9 +66,7 @@
       "router": {}
     },
     "primaryColor": "#4F46E5",
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/c458cacb-2677-48f8-afd4-77eaf0abf4a2"
     }
