@@ -87,7 +87,21 @@
           "backgroundColor": "#1a1a1a"
         }
       ],
-      "expo-updates"
+      "expo-updates",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-9347276405837051~7950500913",
+          "iosAppId": "ca-app-pub-9347276405837051~7950500913",
+          "userTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
+        }
+      ],
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

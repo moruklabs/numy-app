@@ -4,6 +4,10 @@
  * Tests for the Zustand calculator store including AI fallback integration.
  */
 
+import { processWithAI } from "@moruk/ai";
+
+import { useCalculatorStore } from "../stores/calculatorStore";
+
 // Mock AsyncStorage
 jest.mock("@react-native-async-storage/async-storage", () => ({
   setItem: jest.fn(),
@@ -13,9 +17,8 @@ jest.mock("@react-native-async-storage/async-storage", () => ({
 }));
 
 // Mock @moruk/ai
-const mockProcessWithAI = jest.fn();
 jest.mock("@moruk/ai", () => ({
-  processWithAI: mockProcessWithAI,
+  processWithAI: jest.fn(),
   getAIProvider: jest.fn(() => "gemini"),
   getAIProviderInfo: jest.fn(() => ({
     provider: "gemini",
@@ -25,7 +28,7 @@ jest.mock("@moruk/ai", () => ({
   AI: jest.fn(),
 }));
 
-import { useCalculatorStore } from "../stores/calculatorStore";
+const mockProcessWithAI = processWithAI as jest.Mock;
 
 describe("calculatorStore", () => {
   beforeEach(() => {

@@ -26,6 +26,7 @@ validate:
     yarn validate
     just merge-metadata
     just test-localization
+    node scripts/test-ads-schema.js
 
 # Run validation for draft apps (error-tolerant)
 validate-drafts:
@@ -408,7 +409,8 @@ test-app-watch app:
 
 # Run a specific app (supports partial matching: just run coin, just run stone)
 # Default starts Metro server. Use "just run coin -p android" to build & launch.
-run app *flags:
+# If no app is specified, defaults to numy.
+run app="numy" *flags:
     #!/usr/bin/env bash
     set -e
     APPS=(numy)

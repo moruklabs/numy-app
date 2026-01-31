@@ -47,6 +47,7 @@ export default function SettingsScreen() {
   const [emInput, setEmInput] = useState(emBase.toString());
   const [ppiInput, setPpiInput] = useState(ppiBase.toString());
   const [decimalInput, setDecimalInput] = useState(decimalPlaces.toString());
+  const [debugTaps, setDebugTaps] = useState(0);
 
   const handleEmChange = (value: string) => {
     // Filter to only digits
@@ -305,9 +306,26 @@ export default function SettingsScreen() {
 
       {/* Footer */}
       <View style={styles.footer} testID="settings.footer">
-        <Text style={styles.versionText} testID="settings.version" accessibilityRole="text">
-          {t("about.version")}
-        </Text>
+        <Pressable
+          onPress={() => {
+            // Use a local variable if state updates are slow, or just rely on state
+            // But simpler to just use state since it's low frequency
+            // Actually, we need state.
+            setDebugTaps((prev) => {
+              const newCount = prev + 1;
+              if (newCount >= 5) {
+                router.push("/settings/debug" as any);
+                return 0;
+              }
+              return newCount;
+            });
+          }}
+          testID="settings.version-container"
+        >
+          <Text style={styles.versionText} testID="settings.version" accessibilityRole="text">
+            {t("about.version")}
+          </Text>
+        </Pressable>
         <Text style={styles.madeByText} testID="settings.made-by" accessibilityRole="text">
           {t("about.madeBy")}
         </Text>

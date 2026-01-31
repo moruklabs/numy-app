@@ -1,0 +1,24 @@
+ads:
+  app_id: ca-app-pub-9347276405837051~7950500913
+  app_name: Numy
+  enabled:
+    ios: true
+    android: true
+  app_open:
+    frequency: 1
+    interval: 1 day
+    ios:
+      ad_unit_id: ca-app-pub-9347276405837051/3715040109
+    android:
+      ad_unit_id: ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy # Placeholder
+  interstitial:
+    frequency: 1
+    interval: 1 hour
+    ios:
+      ad_unit_id: ca-app-pub-9347276405837051/2888378946
+    android:
+      ad_unit_id: ca-app-pub-xxxxxxxxxxxxxxxx/zzzzzzzzzz # Placeholder
+    when:
+      - screen: "examples"
+        condition: "count > 3"
+        event: "example_viewed"

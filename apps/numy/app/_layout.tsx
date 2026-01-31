@@ -3,14 +3,18 @@ import "../src/i18n";
 
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { colors, typography } from "../src/presentation/theme";
 import { useAnalytics } from "../src/application/hooks";
+import { usePrivacySequence } from "../src/features/privacy/api/PrivacySequence";
+import { colors, typography } from "../src/presentation/theme";
 
 export default function RootLayout() {
   // Initialize analytics and track screen views
   useAnalytics();
+
+  // Initialize privacy sequence (UMP -> ATT)
+  usePrivacySequence();
 
   return (
     <View style={styles.container} testID="app.root">

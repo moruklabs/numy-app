@@ -2,7 +2,7 @@ import { Tabs } from "expo-router";
 import { useTranslation } from "react-i18next";
 import { Pressable, StyleSheet, Text } from "react-native";
 import { useCalculatorStore } from "../../src/application/stores/calculatorStore";
-import { colors, typography, spacing } from "../../src/presentation/theme";
+import { colors, spacing, typography } from "../../src/presentation/theme";
 
 export default function TabLayout() {
   const { t } = useTranslation("tabs");
@@ -67,6 +67,24 @@ export default function TabLayout() {
           ),
           tabBarButtonTestID: "tabs.calculator",
           tabBarAccessibilityLabel: t("calculatorTab"),
+        }}
+      />
+      <Tabs.Screen
+        name="examples"
+        options={{
+          title: t("examples"),
+          tabBarIcon: ({ color }: { color: string }) => (
+            <Text
+              style={[styles.tabIcon, { color }]}
+              testID="tabs.examples.icon"
+              accessibilityElementsHidden={true}
+              importantForAccessibility="no-hide-descendants"
+            >
+              ?
+            </Text>
+          ),
+          tabBarButtonTestID: "tabs.examples",
+          tabBarAccessibilityLabel: t("examplesTab"),
         }}
       />
       <Tabs.Screen

@@ -4,25 +4,25 @@ module.exports = {
   globals: {
     __DEV__: true,
   },
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   transform: {
-    "^.+\\.(ts|tsx)$": [
-      "ts-jest",
-      {
-        tsconfig: {
-          jsx: "react",
-          esModuleInterop: true,
-        },
-      },
-    ],
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
   },
+  transformIgnorePatterns: [
+    "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg|@moruk/.*|@testing-library/react-native|expo-tracking-transparency|react-native-google-mobile-ads)",
+  ],
   testMatch: [
     "**/src/domain/__tests__/**/*.test.(ts|tsx)",
     "**/src/infrastructure/__tests__/**/*.test.(ts|tsx)",
     "**/src/application/__tests__/**/*.test.(ts|tsx)",
+    "**/src/features/**/__tests__/**/*.test.(ts|tsx)",
+    "**/src/shared/**/__tests__/**/*.test.(ts|tsx)",
   ],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
     "^@moruk/ai$": "<rootDir>/../../packages/ai/src/index.ts",
+    "^expo-tracking-transparency$": "<rootDir>/__mocks__/expo-tracking-transparency.js",
+    "^react-native-google-mobile-ads$": "<rootDir>/__mocks__/react-native-google-mobile-ads.js",
   },
   collectCoverageFrom: [
     "src/domain/**/*.{ts,tsx}",

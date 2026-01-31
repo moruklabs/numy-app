@@ -2702,6 +2702,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iabtcf/core@npm:^1.5.6":
+  version: 1.5.6
+  resolution: "@iabtcf/core@npm:1.5.6"
+  checksum: 10c0/e7bb104fab82c5c2a051986b51bf31577f6cc9ca84b5561612d649d4503aa7db21113e667c241cb9ec93c8fe9ce65e1266396174e2f64dd1105f91a097ffa85c
+  languageName: node
+  linkType: hard
+
 "@img/colour@npm:^1.0.0":
   version: 1.0.0
   resolution: "@img/colour@npm:1.0.0"
@@ -3455,6 +3462,7 @@ __metadata:
     syncpack: "npm:^13.0.4"
     typescript: "npm:^5.9.3"
     typescript-eslint: "npm:^8.52.0"
+    zod: "npm:^3.24.1"
   languageName: unknown
   linkType: soft
 
@@ -3603,6 +3611,7 @@ __metadata:
     expo-router: "npm:~6.0.22"
     expo-splash-screen: "npm:^31.0.13"
     expo-status-bar: "npm:*"
+    expo-tracking-transparency: "npm:^6.0.8"
     expo-updates: "npm:*"
     i18next: "npm:*"
     jest: "npm:*"
@@ -3614,6 +3623,7 @@ __metadata:
     react-i18next: "npm:*"
     react-native: "npm:*"
     react-native-gesture-handler: "npm:*"
+    react-native-google-mobile-ads: "npm:^16.0.3"
     react-native-reanimated: "npm:*"
     react-native-safe-area-context: "npm:*"
     react-native-screens: "npm:*"
@@ -6818,7 +6828,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dequal@npm:^2.0.3":
+"dequal@npm:^2.0.2, dequal@npm:^2.0.3":
   version: 2.0.3
   resolution: "dequal@npm:2.0.3"
   checksum: 10c0/f98860cdf58b64991ae10205137c0e97d384c3a4edc7f807603887b7c4b850af1224a33d88012009f150861cbee4fa2d322c4cc04b9313bee312e47f6ecaa888
@@ -8002,6 +8012,16 @@ __metadata:
   version: 5.0.0
   resolution: "expo-structured-headers@npm:5.0.0"
   checksum: 10c0/bbe0f9cb91ca5fd8482fd15723bfe279b26f34a37360af2ce9a510434351e50d889e429037915be9ede493893b99eb8e7f0be56bfcebaebb5d9a25443b1fa419
+  languageName: node
+  linkType: hard
+
+"expo-tracking-transparency@npm:^6.0.8":
+  version: 6.0.8
+  resolution: "expo-tracking-transparency@npm:6.0.8"
+  peerDependencies:
+    expo: "*"
+    react-native: "*"
+  checksum: 10c0/b45c828dd52511319570b0777dbaeedb58f6e5eab9106d62e4fcf0fe97ab2ba7440119c9254841251e2e8d8c05a9f36638cd65e560023bd32fd7a5111e74de4f
   languageName: node
   linkType: hard
 
@@ -12083,6 +12103,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-google-mobile-ads@npm:^16.0.3":
+  version: 16.0.3
+  resolution: "react-native-google-mobile-ads@npm:16.0.3"
+  dependencies:
+    "@iabtcf/core": "npm:^1.5.6"
+    use-deep-compare-effect: "npm:^1.8.1"
+  peerDependencies:
+    expo: ">=47.0.0"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+  checksum: 10c0/2166b3adab509e83bfed0f008aa705d4af46b5bbda91574c2e8e79c4c69cc5d18478967e200bf03377832aca55d53e3f34345ede27621777fd2b6bbed9ba7294
+  languageName: node
+  linkType: hard
+
 "react-native-is-edge-to-edge@npm:^1.1.6, react-native-is-edge-to-edge@npm:^1.2.1":
   version: 1.2.1
   resolution: "react-native-is-edge-to-edge@npm:1.2.1"
@@ -14250,6 +14285,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-deep-compare-effect@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "use-deep-compare-effect@npm:1.8.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.12.5"
+    dequal: "npm:^2.0.2"
+  peerDependencies:
+    react: ">=16.13"
+  checksum: 10c0/f21f4239d774182e5389172321f00db487b415a97f5835abbe99d228eec45e3fd97803a52a25db6216ae6e1e1203b3f523336d94695dc683c661bad36a318891
+  languageName: node
+  linkType: hard
+
 "use-latest-callback@npm:^0.2.1, use-latest-callback@npm:^0.2.4":
   version: 0.2.6
   resolution: "use-latest-callback@npm:0.2.6"
@@ -14781,6 +14828,13 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.24.1":
+  version: 3.25.76
+  resolution: "zod@npm:3.25.76"
+  checksum: 10c0/5718ec35e3c40b600316c5b4c5e4976f7fee68151bc8f8d90ec18a469be9571f072e1bbaace10f1e85cf8892ea12d90821b200e980ab46916a6166a4260a983c
   languageName: node
   linkType: hard
 

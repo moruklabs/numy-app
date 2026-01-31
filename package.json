@@ -16,10 +16,10 @@
     "validate:quick": "yarn type-check && yarn lint && yarn format",
     "validate:ci": "yarn validate:quick && yarn test",
     "validate:fix": "yarn fix:deps && yarn fix:expo",
-    "test:app-config": "node app-config.test.js",
-    "test:store-config": "node store-config.test.js",
-    "test": "node app-config.test.js && node store-config.test.js && node localization.test.js && yarn workspaces foreach -Ap --exclude '@moruk/identifiers-monorepo' run test",
-    "test:localization": "node localization.test.js",
+    "test:app-config": "node scripts/__tests__/app-config.test.js",
+    "test:store-config": "node scripts/__tests__/store-config.test.js",
+    "test": "node scripts/__tests__/app-config.test.js && node scripts/__tests__/store-config.test.js && node scripts/__tests__/localization.test.js && node scripts/test-ads-schema.js && yarn workspaces foreach -Ap --exclude '@moruk/identifiers-monorepo' run test",
+    "test:localization": "node scripts/__tests__/localization.test.js",
     "test:apps": "yarn workspaces foreach -Ap --include '@moruk/*' --exclude '@moruk/identifiers-monorepo' run test",
     "test:coverage": "yarn workspaces foreach -Ap --include '@moruk/*' --exclude '@moruk/identifiers-monorepo' run test:coverage",
     "fix": "EXPO_NO_CACHE=1 yarn workspaces foreach -A --exclude '@moruk/identifiers-monorepo' run fix",
@@ -132,6 +132,7 @@
     "sharp": "^0.34.5",
     "syncpack": "^13.0.4",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.52.0"
+    "typescript-eslint": "^8.52.0",
+    "zod": "^3.24.1"
   }
 }
