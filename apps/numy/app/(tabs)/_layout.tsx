@@ -33,7 +33,7 @@ export default function TabLayout() {
           fontFamily: typography.fonts.mono,
           fontWeight: "600",
         },
-        headerBackVisible: false,
+
         headerLeft: () => null,
       }}
     >
@@ -42,7 +42,7 @@ export default function TabLayout() {
         options={{
           title: t("calculator"),
           headerTitle: "Numy",
-          headerBackVisible: false,
+
           headerLeft: () => null,
           headerRight: () => (
             <Pressable

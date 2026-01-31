@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "node:fs";
+import path from "node:path";
 
 describe("Native Configuration Integrity", () => {
   // Correct path resolution relative to this test file

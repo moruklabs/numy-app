@@ -4,8 +4,8 @@
     "jsx": "react-native",
     "allowJs": true,
     "esModuleInterop": true,
-    "moduleResolution": "nodenext",
-    "module": "nodenext",
+    "moduleResolution": "bundler",
+    "module": "esnext",
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
