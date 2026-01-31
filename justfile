@@ -410,11 +410,20 @@ test-app-watch app:
 # Run a specific app (supports partial matching: just run coin, just run stone)
 # Default starts Metro server. Use "just run coin -p android" to build & launch.
 # If no app is specified, defaults to numy.
+# If platform is specified as first arg (e.g. `just run ios`), defaults app to numy.
 run app="numy" *flags:
     #!/usr/bin/env bash
     set -e
     APPS=(numy)
     INPUT="{{app}}"
+    EXTRA_FLAGS="{{flags}}"
+
+    # Check if input is a platform, if so, default to numy and treat input as flag
+    if [ "$INPUT" = "ios" ] || [ "$INPUT" = "android" ]; then
+        EXTRA_FLAGS="$INPUT $EXTRA_FLAGS"
+        INPUT="numy"
+    fi
+
     MATCHED=""
 
     # Try exact match first
@@ -464,7 +473,7 @@ run app="numy" *flags:
     fi
 
     REAL_PLATFORM="start"
-    for arg in {{flags}}; do
+    for arg in $EXTRA_FLAGS; do
         if [ "$arg" = "android" ] || [ "$arg" = "ios" ]; then REAL_PLATFORM="$arg"; fi
     done
 
