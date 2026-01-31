@@ -31,9 +31,9 @@ numy/
 
 ## App
 
-| App             | Bundle ID               | Description           |
-| --------------- | ----------------------- | --------------------- |
-| numy | ai.moruk.babyglimpse | Coin identification   |
+| App  | Bundle ID            | Description         |
+| ---- | -------------------- | ------------------- |
+| numy | ai.moruk.babyglimpse | Coin identification |
 
 ## Commands
 

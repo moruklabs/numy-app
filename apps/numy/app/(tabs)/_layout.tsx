@@ -4,6 +4,40 @@ import { Pressable, StyleSheet, Text } from "react-native";
 import { useCalculatorStore } from "../../src/application/stores/calculatorStore";
 import { colors, spacing, typography } from "../../src/presentation/theme";
 
+interface TabIconProps {
+  color: string;
+  symbol: string;
+  testID: string;
+}
+
+const TabIcon = ({ color, symbol, testID }: TabIconProps) => (
+  <Text
+    style={[styles.tabIcon, { color }]}
+    testID={testID}
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+  >
+    {symbol}
+  </Text>
+);
+
+interface HeaderAddButtonProps {
+  onPress: () => void;
+  accessibilityLabel: string;
+}
+
+const HeaderAddButton = ({ onPress, accessibilityLabel }: HeaderAddButtonProps) => (
+  <Pressable
+    onPress={onPress}
+    style={({ pressed }) => [styles.headerButton, pressed && styles.headerButtonPressed]}
+    accessibilityLabel={accessibilityLabel}
+    accessibilityRole="button"
+    testID="header.new-button"
+  >
+    <Text style={styles.headerButtonText}>+</Text>
+  </Pressable>
+);
+
 export default function TabLayout() {
   const { t } = useTranslation("tabs");
   const newDocumentWithAutoSave = useCalculatorStore((state) => state.newDocumentWithAutoSave);
@@ -45,25 +79,13 @@ export default function TabLayout() {
 
           headerLeft: () => null,
           headerRight: () => (
-            <Pressable
+            <HeaderAddButton
               onPress={newDocumentWithAutoSave}
-              style={({ pressed }) => [styles.headerButton, pressed && styles.headerButtonPressed]}
               accessibilityLabel={t("newDocument")}
-              accessibilityRole="button"
-              testID="header.new-button"
-            >
-              <Text style={styles.headerButtonText}>+</Text>
-            </Pressable>
+            />
           ),
-          tabBarIcon: ({ color }: { color: string }) => (
-            <Text
-              style={[styles.tabIcon, { color }]}
-              testID="tabs.calculator.icon"
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            >
-              =
-            </Text>
+          tabBarIcon: ({ color }) => (
+            <TabIcon color={color} symbol="=" testID="tabs.calculator.icon" />
           ),
           tabBarButtonTestID: "tabs.calculator",
           tabBarAccessibilityLabel: t("calculatorTab"),
@@ -73,15 +95,8 @@ export default function TabLayout() {
         name="examples"
         options={{
           title: t("examples"),
-          tabBarIcon: ({ color }: { color: string }) => (
-            <Text
-              style={[styles.tabIcon, { color }]}
-              testID="tabs.examples.icon"
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            >
-              ?
-            </Text>
+          tabBarIcon: ({ color }) => (
+            <TabIcon color={color} symbol="?" testID="tabs.examples.icon" />
           ),
           tabBarButtonTestID: "tabs.examples",
           tabBarAccessibilityLabel: t("examplesTab"),
@@ -91,15 +106,8 @@ export default function TabLayout() {
         name="history"
         options={{
           title: t("history"),
-          tabBarIcon: ({ color }: { color: string }) => (
-            <Text
-              style={[styles.tabIcon, { color }]}
-              testID="tabs.history.icon"
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            >
-              #
-            </Text>
+          tabBarIcon: ({ color }) => (
+            <TabIcon color={color} symbol="#" testID="tabs.history.icon" />
           ),
           tabBarButtonTestID: "tabs.history",
           tabBarAccessibilityLabel: t("historyTab"),
@@ -109,15 +117,8 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: t("settings"),
-          tabBarIcon: ({ color }: { color: string }) => (
-            <Text
-              style={[styles.tabIcon, { color }]}
-              testID="tabs.settings.icon"
-              accessibilityElementsHidden={true}
-              importantForAccessibility="no-hide-descendants"
-            >
-              *
-            </Text>
+          tabBarIcon: ({ color }) => (
+            <TabIcon color={color} symbol="*" testID="tabs.settings.icon" />
           ),
           tabBarButtonTestID: "tabs.settings",
           tabBarAccessibilityLabel: t("settingsTab"),

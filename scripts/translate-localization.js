@@ -94,7 +94,7 @@ const MONOREPO_ROOT = __dirname;
 
 // Mock translations from validation test
 const MOCK_TRANSLATIONS = {
-  "numy": { "in-app": ["ca", "fr", "it", "nl", "tr"] },
+  numy: { "in-app": ["ca", "fr", "it", "nl", "tr"] },
   numy: {
     "in-app": [
       "ar",

@@ -75,19 +75,13 @@ create_symlink() {
   echo ""
 }
 
-# Process each app
-create_symlink "numy" "coin-id-GoogleService-Info.plist" "numy-google-services.json"
-create_symlink "interval-timer" "interval-timer-GoogleService-Info.plist" "interval-timer-google-services.json"
-create_symlink "minday" "minday-GoogleService-Info.plist" "minday-google-services.json"
+# Process active apps
 create_symlink "numy" "numy-GoogleService-Info.plist" "numy-google-services.json"
-create_symlink "plant-doctor" "plant-doctor-GoogleService-Info.plist" "plant-doctor-google-services.json"
-create_symlink "rizzman" "rizzman-GoogleService-Info.plist" "rizzman-google-services.json"
-create_symlink "stone-identifier" "stone-identifier-GoogleService-Info.plist" "stone-identifier-google-services.json"
 
 echo "✨ All Firebase configuration symlinks created successfully!"
 echo ""
 echo "Verification:"
-for app in numy interval-timer minday numy plant-doctor rizzman stone-identifier; do
+for app in numy; do
   echo "  $app:"
   ls -la "$APPS_DIR/$app/GoogleService-Info.plist" 2>/dev/null | grep -q "^l" && echo "    ✅ plist symlink" || echo "    ❌ plist missing or not symlink"
   ls -la "$APPS_DIR/$app/google-services.json" 2>/dev/null | grep -q "^l" && echo "    ✅ google-services.json symlink" || echo "    ❌ google-services.json missing or not symlink"

@@ -480,6 +480,14 @@ run app="numy" *flags:
     echo "Running $MATCHED on $REAL_PLATFORM..."
     yarn workspace @moruk/$MATCHED $REAL_PLATFORM
 
+# Alias for run ios
+ios *flags:
+    just run numy ios {{flags}}
+
+# Alias for run android
+android *flags:
+    just run numy android {{flags}}
+
 # Run a specific app (legacy command)
 run-app app platform="ios":
     yarn workspace @moruk/{{app}} {{platform}}

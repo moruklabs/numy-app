@@ -26,9 +26,7 @@ function mergeMetadataFiles() {
   if (!fs.existsSync(BASE_CONFIG_PATH)) {
     console.error("❌ Error: base-config.json not found.");
     console.error("   Make sure you run this script from an app directory.");
-    console.error(
-      "   Example: cd apps/numy && node ../../scripts/localization/merge-metadata.js"
-    );
+    console.error("   Example: cd apps/numy && node ../../scripts/localization/merge-metadata.js");
     process.exit(1);
   }
 

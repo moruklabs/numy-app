@@ -1,10 +1,15 @@
 /* eslint-env node */
-const fs = require("fs");
-const path = require("path");
+/* global __dirname */
+// @ts-check
+
+const fs = require("node:fs");
+const path = require("node:path");
 const yaml = require("js-yaml");
 const { z } = require("zod");
 
+// @ts-ignore - __dirname is available in Node CJS but TS might complain if types are missing
 const ADS_YAML_PATH = path.join(__dirname, "../ads.yaml");
+// @ts-ignore
 const FIREBASE_JSON_PATH = path.join(__dirname, "../firebase.json");
 
 const AdUnitSchema = z.object({
@@ -52,6 +57,7 @@ function validateAds() {
     }
 
     const adsFileContents = fs.readFileSync(ADS_YAML_PATH, "utf8");
+    /** @type {any} */
     const adsData = yaml.load(adsFileContents);
 
     const adsResult = AdsSchema.safeParse(adsData);
@@ -84,6 +90,7 @@ function validateAds() {
     console.log("✅ firebase.json schema is valid.");
 
     // Validate apps/numy/GoogleService-Info.plist
+    // @ts-ignore
     const PLIST_PATH = path.join(__dirname, "../apps/numy/GoogleService-Info.plist");
     if (!fs.existsSync(PLIST_PATH)) {
       console.error("❌ GoogleService-Info.plist not found at:", PLIST_PATH);
@@ -92,19 +99,19 @@ function validateAds() {
     const plistContent = fs.readFileSync(PLIST_PATH, "utf8");
 
     // Helper to extract boolean value from plist key
+    /** @param {string} key */
     const getPlistBool = (key) => {
       // Matches <key>KEY</key> followed by <true/> or <true></true>
       const match = plistContent.match(
-        new RegExp(`<key>${key}</key>\\s*<([a-z]+)(?:/>|></[a-z]+>)`),
+        new RegExp(String.raw`<key>${key}</key>\s*<([a-z]+)(?:/>|></[a-z]+>)`)
       );
       return match ? match[1] === "true" : null;
     };
 
     // Helper to extract string value from plist key
+    /** @param {string} key */
     const getPlistString = (key) => {
-      const match = plistContent.match(
-        new RegExp(`<key>${key}</key>\\s*<string>(.*?)</string>`),
-      );
+      const match = plistContent.match(new RegExp(String.raw`<key>${key}</key>\s*<string>(.*?)</string>`));
       return match ? match[1] : null;
     };
 
@@ -113,22 +120,23 @@ function validateAds() {
       process.exit(1);
     }
     if (getPlistBool("IS_ANALYTICS_ENABLED") !== true) {
-      console.error(
-        "❌ GoogleService-Info.plist: IS_ANALYTICS_ENABLED must be true",
-      );
+      console.error("❌ GoogleService-Info.plist: IS_ANALYTICS_ENABLED must be true");
       process.exit(1);
     }
 
     const plistAdMobId = getPlistString("ADMOB_APP_ID");
+    // @ts-ignore
     if (plistAdMobId !== adsData.ads.app_id) {
       console.error(
-        `❌ GoogleService-Info.plist ADMOB_APP_ID mismatch.\nExpected: ${adsData.ads.app_id}\nFound: ${plistAdMobId}`,
+        // @ts-ignore
+        `❌ GoogleService-Info.plist ADMOB_APP_ID mismatch.\nExpected: ${adsData.ads.app_id}\nFound: ${plistAdMobId}`
       );
       process.exit(1);
     }
     console.log("✅ GoogleService-Info.plist is valid and consistent.");
 
     // Validate apps/numy/src/config/settings.ts
+    // @ts-ignore
     const SETTINGS_PATH = path.join(__dirname, "../apps/numy/src/config/settings.ts");
     if (!fs.existsSync(SETTINGS_PATH)) {
       console.error("❌ src/config/settings.ts not found at:", SETTINGS_PATH);
@@ -140,16 +148,18 @@ function validateAds() {
     const settingsMatch = settingsContent.match(/iosAppId:\s*"([^"]+)"/);
     const settingsAdMobId = settingsMatch ? settingsMatch[1] : null;
 
+    // @ts-ignore
     if (settingsAdMobId !== adsData.ads.app_id) {
       console.error(
-        `❌ src/config/settings.ts iosAppId mismatch.\nExpected: ${adsData.ads.app_id}\nFound: ${settingsAdMobId}`,
+        // @ts-ignore
+        `❌ src/config/settings.ts iosAppId mismatch.\nExpected: ${adsData.ads.app_id}\nFound: ${settingsAdMobId}`
       );
       process.exit(1);
     }
     console.log("✅ src/config/settings.ts is consistent.");
 
     process.exit(0);
-  } catch (error) {
+  } catch (/** @type {any} */ error) {
     console.error("❌ Unexpected error:", error.message);
     process.exit(1);
   }

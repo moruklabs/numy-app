@@ -151,9 +151,7 @@ const appPath = process.argv[2];
 
 if (!appPath) {
   console.error("Usage: node scripts/localization/validate-app-translations.js <app-path>");
-  console.error(
-    "Example: node scripts/localization/validate-app-translations.js apps/numy"
-  );
+  console.error("Example: node scripts/localization/validate-app-translations.js apps/numy");
   process.exit(1);
 }
 

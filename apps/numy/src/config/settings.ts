@@ -1,7 +1,7 @@
 export default {
   // App Metadata
   name: "Numy",
-  bundleId: "com.moruk.numy",
+  bundleId: "ai.moruk.numy",
   scheme: "numy",
   version: "1.0.0", // Syncs with package.json via CI
 
@@ -22,7 +22,7 @@ export default {
   // AdMob Configuration (Source of Truth for IDs)
   ads: {
     iosAppId: "ca-app-pub-9347276405837051~7950500913",
-    androidAppId: "ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy", // Placeholder
+    androidAppId: "ca-app-pub-9347276405837051~7950500913",
     // Unit IDs (Production)
     units: {
       ios: {
