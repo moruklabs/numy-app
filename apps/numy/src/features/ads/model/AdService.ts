@@ -2,6 +2,7 @@ import { AdConfiguration, AdUnitConfig } from "@/shared/config/ads-config";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import mobileAds, {
   AdEventType,
+  AppOpenAd,
   InterstitialAd,
   MaxAdContentRating,
   TestIds,
@@ -11,10 +12,13 @@ class AdService {
   private static instance: AdService;
   private config: AdConfiguration | null = null;
   private interstitial: InterstitialAd | null = null;
-  private appOpenAd: any | null = null; // Placeholder for AppOpenAd
+  private appOpenAd: AppOpenAd | null = null;
 
   private isInterstitialLoaded = false;
   private isInterstitialLoading = false;
+
+  private isAppOpenLoaded = false;
+  private isAppOpenLoading = false;
 
   // Storage for frequency capping (Mocked for now, needs persistence layer)
   private lastShownTimestamps: Record<string, number> = {};
@@ -119,7 +123,61 @@ class AdService {
 
   public isReady(type: "interstitial" | "appOpen"): boolean {
     if (type === "interstitial") return this.isInterstitialLoaded;
+    if (type === "appOpen") return this.isAppOpenLoaded;
     return false;
+  }
+
+  public async loadAppOpenAd(callbacks?: {
+    onLoaded?: () => void;
+    onError?: (error: Error) => void;
+  }) {
+    if (!this.config?.appOpen.enabled) return;
+
+    // Test ID logic: in DEV always use TestIds.APP_OPEN
+    const adUnitId = __DEV__ ? TestIds.APP_OPEN : this.config.appOpen.adUnitId;
+
+    if (this.isAppOpenLoading || this.isAppOpenLoaded) {
+      if (this.isAppOpenLoaded) callbacks?.onLoaded?.();
+      return;
+    }
+
+    // Check frequency caps
+    if (this.isFrequencyCapped(this.config.appOpen, "appOpen")) {
+      console.log("App Open Ad frequency capped");
+      return;
+    }
+
+    this.isAppOpenLoading = true;
+    this.appOpenAd = AppOpenAd.createForAdRequest(adUnitId);
+
+    this.appOpenAd.addAdEventListener(AdEventType.LOADED, () => {
+      this.isAppOpenLoaded = true;
+      this.isAppOpenLoading = false;
+      callbacks?.onLoaded?.();
+    });
+
+    this.appOpenAd.addAdEventListener(AdEventType.ERROR, (error) => {
+      this.isAppOpenLoading = false;
+      console.error("App Open Ad load error", error);
+      callbacks?.onError?.(error);
+    });
+
+    this.appOpenAd.addAdEventListener(AdEventType.CLOSED, () => {
+      this.isAppOpenLoaded = false;
+      this.appOpenAd = null;
+      // Record impression
+      this.recordImpression("appOpen");
+    });
+
+    this.appOpenAd.load();
+  }
+
+  public showAppOpenAd() {
+    if (this.appOpenAd && this.isAppOpenLoaded) {
+      this.appOpenAd.show();
+    } else {
+      console.warn("App Open Ad not ready");
+    }
   }
 
   private isFrequencyCapped(config: AdUnitConfig, type: string): boolean {
@@ -177,10 +235,13 @@ class AdService {
   public __resetForTests() {
     this.isInterstitialLoaded = false;
     this.isInterstitialLoading = false;
+    this.isAppOpenLoaded = false;
+    this.isAppOpenLoading = false;
     this.lastShownTimestamps = {};
     this.sessionImpressions = { interstitial: 0, appOpen: 0 };
     this.config = null;
     this.interstitial = null;
+    this.appOpenAd = null;
   }
 }
 
