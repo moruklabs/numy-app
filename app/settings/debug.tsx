@@ -5,8 +5,8 @@ import {
   getTrackingPermissionsAsync,
   requestTrackingPermissionsAsync,
 } from "expo-tracking-transparency";
-import { adService } from "../../src/features/ads/model/AdService";
-import { colors, spacing, typography } from "../../src/presentation/theme";
+import { adService } from "@/features/ads/model/AdService";
+import { colors, spacing, typography } from "@/presentation/theme";
 
 export default function DebugScreen() {
   const [debugInfo, setDebugInfo] = useState<any>(null);

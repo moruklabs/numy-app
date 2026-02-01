@@ -9,7 +9,7 @@
 import { useEffect, useRef } from "react";
 import { AppState, AppStateStatus } from "react-native";
 import { usePathname, useSegments } from "expo-router";
-import { TIMING } from "../../presentation/theme";
+import { TIMING } from "@/presentation/theme";
 import {
   initializeAnalytics,
   logScreenView,
@@ -31,13 +31,14 @@ import {
   logCalculationError,
   buildCalculationParams,
   buildDocumentParams,
-} from "../../infrastructure/services/AnalyticsService";
+} from "@/infrastructure/services/AnalyticsService";
 import {
   ScreenNames,
   type ScreenName,
   type CalculationCategory,
-} from "../../domain/types/AnalyticsEvents";
-import { useCalculatorStore } from "../stores/calculatorStore";
+} from "@/domain/types/AnalyticsEvents";
+import { useCalculatorStore, type CalculatorState } from "../stores/calculatorStore";
+import type { Line } from "@/domain/entities/Line";
 
 // Map route segments to screen names
 function getScreenNameFromSegments(segments: string[]): ScreenName {
@@ -65,16 +66,18 @@ export function useAnalyticsInit() {
   const appState = useRef<AppStateStatus>(AppState.currentState);
 
   // Get user settings for user properties
-  const emBase = useCalculatorStore((state) => state.emBase);
-  const ppiBase = useCalculatorStore((state) => state.ppiBase);
-  const savedDocumentsCount = useCalculatorStore((state) => state.savedDocuments.length);
+  const emBase = useCalculatorStore((state: CalculatorState) => state.emBase);
+  const ppiBase = useCalculatorStore((state: CalculatorState) => state.ppiBase);
+  const savedDocumentsCount = useCalculatorStore(
+    (state: CalculatorState) => state.savedDocuments.length
+  );
 
   useEffect(() => {
     if (hasInitialized.current) return;
     hasInitialized.current = true;
 
     // Initialize analytics
-    initializeAnalytics().then((success) => {
+    initializeAnalytics().then((success: boolean) => {
       if (success) {
         // Log app opened event
         logAppOpened();
@@ -143,10 +146,12 @@ export function useScreenTracking() {
  * Hook to update user properties when settings change
  */
 export function useAnalyticsUserProperties() {
-  const emBase = useCalculatorStore((state) => state.emBase);
-  const ppiBase = useCalculatorStore((state) => state.ppiBase);
-  const savedDocumentsCount = useCalculatorStore((state) => state.savedDocuments.length);
-  const hasHydrated = useCalculatorStore((state) => state._hasHydrated);
+  const emBase = useCalculatorStore((state: CalculatorState) => state.emBase);
+  const ppiBase = useCalculatorStore((state: CalculatorState) => state.ppiBase);
+  const savedDocumentsCount = useCalculatorStore(
+    (state: CalculatorState) => state.savedDocuments.length
+  );
+  const hasHydrated = useCalculatorStore((state: CalculatorState) => state._hasHydrated);
 
   const previousValues = useRef({
     emBase: 0,
@@ -203,7 +208,9 @@ export function useStoreAnalytics() {
           savedDocsCount: state.savedDocuments.length,
           emBase: state.emBase,
           ppiBase: state.ppiBase,
-          lineResults: new Map(state.document.lines.map((l) => [l.id, l.result?.formatted || ""])),
+          lineResults: new Map(
+            state.document.lines.map((l: Line) => [l.id, l.result?.formatted || ""])
+          ),
         };
         return;
       }
@@ -245,7 +252,7 @@ export function useStoreAnalytics() {
         }
 
         // Track input changes (debounced)
-        const prevLine = prevState?.document.lines.find((l) => l.id === line.id);
+        const prevLine = prevState?.document.lines.find((l: Line) => l.id === line.id);
         if (prevLine && prevLine.input !== line.input) {
           if (inputDebounceRef.current) {
             clearTimeout(inputDebounceRef.current);
@@ -334,7 +341,9 @@ export function useStoreAnalytics() {
         savedDocsCount: state.savedDocuments.length,
         emBase: state.emBase,
         ppiBase: state.ppiBase,
-        lineResults: new Map(state.document.lines.map((l) => [l.id, l.result?.formatted || ""])),
+        lineResults: new Map(
+          state.document.lines.map((l: Line) => [l.id, l.result?.formatted || ""])
+        ),
       };
     });
 

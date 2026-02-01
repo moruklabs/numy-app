@@ -20,7 +20,7 @@ import {
   type CalculationErrorParams,
   type AnalyticsUserProperties,
   type CalculationCategory,
-} from "../../domain/types/AnalyticsEvents";
+} from "@/domain/types/AnalyticsEvents";
 import { logger } from "@moruk/logger";
 
 // Check if we're in a development environment

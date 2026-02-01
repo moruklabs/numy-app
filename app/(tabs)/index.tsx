@@ -11,9 +11,10 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { useCalculatorStore } from "../../src/application/stores/calculatorStore";
-import { CalculatorLine, RunningTotal } from "../../src/presentation/components/calculator";
-import { CategoryKey, colors, spacing, TIMING, typography } from "../../src/presentation/theme";
+import { useCalculatorStore, type CalculatorState } from "@/stores/calculatorStore";
+import type { Line } from "@/domain/entities/Line";
+import { CalculatorLine, RunningTotal } from "@/presentation/components/calculator";
+import { CategoryKey, colors, spacing, TIMING, typography } from "@/presentation/theme";
 
 function getCategoryColor(category?: string): string {
   if (!category) return colors.categories.myCalculations.text;
@@ -28,14 +29,16 @@ export default function CalculatorScreen() {
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [titleInput, setTitleInput] = useState("");
 
-  const document = useCalculatorStore((state) => state.document);
-  const setInput = useCalculatorStore((state) => state.setInput);
-  const calculateLine = useCalculatorStore((state) => state.calculateLine);
-  const addNewLine = useCalculatorStore((state) => state.addNewLine);
-  const removeLine = useCalculatorStore((state) => state.removeLine);
-  const getTotal = useCalculatorStore((state) => state.getTotal);
-  const showTotal = useCalculatorStore((state) => state.showTotal);
-  const updateDocumentTitle = useCalculatorStore((state) => state.updateDocumentTitle);
+  const document = useCalculatorStore((state: CalculatorState) => state.document);
+  const setInput = useCalculatorStore((state: CalculatorState) => state.setInput);
+  const calculateLine = useCalculatorStore((state: CalculatorState) => state.calculateLine);
+  const addNewLine = useCalculatorStore((state: CalculatorState) => state.addNewLine);
+  const removeLine = useCalculatorStore((state: CalculatorState) => state.removeLine);
+  const getTotal = useCalculatorStore((state: CalculatorState) => state.getTotal);
+  const showTotal = useCalculatorStore((state: CalculatorState) => state.showTotal);
+  const updateDocumentTitle = useCalculatorStore(
+    (state: CalculatorState) => state.updateDocumentTitle
+  );
 
   const handleInputChange = useCallback(
     (lineId: string, input: string) => {
@@ -130,7 +133,7 @@ export default function CalculatorScreen() {
           keyboardDismissMode="interactive"
           testID="calculator.lines-scroll"
         >
-          {document.lines.map((line, index) => (
+          {document.lines.map((line: Line, index: number) => (
             <CalculatorLine
               key={line.id}
               line={line}

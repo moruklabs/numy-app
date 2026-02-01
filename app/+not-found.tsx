@@ -2,7 +2,7 @@ import { Link, Stack } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import { useTranslation } from "react-i18next";
 
-import { colors } from "../src/presentation/theme";
+import { colors } from "@/presentation/theme";
 
 export default function NotFoundScreen() {
   const { t } = useTranslation("common");

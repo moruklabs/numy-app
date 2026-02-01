@@ -1,4 +1,4 @@
-import { useCalculatorStore } from "@/application/stores/calculatorStore";
+import { useCalculatorStore, type CalculatorState } from "@/stores/calculatorStore";
 import { getDefaultExamples } from "@/domain/fixtures/defaultExamples";
 import { useInterstitialAd } from "@/features/ads/hooks/useInterstitialAd"; // Import Ad hook
 import { colors, spacing } from "@/presentation/theme";
@@ -14,7 +14,7 @@ export default function ExamplesScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const examples = getDefaultExamples();
-  const loadExample = useCalculatorStore((state) => state.loadExample);
+  const loadExample = useCalculatorStore((state: CalculatorState) => state.loadExample);
   const [isNavigating, setIsNavigating] = React.useState(false);
 
   // Ad-as-Loader: Preload/Show ad when processing (navigating)

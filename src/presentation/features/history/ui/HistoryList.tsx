@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next";
 import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import ReanimatedSwipeable from "react-native-gesture-handler/ReanimatedSwipeable";
 import Reanimated, { SharedValue, useAnimatedStyle } from "react-native-reanimated";
-import { useCalculatorStore } from "../../../../application/stores/calculatorStore";
-import { Document } from "../../../../domain/entities/Document";
-import { colors, spacing, typography } from "../../../../presentation/theme";
+import { useCalculatorStore, type CalculatorState } from "@/stores/calculatorStore";
+import { Document } from "@/domain/entities/Document";
+import { colors, spacing, typography } from "@/presentation/theme";
 
 function RightActions({
   drag,
@@ -44,14 +44,14 @@ export function HistoryList() {
   const { t, i18n } = useTranslation("history");
   const { t: tCommon } = useTranslation("common");
   const router = useRouter();
-  const savedDocuments = useCalculatorStore((state) => state.savedDocuments);
+  const savedDocuments = useCalculatorStore((state: CalculatorState) => state.savedDocuments);
 
   // Sort by last modified (most recent first)
   const sortedDocuments = [...savedDocuments].sort(
     (a, b) => b.updatedAt.getTime() - a.updatedAt.getTime()
   );
-  const loadDocument = useCalculatorStore((state) => state.loadDocument);
-  const deleteDocument = useCalculatorStore((state) => state.deleteDocument);
+  const loadDocument = useCalculatorStore((state: CalculatorState) => state.loadDocument);
+  const deleteDocument = useCalculatorStore((state: CalculatorState) => state.deleteDocument);
 
   // Track which swipeable is currently open to prevent navigation during swipe
   const [openSwipeableId, setOpenSwipeableId] = React.useState<string | null>(null);

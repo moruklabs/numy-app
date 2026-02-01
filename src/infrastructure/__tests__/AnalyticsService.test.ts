@@ -8,7 +8,7 @@ import {
   AnalyticsEvents,
   ScreenNames,
   type CalculationCategory,
-} from "../../domain/types/AnalyticsEvents";
+} from "@/domain/types/AnalyticsEvents";
 
 // Mock logger to avoid pulling in React Native / monitoring-client in tests
 jest.mock("@moruk/logger", () => ({

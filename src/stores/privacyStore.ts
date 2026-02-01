@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { setAnalyticsCollectionEnabled } from "../../infrastructure/services/AnalyticsService";
+import { setAnalyticsCollectionEnabled } from "@/infrastructure/services/AnalyticsService";
 import { logger } from "@moruk/logger";
 
 interface PrivacyState {
@@ -54,7 +54,7 @@ export const usePrivacyStore = create<PrivacyState>()(
         if (state) {
           state._hasHydrated = true;
           // Sync analytics collection state on app load (gracefully handles errors if Firebase unavailable)
-          setAnalyticsCollectionEnabled(state.analyticsEnabled).catch((error) => {
+          setAnalyticsCollectionEnabled(state.analyticsEnabled).catch((error: unknown) => {
             // Firebase not available (e.g., Expo Go) - silently fail
             // The analytics service already handles this gracefully
             if (__DEV__) {

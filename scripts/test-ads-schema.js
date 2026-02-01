@@ -111,7 +111,9 @@ function validateAds() {
     // Helper to extract string value from plist key
     /** @param {string} key */
     const getPlistString = (key) => {
-      const match = plistContent.match(new RegExp(String.raw`<key>${key}</key>\s*<string>(.*?)</string>`));
+      const match = plistContent.match(
+        new RegExp(String.raw`<key>${key}</key>\s*<string>(.*?)</string>`)
+      );
       return match ? match[1] : null;
     };
 

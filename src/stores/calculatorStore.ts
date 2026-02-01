@@ -12,16 +12,10 @@ import {
   setVariable,
   updateLine,
   updateLineResult,
-} from "../../domain/entities/Document";
-import {
-  detectCategory,
-  evaluate,
-  extractVariableName,
-} from "../../domain/services/CalculationEngine";
-import {
-  createNumericResult,
-  createUnitResult,
-} from "../../domain/value-objects/CalculationResult";
+} from "@/domain/entities/Document";
+import type { Line } from "@/domain/entities/Line";
+import { detectCategory, evaluate, extractVariableName } from "@/domain/services/CalculationEngine";
+import { createNumericResult, createUnitResult } from "@/domain/value-objects/CalculationResult";
 import { CALCULATION_PROMPT } from "../services/ai/prompts";
 
 // Default examples moved to src/domain/fixtures/defaultExamples.ts
@@ -108,14 +102,17 @@ function generateRandomTitle(): string {
 function cloneDocument(doc: Document): Document {
   return {
     ...doc,
-    lines: doc.lines.map((line) => ({ ...line, result: line.result ? { ...line.result } : null })),
+    lines: doc.lines.map((line: Line) => ({
+      ...line,
+      result: line.result ? { ...line.result } : null,
+    })),
     variables: new Map(doc.variables),
     createdAt: new Date(doc.createdAt),
     updatedAt: new Date(doc.updatedAt),
   };
 }
 
-interface CalculatorState {
+export interface CalculatorState {
   // Current document
   document: Document;
 
@@ -207,7 +204,7 @@ export const useCalculatorStore = create<CalculatorState>()(
 
       calculateLine: async (lineId: string) => {
         const state = get();
-        const line = state.document.lines.find((l) => l.id === lineId);
+        const line = state.document.lines.find((l: Line) => l.id === lineId);
         if (!line) return;
 
         const context = {
@@ -304,7 +301,7 @@ export const useCalculatorStore = create<CalculatorState>()(
       newDocumentWithAutoSave: () => {
         const state = get();
         // Only auto-save if there's content and not viewing an example
-        if (!state.isViewingExample && state.document.lines.some((l) => l.input.trim())) {
+        if (!state.isViewingExample && state.document.lines.some((l: Line) => l.input.trim())) {
           const existingIndex = state.savedDocuments.findIndex((d) => d.id === state.document.id);
           if (existingIndex >= 0) {
             const newSaved = [...state.savedDocuments];

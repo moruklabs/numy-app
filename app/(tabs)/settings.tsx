@@ -13,8 +13,8 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { useCalculatorStore } from "../../src/application/stores/calculatorStore";
-import { colors, spacing, typography } from "../../src/presentation/theme";
+import { useCalculatorStore, type CalculatorState } from "@/stores/calculatorStore";
+import { colors, spacing, typography } from "@/presentation/theme";
 
 // Validation constants for settings inputs
 const SETTINGS_BOUNDS = {
@@ -34,15 +34,15 @@ export default function SettingsScreen() {
   const router = useRouter();
   const { showConfirmation } = useEraseData();
 
-  const emBase = useCalculatorStore((state) => state.emBase);
-  const ppiBase = useCalculatorStore((state) => state.ppiBase);
-  const decimalPlaces = useCalculatorStore((state) => state.decimalPlaces);
-  const setEmBase = useCalculatorStore((state) => state.setEmBase);
-  const setPpiBase = useCalculatorStore((state) => state.setPpiBase);
-  const setDecimalPlaces = useCalculatorStore((state) => state.setDecimalPlaces);
-  const showTotal = useCalculatorStore((state) => state.showTotal);
-  const toggleShowTotal = useCalculatorStore((state) => state.toggleShowTotal);
-  const resetAll = useCalculatorStore((state) => state.resetAll);
+  const emBase = useCalculatorStore((state: CalculatorState) => state.emBase);
+  const ppiBase = useCalculatorStore((state: CalculatorState) => state.ppiBase);
+  const decimalPlaces = useCalculatorStore((state: CalculatorState) => state.decimalPlaces);
+  const setEmBase = useCalculatorStore((state: CalculatorState) => state.setEmBase);
+  const setPpiBase = useCalculatorStore((state: CalculatorState) => state.setPpiBase);
+  const setDecimalPlaces = useCalculatorStore((state: CalculatorState) => state.setDecimalPlaces);
+  const showTotal = useCalculatorStore((state: CalculatorState) => state.showTotal);
+  const toggleShowTotal = useCalculatorStore((state: CalculatorState) => state.toggleShowTotal);
+  const resetAll = useCalculatorStore((state: CalculatorState) => state.resetAll);
 
   const [emInput, setEmInput] = useState(emBase.toString());
   const [ppiInput, setPpiInput] = useState(ppiBase.toString());

@@ -9,11 +9,11 @@ import {
   TextInputKeyPressEventData,
 } from "react-native";
 import { useTranslation } from "react-i18next";
-import { Line } from "../../../domain/entities/Line";
+import { Line } from "@/domain/entities/Line";
 import { colors, typography, spacing, TIMING } from "../../theme";
-import { useDebounce } from "../../../application/hooks";
-import { shareWithHaptic } from "../../../application/utils";
-import { useCalculatorStore } from "../../../application/stores/calculatorStore";
+import { useDebounce } from "@/hooks";
+import { shareWithHaptic } from "@/utils";
+import { useCalculatorStore } from "@/stores/calculatorStore";
 
 interface CalculatorLineProps {
   line: Line;

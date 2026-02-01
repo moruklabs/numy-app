@@ -1,8 +1,8 @@
 import { Tabs } from "expo-router";
 import { useTranslation } from "react-i18next";
 import { Pressable, StyleSheet, Text } from "react-native";
-import { useCalculatorStore } from "../../src/application/stores/calculatorStore";
-import { colors, spacing, typography } from "../../src/presentation/theme";
+import { useCalculatorStore, type CalculatorState } from "@/stores/calculatorStore";
+import { colors, spacing, typography } from "@/presentation/theme";
 
 interface TabIconProps {
   color: string;
@@ -40,7 +40,9 @@ const HeaderAddButton = ({ onPress, accessibilityLabel }: HeaderAddButtonProps) 
 
 export default function TabLayout() {
   const { t } = useTranslation("tabs");
-  const newDocumentWithAutoSave = useCalculatorStore((state) => state.newDocumentWithAutoSave);
+  const newDocumentWithAutoSave = useCalculatorStore(
+    (state: CalculatorState) => state.newDocumentWithAutoSave
+  );
 
   return (
     <Tabs
