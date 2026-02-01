@@ -8,8 +8,8 @@ import { act, renderHook } from "@testing-library/react-native";
 import { Alert } from "react-native";
 import { useEraseData } from "../useEraseData";
 
-// Mock Alert
-jest.spyOn(Alert, "alert");
+// Mock Alert (no-op so real implementation never runs; it uses Platform.OS and fails in Jest)
+jest.spyOn(Alert, "alert").mockImplementation(() => {});
 
 // Mock @moruk/storage
 jest.mock("@moruk/storage", () => ({
