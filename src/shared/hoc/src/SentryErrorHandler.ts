@@ -4,7 +4,7 @@
  */
 
 import * as Sentry from "@sentry/react-native";
-import type { AppError, ErrorHandler } from "./errorHandling";
+import type { AppError, ErrorHandler } from "./types";
 
 export class SentryErrorHandler implements ErrorHandler {
   handleError(error: AppError): void {

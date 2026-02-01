@@ -1,5 +1,6 @@
 import React, { createContext, useCallback, useContext, useState } from "react";
-import { NotificationBanner, NotificationType } from "@moruk/ui";
+import { NotificationBanner } from "@moruk/ui/notification";
+import type { NotificationType } from "@moruk/ui/notification";
 
 interface NotificationOptions {
   type: NotificationType;

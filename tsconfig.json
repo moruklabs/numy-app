@@ -26,7 +26,8 @@
       "@moruk/navigation": ["./src/shared/navigation/src"],
       "@moruk/perplexity-client": ["./src/shared/perplexity-client/src"],
       "@moruk/storage": ["./src/shared/storage/src"],
-      "@moruk/ui": ["./src/shared/ui/src"]
+      "@moruk/ui": ["./src/shared/ui/src"],
+      "@moruk/ui/notification": ["./src/shared/ui/src/notification"]
     },
     "target": "ES2022",
     "lib": ["ES2022"],
