@@ -5,12 +5,16 @@ import {
   getTrackingPermissionsAsync,
   requestTrackingPermissionsAsync,
 } from "expo-tracking-transparency";
+import * as Application from "expo-application";
+import { useRouter } from "expo-router";
 import { adService } from "@/features/ads/model/AdService";
 import { colors, spacing, typography } from "@/presentation/theme";
 
 export default function DebugScreen() {
+  const router = useRouter();
   const [debugInfo, setDebugInfo] = useState<any>(null);
   const [attStatus, setAttStatus] = useState<string>("unknown");
+  const [advertisingId, setAdvertisingId] = useState<string>("Loading...");
 
   const loadInfo = async () => {
     setDebugInfo(adService.getDebugInfo());
@@ -21,6 +25,14 @@ export default function DebugScreen() {
       setAttStatus(status.status);
     } catch (e) {
       setAttStatus("error");
+    }
+
+    // Load Advertising ID
+    try {
+      const id = await Application.getIosIdForVendorAsync();
+      setAdvertisingId(id || "Not available");
+    } catch (e) {
+      setAdvertisingId("Error loading ID");
     }
   };
 
@@ -162,6 +174,24 @@ export default function DebugScreen() {
             <Text style={styles.buttonText}>Request ATT</Text>
           </Pressable>
         </View>
+
+        <View style={styles.card}>
+          <Text style={styles.label}>Advertising ID (IDFA)</Text>
+          <Text style={[styles.value, styles.mono]} numberOfLines={1}>
+            {advertisingId}
+          </Text>
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Global Configuration</Text>
+
+        <Pressable
+          style={styles.button}
+          onPress={() => router.push("/settings/config-values" as any)}
+        >
+          <Text style={styles.buttonText}>View Config Values</Text>
+        </Pressable>
       </View>
 
       <View style={styles.section}>

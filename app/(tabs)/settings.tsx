@@ -1,111 +1,25 @@
-import { useEraseData } from "@moruk/hooks";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import {
-  Alert,
-  Linking,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Switch,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
-import { useCalculatorStore, type CalculatorState } from "@/stores/calculatorStore";
+import { Alert, Linking, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { colors, spacing, typography } from "@/presentation/theme";
-
-// Validation constants for settings inputs
-const SETTINGS_BOUNDS = {
-  emBase: { min: 1, max: 100 },
-  ppiBase: { min: 1, max: 600 },
-  decimalPlaces: { min: 0, max: 10 },
-} as const;
-
-const LINKS = {
-  privacy: "https://numy.moruk.ai/privacy",
-  terms: "https://numy.moruk.ai/terms",
-  support: "https://numy.moruk.ai/support",
-};
+import settings from "@/config/settings";
+import { useDeveloperMode, PasswordPrompt, useTapDetector } from "@/features/developer-mode";
+import { useGlobalReset, ResetConfirmation } from "@/features/reset";
 
 export default function SettingsScreen() {
-  const { t } = useTranslation("settings");
   const router = useRouter();
-  const { showConfirmation } = useEraseData();
+  const { isDeveloperMode, enableDeveloperMode } = useDeveloperMode();
+  const { isResetting, performReset } = useGlobalReset();
 
-  const emBase = useCalculatorStore((state: CalculatorState) => state.emBase);
-  const ppiBase = useCalculatorStore((state: CalculatorState) => state.ppiBase);
-  const decimalPlaces = useCalculatorStore((state: CalculatorState) => state.decimalPlaces);
-  const setEmBase = useCalculatorStore((state: CalculatorState) => state.setEmBase);
-  const setPpiBase = useCalculatorStore((state: CalculatorState) => state.setPpiBase);
-  const setDecimalPlaces = useCalculatorStore((state: CalculatorState) => state.setDecimalPlaces);
-  const showTotal = useCalculatorStore((state: CalculatorState) => state.showTotal);
-  const toggleShowTotal = useCalculatorStore((state: CalculatorState) => state.toggleShowTotal);
-  const resetAll = useCalculatorStore((state: CalculatorState) => state.resetAll);
+  const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
+  const [showResetConfirmation, setShowResetConfirmation] = useState(false);
 
-  const [emInput, setEmInput] = useState(emBase.toString());
-  const [ppiInput, setPpiInput] = useState(ppiBase.toString());
-  const [decimalInput, setDecimalInput] = useState(decimalPlaces.toString());
-  const [debugTaps, setDebugTaps] = useState(0);
-
-  const handleEmChange = (value: string) => {
-    // Filter to only digits
-    const filtered = value.replace(/[^0-9]/g, "");
-    setEmInput(filtered);
-    const num = parseInt(filtered, 10);
-    const { min, max } = SETTINGS_BOUNDS.emBase;
-    if (!isNaN(num) && num >= min && num <= max) {
-      setEmBase(num);
-    }
-  };
-
-  const handleEmBlur = () => {
-    // Restore to valid range if empty or out of bounds
-    const num = parseInt(emInput, 10);
-    const { min, max } = SETTINGS_BOUNDS.emBase;
-    if (!emInput || isNaN(num) || num < min || num > max) {
-      setEmInput(emBase.toString());
-    }
-  };
-
-  const handlePpiChange = (value: string) => {
-    // Filter to only digits
-    const filtered = value.replace(/[^0-9]/g, "");
-    setPpiInput(filtered);
-    const num = parseInt(filtered, 10);
-    const { min, max } = SETTINGS_BOUNDS.ppiBase;
-    if (!isNaN(num) && num >= min && num <= max) {
-      setPpiBase(num);
-    }
-  };
-
-  const handlePpiBlur = () => {
-    // Restore to valid range if empty or out of bounds
-    const num = parseInt(ppiInput, 10);
-    const { min, max } = SETTINGS_BOUNDS.ppiBase;
-    if (!ppiInput || isNaN(num) || num < min || num > max) {
-      setPpiInput(ppiBase.toString());
-    }
-  };
-
-  const handleDecimalChange = (value: string) => {
-    // Filter to only digits
-    const filtered = value.replace(/[^0-9]/g, "");
-    setDecimalInput(filtered);
-    const num = parseInt(filtered, 10);
-    if (!isNaN(num) && num >= 0 && num <= 10) {
-      setDecimalPlaces(num);
-    }
-  };
-
-  const handleDecimalBlur = () => {
-    // Restore default if empty or invalid
-    const num = parseInt(decimalInput, 10);
-    if (!decimalInput || isNaN(num) || num < 0 || num > 10) {
-      setDecimalInput(decimalPlaces.toString());
-    }
-  };
+  // 5-tap detector for version text
+  const { handleTap } = useTapDetector({
+    threshold: 5,
+    timeWindow: 3000,
+    onThresholdReached: () => setShowPasswordPrompt(true),
+  });
 
   const handleOpenLink = async (url: string) => {
     try {
@@ -113,223 +27,155 @@ export default function SettingsScreen() {
       if (supported) {
         await Linking.openURL(url);
       } else {
-        Alert.alert(`Don't know how to open this URL: ${url}`);
+        Alert.alert("Error", `Cannot open URL: ${url}`);
       }
     } catch (error) {
-      Alert.alert("An error occurred", "Could not open the link.");
+      Alert.alert("Error", "Could not open the link.");
     }
   };
 
-  const handleResetAll = () => {
-    showConfirmation({
-      title: t("resetAll.title"),
-      message: t("resetAll.message"),
-      confirmText: t("resetAll.confirm"),
-      cancelText: t("resetAll.cancel"),
-      extraActions: [
-        async () => {
-          await resetAll();
-          setEmInput("16");
-          setPpiInput("96");
-          setDecimalInput("2");
-        },
-      ],
-      onSuccess: () => {
-        router.replace("/(tabs)");
-      },
-    });
+  const handlePasswordSuccess = () => {
+    setShowPasswordPrompt(false);
+    enableDeveloperMode("3146");
+  };
+
+  const handleResetConfirm = () => {
+    setShowResetConfirmation(false);
+    performReset();
+  };
+
+  const handleOpenPermissions = () => {
+    Linking.openSettings();
+  };
+
+  const handleShareApp = () => {
+    Alert.alert("Share App", "Share functionality coming soon!");
   };
 
   return (
-    <ScrollView
-      style={styles.container}
-      testID="settings.screen"
-      accessible={true}
-      accessibilityLabel={t("screenTitle")}
-    >
-      {/* Preferences Section */}
-      <View
-        style={styles.section}
-        testID="settings.preferences-section"
-        accessible={true}
-        accessibilityRole="none"
-      >
-        <Text style={styles.sectionTitle} accessibilityRole="header">
-          {t("preferences.title")}
+    <ScrollView style={styles.container} testID="settings.screen">
+      {/* App-Specific Settings Section */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>App Settings</Text>
+        <Text style={styles.sectionDescription}>
+          These settings are specific to Numy calculator functionality.
         </Text>
 
-        <View style={styles.settingRow}>
-          <Text style={styles.settingLabel} nativeID="show-total-label">
-            {t("preferences.showTotal")}
-          </Text>
-          <Switch
-            value={showTotal}
-            onValueChange={toggleShowTotal}
-            thumbColor={showTotal ? colors.categories.myCalculations.accent : colors.text.secondary}
-            trackColor={{ true: colors.ui.highlight, false: colors.ui.border }}
-            testID="settings.show-total-switch"
-            accessibilityLabel={t("preferences.showTotal")}
-            accessibilityHint={t("preferences.showTotalHint")}
-            accessibilityLabelledBy="show-total-label"
-          />
-        </View>
-
-        <View style={styles.settingRow}>
-          <Text style={styles.settingLabel} nativeID="decimal-places-label">
-            {t("preferences.decimalPlaces")}
-          </Text>
-          <TextInput
-            style={styles.settingInput}
-            value={decimalInput}
-            onChangeText={handleDecimalChange}
-            onBlur={handleDecimalBlur}
-            keyboardType="number-pad"
-            placeholder="2"
-            placeholderTextColor={colors.text.muted}
-            testID="settings.decimal-input"
-            accessibilityLabel={t("preferences.decimalPlaces")}
-            accessibilityHint={t("preferences.decimalPlacesHint")}
-            accessibilityLabelledBy="decimal-places-label"
-          />
-        </View>
-
-        {/* CSS Units Subsection */}
-        <Text style={styles.subsectionTitle} accessibilityRole="header">
-          {t("cssUnits.title")}
-        </Text>
-        <Text style={styles.sectionDescription} accessibilityRole="text">
-          {t("cssUnits.description")}
-        </Text>
-
-        <View style={styles.settingRow}>
-          <Text style={styles.settingLabel} nativeID="em-base-label">
-            {t("cssUnits.emBase")}
-          </Text>
-          <TextInput
-            style={styles.settingInput}
-            value={emInput}
-            onChangeText={handleEmChange}
-            onBlur={handleEmBlur}
-            keyboardType="number-pad"
-            placeholder="16"
-            placeholderTextColor={colors.text.muted}
-            testID="settings.em-input"
-            accessibilityLabel={t("cssUnits.emBase")}
-            accessibilityHint={t("cssUnits.emBaseHint")}
-            accessibilityLabelledBy="em-base-label"
-          />
-        </View>
-
-        <View style={styles.settingRow}>
-          <Text style={styles.settingLabel} nativeID="ppi-base-label">
-            {t("cssUnits.ppiBase")}
-          </Text>
-          <TextInput
-            style={styles.settingInput}
-            value={ppiInput}
-            onChangeText={handlePpiChange}
-            onBlur={handlePpiBlur}
-            keyboardType="number-pad"
-            placeholder="96"
-            placeholderTextColor={colors.text.muted}
-            testID="settings.ppi-input"
-            accessibilityLabel={t("cssUnits.ppiBase")}
-            accessibilityHint={t("cssUnits.ppiBaseHint")}
-            accessibilityLabelledBy="ppi-base-label"
-          />
-        </View>
+        <Pressable
+          style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
+          onPress={() => router.push("/settings/calculator-settings" as any)}
+          testID="settings.calculator-settings-button"
+        >
+          <Text style={styles.linkButtonText}>Calculator Preferences</Text>
+        </Pressable>
       </View>
 
-      {/* About Section */}
-      <View
-        style={styles.section}
-        testID="settings.about-section"
-        accessible={true}
-        accessibilityRole="none"
-      >
-        <Text style={styles.sectionTitle} accessibilityRole="header">
-          {t("about.title")}
-        </Text>
-        <Text style={styles.aboutText} testID="settings.app-name" accessibilityRole="text">
-          {t("about.appName")}
-        </Text>
-        <Text style={styles.aiHighlight} testID="settings.ai-highlight" accessibilityRole="text">
-          {t("about.aiHighlight")}
-        </Text>
+      {/* Privacy & Security Section */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Privacy & Security</Text>
 
-        <View style={styles.linksContainer}>
-          <Pressable
-            style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
-            onPress={() => handleOpenLink(LINKS.privacy)}
-            testID="settings.privacy-button"
-            accessibilityLabel={t("links.privacyPolicy")}
-            accessibilityHint={t("links.opensInBrowser")}
-            accessibilityRole="link"
-          >
-            <Text style={styles.linkButtonText}>{t("links.privacyPolicy")}</Text>
-          </Pressable>
+        <Pressable
+          style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
+          onPress={handleOpenPermissions}
+          testID="settings.permissions-button"
+        >
+          <Text style={styles.linkButtonText}>App Permissions</Text>
+        </Pressable>
 
-          <Pressable
-            style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
-            onPress={() => handleOpenLink(LINKS.terms)}
-            testID="settings.terms-button"
-            accessibilityLabel={t("links.termsOfUse")}
-            accessibilityHint={t("links.opensInBrowser")}
-            accessibilityRole="link"
-          >
-            <Text style={styles.linkButtonText}>{t("links.termsOfUse")}</Text>
-          </Pressable>
+        <Pressable
+          style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
+          onPress={() => handleOpenLink(settings.links.privacyPolicy)}
+          testID="settings.privacy-button"
+        >
+          <Text style={styles.linkButtonText}>Privacy Policy</Text>
+        </Pressable>
 
-          <Pressable
-            style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
-            onPress={() => handleOpenLink(LINKS.support)}
-            testID="settings.support-button"
-            accessibilityLabel={t("links.support")}
-            accessibilityHint={t("links.opensInBrowser")}
-            accessibilityRole="link"
-          >
-            <Text style={styles.linkButtonText}>{t("links.support")}</Text>
-          </Pressable>
-        </View>
+        <Pressable
+          style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
+          onPress={() => handleOpenLink(settings.links.termsOfService)}
+          testID="settings.terms-button"
+        >
+          <Text style={styles.linkButtonText}>Terms and Conditions</Text>
+        </Pressable>
 
         <Pressable
           style={({ pressed }) => [styles.resetButton, pressed && styles.resetButtonPressed]}
-          onPress={handleResetAll}
-          testID="settings.reset-button"
-          accessibilityLabel={t("resetAll.buttonLabel")}
-          accessibilityHint={t("resetAll.buttonHint")}
-          accessibilityRole="button"
+          onPress={() => setShowResetConfirmation(true)}
+          testID="settings.clear-data-button"
         >
-          <Text style={styles.resetButtonText}>{t("resetAll.buttonLabel")}</Text>
+          <Text style={styles.resetButtonText}>Clear All Data</Text>
         </Pressable>
       </View>
 
-      {/* Footer */}
-      <View style={styles.footer} testID="settings.footer">
+      {/* Support & Feedback Section */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Support & Feedback</Text>
+
         <Pressable
-          onPress={() => {
-            // Use a local variable if state updates are slow, or just rely on state
-            // But simpler to just use state since it's low frequency
-            // Actually, we need state.
-            setDebugTaps((prev) => {
-              const newCount = prev + 1;
-              if (newCount >= 5) {
-                router.push("/settings/debug" as any);
-                return 0;
-              }
-              return newCount;
-            });
-          }}
-          testID="settings.version-container"
+          style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
+          onPress={() => handleOpenLink(settings.links.support)}
+          testID="settings.support-button"
         >
-          <Text style={styles.versionText} testID="settings.version" accessibilityRole="text">
-            {t("about.version")}
+          <Text style={styles.linkButtonText}>Contact Support</Text>
+        </Pressable>
+
+        <Pressable
+          style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
+          onPress={() => handleOpenLink(settings.links.review)}
+          testID="settings.rate-button"
+        >
+          <Text style={styles.linkButtonText}>Rate Us</Text>
+        </Pressable>
+
+        <Pressable
+          style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
+          onPress={handleShareApp}
+          testID="settings.share-button"
+        >
+          <Text style={styles.linkButtonText}>Share App</Text>
+        </Pressable>
+      </View>
+
+      {/* Advanced Section (Hidden unless Developer Mode) */}
+      {isDeveloperMode && (
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Advanced</Text>
+
+          <Pressable
+            style={({ pressed }) => [styles.linkButton, pressed && styles.linkButtonPressed]}
+            onPress={() => router.push("/settings/debug" as any)}
+            testID="settings.debug-button"
+          >
+            <Text style={styles.linkButtonText}>Debug Tools</Text>
+          </Pressable>
+        </View>
+      )}
+
+      {/* App Version Footer */}
+      <View style={styles.footer} testID="settings.footer">
+        <Pressable onPress={handleTap} testID="settings.version-container">
+          <Text style={styles.versionText} testID="settings.version">
+            Version {settings.version}
           </Text>
         </Pressable>
-        <Text style={styles.madeByText} testID="settings.made-by" accessibilityRole="text">
-          {t("about.madeBy")}
+        <Text style={styles.madeByText} testID="settings.made-by">
+          Made with ❤️ by Moruk
         </Text>
       </View>
+
+      {/* Modals */}
+      <PasswordPrompt
+        visible={showPasswordPrompt}
+        onSuccess={handlePasswordSuccess}
+        onDismiss={() => setShowPasswordPrompt(false)}
+      />
+
+      <ResetConfirmation
+        visible={showResetConfirmation}
+        isResetting={isResetting}
+        onConfirm={handleResetConfirm}
+        onCancel={() => setShowResetConfirmation(false)}
+      />
     </ScrollView>
   );
 }
@@ -351,41 +197,11 @@ const styles = StyleSheet.create({
     fontWeight: typography.weights.semibold,
     marginBottom: spacing.sm,
   },
-  subsectionTitle: {
-    fontFamily: typography.fonts.mono,
-    fontSize: typography.sizes.sm,
-    color: colors.text.secondary,
-    fontWeight: typography.weights.semibold,
-    marginTop: spacing.lg,
-    marginBottom: spacing.xs,
-  },
   sectionDescription: {
     fontFamily: typography.fonts.mono,
     fontSize: typography.sizes.sm,
     color: colors.text.muted,
     marginBottom: spacing.lg,
-  },
-  settingRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingVertical: spacing.md,
-  },
-  settingLabel: {
-    fontFamily: typography.fonts.mono,
-    fontSize: typography.sizes.md,
-    color: colors.text.primary,
-  },
-  settingInput: {
-    fontFamily: typography.fonts.mono,
-    fontSize: typography.sizes.md,
-    color: colors.result.primary,
-    backgroundColor: colors.background.secondary,
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.sm,
-    borderRadius: 4,
-    minWidth: 80,
-    textAlign: "right",
   },
   linkButton: {
     backgroundColor: colors.background.secondary,
@@ -402,33 +218,12 @@ const styles = StyleSheet.create({
     fontSize: typography.sizes.md,
     color: colors.text.primary,
   },
-  aboutText: {
-    fontFamily: typography.fonts.mono,
-    fontSize: typography.sizes.md,
-    color: colors.text.primary,
-    marginBottom: spacing.sm,
-  },
-  versionText: {
-    fontFamily: typography.fonts.mono,
-    fontSize: typography.sizes.sm,
-    color: colors.text.secondary,
-    marginBottom: spacing.xs,
-  },
-  aiHighlight: {
-    fontFamily: typography.fonts.mono,
-    fontSize: typography.sizes.sm,
-    color: colors.categories.myCalculations.text,
-    marginBottom: spacing.lg,
-  },
-  linksContainer: {
-    marginTop: spacing.md,
-    marginBottom: spacing.lg,
-  },
   resetButton: {
     backgroundColor: colors.result.error,
     padding: spacing.lg,
     borderRadius: 8,
     alignItems: "center",
+    marginTop: spacing.sm,
   },
   resetButtonPressed: {
     opacity: 0.7,
@@ -442,6 +237,12 @@ const styles = StyleSheet.create({
   footer: {
     padding: spacing.xxl,
     alignItems: "center",
+  },
+  versionText: {
+    fontFamily: typography.fonts.mono,
+    fontSize: typography.sizes.sm,
+    color: colors.text.secondary,
+    marginBottom: spacing.xs,
   },
   madeByText: {
     fontFamily: typography.fonts.mono,
