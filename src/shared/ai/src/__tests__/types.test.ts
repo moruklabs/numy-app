@@ -67,7 +67,7 @@ describe("types", () => {
         expect(response.formatted).toBe("result");
       } else {
         // TypeScript narrows to AIErrorResponse
-        expect(response.error).toBeDefined();
+        expect((response as any).error).toBeDefined();
       }
     });
   });

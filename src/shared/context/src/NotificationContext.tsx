@@ -1,6 +1,5 @@
 import React, { createContext, useCallback, useContext, useState } from "react";
-// Import directly to avoid require cycle with @moruk/ui barrel export
-import { NotificationBanner, NotificationType } from "@moruk/ui/src/components/NotificationBanner";
+import { NotificationBanner, NotificationType } from "@moruk/ui";
 
 interface NotificationOptions {
   type: NotificationType;
