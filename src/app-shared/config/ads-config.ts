@@ -1,4 +1,4 @@
-import { toMs } from "@/shared/utils/time";
+import { toMs } from "@/app-shared/utils/time";
 
 export interface AdPacing {
   /** Maximum number of impressions allowed within the interval */

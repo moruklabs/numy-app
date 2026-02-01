@@ -1,5 +1,5 @@
 import settings from "@/config/settings";
-import { createAdConfig } from "@/shared/config/ads-config";
+import { createAdConfig } from "@/app-shared/config/ads-config";
 import { useEffect, useState } from "react";
 import { adService } from "../model/AdService";
 

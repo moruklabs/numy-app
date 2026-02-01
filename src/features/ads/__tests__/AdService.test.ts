@@ -7,7 +7,7 @@ jest.mock("@react-native-async-storage/async-storage", () => ({
   },
 }));
 
-import { AdConfiguration } from "@/shared/config/ads-config";
+import { AdConfiguration } from "@/app-shared/config/ads-config";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import mobileAds, { AppOpenAd, InterstitialAd } from "react-native-google-mobile-ads";
 import { adService } from "../model/AdService";

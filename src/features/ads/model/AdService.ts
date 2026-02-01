@@ -1,4 +1,4 @@
-import { AdConfiguration, AdUnitConfig } from "@/shared/config/ads-config";
+import { AdConfiguration, AdUnitConfig } from "@/app-shared/config/ads-config";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import mobileAds, {
   AdEventType,
