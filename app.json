@@ -1,3 +1,16 @@
 {
-  "expo": {}
+  "expo": {
+    "plugins": ["@react-native-firebase/app", "react-native-google-mobile-ads"],
+    "extra": {
+      "SENTRY_DSN": "https://examplePublicKey@o0.ingest.sentry.io/0",
+      "sentry": {
+        "organization": "moruk",
+        "project": "numy"
+      },
+      "eas": {
+        "projectId": "c458cacb-2677-48f8-afd4-77eaf0abf4a2"
+      }
+    },
+    "owner": "morukhq"
+  }
 }

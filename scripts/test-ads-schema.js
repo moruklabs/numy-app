@@ -89,57 +89,57 @@ function validateAds() {
 
     console.log("✅ firebase.json schema is valid.");
 
-    // Validate apps/numy/GoogleService-Info.plist
+    // Validate GoogleService-Info.plist at project root (optional; often gitignored)
     // @ts-ignore
-    const PLIST_PATH = path.join(__dirname, "../apps/numy/GoogleService-Info.plist");
-    if (!fs.existsSync(PLIST_PATH)) {
-      console.error("❌ GoogleService-Info.plist not found at:", PLIST_PATH);
-      process.exit(1);
+    const PLIST_PATH = path.join(__dirname, "../GoogleService-Info.plist");
+    if (fs.existsSync(PLIST_PATH)) {
+      const plistContent = fs.readFileSync(PLIST_PATH, "utf8");
+
+      // Helper to extract boolean value from plist key
+      /** @param {string} key */
+      const getPlistBool = (key) => {
+        // Matches <key>KEY</key> followed by <true/> or <true></true>
+        const match = plistContent.match(
+          new RegExp(String.raw`<key>${key}</key>\s*<([a-z]+)(?:/>|></[a-z]+>)`)
+        );
+        return match ? match[1] === "true" : null;
+      };
+
+      // Helper to extract string value from plist key
+      /** @param {string} key */
+      const getPlistString = (key) => {
+        const match = plistContent.match(
+          new RegExp(String.raw`<key>${key}</key>\s*<string>(.*?)</string>`)
+        );
+        return match ? match[1] : null;
+      };
+
+      if (getPlistBool("IS_ADS_ENABLED") !== true) {
+        console.error("❌ GoogleService-Info.plist: IS_ADS_ENABLED must be true");
+        process.exit(1);
+      }
+      if (getPlistBool("IS_ANALYTICS_ENABLED") !== true) {
+        console.error("❌ GoogleService-Info.plist: IS_ANALYTICS_ENABLED must be true");
+        process.exit(1);
+      }
+
+      const plistAdMobId = getPlistString("ADMOB_APP_ID");
+      // @ts-ignore
+      if (plistAdMobId !== adsData.ads.app_id) {
+        console.error(
+          // @ts-ignore
+          `❌ GoogleService-Info.plist ADMOB_APP_ID mismatch.\nExpected: ${adsData.ads.app_id}\nFound: ${plistAdMobId}`
+        );
+        process.exit(1);
+      }
+      console.log("✅ GoogleService-Info.plist is valid and consistent.");
+    } else {
+      console.log("⏭️  GoogleService-Info.plist not found; skipping.");
     }
-    const plistContent = fs.readFileSync(PLIST_PATH, "utf8");
 
-    // Helper to extract boolean value from plist key
-    /** @param {string} key */
-    const getPlistBool = (key) => {
-      // Matches <key>KEY</key> followed by <true/> or <true></true>
-      const match = plistContent.match(
-        new RegExp(String.raw`<key>${key}</key>\s*<([a-z]+)(?:/>|></[a-z]+>)`)
-      );
-      return match ? match[1] === "true" : null;
-    };
-
-    // Helper to extract string value from plist key
-    /** @param {string} key */
-    const getPlistString = (key) => {
-      const match = plistContent.match(
-        new RegExp(String.raw`<key>${key}</key>\s*<string>(.*?)</string>`)
-      );
-      return match ? match[1] : null;
-    };
-
-    if (getPlistBool("IS_ADS_ENABLED") !== true) {
-      console.error("❌ GoogleService-Info.plist: IS_ADS_ENABLED must be true");
-      process.exit(1);
-    }
-    if (getPlistBool("IS_ANALYTICS_ENABLED") !== true) {
-      console.error("❌ GoogleService-Info.plist: IS_ANALYTICS_ENABLED must be true");
-      process.exit(1);
-    }
-
-    const plistAdMobId = getPlistString("ADMOB_APP_ID");
+    // Validate src/config/settings.ts
     // @ts-ignore
-    if (plistAdMobId !== adsData.ads.app_id) {
-      console.error(
-        // @ts-ignore
-        `❌ GoogleService-Info.plist ADMOB_APP_ID mismatch.\nExpected: ${adsData.ads.app_id}\nFound: ${plistAdMobId}`
-      );
-      process.exit(1);
-    }
-    console.log("✅ GoogleService-Info.plist is valid and consistent.");
-
-    // Validate apps/numy/src/config/settings.ts
-    // @ts-ignore
-    const SETTINGS_PATH = path.join(__dirname, "../apps/numy/src/config/settings.ts");
+    const SETTINGS_PATH = path.join(__dirname, "../src/config/settings.ts");
     if (!fs.existsSync(SETTINGS_PATH)) {
       console.error("❌ src/config/settings.ts not found at:", SETTINGS_PATH);
       process.exit(1);

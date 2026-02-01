@@ -59,25 +59,30 @@ function validateAllApps() {
   console.log("🔍 Validating localization metadata for all apps...\n");
 
   const appsDir = path.join(process.cwd(), "apps");
-  if (!fs.existsSync(appsDir)) {
-    console.error("❌ Error: apps directory not found");
-    process.exit(1);
-  }
-
-  const apps = fs.readdirSync(appsDir).filter((name) => {
-    const appPath = path.join(appsDir, name);
-    return fs.statSync(appPath).isDirectory();
-  });
+  const isMonorepo = fs.existsSync(appsDir);
 
   let totalErrors = 0;
   let validApps = 0;
   const results = [];
 
-  apps.forEach((appName) => {
-    const appPath = path.join(appsDir, appName);
-    const result = validateApp(appPath);
-    results.push(result);
+  if (isMonorepo) {
+    const apps = fs.readdirSync(appsDir).filter((name) => {
+      const appPath = path.join(appsDir, name);
+      return fs.statSync(appPath).isDirectory();
+    });
 
+    apps.forEach((appName) => {
+      const appPath = path.join(appsDir, appName);
+      const result = validateApp(appPath);
+      results.push(result);
+    });
+  } else {
+    // Single-app mode: validate current directory as the app
+    const result = validateApp(process.cwd());
+    results.push(result);
+  }
+
+  results.forEach((result) => {
     if (result.hasMetadata) {
       if (result.errors.length === 0) {
         console.log(`✅ ${result.appName} (${result.localeCount} locales)`);
@@ -96,9 +101,10 @@ function validateAllApps() {
     }
   });
 
+  const totalApps = results.length;
   console.log(`\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
   console.log(`\nValidation Summary:`);
-  console.log(`  • Total apps: ${apps.length}`);
+  console.log(`  • Total apps: ${totalApps}`);
   console.log(`  • Valid apps: ${validApps}`);
   console.log(
     `  • Apps with errors: ${results.filter((r) => r.hasMetadata && r.errors.length > 0).length}`
