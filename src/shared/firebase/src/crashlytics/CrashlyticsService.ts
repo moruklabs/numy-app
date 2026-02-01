@@ -5,8 +5,8 @@
  * Implements graceful degradation if Firebase is not available.
  */
 
-import { FIREBASE_CRASHLYTICS_ENABLED } from "../config";
 import { logger } from "@moruk/logger";
+import { FIREBASE_CRASHLYTICS_ENABLED } from "../config";
 
 // Type for the Crashlytics instance
 type CrashlyticsInstance = ReturnType<
@@ -22,8 +22,7 @@ export class CrashlyticsService {
   private initializationPromise: Promise<void> | null = null;
 
   constructor() {
-    // Initialize lazily to avoid blocking app startup
-    this.initializationPromise = this.initialize();
+    // Initialization is handled lazily via ensureInitialized()
   }
 
   /**
@@ -46,6 +45,7 @@ export class CrashlyticsService {
       this.crashlyticsInstance = crashlytics();
       /* istanbul ignore next -- @preserve Dynamic import success path */
       this.initialized = true;
+      this.initializationPromise?.catch(() => {});
       /* istanbul ignore next -- @preserve Dynamic import success path */
       logger.info("[CrashlyticsService] Initialized successfully");
     } catch (error) {
@@ -72,12 +72,16 @@ export class CrashlyticsService {
       return;
     }
 
-    this.ensureInitialized().then((ready) => {
-      /* istanbul ignore next -- @preserve SDK-dependent code path */
-      if (ready && this.crashlyticsInstance) {
-        this.crashlyticsInstance.log(message);
-      }
-    });
+    this.ensureInitialized()
+      .then((ready) => {
+        /* istanbul ignore next -- @preserve SDK-dependent code path */
+        if (ready && this.crashlyticsInstance) {
+          this.crashlyticsInstance.log(message);
+        }
+      })
+      .catch((error) => {
+        logger.error("[CrashlyticsService] Failed to log message:", error);
+      });
   }
 
   /**
@@ -90,13 +94,17 @@ export class CrashlyticsService {
       return;
     }
 
-    this.ensureInitialized().then((ready) => {
-      /* istanbul ignore next -- @preserve SDK-dependent code path */
-      if (ready && this.crashlyticsInstance) {
-        this.crashlyticsInstance.recordError(error);
-        logger.info("[CrashlyticsService] Error recorded:", error.message);
-      }
-    });
+    this.ensureInitialized()
+      .then((ready) => {
+        /* istanbul ignore next -- @preserve SDK-dependent code path */
+        if (ready && this.crashlyticsInstance) {
+          this.crashlyticsInstance.recordError(error);
+          logger.info("[CrashlyticsService] Error recorded:", error.message);
+        }
+      })
+      .catch((error) => {
+        logger.error("[CrashlyticsService] Failed to record error:", error);
+      });
   }
 
   /**
@@ -107,12 +115,16 @@ export class CrashlyticsService {
       return;
     }
 
-    this.ensureInitialized().then((ready) => {
-      /* istanbul ignore next -- @preserve SDK-dependent code path */
-      if (ready && this.crashlyticsInstance) {
-        this.crashlyticsInstance.setUserId(userId);
-      }
-    });
+    this.ensureInitialized()
+      .then((ready) => {
+        /* istanbul ignore next -- @preserve SDK-dependent code path */
+        if (ready && this.crashlyticsInstance) {
+          this.crashlyticsInstance.setUserId(userId);
+        }
+      })
+      .catch((error) => {
+        logger.error("[CrashlyticsService] Failed to set user ID:", error);
+      });
   }
 
   /**
@@ -123,12 +135,16 @@ export class CrashlyticsService {
       return;
     }
 
-    this.ensureInitialized().then((ready) => {
-      /* istanbul ignore next -- @preserve SDK-dependent code path */
-      if (ready && this.crashlyticsInstance) {
-        this.crashlyticsInstance.setAttribute(key, value);
-      }
-    });
+    this.ensureInitialized()
+      .then((ready) => {
+        /* istanbul ignore next -- @preserve SDK-dependent code path */
+        if (ready && this.crashlyticsInstance) {
+          this.crashlyticsInstance.setAttribute(key, value);
+        }
+      })
+      .catch((error) => {
+        logger.error("[CrashlyticsService] Failed to set attribute:", error);
+      });
   }
 
   /**
@@ -139,12 +155,16 @@ export class CrashlyticsService {
       return;
     }
 
-    this.ensureInitialized().then((ready) => {
-      /* istanbul ignore next -- @preserve SDK-dependent code path */
-      if (ready && this.crashlyticsInstance) {
-        this.crashlyticsInstance.setAttributes(attributes);
-      }
-    });
+    this.ensureInitialized()
+      .then((ready) => {
+        /* istanbul ignore next -- @preserve SDK-dependent code path */
+        if (ready && this.crashlyticsInstance) {
+          this.crashlyticsInstance.setAttributes(attributes);
+        }
+      })
+      .catch((error) => {
+        logger.error("[CrashlyticsService] Failed to set attributes:", error);
+      });
   }
 
   /**
@@ -157,13 +177,17 @@ export class CrashlyticsService {
       return;
     }
 
-    this.ensureInitialized().then((ready) => {
-      /* istanbul ignore next -- @preserve SDK-dependent code path */
-      if (ready && this.crashlyticsInstance) {
-        logger.info("[CrashlyticsService] Triggering test crash...");
-        this.crashlyticsInstance.crash();
-      }
-    });
+    this.ensureInitialized()
+      .then((ready) => {
+        /* istanbul ignore next -- @preserve SDK-dependent code path */
+        if (ready && this.crashlyticsInstance) {
+          logger.info("[CrashlyticsService] Triggering test crash...");
+          this.crashlyticsInstance.crash();
+        }
+      })
+      .catch((error) => {
+        logger.error("[CrashlyticsService] Failed to trigger crash:", error);
+      });
   }
 
   /**
@@ -201,9 +225,7 @@ let crashlyticsServiceInstance: CrashlyticsService | null = null;
  * Get or create the Crashlytics service singleton
  */
 export function getCrashlyticsService(): CrashlyticsService {
-  if (!crashlyticsServiceInstance) {
-    crashlyticsServiceInstance = new CrashlyticsService();
-  }
+  crashlyticsServiceInstance ??= new CrashlyticsService();
   return crashlyticsServiceInstance;
 }
 

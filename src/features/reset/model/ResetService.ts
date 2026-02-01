@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AdsConsent } from "react-native-google-mobile-ads";
 import * as Updates from "expo-updates";
+import { logger } from "@moruk/logger";
 
 /**
  * ResetService - Orchestrates global app reset operations
@@ -26,7 +27,7 @@ export class ResetService {
       // Step 3: Force app reload to start fresh
       await Updates.reloadAsync();
     } catch (error) {
-      console.error("Global reset failed:", error);
+      logger.error("[ResetService] Global reset failed:", error);
       throw error;
     }
   }

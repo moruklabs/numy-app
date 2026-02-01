@@ -3,7 +3,7 @@ export default {
   name: "Numy",
   bundleId: "ai.moruk.numy",
   scheme: "numy",
-  version: "1.0.0", // Syncs with package.json via CI
+  version: "1.0.1", // Syncs with package.json via CI
 
   // Feature Flags
   features: {

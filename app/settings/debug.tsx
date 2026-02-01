@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import { AdsConsent } from "react-native-google-mobile-ads";
+import { adService } from "@/features/ads/model/AdService";
+import { colors, spacing, typography } from "@/presentation/theme";
+import { AppError, ErrorCategory, ErrorSeverity, globalErrorHandler } from "@/shared/hoc";
+import * as Sentry from "@sentry/react-native";
+import * as Application from "expo-application";
+import { useRouter } from "expo-router";
 import {
   getTrackingPermissionsAsync,
   requestTrackingPermissionsAsync,
 } from "expo-tracking-transparency";
-import * as Application from "expo-application";
-import { useRouter } from "expo-router";
-import { adService } from "@/features/ads/model/AdService";
-import { colors, spacing, typography } from "@/presentation/theme";
+import React, { useEffect, useState } from "react";
+import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { AdsConsent } from "react-native-google-mobile-ads";
 
 export default function DebugScreen() {
   const router = useRouter();
@@ -23,7 +25,7 @@ export default function DebugScreen() {
     try {
       const status = await getTrackingPermissionsAsync();
       setAttStatus(status.status);
-    } catch (e) {
+    } catch {
       setAttStatus("error");
     }
 
@@ -31,7 +33,7 @@ export default function DebugScreen() {
     try {
       const id = await Application.getIosIdForVendorAsync();
       setAdvertisingId(id || "Not available");
-    } catch (e) {
+    } catch {
       setAdvertisingId("Error loading ID");
     }
   };
@@ -44,9 +46,9 @@ export default function DebugScreen() {
 
   const handleResetConsent = async () => {
     try {
-      await AdsConsent.reset();
+      AdsConsent.reset();
       Alert.alert("Success", "Consent reset. Restart app to trigger flow.");
-    } catch (e) {
+    } catch {
       Alert.alert("Error", "Failed to reset consent");
     }
   };
@@ -105,6 +107,36 @@ export default function DebugScreen() {
       },
       onError: (e) => Alert.alert("Error", e.message),
     });
+  };
+
+  const handleCaptureTestError = () => {
+    const testError = new AppError(
+      "Test error from debug screen",
+      "DEBUG_TEST_ERROR",
+      ErrorSeverity.MEDIUM,
+      ErrorCategory.UI,
+      "This is a test error for Sentry"
+    );
+    globalErrorHandler.handleError(testError);
+    Alert.alert("Success", "Test error sent to Sentry");
+  };
+
+  const handleCaptureTestMessage = () => {
+    Sentry.captureMessage("Test message from debug screen", "info");
+    Alert.alert("Success", "Test message sent to Sentry");
+  };
+
+  const handleTriggerTestCrash = () => {
+    Alert.alert("Trigger Crash", "This will crash the app. Are you sure?", [
+      { text: "Cancel", style: "cancel" },
+      {
+        text: "Crash",
+        style: "destructive",
+        onPress: () => {
+          throw new Error("Intentional crash for testing");
+        },
+      },
+    ]);
   };
 
   return (
@@ -181,6 +213,25 @@ export default function DebugScreen() {
             {advertisingId}
           </Text>
         </View>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Error Tracking (Sentry)</Text>
+
+        <Pressable style={styles.button} onPress={handleCaptureTestError}>
+          <Text style={styles.buttonText}>Capture Test Error</Text>
+        </Pressable>
+
+        <Pressable style={styles.button} onPress={handleCaptureTestMessage}>
+          <Text style={styles.buttonText}>Capture Test Message</Text>
+        </Pressable>
+
+        <Pressable
+          style={[styles.button, styles.destructiveButton]}
+          onPress={handleTriggerTestCrash}
+        >
+          <Text style={styles.buttonText}>Trigger Test Crash</Text>
+        </Pressable>
       </View>
 
       <View style={styles.section}>

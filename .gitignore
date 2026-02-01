@@ -537,3 +537,5 @@ builds/
 *.bak
 ~*
 *.claude/data
+
+.env.local

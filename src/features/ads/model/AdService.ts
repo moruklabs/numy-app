@@ -1,4 +1,5 @@
 import { AdConfiguration, AdUnitConfig } from "@/app-shared/config/ads-config";
+import { logger } from "@moruk/logger";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import mobileAds, {
   AdEventType,
@@ -57,7 +58,7 @@ class AdService {
           this.config.storageKeys.interstitialLastShown
         );
         if (interstitialLastShown) {
-          this.lastShownTimestamps["interstitial"] = parseInt(interstitialLastShown, 10);
+          this.lastShownTimestamps["interstitial"] = Number.parseInt(interstitialLastShown, 10);
         }
       } catch (e) {
         console.warn("Failed to load ad timestamps", e);
@@ -217,7 +218,7 @@ class AdService {
           : this.config.storageKeys.appOpenLastShown;
       if (key) {
         AsyncStorage.setItem(key, now.toString()).catch((e) =>
-          console.warn("Failed to save ad timestamp", e)
+          logger.warn("[AdService] Failed to save ad timestamp", e)
         );
       }
     }

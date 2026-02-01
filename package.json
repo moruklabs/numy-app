@@ -1,7 +1,7 @@
 {
   "name": "@moruk/numy",
   "main": "expo-router/entry",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "engines": {
     "node": "24.12.0"
   },
@@ -36,6 +36,7 @@
     "@react-native-firebase/app": "^23.8.4",
     "@react-native-firebase/crashlytics": "^23.8.4",
     "@react-native-firebase/remote-config": "^23.8.4",
+    "@sentry/react-native": "~7.2.0",
     "@shopify/flash-list": "2.0.2",
     "decimal.js": "*",
     "expo": "~54.0.33",
@@ -72,6 +73,7 @@
     "react-native-svg": "15.12.1",
     "react-native-web": "*",
     "react-native-worklets": "0.5.1",
+    "tinyglobby": "^0.2.15",
     "zustand": "*"
   },
   "devDependencies": {
@@ -84,7 +86,7 @@
     "babel-preset-expo": "~54.0.10",
     "concurrently": "*",
     "eslint": "*",
-    "eslint-config-expo": "*",
+    "eslint-config-expo": "~10.0.0",
     "jest": "~29.7.0",
     "jest-expo": "~54.0.17",
     "js-yaml": "^4.1.0",

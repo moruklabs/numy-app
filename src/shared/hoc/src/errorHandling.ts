@@ -28,7 +28,9 @@ export interface ErrorContext {
   action?: string;
   userId?: string;
   timestamp?: Date;
+  isFatal?: boolean;
   metadata?: Record<string, any>;
+  [key: string]: unknown;
 }
 
 export class AppError extends Error {
@@ -140,3 +142,7 @@ export class ErrorHandlerChain implements ErrorHandler {
 // Global error handler instance
 export const globalErrorHandler = new ErrorHandlerChain();
 globalErrorHandler.addHandler(new ConsoleErrorHandler());
+
+// Add Sentry error handler
+import { SentryErrorHandler } from "./SentryErrorHandler";
+globalErrorHandler.addHandler(new SentryErrorHandler());

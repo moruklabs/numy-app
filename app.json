@@ -1,6 +1,9 @@
 {
   "expo": {
-    "plugins": ["@react-native-firebase/app", "react-native-google-mobile-ads"],
+    "name": "Numy",
+    "slug": "numy",
+    "version": "1.0.1",
+    "plugins": [],
     "extra": {
       "SENTRY_DSN": "https://examplePublicKey@o0.ingest.sentry.io/0",
       "sentry": {
@@ -11,6 +14,12 @@
         "projectId": "c458cacb-2677-48f8-afd4-77eaf0abf4a2"
       }
     },
-    "owner": "morukhq"
+    "owner": "morukhq",
+    "ios": {
+      "buildNumber": "1"
+    },
+    "android": {
+      "versionCode": 1
+    }
   }
 }

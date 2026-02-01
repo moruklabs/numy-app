@@ -1,8 +1,3 @@
-import { processWithAI } from "@moruk/ai";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import Decimal from "decimal.js";
-import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
 import {
   Document,
   addLine,
@@ -16,6 +11,12 @@ import {
 import type { Line } from "@/domain/entities/Line";
 import { detectCategory, evaluate, extractVariableName } from "@/domain/services/CalculationEngine";
 import { createNumericResult, createUnitResult } from "@/domain/value-objects/CalculationResult";
+import { processWithAI } from "@moruk/ai";
+import { logger } from "@moruk/logger";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Decimal } from "decimal.js";
+import { create } from "zustand";
+import { createJSONStorage, persist } from "zustand/middleware";
 import { CALCULATION_PROMPT } from "../services/ai/prompts";
 
 // Default examples moved to src/domain/fixtures/defaultExamples.ts
@@ -240,8 +241,9 @@ export const useCalculatorStore = create<CalculatorState>()(
               });
               return;
             }
-          } catch {
-            // AI failed, fall through to use original error result
+          } catch (error) {
+            logger.warn("[CalculatorStore] AI calculation failed, using original result:", error);
+            // Fall through to use original error result
           }
         }
 
@@ -394,7 +396,7 @@ export const useCalculatorStore = create<CalculatorState>()(
 
       resetAll: async () => {
         // Clear only this store's persisted data (not expo-router or other storage)
-        await useCalculatorStore.persist.clearStorage();
+        useCalculatorStore.persist.clearStorage();
 
         // Set fresh state with NO examples in history
         set({
@@ -417,7 +419,7 @@ export const useCalculatorStore = create<CalculatorState>()(
         emBase: state.emBase,
         ppiBase: state.ppiBase,
         decimalPlaces: state.decimalPlaces,
-        savedDocuments: state.savedDocuments.map(serializeDocument),
+        savedDocuments: state.savedDocuments.map((doc) => serializeDocument(doc)),
         showTotal: state.showTotal,
       }),
       onRehydrateStorage: () => (state) => {
@@ -426,7 +428,7 @@ export const useCalculatorStore = create<CalculatorState>()(
           state.document = deserializeDocument(state.document);
 
           // Deserialize saved documents
-          const userDocs = (state.savedDocuments || []).map(deserializeDocument);
+          const userDocs = (state.savedDocuments || []).map((doc) => deserializeDocument(doc));
 
           // Migration: Remove legacy examples from savedDocuments if they exist
           const cleanedDocs = userDocs.filter((doc) => !doc.id.startsWith("example_"));

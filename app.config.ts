@@ -1,6 +1,7 @@
 import { ConfigContext, ExpoConfig } from "expo/config";
+import withModularHeaders from "./src/shared/config/src/plugins/withModularHeaders";
 
-export default ({ config }: ConfigContext): ExpoConfig => {
+const config = ({ config }: ConfigContext): ExpoConfig => {
   // Firebase configuration files (from root directory)
   const iosGoogleServicesFile = "./GoogleService-Info.plist";
 
@@ -15,32 +16,28 @@ export default ({ config }: ConfigContext): ExpoConfig => {
       androidAppId: "ca-app-pub-9347276405837051~7950500913",
     },
     sentry: {
-      dsn: "https://examplePublicKey@o0.ingest.sentry.io/0",
+      dsn: "https://fc334c47ed5d1e6b4be2302e4b5bd93c@o4510417138352128.ingest.de.sentry.io/4510812305358928",
     },
   };
 
-  const plugins = (config.plugins || []).map((plugin) => {
-    if (Array.isArray(plugin) && plugin[0] === "@react-native-firebase/app") {
-      return [
-        "@react-native-firebase/app",
-        {
-          ios: { googleServicesFile: iosGoogleServicesFile },
-        },
-      ];
-    }
-    if (Array.isArray(plugin) && plugin[0] === "react-native-google-mobile-ads") {
-      return [
-        "react-native-google-mobile-ads",
-        {
-          androidAppId: appSettings.ads.androidAppId,
-          iosAppId: appSettings.ads.iosAppId,
-          userTrackingPermission:
-            "This app uses ads to provide free access to calculator features.",
-        },
-      ];
-    }
-    return plugin;
-  });
+  const plugins = [
+    [
+      "react-native-google-mobile-ads",
+      {
+        androidAppId: appSettings.ads.androidAppId,
+        iosAppId: appSettings.ads.iosAppId,
+        userTrackingPermission: "This app uses ads to provide free access to calculator features.",
+      },
+    ],
+    [
+      "@sentry/react-native/expo",
+      {
+        url: "https://sentry.io/",
+        project: "numy",
+        organization: "moruk",
+      },
+    ],
+  ];
 
   return {
     ...config,
@@ -53,7 +50,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
       googleServicesFile: iosGoogleServicesFile,
     },
     runtimeVersion: appSettings.version,
-    plugins: [...plugins, require("./src/shared/config/src/plugins/withModularHeaders.js")] as any,
+    plugins: [...plugins, withModularHeaders] as any,
     extra: {
       ...config.extra,
       SENTRY_DSN: appSettings.sentry.dsn,
@@ -64,3 +61,5 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     },
   } as ExpoConfig;
 };
+
+export default config;

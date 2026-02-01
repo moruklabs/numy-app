@@ -36,6 +36,6 @@
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "extends": "expo/tsconfig.base"
 }

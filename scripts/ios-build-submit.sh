@@ -61,6 +61,32 @@ bump_version() {
   esac
 
   echo "${major}.${minor}.${patch}"
+  echo "${major}.${minor}.${patch}"
+}
+
+increment_build_number() {
+  echo "Incrementing build number..."
+
+  if command -v jq &> /dev/null; then
+    # Read current values
+    CURRENT_IOS_BUILD=$(jq -r '.expo.ios.buildNumber // "0"' app.json)
+    CURRENT_ANDROID_CODE=$(jq -r '.expo.android.versionCode // 0' app.json)
+
+    # Increment
+    NEW_IOS_BUILD=$((CURRENT_IOS_BUILD + 1))
+    NEW_ANDROID_CODE=$((CURRENT_ANDROID_CODE + 1))
+
+    echo "Updating build number: iOS $CURRENT_IOS_BUILD -> $NEW_IOS_BUILD, Android $CURRENT_ANDROID_CODE -> $NEW_ANDROID_CODE"
+
+    # Write back
+    jq --arg iosBuild "$NEW_IOS_BUILD" --argjson androidCode "$NEW_ANDROID_CODE" \
+       '.expo.ios.buildNumber = $iosBuild | .expo.android.versionCode = $androidCode' \
+       app.json > app.json.tmp && mv app.json.tmp app.json
+
+    echo "✓ Updated app.json build numbers"
+  else
+    echo "Warning: jq not found, skipping build number auto-increment"
+  fi
 }
 
 # Function to parse command line arguments
@@ -206,6 +232,8 @@ fi
 BUILD_FILE="./builds/ios-${PLATFORM}-${APP_ENV}-${TIMESTAMP}.tar.gz"
 
 echo ""
+echo ""
+increment_build_number
 echo "Starting iOS build process..."
 echo "Using platform profile: ${PLATFORM} and APP_ENV=${APP_ENV}"
 

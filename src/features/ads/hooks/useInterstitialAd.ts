@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import { adService } from "../model/AdService";
+import { logger } from "@moruk/logger";
 
 interface UseInterstitialAdProps {
   /** The feature requesting the ad (for logging/analytics) */
@@ -34,8 +35,9 @@ export function useInterstitialAd({
             showAdIfReady();
           }
         },
-        onError: (e) => {
-          // Silently fail or log, don't interrupt user flow
+        onError: (error) => {
+          logger.warn("[useInterstitialAd] Ad failed to load:", error);
+          // Still don't interrupt user flow
         },
       });
     }

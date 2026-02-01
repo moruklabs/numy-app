@@ -17,3 +17,4 @@ export {
   globalErrorHandler,
 } from "./errorHandling";
 export type { ErrorHandler, ErrorContext } from "./errorHandling";
+export { SentryErrorHandler } from "./SentryErrorHandler";
