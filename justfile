@@ -113,9 +113,9 @@ upload-sourcemaps platform="android":
 clean:
     yarn run clean
 
-# Kill process on port 8081
+# Kill process on port 2007
 killport:
-    ./scripts/killport.sh 8081
+    ./scripts/killport.sh 2007
 
 # Sync Firebase symlinks (legacy compatibility)
 sync-firebase:

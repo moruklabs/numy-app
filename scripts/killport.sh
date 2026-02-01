@@ -1,7 +1,23 @@
 #!/bin/bash
-# Kill process on specified port
+# Kill process running on a specific port
+# Usage: ./killport.sh <port>
 
-PORT=${1:-3131}
-echo "Killing process on port $PORT..."
-lsof -ti:$PORT | xargs kill -9 2>/dev/null || true
-echo "Port $PORT is now free"
+set -e
+
+PORT=${1:-2007}
+
+if [ -z "$PORT" ]; then
+    echo "Usage: $0 <port>"
+    exit 1
+fi
+
+# Find and kill process on the specified port
+PID=$(lsof -t -i:$PORT 2>/dev/null || true)
+
+if [ -n "$PID" ]; then
+    echo "Killing process $PID on port $PORT..."
+    kill -9 $PID
+    echo "Done."
+else
+    echo "No process found on port $PORT"
+fi
