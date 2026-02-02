@@ -1,7 +1,7 @@
 {
   "name": "@moruk/numy",
   "main": "expo-router/entry",
-  "version": "1.0.1",
+  "version": "1.1.7",
   "engines": {
     "node": "24.12.0"
   },
