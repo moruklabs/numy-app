@@ -16,10 +16,10 @@
     },
     "owner": "morukhq",
     "ios": {
-      "buildNumber": "1"
+      "buildNumber": "3"
     },
     "android": {
-      "versionCode": 1
+      "versionCode": 3
     }
   }
 }
