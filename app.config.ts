@@ -1,5 +1,6 @@
 import { ConfigContext, ExpoConfig } from "expo/config";
 import withModularHeaders from "./src/shared/config/src/plugins/withModularHeaders";
+import pkg from "./package.json";
 
 const config = ({ config }: ConfigContext): ExpoConfig => {
   // Firebase configuration files (from root directory)
@@ -10,7 +11,7 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
     name: "Numy",
     bundleId: "ai.moruk.numy",
     scheme: "numy",
-    version: "1.0.0",
+    version: pkg.version,
     ads: {
       iosAppId: "ca-app-pub-9347276405837051~7950500913",
       androidAppId: "ca-app-pub-9347276405837051~7950500913",
