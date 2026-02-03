@@ -1,6 +1,6 @@
 import { ConfigContext, ExpoConfig } from "expo/config";
-import withModularHeaders from "./src/shared/config/src/plugins/withModularHeaders";
 import pkg from "./package.json";
+import withModularHeaders from "./src/shared/config/src/plugins/withModularHeaders";
 
 const config = ({ config }: ConfigContext): ExpoConfig => {
   // Firebase configuration files (from root directory)
@@ -22,6 +22,12 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
   };
 
   const plugins = [
+    [
+      "expo-tracking-transparency",
+      {
+        userTrackingPermission: "This app uses ads to provide free access to calculator features.",
+      },
+    ],
     [
       "react-native-google-mobile-ads",
       {
@@ -49,8 +55,17 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
       ...config.ios,
       bundleIdentifier: appSettings.bundleId,
       googleServicesFile: iosGoogleServicesFile,
+      infoPlist: {
+        ...config.ios?.infoPlist,
+        NSUserTrackingUsageDescription:
+          "This app uses ads to provide free access to calculator features.",
+      },
     },
     runtimeVersion: appSettings.version,
+    updates: {
+      enabled: true,
+      fallbackToCacheTimeout: 0,
+    },
     plugins: [...plugins, withModularHeaders] as any,
     extra: {
       ...config.extra,

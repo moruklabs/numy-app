@@ -1,6 +1,7 @@
 // Initialize i18n first, before any other imports that might use translations
 import "../src/i18n";
 
+import { OnboardingFlow, useOnboardingState } from "@/features/onboarding";
 import { usePrivacySequence } from "@/features/privacy/api/PrivacySequence";
 import { useAnalytics } from "@/hooks";
 import { colors, typography } from "@/presentation/theme";
@@ -19,21 +20,11 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 Sentry.init({
   dsn: "https://fc334c47ed5d1e6b4be2302e4b5bd93c@o4510417138352128.ingest.de.sentry.io/4510812305358928",
-
-  // Adds more context data to events (IP address, cookies, user, etc.)
-  // For more information, visit: https://docs.sentry.io/platforms/react-native/data-management/data-collected/
   sendDefaultPii: true,
-
-  // Enable Logs
   enableLogs: true,
-
-  // Configure Session Replay
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1,
   integrations: [Sentry.mobileReplayIntegration(), Sentry.feedbackIntegration()],
-
-  // uncomment the line below to enable Spotlight (https://spotlightjs.com)
-  // spotlight: __DEV__,
 });
 
 // Global unhandled promise rejection handler
@@ -81,11 +72,8 @@ if (ErrorUtils) {
   });
 }
 
-export default Sentry.wrap(function RootLayout() {
-  // Initialize analytics and track screen views
-  useAnalytics();
-
-  // Initialize privacy sequence (UMP -> ATT)
+function MainLayout() {
+  // Initialize privacy sequence (UMP -> ATT) only after onboarding
   usePrivacySequence();
 
   return (
@@ -120,6 +108,24 @@ export default Sentry.wrap(function RootLayout() {
       </GestureHandlerRootView>
     </View>
   );
+}
+
+export default Sentry.wrap(function RootLayout() {
+  const { hasSeenOnboarding } = useOnboardingState();
+
+  // Initialize analytics
+  useAnalytics();
+
+  if (!hasSeenOnboarding) {
+    return (
+      <View style={styles.container}>
+        <StatusBar style="light" />
+        <OnboardingFlow onComplete={() => {}} />
+      </View>
+    );
+  }
+
+  return <MainLayout />;
 });
 
 const styles = StyleSheet.create({

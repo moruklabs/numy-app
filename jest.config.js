@@ -12,6 +12,7 @@ module.exports = {
     "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg|@moruk/.*|@testing-library/react-native|expo-tracking-transparency|react-native-google-mobile-ads)",
   ],
   testMatch: [
+    "**/src/config/__tests__/**/*.test.(ts|tsx)",
     "**/src/domain/__tests__/**/*.test.(ts|tsx)",
     "**/src/infrastructure/__tests__/**/*.test.(ts|tsx)",
     "**/src/application/__tests__/**/*.test.(ts|tsx)",

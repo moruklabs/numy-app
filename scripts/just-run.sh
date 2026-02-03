@@ -7,7 +7,7 @@ set -e
 # Default values
 PORT=2007
 PLATFORM="ios"
-DEVICE="iPad Pro 13-inch (M4)"
+DEVICE=""
 BUILD=false
 CLEAN=false
 CACHE=true
@@ -81,7 +81,12 @@ if [ "$BUILD" = true ]; then
   if [ "$PLATFORM" = "ios" ]; then
     # iOS Build & Run
     APP_ENV=DEV RCT_NEW_ARCH_ENABLED=1 USE_CCACHE=1 npx expo prebuild --platform ios
-    APP_ENV=DEV RCT_NEW_ARCH_ENABLED=1 USE_CCACHE=1 npx expo run:ios --device "$DEVICE" --port $PORT
+
+    RUN_CMD="APP_ENV=DEV RCT_NEW_ARCH_ENABLED=1 USE_CCACHE=1 npx expo run:ios --port $PORT"
+    if [ -n "$DEVICE" ]; then
+        RUN_CMD="$RUN_CMD --device \"$DEVICE\""
+    fi
+    eval "$RUN_CMD"
   else
     # Android Build & Run
     APP_ENV=DEV npx expo prebuild --platform android

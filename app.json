@@ -19,7 +19,11 @@
       "buildNumber": "6"
     },
     "android": {
-      "versionCode": 6
+      "versionCode": 6,
+      "permissions": [
+        "com.google.android.gms.permission.AD_ID"
+      ],
+      "package": "ai.moruk.numy"
     }
   }
 }
