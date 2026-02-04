@@ -16,10 +16,10 @@
     },
     "owner": "morukhq",
     "ios": {
-      "buildNumber": "6"
+      "buildNumber": "9"
     },
     "android": {
-      "versionCode": 6,
+      "versionCode": 9,
       "permissions": [
         "com.google.android.gms.permission.AD_ID"
       ],

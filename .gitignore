@@ -539,3 +539,4 @@ builds/
 *.claude/data
 
 .env.local
+tsc_output.txt
