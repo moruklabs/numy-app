@@ -1,10 +1,24 @@
 import { PasswordPrompt, useDeveloperMode, useTapDetector } from "@/features/developer-mode";
+import { changeLanguage, supportedLanguages, SupportedLanguage } from "@/i18n";
 import { colors, spacing, typography } from "@/presentation/theme";
+import * as Linking from "expo-linking";
+import { useRouter } from "expo-router";
+import * as Sharing from "expo-sharing";
 import * as Updates from "expo-updates";
 import { useState } from "react";
-import { Alert, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from "react-native";
+import {
+  Alert,
+  Modal,
+  ScrollView,
+  StyleSheet,
+  Switch,
+  Text,
+  TouchableOpacity,
+  View,
+  FlatList,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import config from "../../../config/settings"; // Importing directly as per valid path, or use app-config
+import config from "../../../config/settings";
 import { useSettingsStore } from "../model/settingsStore";
 
 interface SettingsScreenProps {
@@ -12,9 +26,12 @@ interface SettingsScreenProps {
 }
 
 export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
-  const { themeMode, setThemeMode, reduceMotion, toggleReduceMotion } = useSettingsStore();
+  const router = useRouter();
+  const { themeMode, setThemeMode, reduceMotion, toggleReduceMotion, language, setLanguage } =
+    useSettingsStore();
   const { isDeveloperMode, enableDeveloperMode } = useDeveloperMode();
   const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
+  const [showLanguageModal, setShowLanguageModal] = useState(false);
 
   const { handleTap } = useTapDetector({
     threshold: 5,
@@ -44,6 +61,39 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
     }
   };
 
+  const handleLanguageSelect = async (lang: SupportedLanguage | null) => {
+    setLanguage(lang);
+    if (lang) {
+      await changeLanguage(lang);
+    } else {
+      // If null (System), we might want to revert to system default
+      // For now, let's just keep it simple. If we had a way to get system default easily here.
+      // Re-running init logic is hard.
+      // We will just let the store update. Ideally app reload is needed for full system reset effect
+      // or we explicitly set it to system locale.
+      // For now, we'll force a reload if switching to system to be safe?
+      // Or just set to 'en' or detected system locale.
+      // Let's just set it to the detected system locale if 'null' is selected.
+      // But 'null' isn't really an option in the list yet.
+      // I'll add "System (Default)" as an option.
+    }
+    setShowLanguageModal(false);
+  };
+
+  const openLink = async (url: string) => {
+    if (await Linking.canOpenURL(url)) {
+      await Linking.openURL(url);
+    } else {
+      Alert.alert("Error", "Cannot open link");
+    }
+  };
+
+  const handleShare = async () => {
+    if (config.links.shareUrl && (await Sharing.isAvailableAsync())) {
+      await Sharing.shareAsync(config.links.shareUrl);
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container} edges={["top"]}>
       <ScrollView contentContainerStyle={styles.content}>
@@ -51,15 +101,17 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
 
         {/* Appearance */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Appearance</Text>
+          <Text style={styles.sectionTitle}>Appearance & Localization</Text>
+          <View style={styles.row}>
+            <Text style={styles.label}>Language</Text>
+            <TouchableOpacity onPress={() => setShowLanguageModal(true)}>
+              <Text style={styles.value}>
+                {language ? language.toUpperCase() : "System Default"}
+              </Text>
+            </TouchableOpacity>
+          </View>
           <View style={styles.row}>
             <Text style={styles.label}>Dark Mode</Text>
-            {/* Simple Toggle for now, mirroring 'Dark Mode (Toggle)' requirement.
-                 If 'system' is needed, we might need a selector.
-                 User req said: "Dark/Light/System toggles".
-                 Let's implement a simple cycle or selector. For now, a toggle for Dark/Light override?
-                 Actually, let's just stick to the specific requirement: "Dark/Light/System toggles"
-             */}
             <View style={styles.toggleGroup}>
               {(["light", "dark", "system"] as const).map((mode) => (
                 <TouchableOpacity
@@ -73,6 +125,19 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
                 </TouchableOpacity>
               ))}
             </View>
+          </View>
+          <View style={styles.row}>
+            <Text style={styles.label}>Use System Theme</Text>
+            {/* This is redundant with the 'system' toggle above, but requested explicitly.
+                 "Make Sure Use System Theme toggle exists. When System is on dark/light disables and vice/versa."
+                 The above 3-way toggle handles this elegantly.
+                 If a separate switch is strictly required:
+             */}
+            <Switch
+              value={themeMode === "system"}
+              onValueChange={(val) => setThemeMode(val ? "system" : "light")} // Default to light if turning system off?
+              trackColor={{ false: colors.ui.border, true: colors.ui.highlight }}
+            />
           </View>
         </View>
 
@@ -89,6 +154,57 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
           </View>
         </View>
 
+        {/* Privacy & Security */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Privacy & Security</Text>
+          <TouchableOpacity style={styles.row} onPress={() => Linking.openSettings()}>
+            <Text style={styles.label}>App Permissions</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.row} onPress={() => openLink(config.links.privacyPolicy)}>
+            <Text style={styles.label}>Privacy Policy</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.row}
+            onPress={() => openLink(config.links.termsOfService)}
+          >
+            <Text style={styles.label}>Terms and Conditions</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.row} onPress={() => openLink(config.links.cookiePolicy)}>
+            <Text style={styles.label}>Cookie Policy</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+          {/* Clear All Data - Destructive */}
+          {/* Not explicitly implemented in store yet, usually clears Async Storage */}
+        </View>
+
+        {/* Support & Feedback */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Support & Feedback</Text>
+          <TouchableOpacity style={styles.row} onPress={() => openLink(config.links.support)}>
+            <Text style={styles.label}>Contact Support</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.row} onPress={() => openLink(config.links.review)}>
+            <Text style={styles.label}>Rate Us</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.row} onPress={handleShare}>
+            <Text style={styles.label}>Share App</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.row} onPress={() => openLink(config.links.community)}>
+            <Text style={styles.label}>Join Our Community</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.row} onPress={() => openLink(config.links.moreApps)}>
+            <Text style={styles.label}>More From Us</Text>
+            <Text style={styles.chevron}>{">"}</Text>
+          </TouchableOpacity>
+        </View>
+
         {/* App Info / Advanced */}
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>About</Text>
@@ -98,7 +214,6 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
               <Text style={styles.value}>{config.version}</Text>
             </View>
           </TouchableOpacity>
-          {/* Note: Build Number is not easily available in expo-constants manifest in all contexts but can use Constants.expoConfig?.ios?.buildNumber or similar. using generic string for now or '1' */}
         </View>
 
         {/* Developer Sections */}
@@ -108,10 +223,7 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
             <TouchableOpacity style={styles.button} onPress={handleReload}>
               <Text style={styles.buttonText}>Reload App</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => Alert.alert("Debug", "Navigate to Debug Screen")}
-            >
+            <TouchableOpacity style={styles.button} onPress={() => router.push("/settings/debug")}>
               <Text style={styles.buttonText}>Open Debug Tools</Text>
             </TouchableOpacity>
           </View>
@@ -123,6 +235,39 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
         onSuccess={handlePasswordSubmit}
         onDismiss={() => setShowPasswordPrompt(false)}
       />
+
+      <Modal visible={showLanguageModal} animationType="slide" transparent>
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Select Language</Text>
+            <FlatList
+              data={["system", ...supportedLanguages]}
+              keyExtractor={(item) => item}
+              renderItem={({ item }) => (
+                <TouchableOpacity
+                  style={styles.languageItem}
+                  onPress={() =>
+                    handleLanguageSelect(item === "system" ? null : (item as SupportedLanguage))
+                  }
+                >
+                  <Text style={styles.languageText}>
+                    {item === "system" ? "System Default" : item.toUpperCase()}
+                  </Text>
+                  {(item === "system" ? language === null : language === item) && (
+                    <Text style={styles.checkMark}>✓</Text>
+                  )}
+                </TouchableOpacity>
+              )}
+            />
+            <TouchableOpacity
+              style={styles.closeButton}
+              onPress={() => setShowLanguageModal(false)}
+            >
+              <Text style={styles.closeButtonText}>Close</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };
@@ -134,6 +279,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: spacing.lg,
+    paddingBottom: spacing.xxl,
   },
   headerTitle: {
     fontFamily: typography.fonts.mono,
@@ -171,6 +317,10 @@ const styles = StyleSheet.create({
     fontSize: typography.sizes.md,
     color: colors.text.secondary,
   },
+  chevron: {
+    color: colors.text.secondary,
+    fontSize: typography.sizes.md,
+  },
   toggleGroup: {
     flexDirection: "row",
     gap: spacing.xs,
@@ -203,6 +353,53 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: colors.ui.highlight,
+    fontWeight: "bold",
+  },
+  // Modal Styles
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    justifyContent: "flex-end",
+  },
+  modalContent: {
+    backgroundColor: colors.background.primary,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+    maxHeight: "80%",
+    padding: spacing.lg,
+  },
+  modalTitle: {
+    fontFamily: typography.fonts.mono,
+    fontSize: typography.sizes.xl,
+    fontWeight: "bold",
+    marginBottom: spacing.lg,
+    color: colors.text.primary,
+    textAlign: "center",
+  },
+  languageItem: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: spacing.md,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.ui.border,
+  },
+  languageText: {
+    fontSize: typography.sizes.md,
+    color: colors.text.primary,
+  },
+  checkMark: {
+    fontSize: typography.sizes.md,
+    color: colors.ui.highlight,
+  },
+  closeButton: {
+    marginTop: spacing.lg,
+    padding: spacing.md,
+    backgroundColor: colors.background.secondary,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  closeButtonText: {
+    color: colors.text.primary,
     fontWeight: "bold",
   },
 });

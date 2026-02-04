@@ -19,6 +19,8 @@ export interface AdUnitConfig extends AdPacing {
   appId: string;
   /** Safety limit: max impressions per app session */
   maxImpressionsPerSession: number;
+  /** Max impressions per day */
+  maxImpressionsPerDay: number;
 }
 
 /**
@@ -31,6 +33,8 @@ export interface AdConfiguration {
   storageKeys: {
     interstitialLastShown: string;
     appOpenLastShown: string;
+    interstitialDailyCount: string;
+    appOpenDailyCount: string;
   };
 }
 
@@ -42,29 +46,37 @@ export const createAdConfig = (rawConfig: any, settings: any): AdConfiguration =
   // Logic to merge defaults from settings.ts with remote/yaml values can go here.
   // For now we map the static settings structure.
 
-  const defaults = settings.ads.defaults;
+  // Force 60 minutes interval and 1 per session as per strict requirements
+  const STRICT_INTERVAL_MS = 60 * 60 * 1000;
+  const STRICT_MAX_SESSION = 1;
+  const STRICT_MAX_DAILY = 24;
+
   const units = settings.ads.units.ios; // Defaulting to iOS for now, platform logic should be in hook
 
   return {
     interstitial: {
-      frequency: defaults.interstitial.frequency,
-      intervalMs: toMs(defaults.interstitial.interval, defaults.interstitial.intervalUnit as any),
+      frequency: 1, // Pacing frequency (how many in interval)
+      intervalMs: STRICT_INTERVAL_MS,
       enabled: settings.features.ads,
       adUnitId: units.interstitial,
       appId: settings.ads.iosAppId,
-      maxImpressionsPerSession: 3, // Safe default
+      maxImpressionsPerSession: STRICT_MAX_SESSION,
+      maxImpressionsPerDay: STRICT_MAX_DAILY,
     },
     appOpen: {
-      frequency: defaults.appOpen.frequency,
-      intervalMs: toMs(defaults.appOpen.interval, defaults.appOpen.intervalUnit as any),
+      frequency: 1,
+      intervalMs: STRICT_INTERVAL_MS,
       enabled: settings.features.ads,
       adUnitId: units.appOpen,
       appId: settings.ads.iosAppId,
-      maxImpressionsPerSession: 3,
+      maxImpressionsPerSession: STRICT_MAX_SESSION,
+      maxImpressionsPerDay: STRICT_MAX_DAILY,
     },
     storageKeys: {
       interstitialLastShown: "ads_interstitial_last_shown",
       appOpenLastShown: "ads_app_open_last_shown",
+      interstitialDailyCount: "ads_interstitial_daily_count",
+      appOpenDailyCount: "ads_app_open_daily_count",
     },
   };
 };

@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import { getLocales } from "expo-localization";
 
 // Arabic translations
 import arCommon from "../locales/ar/common.json";
@@ -553,9 +554,14 @@ const resources = {
   },
 };
 
+const systemLocale = getLocales()[0]?.languageCode ?? "en";
+const defaultLanguage = supportedLanguages.includes(systemLocale as SupportedLanguage)
+  ? systemLocale
+  : "en";
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
+  lng: defaultLanguage,
   fallbackLng: "en",
   defaultNS,
   ns: ["common", "calculator", "settings", "history", "tabs", "errors"],

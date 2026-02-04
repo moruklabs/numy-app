@@ -20,6 +20,7 @@ const mockConfig: AdConfiguration = {
     adUnitId: "test-interstitial",
     appId: "test-app",
     maxImpressionsPerSession: 5,
+    maxImpressionsPerDay: 10,
   },
   appOpen: {
     enabled: true,
@@ -28,10 +29,13 @@ const mockConfig: AdConfiguration = {
     adUnitId: "test-app-open",
     appId: "test-app",
     maxImpressionsPerSession: 1,
+    maxImpressionsPerDay: 5,
   },
   storageKeys: {
     interstitialLastShown: "key1",
     appOpenLastShown: "key2",
+    interstitialDailyCount: "daily1",
+    appOpenDailyCount: "daily2",
   },
 };
 

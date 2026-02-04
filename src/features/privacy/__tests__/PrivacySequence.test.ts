@@ -21,6 +21,7 @@ jest.mock("react-native-google-mobile-ads", () => ({
 
 describe("usePrivacySequence", () => {
   beforeEach(() => {
+    jest.useFakeTimers();
     jest.clearAllMocks();
     jest.spyOn(console, "error").mockImplementation(() => {});
     (AdsConsent.requestInfoUpdate as jest.Mock).mockResolvedValue(undefined);
@@ -34,30 +35,29 @@ describe("usePrivacySequence", () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
+    jest.useRealTimers();
   });
 
-  it("should execute UMP then ATT strictly sequentially with Primer", async () => {
+  it("should execute UMP then ATT strictly sequentially", async () => {
+    (AdsConsent.requestInfoUpdate as jest.Mock).mockResolvedValue({
+      isConsentFormAvailable: true,
+      status: "REQUIRED",
+    });
     const { result } = renderHook(() => usePrivacySequence());
 
-    // 1. Wait for UMP to finish and Primer to appear
-    await waitFor(() => expect(result.current.showPrimer).toBe(true));
+    // 1. Wait for UMP to finish
+    await waitFor(() => expect(AdsConsent.requestInfoUpdate).toHaveBeenCalled());
+    await waitFor(() => expect(AdsConsent.loadAndShowConsentFormIfRequired).toHaveBeenCalled());
 
-    // Verify UMP was called
-    expect(AdsConsent.requestInfoUpdate).toHaveBeenCalled();
-    expect(AdsConsent.loadAndShowConsentFormIfRequired).toHaveBeenCalled();
-
-    // Verify ATT NOT called yet
-    expect(requestTrackingPermissionsAsync).not.toHaveBeenCalled();
-
-    // 2. User accepts Primer
-    await act(async () => {
-      result.current.onPrimerContinue();
+    // Advance time for the stability delay
+    act(() => {
+      jest.advanceTimersByTime(1000);
     });
 
-    // 3. Wait for initialization
+    // 2. Wait for initialization
     await waitFor(() => expect(result.current.initialized).toBe(true));
 
-    // Verify ATT called NOW
+    // Verify ATT called
     expect(requestTrackingPermissionsAsync).toHaveBeenCalled();
   });
 
@@ -65,6 +65,12 @@ describe("usePrivacySequence", () => {
     (getTrackingPermissionsAsync as jest.Mock).mockResolvedValue({ status: "granted" });
 
     const { result } = renderHook(() => usePrivacySequence());
+
+    await waitFor(() => expect(AdsConsent.requestInfoUpdate).toHaveBeenCalled());
+
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
 
     await waitFor(() => expect(result.current.initialized).toBe(true));
 
@@ -75,6 +81,12 @@ describe("usePrivacySequence", () => {
     (AdsConsent.requestInfoUpdate as jest.Mock).mockRejectedValue(new Error("Network fail"));
 
     const { result } = renderHook(() => usePrivacySequence());
+
+    await waitFor(() => expect(AdsConsent.requestInfoUpdate).toHaveBeenCalled());
+
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
 
     await waitFor(() => expect(result.current.initialized).toBe(true));
 

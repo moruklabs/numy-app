@@ -1,12 +1,11 @@
 import { ConfigContext, ExpoConfig } from "expo/config";
 import pkg from "./package.json";
 import withModularHeaders from "./src/shared/config/src/plugins/withModularHeaders";
-
 const config = ({ config }: ConfigContext): ExpoConfig => {
   // Firebase configuration files (from root directory)
   const iosGoogleServicesFile = "./GoogleService-Info.plist";
 
-  // App settings (synced with src/config/settings.ts)
+  // App settings (synced manualy with src/config/settings.ts due to resolution issues)
   const appSettings = {
     name: "Numy",
     bundleId: "ai.moruk.numy",
@@ -25,7 +24,7 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
     [
       "expo-tracking-transparency",
       {
-        userTrackingPermission: "This app uses ads to provide free access to calculator features.",
+        userTrackingPermission: "This identifier will be used to deliver personalized ads to you.",
       },
     ],
     [
@@ -33,7 +32,7 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
       {
         androidAppId: appSettings.ads.androidAppId,
         iosAppId: appSettings.ads.iosAppId,
-        userTrackingPermission: "This app uses ads to provide free access to calculator features.",
+        userTrackingPermission: "This identifier will be used to deliver personalized ads to you.",
       },
     ],
     [
@@ -57,8 +56,6 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
       googleServicesFile: iosGoogleServicesFile,
       infoPlist: {
         ...config.ios?.infoPlist,
-        NSUserTrackingUsageDescription:
-          "This app uses ads to provide free access to calculator features.",
       },
     },
     runtimeVersion: appSettings.version,

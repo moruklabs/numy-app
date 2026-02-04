@@ -113,13 +113,4 @@ describe("Expo Configuration", () => {
       expect(typeof config.updates?.fallbackToCacheTimeout).toBe("number");
     });
   });
-
-  describe("iOS Info.plist Configuration", () => {
-    test("should have NSUserTrackingUsageDescription in infoPlist", () => {
-      const infoPlist = config.ios?.infoPlist as Record<string, unknown> | undefined;
-      expect(infoPlist?.NSUserTrackingUsageDescription).toBeDefined();
-      expect(typeof infoPlist?.NSUserTrackingUsageDescription).toBe("string");
-      expect((infoPlist?.NSUserTrackingUsageDescription as string).length).toBeGreaterThan(10);
-    });
-  });
 });

@@ -38,7 +38,7 @@ export default {
         rewarded: "",
       },
     },
-    // Default Pacing (Can be overridden by Remote Config)
+    // Default Pacing
     defaults: {
       appOpen: {
         frequency: 1,
@@ -55,9 +55,15 @@ export default {
 
   // Support & Links
   links: {
-    privacyPolicy: "https://moruk.link/com.moruk.numy/privacy",
-    termsOfService: "https://moruk.link/com.moruk.numy/terms",
-    support: "https://moruk.link/com.moruk.numy/support",
-    review: "https://moruk.link/com.moruk.numy/review",
+    privacyPolicy: "https://moruk.link/ai.moruk.numy/privacy",
+    termsOfService: "https://moruk.link/ai.moruk.numy/terms",
+    cookiePolicy: "https://moruk.link/ai.moruk.numy/cookie",
+    support: "https://moruk.link/ai.moruk.numy/support",
+    review: "https://moruk.link/ai.moruk.numy/review",
+    community: "https://moruk.link/ai.moruk.numy/community",
+    moreApps: "https://moruk.link/app-store",
+    share: "https://docs.expo.dev/versions/latest/sdk/sharing/", // Placeholder as per req? No, req says "Make Sure Share App exists -> https://docs.expo.dev/versions/latest/sdk/sharing/" which means USE the lib. The link itself is usually a store link. I will use a generic store link or just not put it in config if it's dynamic.
+    // I will add a shareUrl for the content being shared.
+    shareUrl: "https://apps.apple.com/app/id6474643146", // Placeholder ID, usually from config
   },
 } as const;

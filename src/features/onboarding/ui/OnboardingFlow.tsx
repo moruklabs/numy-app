@@ -1,23 +1,24 @@
+import { adService } from "@/features/ads";
 import { colors, spacing, typography } from "@/presentation/theme";
 import * as Haptics from "expo-haptics";
 import { useState } from "react";
 import { Platform, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useOnboardingState } from "../model/useOnboardingState";
+import { PageAdPact } from "./pages/PageAdPact";
 import { PageHook } from "./pages/PageHook";
-import { PagePermissions } from "./pages/PagePermissions";
 import { PagePersonalization } from "./pages/PagePersonalization";
+import { PagePrivacyHandshake } from "./pages/PagePrivacyHandshake";
 
 interface OnboardingFlowProps {
   onComplete: () => void;
 }
 
-const TOTAL_STEPS = 3;
+const TOTAL_STEPS = 4;
 
 export const OnboardingFlow = ({ onComplete }: OnboardingFlowProps) => {
   const [currentStep, setCurrentStep] = useState(0);
   const { userGoal, completeOnboarding } = useOnboardingState();
-  const [permissionsReady, setPermissionsReady] = useState(false);
 
   const handleNext = async () => {
     if (currentStep < TOTAL_STEPS - 1) {
@@ -32,6 +33,10 @@ export const OnboardingFlow = ({ onComplete }: OnboardingFlowProps) => {
       }
       completeOnboarding();
       onComplete();
+
+      // Preload ads immediately after onboarding
+      adService.loadInterstitial();
+      adService.loadAppOpenAd();
     }
   };
 
@@ -47,8 +52,6 @@ export const OnboardingFlow = ({ onComplete }: OnboardingFlowProps) => {
   const isNextDisabled = () => {
     // Page 2 (Index 1): Personalization - disabled if no goal selected
     if (currentStep === 1 && !userGoal) return true;
-    // Page 3 (Index 2): Permissions - disabled if not ready
-    if (currentStep === 2 && !permissionsReady) return true;
     return false;
   };
 
@@ -59,7 +62,9 @@ export const OnboardingFlow = ({ onComplete }: OnboardingFlowProps) => {
       case 1:
         return <PagePersonalization />;
       case 2:
-        return <PagePermissions onReady={() => setPermissionsReady(true)} />;
+        return <PagePrivacyHandshake />;
+      case 3:
+        return <PageAdPact />;
       default:
         return null;
     }

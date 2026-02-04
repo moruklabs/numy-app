@@ -16,13 +16,11 @@
     },
     "owner": "morukhq",
     "ios": {
-      "buildNumber": "9"
+      "buildNumber": "12"
     },
     "android": {
-      "versionCode": 9,
-      "permissions": [
-        "com.google.android.gms.permission.AD_ID"
-      ],
+      "versionCode": 12,
+      "permissions": ["com.google.android.gms.permission.AD_ID"],
       "package": "ai.moruk.numy"
     }
   }
