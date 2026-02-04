@@ -1,5 +1,5 @@
-import { colors, spacing, typography } from "@/presentation/theme";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { colors, spacing, typography } from "../../../../presentation/theme";
 import { useOnboardingState } from "../../model/useOnboardingState";
 
 const GOALS = [
