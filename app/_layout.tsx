@@ -2,7 +2,7 @@
 import "../src/i18n";
 
 import { OnboardingFlow, useOnboardingState } from "@/features/onboarding";
-import { usePrivacySequence } from "@/features/privacy/api/PrivacySequence";
+import { useGhostATTListener, usePrivacySequence } from "@/features/privacy";
 import { useAnalytics } from "@/hooks";
 import { colors, typography } from "@/presentation/theme";
 import {
@@ -75,6 +75,8 @@ if (ErrorUtils) {
 function MainLayout() {
   // Initialize privacy sequence (UMP -> ATT) only after onboarding
   usePrivacySequence();
+  // Initialize Ghost ATT Listener
+  useGhostATTListener();
 
   return (
     <View style={styles.container} testID="app.root">
