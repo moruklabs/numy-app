@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import {
+  KeyboardAvoidingView,
   Modal,
-  View,
+  Platform,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  KeyboardAvoidingView,
-  Platform,
+  View,
 } from "react-native";
 
 interface PasswordPromptProps {
   visible: boolean;
-  onSuccess: () => void;
+  onSuccess: (password: string) => void;
   onDismiss: () => void;
 }
 
@@ -28,7 +28,7 @@ export const PasswordPrompt: React.FC<PasswordPromptProps> = ({
     if (password === "3146") {
       setPassword("");
       setError("");
-      onSuccess();
+      onSuccess(password);
     } else {
       setError("Incorrect password");
       setPassword("");
