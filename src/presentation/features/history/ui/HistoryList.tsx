@@ -1,4 +1,4 @@
-import { FlashList } from "@shopify/flash-list";
+import { FlashList, ListRenderItem } from "@shopify/flash-list";
 import * as Haptics from "expo-haptics";
 import { useRouter } from "expo-router";
 import React, { useCallback } from "react";
@@ -6,21 +6,21 @@ import { useTranslation } from "react-i18next";
 import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import ReanimatedSwipeable from "react-native-gesture-handler/ReanimatedSwipeable";
 import Reanimated, { SharedValue, useAnimatedStyle } from "react-native-reanimated";
-import { useCalculatorStore, type CalculatorState } from "@/stores/calculatorStore";
-import { Document } from "@/domain/entities/Document";
-import { colors, spacing, typography } from "@/presentation/theme";
+import { Document } from "../../../../domain/entities/Document";
+import { useCalculatorStore, type CalculatorState } from "../../../../stores/calculatorStore";
+import { colors, spacing, typography } from "../../../theme";
 
 function RightActions({
   drag,
   onDelete,
   documentTitle,
   deleteLabel,
-}: {
+}: Readonly<{
   drag: SharedValue<number>;
   onDelete: () => void;
   documentTitle: string;
   deleteLabel: string;
-}) {
+}>) {
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ translateX: drag.value + 80 }],
   }));
@@ -104,8 +104,8 @@ export function HistoryList() {
         {
           text: tCommon("delete"),
           style: "destructive",
-          onPress: async () => {
-            await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+          onPress: () => {
+            void Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
             deleteDocument(docId);
             // Close the swipeable after delete
             setOpenSwipeableId(null);
@@ -116,8 +116,8 @@ export function HistoryList() {
     [deleteDocument, t, tCommon]
   );
 
-  const renderItem = useCallback(
-    ({ item }: { item: Document }) => (
+  const renderItem: ListRenderItem<Document> = useCallback(
+    ({ item }) => (
       <ReanimatedSwipeable
         friction={2}
         rightThreshold={40}
