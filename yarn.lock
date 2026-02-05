@@ -2859,7 +2859,7 @@ __metadata:
     "@babel/core": "npm:7.29.0"
     "@react-native-async-storage/async-storage": "npm:2.2.0"
     "@react-native-firebase/analytics": "npm:23.8.5"
-    "@react-native-firebase/app": "npm:23.8.5"
+    "@react-native-firebase/app": "npm:23.8.6"
     "@react-native-firebase/crashlytics": "npm:23.8.5"
     "@sentry/react-native": "npm:7.2.0"
     "@shopify/flash-list": "npm:2.0.2"
@@ -3446,9 +3446,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-firebase/app@npm:23.8.5":
-  version: 23.8.5
-  resolution: "@react-native-firebase/app@npm:23.8.5"
+"@react-native-firebase/app@npm:23.8.6":
+  version: 23.8.6
+  resolution: "@react-native-firebase/app@npm:23.8.6"
   dependencies:
     firebase: "npm:12.8.0"
   peerDependencies:
@@ -3458,7 +3458,7 @@ __metadata:
   peerDependenciesMeta:
     expo:
       optional: true
-  checksum: 10c0/29c2edfcce4815eb3fc011f7ce501db1c933e816ede3ebdb2d574d3743dc3dd5f615c9b1d2e66916f625cfbdd1345cfe6838a98496d0ef624f39c675d4c6d4ba
+  checksum: 10c0/40128fe596d951477bb57a1d765696cd14cd5ce48e68f214022b7eb86e631589e4c3c7123dc13bf6c9cd4c5d9888c6256e235e9a596531141916df8578700604
   languageName: node
   linkType: hard
 
