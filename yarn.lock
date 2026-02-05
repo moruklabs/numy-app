@@ -2858,7 +2858,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:7.29.0"
     "@react-native-async-storage/async-storage": "npm:2.2.0"
-    "@react-native-firebase/analytics": "npm:23.8.5"
+    "@react-native-firebase/analytics": "npm:23.8.6"
     "@react-native-firebase/app": "npm:23.8.5"
     "@react-native-firebase/crashlytics": "npm:23.8.5"
     "@sentry/react-native": "npm:7.2.0"
@@ -3435,14 +3435,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-firebase/analytics@npm:23.8.5":
-  version: 23.8.5
-  resolution: "@react-native-firebase/analytics@npm:23.8.5"
+"@react-native-firebase/analytics@npm:23.8.6":
+  version: 23.8.6
+  resolution: "@react-native-firebase/analytics@npm:23.8.6"
   dependencies:
     superstruct: "npm:^2.0.2"
   peerDependencies:
-    "@react-native-firebase/app": 23.8.5
-  checksum: 10c0/a302fca8f2ac800a6126371baef9fad3bfe0c04b2642928fd3a5c0f2cc582a36f0579b7f7a659da2571e5a8849b2e49be9def04924dbe467509ab96df9a08291
+    "@react-native-firebase/app": 23.8.6
+  checksum: 10c0/65ccac47fc1dbb52195930ec0ca8c46c431b28a2b94afb8bc2b2d8e947d7e53d6c732fd15b4f6a0e8e006f32c67f793eac3e193942c5d41f2ffb50f0acd2f7ba
   languageName: node
   linkType: hard
 
