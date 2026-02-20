@@ -5,6 +5,10 @@ set dotenv-load := true
 default:
     @just --list
 
+# Internal: verify bun + node prerequisites (cached for 1 hour)
+_check-prereqs:
+    @../../shared/scripts/check-prereqs.sh
+
 # ============================================================
 # Development
 # ============================================================
@@ -12,7 +16,7 @@ default:
 # Start development server or run app with flags
 # Usage: just run [--build] [--android] [--clean] [--no-cache]
 run *args:
-    ./scripts/just-run.sh {{args}}
+    ../../shared/scripts/just-run.sh {{args}}
 
 # Alias for run
 start *args:
@@ -31,14 +35,14 @@ android:
 # ============================================================
 
 # Run full validation (type-check, lint, format, doctor, test, circular, metadata, ads)
-validate:
-    @yarn type-check
-    @yarn lint
-    @yarn format
+validate: _check-prereqs
+    @bun run type-check
+    @bun run lint
+    @bun run format
     @npx expo-doctor > /dev/null
-    @yarn test
+    @bun run test
     @just check-circular
-    @yarn validate:metadata
+    @bun run validate: _check-prereqsmetadata
     @node scripts/test-ads-schema.js
 
 # Run deep validation including E2E tests
@@ -49,26 +53,70 @@ validate-deep: validate
 check-circular:
     @npx dpdm --no-tree --no-warning --exit-code circular:1 app/_layout.tsx > /dev/null
 
+# Run lint tests (used by root just _run-all test-lint)
+test-lint:
+    bun run test:lint
+
+# Validate store metadata (used by root just _run-all check-metadata)
+check-metadata:
+    bun run validate:metadata
+
+# Validate AdMob schema (used by root just _run-all check-ads-schema)
+check-ads-schema:
+    bun run validate:ads
+
+# Validate localization (used by root just _run-all check-localization)
+check-localization:
+    bun run validate:metadata
+
 # Run tests
 test *args:
-    yarn test {{args}}
+    bun run test {{args}}
 
 # Type check
 type-check:
-    yarn type-check
+    bun run type-check
 
 # Lint code
 lint:
-    yarn lint
+    bun run lint
+
+# Fix lint issues
+lint-fix:
+    bun run lint:fix
+
+# Check formatting
+format:
+    bun run format
+
+# Fix formatting issues
+format-fix:
+    bun run format:fix
+
+# Run expo doctor
+doctor:
+    bun run doctor
+
+# Fix expo doctor issues
+doctor-fix:
+    bun run doctor:fix
+
+# EAS/Expo config validation
+eas-config:
+    eas config --profile preview --platform ios
+eas-inspect:
+    eas build:inspect --platform ios --stage pre-build --output ./inspect-output
+prebuild-check:
+    npx expo prebuild --platform ios --clear
 
 # Fix all issues (lint, format, doctor)
 fix:
-    yarn fix
+    bun run fix
 
 # Run AI translations for app and store metadata
 # Usage: just translate [app|store|all]
 translate mode="all":
-    yarn translate {{mode}}
+    bun run translate {{mode}}
 
 # ============================================================
 # Building & Release
@@ -89,7 +137,7 @@ build-android:
 #   just build-submit production patch   # production build & submit, bump patch
 #   just build-submit preview            # preview build only
 build-submit *args:
-    ./scripts/ios-build-submit.sh {{args}}
+    ../../shared/scripts/build/ios_build_submit.sh {{args}}
 
 # Upload sourcemaps to Sentry (requires SENTRY_AUTH_TOKEN)
 upload-sourcemaps platform="android":
@@ -111,11 +159,11 @@ upload-sourcemaps platform="android":
 
 # Clean build artifacts
 clean:
-    yarn run clean
+    bun run clean
 
 # Kill process on port 2007
 killport:
-    ./scripts/killport.sh 2007
+    PYTHONPATH=../../ python3 -m scripts.killport 2007
 
 # Sync Firebase symlinks (legacy compatibility)
 sync-firebase:
@@ -123,3 +171,11 @@ sync-firebase:
     @cp secrets/info-plists/numy-GoogleService-Info.plist firebase/development/GoogleService-Info.plist
     @cp secrets/info-plists/numy-GoogleService-Info.plist firebase/production/GoogleService-Info.plist
     @echo "✅ Firebase configuration files synced to firebase/ from secrets/"
+
+# Show app kanban board
+board:
+	PYTHONPATH="../../.." python3 -m shared.scripts.product_management.kanban_board --app numy
+
+# Show app status
+status:
+	PYTHONPATH="../../.." python3 -m shared.scripts.product_management.workspace_status --app numy

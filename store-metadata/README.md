@@ -55,17 +55,17 @@ Before pushing to App Store Connect, merge all files and validate:
 
 ```bash
 # Merge all files into store.config.json with validation
-yarn run metadata:merge
+bun run metadata:merge
 
 # Run tests to ensure everything is valid
-yarn run test:metadata
+bun run test:metadata
 ```
 
 ### Pushing to App Store Connect
 
 ```bash
 # This automatically merges before pushing
-yarn run metadata:push
+bun run metadata:push
 ```
 
 ### Splitting After Pull
@@ -74,10 +74,10 @@ If you pull metadata from App Store Connect:
 
 ```bash
 # Pull from App Store Connect
-yarn run metadata:pull
+bun run metadata:pull
 
 # Split the monolithic file back into modular structure
-yarn run metadata:split
+bun run metadata:split
 ```
 
 ## ✅ ASO Validation Rules
@@ -137,7 +137,7 @@ Each locale file must contain:
 Run the test suite to validate all metadata:
 
 ```bash
-yarn run test:metadata
+bun run test:metadata
 ```
 
 Tests verify:
@@ -158,23 +158,23 @@ Tests verify:
 vim store-metadata/locales/en-US.json
 
 # 2. Validate & merge
-yarn run metadata:merge
+bun run metadata:merge
 
 # 3. Run tests
-yarn run test:metadata
+bun run test:metadata
 
 # 4. Push to App Store Connect
-yarn run metadata:push
+bun run metadata:push
 ```
 
 ### After Pulling from App Store Connect
 
 ```bash
 # 1. Pull latest
-yarn run metadata:pull
+bun run metadata:pull
 
 # 2. Split into modular files
-yarn run metadata:split
+bun run metadata:split
 
 # 3. Commit modular files
 git add store-metadata/
@@ -199,10 +199,10 @@ git commit -m "Update metadata from App Store Connect"
 
 | Command                   | Description                                |
 | ------------------------- | ------------------------------------------ |
-| `yarn run metadata:merge` | Merge modular files into store.config.json |
-| `yarn run metadata:split` | Split store.config.json into modular files |
-| `yarn run metadata:push`  | Merge & push to App Store Connect          |
-| `yarn run test:metadata`  | Run validation tests                       |
+| `bun run metadata:merge` | Merge modular files into store.config.json |
+| `bun run metadata:split` | Split store.config.json into modular files |
+| `bun run metadata:push`  | Merge & push to App Store Connect          |
+| `bun run test:metadata`  | Run validation tests                       |
 
 ## 📚 Additional Resources
 

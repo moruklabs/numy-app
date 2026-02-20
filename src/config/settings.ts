@@ -9,6 +9,7 @@ export default {
   features: {
     darkMode: true,
     ads: true,
+    showAppOpenAd: true,
     analytics: true,
     crashlytics: true,
     sentry: true,

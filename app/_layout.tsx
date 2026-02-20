@@ -15,8 +15,10 @@ import {
 import * as Sentry from "@sentry/react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { useEffect } from "react";
+import { AppState, type AppStateStatus, Platform, StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import settings from "@/config/settings";
 
 Sentry.init({
   dsn: "https://fc334c47ed5d1e6b4be2302e4b5bd93c@o4510417138352128.ingest.de.sentry.io/4510812305358928",
@@ -78,6 +80,58 @@ function MainLayout() {
   // Initialize Ghost ATT Listener
   useGhostATTListener();
 
+  // --- OTA Update Check ---
+  useEffect(() => {
+    if (__DEV__) return;
+    const lastCheck = { current: 0 };
+    const check = async () => {
+      const now = Date.now();
+      if (now - lastCheck.current < 5 * 60 * 1000) return;
+      lastCheck.current = now;
+      try {
+        const Updates = await import("expo-updates");
+        const result = await Updates.checkForUpdateAsync();
+        if (result.isAvailable) await Updates.fetchUpdateAsync();
+      } catch (_) {}
+    };
+    check();
+    const sub = AppState.addEventListener("change", (s: AppStateStatus) => {
+      if (s === "active") check();
+    });
+    return () => sub.remove();
+  }, []);
+
+  // --- App Open Ad ---
+  useEffect(() => {
+    if (__DEV__ || !settings.features.showAppOpenAd) return;
+    const adUnitId =
+      Platform.OS === "ios" ? settings.ads.units.ios.appOpen : settings.ads.units.android.appOpen;
+    if (!adUnitId) return;
+    let cleanup: (() => void) | undefined;
+    (async () => {
+      try {
+        const { AppOpenAd, AdEventType } = await import("react-native-google-mobile-ads");
+        const AsyncStorage = (await import("@react-native-async-storage/async-storage")).default;
+        const KEY = "@numy:app_open_last_shown";
+        const today = new Date().toISOString().split("T")[0];
+        const showIfOk = async (ad: any) => {
+          const last = await AsyncStorage.getItem(KEY);
+          if (last === today) return;
+          ad.show();
+          await AsyncStorage.setItem(KEY, today);
+        };
+        const ad = AppOpenAd.createForAdRequest(adUnitId);
+        ad.addAdEventListener(AdEventType.LOADED, () => showIfOk(ad));
+        ad.load();
+        const sub = AppState.addEventListener("change", (s: AppStateStatus) => {
+          if (s === "active") showIfOk(ad).catch(() => {});
+        });
+        cleanup = () => sub.remove();
+      } catch (_) {}
+    })();
+    return () => cleanup?.();
+  }, []);
+
   return (
     <View style={styles.container} testID="app.root">
       <StatusBar style="light" />
@@ -128,6 +182,8 @@ export default Sentry.wrap(function RootLayout() {
   }
 
   return <MainLayout />;
+
+  // --- OTA + App Open Ad hooks are in MainLayout below ---
 });
 
 const styles = StyleSheet.create({

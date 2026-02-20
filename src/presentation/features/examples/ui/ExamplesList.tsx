@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View } from "react-native";
-import { colors, spacing, typography } from "../../../../presentation/theme";
+import { colors, spacing, typography } from "../../../theme";
 
 export function ExamplesList() {
   const { t } = useTranslation("history");
