@@ -1,3 +1,4 @@
+// posthog: analytics transport (see @moruk/observability)
 export default {
   // App Metadata
   name: "Numy",

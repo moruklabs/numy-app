@@ -233,10 +233,6 @@ cs, sk, hu, ro, el, tr, he, th, vi, id, ms, ca, hr, uk
 
 ## Related Documentation
 
-- [LOCALIZATION_ANALYSIS_REVISED.md](../../docs/LOCALIZATION_ANALYSIS_REVISED.md) - Full analysis and plan
-- [LOCALIZATION_COMPARISON.md](../../docs/LOCALIZATION_COMPARISON.md) - Package vs. lib approach comparison
-- [LOCALIZATION_ARCHITECTURE.md](../../docs/LOCALIZATION_ARCHITECTURE.md) - Visual diagrams
-
 ## Migration from Old Scripts
 
 Old duplicate scripts in individual apps should be deleted:

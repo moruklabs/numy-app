@@ -53,6 +53,10 @@ validate-deep: validate
 check-circular:
     @npx dpdm --no-tree --no-warning --exit-code circular:1 app/_layout.tsx > /dev/null
 
+# Check for code duplication (copy-paste detection)
+check-duplication:
+    @bunx jscpd src/
+
 # Run lint tests (used by root just _run-all test-lint)
 test-lint:
     bun run test:lint
@@ -103,11 +107,12 @@ doctor-fix:
 
 # EAS/Expo config validation
 eas-config:
-    eas config --profile preview --platform ios
+    eas config --profile preview --platform ios --non-interactive
 eas-inspect:
-    eas build:inspect --platform ios --stage pre-build --output ./inspect-output
+    rm -rf ./inspect-output
+    gtimeout 90 eas build:inspect --platform ios --stage pre-build --output ./inspect-output
 prebuild-check:
-    npx expo prebuild --platform ios --clear
+    CI=1 npx expo prebuild --platform ios
 
 # Fix all issues (lint, format, doctor)
 fix:
@@ -163,7 +168,7 @@ clean:
 
 # Kill process on port 2007
 killport:
-    PYTHONPATH=../../ python3 -m scripts.killport 2007
+    PYTHONPATH=../../ python3 -m shared.scripts.killport 2010
 
 # Sync Firebase symlinks (legacy compatibility)
 sync-firebase:

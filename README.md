@@ -88,7 +88,7 @@ yarn check:deps        # Check for dependency issues
 
 ## Architecture
 
-Apps follow [Feature-Sliced Design](docs/fsd-guides/README.md) methodology:
+Apps follow Feature-Sliced Design methodology:
 
 ```
 app/           # Expo Router routes & providers
@@ -101,11 +101,6 @@ src/
 ```
 
 ## Documentation
-
-- [FSD Architecture Guide](docs/fsd-guides/README.md)
-- [Dependency Management](docs/DEPENDENCY_MANAGEMENT.md)
-- [Localization Guide](docs/LOCALIZATION_README.md)
-- [Validation Troubleshooting](docs/VALIDATION_TROUBLESHOOTING.md)
 
 ## API Endpoints
 

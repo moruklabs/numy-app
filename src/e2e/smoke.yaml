@@ -1,0 +1,6 @@
+appId: "ai.moruk.numy"
+name: "App launches"
+tags: [smoke]
+priority: P0
+---
+- launchApp: {}

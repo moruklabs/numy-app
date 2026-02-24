@@ -4,6 +4,7 @@ import withModularHeaders from "./src/shared/config/src/plugins/withModularHeade
 const config = ({ config }: ConfigContext): ExpoConfig => {
   // Firebase configuration files (from root directory)
   const iosGoogleServicesFile = "./GoogleService-Info.plist";
+  const androidGoogleServicesFile = "./google-services.json";
 
   // App settings (synced manualy with src/config/settings.ts due to resolution issues)
   const appSettings = {
@@ -58,6 +59,10 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
         ...config.ios?.infoPlist,
       },
     },
+    android: {
+      ...config.android,
+      googleServicesFile: androidGoogleServicesFile,
+    },
     runtimeVersion: appSettings.version,
     updates: {
       enabled: true,
@@ -66,6 +71,9 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
     plugins: [...plugins, withModularHeaders] as any,
     extra: {
       ...config.extra,
+      eas: {
+        projectId: "c458cacb-2677-48f8-afd4-77eaf0abf4a2",
+      },
       SENTRY_DSN: appSettings.sentry.dsn,
       sentry: {
         organization: "moruk",
