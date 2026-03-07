@@ -77,11 +77,11 @@ class AdService {
         await this.loadDailyCount("interstitial", this.config.storageKeys.interstitialDailyCount);
         await this.loadDailyCount("appOpen", this.config.storageKeys.appOpenDailyCount);
       } catch (e) {
-        console.warn("Failed to load ad timestamps", e);
+        logger.warn("Failed to load ad timestamps", e);
       }
     }
 
-    console.log("AdMob Initialized");
+    logger.info("AdMob Initialized");
   }
 
   private async loadDailyCount(type: string, key: string) {
@@ -127,7 +127,7 @@ class AdService {
 
     // Check frequency caps
     if (this.isFrequencyCapped(this.config.interstitial, "interstitial")) {
-      console.log("Interstitial frequency capped");
+      logger.info("Interstitial frequency capped");
       return;
     }
 
@@ -142,7 +142,7 @@ class AdService {
 
     this.interstitial.addAdEventListener(AdEventType.ERROR, (error) => {
       this.isInterstitialLoading = false;
-      console.error("Interstitial load error", error);
+      logger.error("Interstitial load error", error);
       callbacks?.onError?.(error);
     });
 
@@ -163,7 +163,7 @@ class AdService {
     if (this.interstitial && this.isInterstitialLoaded) {
       this.interstitial.show();
     } else {
-      console.warn("Interstitial not ready");
+      logger.warn("Interstitial not ready");
       // Attempt load if not ready?
       this.loadInterstitial();
     }
@@ -191,7 +191,7 @@ class AdService {
 
     // Check frequency caps
     if (this.isFrequencyCapped(this.config.appOpen, "appOpen")) {
-      console.log("App Open Ad frequency capped");
+      logger.info("App Open Ad frequency capped");
       return;
     }
 
@@ -206,7 +206,7 @@ class AdService {
 
     this.appOpenAd.addAdEventListener(AdEventType.ERROR, (error) => {
       this.isAppOpenLoading = false;
-      console.error("App Open Ad load error", error);
+      logger.error("App Open Ad load error", error);
       callbacks?.onError?.(error);
     });
 
@@ -224,7 +224,7 @@ class AdService {
     if (this.appOpenAd && this.isAppOpenLoaded) {
       this.appOpenAd.show();
     } else {
-      console.warn("App Open Ad not ready");
+      logger.warn("App Open Ad not ready");
     }
   }
 
@@ -234,7 +234,7 @@ class AdService {
 
     // Interval check
     if (now - lastShown < config.intervalMs) {
-      console.log(
+      logger.info(
         `Frequency Capped: ${type}. Time since last: ${now - lastShown}ms < ${config.intervalMs}ms`
       );
       return true;
@@ -242,7 +242,7 @@ class AdService {
 
     // Session Cap
     if (this.sessionImpressions[type] >= config.maxImpressionsPerSession) {
-      console.log(
+      logger.info(
         `Session Capped: ${type}. Impressions: ${this.sessionImpressions[type]} >= ${config.maxImpressionsPerSession}`
       );
       return true;
@@ -258,7 +258,7 @@ class AdService {
     }
 
     if (this.dailyImpressions[type].count >= config.maxImpressionsPerDay) {
-      console.log(`Daily Capped: ${type}. Count: ${this.dailyImpressions[type].count}`);
+      logger.info(`Daily Capped: ${type}. Count: ${this.dailyImpressions[type].count}`);
       return true;
     }
 
@@ -325,11 +325,11 @@ class AdService {
           this.config.storageKeys.appOpenDailyCount,
         ]);
       } catch (e) {
-        console.warn("Failed to reset storage", e);
+        logger.warn("Failed to reset storage", e);
       }
     }
 
-    console.log("Ad Limits Reset");
+    logger.info("Ad Limits Reset");
   }
 
   public getStats() {

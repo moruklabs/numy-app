@@ -1,5 +1,6 @@
 import { useCallback, useRef } from "react";
 import { adService } from "../model/AdService";
+import { logger } from "@moruk/logger";
 
 interface AdCondition {
   screen: string;
@@ -36,7 +37,7 @@ export function useConditionalInterstitial({
     // Parse condition (e.g., "count > 3")
     const match = matchingCondition.condition.match(/count\s*([><=]+)\s*(\d+)/);
     if (!match) {
-      console.warn("Invalid condition format:", matchingCondition.condition);
+      logger.warn("Invalid condition format:", matchingCondition.condition);
       return false;
     }
 
@@ -58,7 +59,7 @@ export function useConditionalInterstitial({
         conditionMet = count === threshold;
         break;
       default:
-        console.warn("Unsupported operator:", operator);
+        logger.warn("Unsupported operator:", operator);
     }
 
     // Show ad if condition met and not already shown

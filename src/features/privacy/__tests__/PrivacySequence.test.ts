@@ -5,6 +5,7 @@ import {
 } from "expo-tracking-transparency";
 import { AdsConsent } from "react-native-google-mobile-ads";
 import { usePrivacySequence } from "../api/PrivacySequence";
+import { logger } from "@moruk/logger";
 
 // Properly mock dependencies
 jest.mock("expo-tracking-transparency", () => ({
@@ -19,11 +20,19 @@ jest.mock("react-native-google-mobile-ads", () => ({
   },
 }));
 
+jest.mock("@moruk/logger", () => ({
+  logger: {
+    info: jest.fn(),
+    debug: jest.fn(),
+    warn: jest.fn(),
+    error: jest.fn(),
+  },
+}));
+
 describe("usePrivacySequence", () => {
   beforeEach(() => {
     jest.useFakeTimers();
     jest.clearAllMocks();
-    jest.spyOn(console, "error").mockImplementation(() => {});
     (AdsConsent.requestInfoUpdate as jest.Mock).mockResolvedValue(undefined);
     (AdsConsent.loadAndShowConsentFormIfRequired as jest.Mock).mockResolvedValue({
       canRequestAds: true,
@@ -90,6 +99,6 @@ describe("usePrivacySequence", () => {
 
     await waitFor(() => expect(result.current.initialized).toBe(true));
 
-    expect(console.error).toHaveBeenCalledWith("Privacy sequence failed", expect.any(Error));
+    expect(logger.error).toHaveBeenCalledWith("Privacy sequence failed", expect.any(Error));
   });
 });

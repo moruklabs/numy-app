@@ -4,6 +4,7 @@ import {
 } from "expo-tracking-transparency";
 import { useEffect, useRef, useState } from "react";
 import { AdsConsent } from "react-native-google-mobile-ads";
+import { logger } from "@moruk/logger";
 
 export function usePrivacySequence() {
   const [initialized, setInitialized] = useState(false);
@@ -35,7 +36,7 @@ export function usePrivacySequence() {
         setInitialized(true);
         running.current = false;
       } catch (error) {
-        console.error("Privacy sequence failed", error);
+        logger.error("Privacy sequence failed", error);
         setInitialized(true);
         running.current = false;
       }

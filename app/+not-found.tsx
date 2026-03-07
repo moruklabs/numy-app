@@ -1,6 +1,6 @@
 import { Link, Stack } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "node_modules/react-i18next";
 
 import { colors } from "@/presentation/theme";
 

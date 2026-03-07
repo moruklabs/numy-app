@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import { ResetService } from "../model/ResetService";
+import { logger } from "@moruk/logger";
 
 export const useGlobalReset = () => {
   const [isResetting, setIsResetting] = useState(false);
@@ -9,7 +10,7 @@ export const useGlobalReset = () => {
     try {
       await ResetService.performGlobalReset();
     } catch (error) {
-      console.error("Reset failed:", error);
+      logger.error("Reset failed:", error);
       setIsResetting(false);
     }
   }, []);

@@ -5,6 +5,7 @@ import {
 } from "expo-tracking-transparency";
 import { useEffect, useRef } from "react";
 import { AppState, AppStateStatus } from "react-native";
+import { logger } from "@moruk/logger";
 
 const ATT_CHECK_KEY = "has_checked_att_change";
 
@@ -49,7 +50,7 @@ export const useGhostATTListener = () => {
           await requestTrackingPermissionsAsync();
         }
       } catch (e) {
-        console.error("Ghost ATT check failed", e);
+        logger.error("Ghost ATT check failed", e);
       }
     };
 

@@ -8,7 +8,7 @@ import {
   NativeSyntheticEvent,
   TextInputKeyPressEventData,
 } from "react-native";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "node_modules/react-i18next";
 import { Line } from "@/domain/entities/Line";
 import { colors, typography, spacing, TIMING } from "../../theme";
 import { useDebounce } from "@/hooks";

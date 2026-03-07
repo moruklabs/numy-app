@@ -7,7 +7,7 @@ default:
 
 # Internal: verify bun + node prerequisites (cached for 1 hour)
 _check-prereqs:
-    @../../shared/scripts/check-prereqs.sh
+    @../../scripts/check-prereqs.sh
 
 # ============================================================
 # Development
@@ -16,7 +16,7 @@ _check-prereqs:
 # Start development server or run app with flags
 # Usage: just run [--build] [--android] [--clean] [--no-cache]
 run *args:
-    ../../shared/scripts/just-run.sh {{args}}
+    ../../scripts/just-run.sh {{args}}
 
 # Alias for run
 start *args:
@@ -142,7 +142,7 @@ build-android:
 #   just build-submit production patch   # production build & submit, bump patch
 #   just build-submit preview            # preview build only
 build-submit *args:
-    ../../shared/scripts/build/ios_build_submit.sh {{args}}
+    ../../scripts/build/ios_build_submit.sh {{args}}
 
 # Upload sourcemaps to Sentry (requires SENTRY_AUTH_TOKEN)
 upload-sourcemaps platform="android":
@@ -168,7 +168,7 @@ clean:
 
 # Kill process on port 2007
 killport:
-    PYTHONPATH=../../ python3 -m shared.scripts.killport 2010
+    PYTHONPATH=../../ python3 -m scripts.killport 2010
 
 # Sync Firebase symlinks (legacy compatibility)
 sync-firebase:
@@ -179,8 +179,8 @@ sync-firebase:
 
 # Show app kanban board
 board:
-	PYTHONPATH="../../.." python3 -m shared.scripts.product_management.kanban_board --app numy
+	PYTHONPATH="../../.." python3 -m scripts.product_management.kanban_board --app numy
 
 # Show app status
 status:
-	PYTHONPATH="../../.." python3 -m shared.scripts.product_management.workspace_status --app numy
+	PYTHONPATH="../../.." python3 -m scripts.product_management.workspace_status --app numy

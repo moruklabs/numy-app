@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "node_modules/react-i18next";
 import { StyleSheet, Text, View } from "react-native";
 import { colors, spacing, typography } from "../../../theme";
 

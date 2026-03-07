@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import Decimal from "decimal.js";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "node_modules/react-i18next";
 import { colors, typography, spacing } from "../../theme";
 import { shareWithHaptic } from "@/utils";
 

@@ -5,7 +5,7 @@ import { colors, spacing } from "@/presentation/theme";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "node_modules/react-i18next";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 

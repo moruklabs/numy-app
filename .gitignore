@@ -540,3 +540,10 @@ builds/
 
 .env.local
 tsc_output.txt
+
+# --- Context isolation (hidden by just context) ---
+.GEMINI.md
+.CLAUDE.md
+.WARP.md
+.AGENTS.md
+.github/.copilot-instructions.md

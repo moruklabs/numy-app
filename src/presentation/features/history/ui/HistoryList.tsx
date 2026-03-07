@@ -2,7 +2,7 @@ import { FlashList, ListRenderItem } from "@shopify/flash-list";
 import * as Haptics from "expo-haptics";
 import { useRouter } from "expo-router";
 import React, { useCallback } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "node_modules/react-i18next";
 import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import ReanimatedSwipeable from "react-native-gesture-handler/ReanimatedSwipeable";
 import Reanimated, { SharedValue, useAnimatedStyle } from "react-native-reanimated";

@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "node_modules/react-i18next";
 import { Pressable, StyleSheet, Text } from "react-native";
 import { useCalculatorStore, type CalculatorState } from "@/stores/calculatorStore";
 import { colors, spacing, typography } from "@/presentation/theme";

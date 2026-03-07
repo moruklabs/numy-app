@@ -8,6 +8,7 @@ import { AdsConsent } from "react-native-google-mobile-ads";
 // If theme import fails, we can use hardcoded colors or try to find the right path
 // But let's try to match existing style
 import { colors } from "@/presentation/theme";
+import { logger } from "@moruk/logger";
 
 export const ConsentGate = () => {
   const handleManagePrivacy = async () => {
@@ -16,10 +17,10 @@ export const ConsentGate = () => {
       if (consentInfo.privacyOptionsRequirementStatus === "REQUIRED") {
         await AdsConsent.showPrivacyOptionsForm();
       } else {
-        console.log("Privacy options not required or available.");
+        logger.info("Privacy options not required or available.");
       }
     } catch (error) {
-      console.error("Failed to present privacy options:", error);
+      logger.error("Failed to present privacy options:", error);
     }
   };
 

@@ -1,8 +1,8 @@
 import json
 import os
 
-locales_dir = "/Users/fatih/mobile/numy/mobile/apps/numy/store-metadata/locales"
-store_config_path = "/Users/fatih/mobile/numy/mobile/apps/numy/store.config.json"
+locales_dir = "/$HOME/moruk/mobile-workspace/numy/mobile/apps/numy/store-metadata/locales"
+store_config_path = "/$HOME/moruk/mobile-workspace/numy/mobile/apps/numy/store.config.json"
 
 # Basic mapping for "AI Scanner & Value" and "The Best AI Coin Identification"
 # This is a heuristic based on existing translations if available.

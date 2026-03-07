@@ -1,7 +1,7 @@
 import { HistoryList } from "@/presentation/features/history";
 import { colors } from "@/presentation/theme";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "node_modules/react-i18next";
 import { StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 

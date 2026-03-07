@@ -1,0 +1,4 @@
+infra/
+.mypy_cache/
+.pytest_cache/
+!violations/
