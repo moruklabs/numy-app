@@ -26,7 +26,7 @@
     "prepare": "husky",
     "test": "jest --passWithNoTests --silent",
     "test:coverage": "jest --coverage --passWithNoTests",
-    "lint:custom": "jest --passWithNoTests --silent --bail --testPathPattern='(../../shared/__tests__/lint/|__tests__/lint/)'",
+    "lint:custom": "jest --passWithNoTests --silent --bail --testPathPattern='(src/shared/__tests__/lint/|__tests__/lint/)'",
     "test:watch": "jest --watch --passWithNoTests",
     "translate": "node scripts/localization/translate-ai.js",
     "type-check": "node ../../scripts/type-check.js",
@@ -35,16 +35,17 @@
     "check:circular": "bun run lint:circular",
     "check:dead-code": "bun run lint:dead-code",
     "check:duplication": "bun run lint:duplication",
+    "check:native": "node ../../scripts/check-native-modules.js",
     "android": "bun run killport && expo run:android --port 2010",
     "clean": "sh -c 'rm -rf ~/Library/Developer/Xcode/DerivedData/Numy* ios/Pods ios/build android/build android/app/build' && CI=1 npx expo prebuild --clean",
     "ios": "bun run killport && expo run:ios --port 2010",
     "ios:fast": "bun run killport && USE_CCACHE=1 expo run:ios --no-install --port 2010",
+    "lint": "expo lint",
     "start": "bun run killport && expo start --port 2010",
     "test:lint": "jest --passWithNoTests --silent --bail --testPathPattern='(../../shared/__tests__/lint/|__tests__/lint/)'",
     "validate": "concurrently --kill-others-on-fail -n \"TypeCheck,Lint,Format,Doctor,Test\" -c \"magenta,cyan,yellow,magenta,purple\" \"bun run type-check\" \"bun run lint\" \"bun run format\" \"bun run doctor\" \"bun run test\"",
     "validate:metadata": "node ../../scripts/localization-validator.js",
-    "watchman:clean": "watchman watch-del-all",
-    "lint": "expo lint"
+    "watchman:clean": "watchman watch-del-all"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",

@@ -68,7 +68,7 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
       enabled: true,
       fallbackToCacheTimeout: 0,
     },
-    plugins: [...plugins, "../../shared/packages/config/plugins/withModularHeaders.js"] as any,
+    plugins: [...plugins, "./src/shared/config/plugins/withModularHeaders.js"] as any,
     extra: {
       ...config.extra,
       eas: {
