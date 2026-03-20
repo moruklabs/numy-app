@@ -1,6 +1,6 @@
 import { ConfigContext, ExpoConfig } from "expo/config";
 import pkg from "./package.json";
-import withModularHeaders from "./src/shared/config/src/plugins/withModularHeaders";
+
 const config = ({ config }: ConfigContext): ExpoConfig => {
   // Firebase configuration files (from root directory)
   const iosGoogleServicesFile = "./GoogleService-Info.plist";
@@ -68,7 +68,7 @@ const config = ({ config }: ConfigContext): ExpoConfig => {
       enabled: true,
       fallbackToCacheTimeout: 0,
     },
-    plugins: [...plugins, withModularHeaders] as any,
+    plugins: [...plugins, "../../shared/packages/config/plugins/withModularHeaders.js"] as any,
     extra: {
       ...config.extra,
       eas: {

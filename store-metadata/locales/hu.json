@@ -11,5 +11,6 @@
   ],
   "marketingUrl": "https://moruk.ai",
   "supportUrl": "https://moruk.link/support",
-  "privacyPolicyUrl": "https://numy.moruk.ai/privacy"
+  "privacyPolicyUrl": "https://numy.moruk.ai/privacy",
+  "releaseNotes": "- Performance improvements and bug fixes"
 }

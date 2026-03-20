@@ -1,6 +1,6 @@
 # Localization Scripts
 
-Centralized localization tools for managing store metadata, translations, and app configurations across all apps in the monorepo.
+Centralized localization tools for managing store metadata, translations, and app configurations across all apps in the polyrepo.
 
 ## Directory Structure
 

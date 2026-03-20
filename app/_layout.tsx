@@ -11,7 +11,7 @@ import {
   ErrorCategory,
   ErrorSeverity,
   globalErrorHandler,
-} from "@/shared/hoc";
+} from "@moruk/ui";
 import * as Sentry from "@sentry/react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -26,7 +26,10 @@ Sentry.init({
   enableLogs: true,
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1,
-  integrations: [Sentry.mobileReplayIntegration(), Sentry.feedbackIntegration()],
+  integrations: [
+    (Sentry as any).mobileReplayIntegration?.(),
+    (Sentry as any).feedbackIntegration?.(),
+  ],
 });
 
 // Global unhandled promise rejection handler

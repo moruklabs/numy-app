@@ -57,7 +57,7 @@ export const PasswordPrompt: React.FC<PasswordPromptProps> = ({
               placeholder="Enter password"
               placeholderTextColor="#999"
               value={password}
-              onChangeText={(text) => {
+              onChangeText={(text: string) => {
                 setPassword(text);
                 setError("");
               }}

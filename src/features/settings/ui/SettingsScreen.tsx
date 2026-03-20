@@ -135,7 +135,7 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
              */}
             <Switch
               value={themeMode === "system"}
-              onValueChange={(val) => setThemeMode(val ? "system" : "light")} // Default to light if turning system off?
+              onValueChange={(val: any) => setThemeMode(val ? "system" : "light")} // Default to light if turning system off?
               trackColor={{ false: colors.ui.border, true: colors.ui.highlight }}
             />
           </View>
@@ -242,8 +242,8 @@ export const SettingsScreen = ({ onNavigateBack }: SettingsScreenProps) => {
             <Text style={styles.modalTitle}>Select Language</Text>
             <FlatList
               data={["system", ...supportedLanguages]}
-              keyExtractor={(item) => item}
-              renderItem={({ item }) => (
+              keyExtractor={(item: any) => item}
+              renderItem={({ item }: { item: any }) => (
                 <TouchableOpacity
                   style={styles.languageItem}
                   onPress={() =>
